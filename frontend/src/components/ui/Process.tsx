@@ -1,8 +1,40 @@
-import React from "react";
-import { Workflow, ArrowUpRight, ArrowDownRight } from "lucide-react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { Workflow, ArrowUp, ArrowDown, Target, Lightbulb, TrendingUp } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const steps = [
+  {
+    id: "01",
+    title: "Strategic Planning",
+    desc: "We work closely with you to define your goals and develop a comprehensive strategy for success.",
+    icon: Target,
+  },
+  {
+    id: "02",
+    title: "Creative Development",
+    desc: "Our team of experts creates innovative designs and solutions tailored to your unique needs.",
+    icon: Lightbulb,
+  },
+  {
+    id: "03",
+    title: "Implementation & Integration",
+    desc: "We ensure smooth implementation and seamless integration of technologies into your existing ecosystem.",
+    icon: Workflow,
+  },
+  {
+    id: "04",
+    title: "Sustainable Growth",
+    desc: "We provide ongoing support and analysis to ensure your business continues to thrive in the long term.",
+    icon: TrendingUp,
+  }
+];
 
 export default function Process() {
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const nextStep = () => setCurrentStep((prev) => (prev + 1) % steps.length);
+  const prevStep = () => setCurrentStep((prev) => (prev - 1 + steps.length) % steps.length);
+
   return (
     <section className="bg-[#020617] py-32 px-4 md:px-20 relative overflow-hidden" id="process">
       {/* Decorative Background Elements */}
@@ -70,40 +102,53 @@ export default function Process() {
               Growing Your Business.
             </h2>
             
-            <p className="text-gray-400 text-lg mb-12 leading-relaxed max-w-lg">
+            <p className="text-gray-400 text-lg mb-12 leading-relaxed max-w-lg font-medium">
               We provide innovative solution that ensure long-term growth & stability, driving your business success.
             </p>
             
             <div className="flex items-center gap-8">
               {/* Main Step Card */}
-              <motion.div 
-                whileHover={{ y: -10 }}
-                transition={{ duration: 0.3 }}
-                className="flex-grow bg-[#6373f2] p-10 rounded-[24px] relative overflow-hidden group shadow-2xl shadow-[#6373f2]/20 cursor-pointer"
-              >
-                {/* Large Background Number */}
-                <div className="absolute top-2 right-4 text-8xl font-black text-white/10 select-none">
-                  03
-                </div>
-                
-                <div className="bg-white w-14 h-14 rounded-xl flex items-center justify-center mb-10 shadow-lg">
-                  <Workflow className="w-8 h-8 text-[#6373f2]" strokeWidth={2} />
-                </div>
-                
-                <h3 className="text-2xl font-bold text-white mb-4 font-heading">Implementation & Integration</h3>
-                <p className="text-white/80 leading-relaxed font-medium">
-                  We ensure smooth implementation and seamless integration of technologies into your existing ecosystem.
-                </p>
-              </motion.div>
+              <div className="flex-grow min-h-[380px] relative">
+                <AnimatePresence mode="wait">
+                  <motion.div 
+                    key={currentStep}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.5 }}
+                    className="absolute inset-0 bg-[#6373f2] p-10 rounded-[32px] overflow-hidden group shadow-2xl shadow-[#6373f2]/20 cursor-pointer"
+                  >
+                    {/* Large Background Number */}
+                    <div className="absolute top-2 right-6 text-[120px] font-black text-white/10 select-none leading-none">
+                      {steps[currentStep].id}
+                    </div>
+                    
+                    <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-12 shadow-lg">
+                      {React.createElement(steps[currentStep].icon, { className: "w-9 h-9 text-[#6373f2]", strokeWidth: 2.5 })}
+                    </div>
+                    
+                    <h3 className="text-3xl font-bold text-white mb-6 font-heading">{steps[currentStep].title}</h3>
+                    <p className="text-white/80 text-lg leading-relaxed font-medium">
+                      {steps[currentStep].desc}
+                    </p>
+                  </motion.div>
+                </AnimatePresence>
+              </div>
               
               {/* Vertical Controls */}
               <div className="flex flex-col items-center gap-6">
-                <button className="w-12 h-12 border border-white/20 rounded-lg flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                  <ArrowUpRight className="w-5 h-5" />
+                <button 
+                  onClick={prevStep}
+                  className="w-14 h-14 border-2 border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#6373f2] hover:border-white transition-all duration-300 group"
+                >
+                  <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
                 </button>
-                <div className="w-px h-24 bg-white/20"></div>
-                <button className="w-12 h-12 border border-white/20 rounded-lg flex items-center justify-center text-white hover:bg-white/10 transition-all">
-                  <ArrowDownRight className="w-5 h-5" />
+                <div className="w-0.5 h-24 bg-gradient-to-b from-white/20 via-white/40 to-white/20"></div>
+                <button 
+                  onClick={nextStep}
+                  className="w-14 h-14 border-2 border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#6373f2] hover:border-white transition-all duration-300 group"
+                >
+                  <ArrowDown className="w-6 h-6 group-hover:translate-y-1 transition-transform" />
                 </button>
               </div>
             </div>
@@ -113,6 +158,7 @@ export default function Process() {
     </section>
   );
 }
+
 
 
 
