@@ -8,7 +8,7 @@ const slides = [
   {
     title: "Success in the Middle East",
     desc: "Empowering businesses across the GCC with integrated consulting and strategic solutions.",
-    image: "/WhatsApp-Image-2025-09-26-at-18.30.32_83b14124.webp"
+    image: "/WhatsApp-Image-2025-10-05-at-19.49.59-1.webp"
   },
   {
     title: "Heritage Meets Innovation",
