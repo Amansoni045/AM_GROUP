@@ -30,7 +30,6 @@ export default function Process() {
             {/* Dynamic Glows */}
             <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#6373f2]/20 rounded-full blur-[100px] -z-10 animate-pulse"></div>
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-purple-500/10 rounded-full blur-[100px] -z-10 animate-pulse delay-1000"></div>
-            </div>
             {/* Subtle glow behind image */}
             <div className="absolute -inset-4 bg-[#6373f2]/10 blur-[80px] -z-10"></div>
           </div>
