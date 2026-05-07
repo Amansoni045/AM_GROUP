@@ -35,6 +35,11 @@ export default function Process() {
   const nextStep = () => setCurrentStep((prev) => (prev + 1) % steps.length);
   const prevStep = () => setCurrentStep((prev) => (prev - 1 + steps.length) % steps.length);
 
+  React.useEffect(() => {
+    const timer = setInterval(nextStep, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="bg-[#020617] py-32 px-4 md:px-20 relative overflow-hidden" id="process">
       {/* Decorative Background Elements */}
