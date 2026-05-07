@@ -1,11 +1,17 @@
 import React from "react";
 import { Workflow, ArrowUpRight, ArrowDownRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Process() {
   return (
     <section className="bg-[#020617] py-32 px-4 md:px-20 relative overflow-hidden" id="process">
       {/* Decorative Background Elements */}
-      <div className="absolute top-10 right-10 flex flex-col gap-4 opacity-20">
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 0.2, y: 0 }}
+        transition={{ duration: 1 }}
+        className="absolute top-10 right-10 flex flex-col gap-4"
+      >
         <div className="flex gap-4">
           <div className="w-16 h-16 bg-white/10 rounded-lg"></div>
           <div className="w-16 h-16 bg-white/10 rounded-lg"></div>
@@ -13,12 +19,18 @@ export default function Process() {
         <div className="flex gap-4 justify-end">
           <div className="w-16 h-16 bg-white/10 rounded-lg"></div>
         </div>
-      </div>
+      </motion.div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Left Column: Image */}
-          <div className="relative group">
+          <motion.div 
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="relative group"
+          >
             <div className="relative rounded-[40px] overflow-hidden aspect-square shadow-2xl shadow-[#6373f2]/10 border border-white/5">
               <img 
                 src="/digital_hands_process.png" 
@@ -30,17 +42,28 @@ export default function Process() {
             {/* Dynamic Glows */}
             <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#6373f2]/20 rounded-full blur-[100px] -z-10 animate-pulse"></div>
             <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-purple-500/10 rounded-full blur-[100px] -z-10 animate-pulse delay-1000"></div>
+            
             {/* Subtle glow behind image */}
             <div className="absolute -inset-4 bg-[#6373f2]/10 blur-[80px] -z-10"></div>
-          </div>
+          </motion.div>
           
           {/* Right Column: Content */}
-          <div>
-            <div className="inline-block bg-[#c5e17a] px-4 py-1.5 mb-8">
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="inline-block bg-[#c5e17a] px-4 py-1.5 mb-8"
+            >
               <span className="text-black text-[13px] font-bold uppercase tracking-widest">
                 Work Process
               </span>
-            </div>
+            </motion.div>
             
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight font-heading">
               Proven Process For<br />
@@ -53,7 +76,11 @@ export default function Process() {
             
             <div className="flex items-center gap-8">
               {/* Main Step Card */}
-              <div className="flex-grow bg-[#6373f2] p-10 rounded-[24px] relative overflow-hidden group shadow-2xl shadow-[#6373f2]/20">
+              <motion.div 
+                whileHover={{ y: -10 }}
+                transition={{ duration: 0.3 }}
+                className="flex-grow bg-[#6373f2] p-10 rounded-[24px] relative overflow-hidden group shadow-2xl shadow-[#6373f2]/20 cursor-pointer"
+              >
                 {/* Large Background Number */}
                 <div className="absolute top-2 right-4 text-8xl font-black text-white/10 select-none">
                   03
@@ -67,7 +94,7 @@ export default function Process() {
                 <p className="text-white/80 leading-relaxed font-medium">
                   We ensure smooth implementation and seamless integration of technologies into your existing ecosystem.
                 </p>
-              </div>
+              </motion.div>
               
               {/* Vertical Controls */}
               <div className="flex flex-col items-center gap-6">
@@ -80,12 +107,13 @@ export default function Process() {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
+
 
 
 

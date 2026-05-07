@@ -1,5 +1,6 @@
 import React from "react";
 import { Globe, Cpu, Smartphone, ArrowUp } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Services() {
   const services = [
@@ -23,48 +24,91 @@ export default function Services() {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -30 },
+    visible: { 
+      opacity: 1, 
+      x: 0,
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
+  };
+
   return (
     <section className="py-32 px-4 md:px-20 bg-[#f3f4f6] relative overflow-hidden" id="services">
-      {/* Background Decorative Elements - Rounded Squares from Image */}
-      <div className="absolute top-10 right-[2%] w-64 h-64 bg-white/60 rounded-[60px] -z-0"></div>
-      <div className="absolute top-40 right-[12%] w-32 h-32 bg-[#6373f2]/80 rounded-[30px] -z-0"></div>
-      <div className="absolute top-[50%] right-[15%] w-48 h-48 bg-white/40 rounded-[50px] -z-0"></div>
-      <div className="absolute top-[20%] right-[20%] w-40 h-40 bg-white/40 rounded-[40px] -z-0"></div>
-      <div className="absolute bottom-[10%] right-[5%] w-32 h-32 bg-white/60 rounded-[30px] -z-0"></div>
+      {/* Background Decorative Elements */}
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 0.6, scale: 1 }}
+        transition={{ duration: 1.5 }}
+        className="absolute top-10 right-[2%] w-64 h-64 bg-white/60 rounded-[60px] -z-0"
+      ></motion.div>
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 0.8, scale: 1 }}
+        transition={{ duration: 1.5, delay: 0.2 }}
+        className="absolute top-40 right-[12%] w-32 h-32 bg-[#6373f2]/80 rounded-[30px] -z-0"
+      ></motion.div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="mb-32">
-          <div className="inline-block bg-[#c5e17a] px-5 py-2 mb-8 relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-block bg-[#c5e17a] px-5 py-2 mb-8 relative"
+          >
              <span className="text-black text-[14px] font-bold uppercase tracking-wider relative z-10">
               Our Area Of Services
             </span>
-            {/* Tag effect if needed, but the image shows a simple rectangle with slight offset maybe? 
-                Actually, it looks like a simple rectangle. */}
-          </div>
+          </motion.div>
           
-          <h2 className="text-5xl md:text-7xl font-bold text-[#1a1a1a] max-w-4xl leading-[1.1] tracking-tight font-heading">
+          <motion.h2 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="text-5xl md:text-7xl font-bold text-[#1a1a1a] max-w-4xl leading-[1.1] tracking-tight font-heading"
+          >
             We Provide Innovative,<br />
             Technology-driven Services
-          </h2>
+          </motion.h2>
         </div>
 
         {/* Stepped Services Layout */}
-        <div className="flex flex-col gap-24 md:gap-0">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="flex flex-col gap-24 md:gap-0"
+        >
           {services.map((service, i) => (
-            <div 
+            <motion.div 
               key={i} 
+              variants={itemVariants}
               className={`flex flex-col md:flex-row items-start gap-8 max-w-2xl transition-all duration-700 ${service.offset}`}
             >
               {/* Icon & Background Card */}
               <div className="relative flex-shrink-0 group">
-                {/* Rounded background card */}
                 <div className="absolute top-4 left-6 w-32 h-32 bg-white/80 rounded-[40px] -z-10 group-hover:bg-white transition-colors duration-500"></div>
                 
-                {/* Blue Icon Square */}
-                <div className="w-20 h-20 bg-[#6373f2] rounded-[24px] flex items-center justify-center shadow-lg shadow-[#6373f2]/20 relative z-10">
+                <motion.div 
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  className="w-20 h-20 bg-[#6373f2] rounded-[24px] flex items-center justify-center shadow-lg shadow-[#6373f2]/20 relative z-10 cursor-pointer"
+                >
                   <service.icon className="w-10 h-10 text-white" strokeWidth={1.5} />
-                </div>
+                </motion.div>
               </div>
 
               {/* Content */}
@@ -74,19 +118,24 @@ export default function Services() {
                   {service.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      {/* Bottom Right Back to Top Button from Image */}
-      <div className="absolute bottom-10 right-10">
+      {/* Bottom Right Back to Top Button */}
+      <motion.div 
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        className="absolute bottom-10 right-10"
+      >
         <a href="#hero" className="w-12 h-12 border-2 border-[#6373f2]/20 rounded-full flex items-center justify-center text-[#6373f2] hover:bg-[#6373f2] hover:text-white transition-all duration-300">
            <ArrowUp className="w-5 h-5" />
         </a>
-      </div>
+      </motion.div>
     </section>
   );
 }
+
 
 

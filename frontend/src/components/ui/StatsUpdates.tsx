@@ -1,5 +1,6 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function StatsUpdates() {
   const stats = [
@@ -12,19 +13,38 @@ export default function StatsUpdates() {
   return (
     <section className="bg-white pt-24" id="stats">
       <div className="max-w-7xl mx-auto px-4 md:px-20 -mb-24 relative z-10">
-        <div className="bg-[#f3f4f6] p-12 md:p-16 rounded-[40px] grid grid-cols-2 lg:grid-cols-4 gap-12 border border-gray-100 shadow-xl shadow-black/5">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="bg-[#f3f4f6] p-12 md:p-16 rounded-[40px] grid grid-cols-2 lg:grid-cols-4 gap-12 border border-gray-100 shadow-xl shadow-black/5"
+        >
           {stats.map((stat, i) => (
-            <div key={i} className="text-center group">
+            <motion.div 
+              key={i} 
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 + 0.3 }}
+              className="text-center group"
+            >
               <div className="text-[12px] font-bold text-[#6373f2] mb-4 uppercase tracking-[0.2em]">{stat.label}</div>
               <div className="text-5xl md:text-6xl font-black text-[#1a1a1a] group-hover:scale-110 transition-transform duration-500 font-heading">{stat.value}</div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
       {/* Global Updates */}
       <div className="bg-[#f9f9f9] pt-48 pb-32 px-4 md:px-20">
-        <div className="max-w-7xl mx-auto bg-white rounded-[48px] p-10 md:p-20 relative overflow-hidden border border-gray-100 shadow-2xl shadow-black/5">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="max-w-7xl mx-auto bg-white rounded-[48px] p-10 md:p-20 relative overflow-hidden border border-gray-100 shadow-2xl shadow-black/5"
+        >
           {/* Subtle Glow */}
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#6373f2]/5 rounded-full blur-[100px]"></div>
           
@@ -33,7 +53,13 @@ export default function StatsUpdates() {
           </div>
           
           <div className="flex flex-col lg:flex-row gap-16 items-center relative z-10">
-            <div className="w-full lg:w-1/2 group">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="w-full lg:w-1/2 group"
+            >
               <div className="relative rounded-[32px] overflow-hidden">
                 <img 
                   alt="Corporate Event" 
@@ -42,22 +68,34 @@ export default function StatsUpdates() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent"></div>
               </div>
-            </div>
-            <div className="w-full lg:w-1/2">
+            </motion.div>
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="w-full lg:w-1/2"
+            >
               <h3 className="text-3xl md:text-5xl font-bold text-[#1a1a1a] mb-8 leading-tight font-heading">Empowering Businesses in Bahrain, KSA & Oman</h3>
               <p className="text-gray-500 text-lg mb-12 leading-relaxed font-medium">
                 As the leading consultancy in the GCC, we provide strategy, creative design, and financial expertise to help businesses thrive in a dynamic market environment.
               </p>
-              <a className="inline-flex items-center gap-4 bg-[#6373f2] text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all group" href="#">
+              <motion.a 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-4 bg-[#6373f2] text-white px-10 py-5 rounded-full font-bold hover:scale-105 transition-all group" 
+                href="#"
+              >
                 View Case Studies
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
 }
+
 
 

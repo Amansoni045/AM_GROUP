@@ -1,7 +1,6 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 import Header from "@/components/layouts/Header";
 
 const slides = [
@@ -31,31 +30,33 @@ export default function Hero() {
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(nextSlide, 7000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex flex-col bg-[#040b1e] overflow-hidden" id="hero">
+    <section className="relative min-h-[95vh] flex flex-col bg-[#040b1e] overflow-hidden" id="hero">
       {/* Background Image with Transition */}
       <div className="absolute inset-0 z-0">
-        {slides.map((slide, i) => (
-          <div 
-            key={i}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${i === current ? "opacity-100" : "opacity-0"}`}
+        <AnimatePresence mode="wait">
+          <motion.div 
+            key={current}
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="absolute inset-0"
           >
             <img 
-              alt={slide.title} 
+              alt={slides[current].title} 
               className="w-full h-full object-cover" 
-              src={slide.image} 
+              src={slides[current].image} 
             />
-          </div>
-        ))}
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 bg-black/50"></div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
       <Header />
@@ -63,39 +64,57 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 flex-grow flex items-center justify-center px-4 md:px-12 text-center">
         <div className="max-w-5xl">
-          <h1 className="text-white text-5xl md:text-8xl font-bold leading-tight mb-8 drop-shadow-2xl">
-            {slides[current].title}
-          </h1>
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mt-12">
-            <a 
-              className="inline-flex items-center justify-center gap-3 bg-[#6373f2] text-white px-10 py-5 rounded-md font-bold hover:bg-opacity-90 transition-all group" 
-              href="#services"
-            >
-              Explore Services
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </a>
-            <a 
-              className="inline-flex items-center justify-center gap-3 bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-md font-bold hover:bg-white/30 transition-all" 
-              href="#story"
-            >
-              About AM Group
-            </a>
-          </div>
+          <motion.div
+            key={`content-${current}`}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <h1 className="text-white text-5xl md:text-8xl font-bold leading-tight mb-8 drop-shadow-2xl font-heading">
+              {slides[current].title}
+            </h1>
+            <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-medium">
+              {slides[current].desc}
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <motion.a 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center justify-center gap-3 bg-[#6373f2] text-white px-10 py-5 rounded-md font-bold transition-all group" 
+                href="#services"
+              >
+                Explore Services
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </motion.a>
+              <motion.a 
+                whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.3)" }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center justify-center gap-3 bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-md font-bold transition-all" 
+                href="#process"
+              >
+                Our Process
+              </motion.a>
+            </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Slider Indicators (Custom centered bar) */}
-      <div className="relative z-10 flex justify-center pb-8">
+      {/* Slider Indicators */}
+      <div className="relative z-10 flex justify-center pb-12">
         <div className="flex gap-4">
           {slides.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrent(i)}
-              className={`h-1 transition-all duration-500 rounded-full ${i === current ? "bg-white w-12" : "bg-white/30 w-6"}`}
-            />
+              className="group relative p-2"
+            >
+              <div className={`h-1.5 transition-all duration-500 rounded-full ${i === current ? "bg-[#6373f2] w-12" : "bg-white/30 w-6 group-hover:bg-white/50"}`} />
+            </button>
           ))}
         </div>
       </div>
     </section>
   );
 }
+
