@@ -1,20 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "AM GROUP",
-  description: "High-end residential development.",
+  title: "New UI Project",
+  description: "Starting fresh with a new UI.",
 };
 
 export default function RootLayout({
@@ -23,8 +12,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${cinzel.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans">{children}</body>
+    <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+      </head>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
