@@ -1,6 +1,6 @@
 import React from "react";
 import { Globe, Cpu, Smartphone, ArrowUp } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 export default function Services() {
   const services = [
@@ -24,7 +24,7 @@ export default function Services() {
     }
   ];
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -34,7 +34,7 @@ export default function Services() {
     }
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, x: -30 },
     visible: { 
       opacity: 1, 
