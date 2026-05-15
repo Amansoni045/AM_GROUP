@@ -12,8 +12,8 @@ const socialIcons = [
 const companies = [
   { name: "AM Consulting", href: "/consulting" },
   { name: "AM Accounting", href: "/accounting" },
-  { name: "AM Design", href: "/#services" },
-  { name: "AM Analytiks", href: "/#services" },
+  { name: "AM Design", href: "/design" },
+  { name: "AM Analytiks", href: "/analytiks" },
 ];
 
 const navLinks = [
