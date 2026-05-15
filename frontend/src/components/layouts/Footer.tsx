@@ -10,21 +10,21 @@ const socialIcons = [
 ];
 
 const companies = [
-  { name: "AM Consulting", href: "#services" },
-  { name: "AM Accounting", href: "#services" },
-  { name: "AM Design", href: "#services" },
-  { name: "AM Analytiks", href: "#services" },
+  { name: "AM Consulting", href: "/consulting" },
+  { name: "AM Accounting", href: "/#services" },
+  { name: "AM Design", href: "/#services" },
+  { name: "AM Analytiks", href: "/#services" },
 ];
 
 const navLinks = [
-  { name: "Home", href: "#hero" },
-  { name: "About Us", href: "#about" },
-  { name: "What We Do", href: "#what-we-do" },
-  { name: "Why Choose Us", href: "#why-us" },
-  { name: "Industry Expertise", href: "#industries" },
-  { name: "Our Services", href: "#services" },
-  { name: "Testimonials", href: "#testimonials" },
-  { name: "Contact", href: "#consultation" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "What We Do", href: "/#what-we-do" },
+  { name: "Why Choose Us", href: "/#why-us" },
+  { name: "Industry Expertise", href: "/#industries" },
+  { name: "Our Services", href: "/#services" },
+  { name: "Testimonials", href: "/#testimonials" },
+  { name: "Contact", href: "/#consultation" },
 ];
 
 export default function Footer() {

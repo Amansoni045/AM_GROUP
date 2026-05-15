@@ -3,12 +3,12 @@ import { motion } from "framer-motion";
 
 export default function Header() {
   const navItems = [
-    { name: "HOME", href: "#hero" },
-    { name: "ABOUT US", href: "#story" },
-    { name: "AM CONSULTING", href: "#services" },
-    { name: "AM ACCOUNTING", href: "#services" },
-    { name: "AM DESIGN", href: "#services" },
-    { name: "AM ANALYTIKS", href: "#services" },
+    { name: "HOME", href: "/" },
+    { name: "ABOUT US", href: "/about" },
+    { name: "AM CONSULTING", href: "/consulting" },
+    { name: "AM ACCOUNTING", href: "/#services" },
+    { name: "AM DESIGN", href: "/#services" },
+    { name: "AM ANALYTIKS", href: "/#services" },
   ];
 
   return (
@@ -20,7 +20,7 @@ export default function Header() {
     >
       {/* Logo Area */}
       <div className="flex items-center">
-        <a href="#hero" className="flex items-center">
+        <a href="/" className="flex items-center">
           <img src="/logo.webp" alt="AM Group Logo" className="h-12 w-auto object-contain" />
         </a>
       </div>
