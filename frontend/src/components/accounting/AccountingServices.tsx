@@ -16,35 +16,35 @@ const services = [
     desc: "We prepare comprehensive financial records for our clients, analyzing invoices, receipts, bills, vouchers.",
     icon: BookOpen,
     color: "#059669",
-    href: "#"
+    href: "/accounting/bookkeeping"
   },
   {
     title: "MIS Reporting",
     desc: "We provide comprehensive MIS reports with detailed financial statements and data-driven recommendations.",
     icon: BarChart3,
     color: "#d4af37",
-    href: "#"
+    href: "/accounting/mis-reporting"
   },
   {
     title: "Backlog Management",
     desc: "Our team efficiently updates and streamlines your backlog accounts for financial reporting.",
     icon: Rewind,
     color: "#8b5cf6",
-    href: "#"
+    href: "/accounting/backlog-management"
   },
   {
     title: "Reconciliation",
     desc: "Our team reconciles accounts to identify and resolve discrepancies, ensuring financial integrity.",
     icon: CheckSquare,
     color: "#dc2626",
-    href: "#"
+    href: "/accounting/reconciliation"
   },
   {
     title: "VAT Services",
     desc: "Our experts ensure seamless VAT registration, offering expert guidance and support.",
     icon: Receipt,
     color: "#0ea5e9",
-    href: "#"
+    href: "/accounting/vat-services"
   }
 ];
 
