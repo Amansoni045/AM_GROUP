@@ -6,7 +6,7 @@ export default function Header() {
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about" },
     { name: "AM CONSULTING", href: "/consulting" },
-    { name: "AM ACCOUNTING", href: "/#services" },
+    { name: "AM ACCOUNTING", href: "/accounting" },
     { name: "AM DESIGN", href: "/#services" },
     { name: "AM ANALYTIKS", href: "/#services" },
   ];
