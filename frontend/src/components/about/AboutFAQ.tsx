@@ -33,10 +33,10 @@ export default function AboutFAQ() {
     <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="faq">
       <div className="max-w-4xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
           <div className="inline-block bg-[#020817] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5">
@@ -56,7 +56,7 @@ export default function AboutFAQ() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.08 }}
               className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
             >
               <button
@@ -76,7 +76,7 @@ export default function AboutFAQ() {
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden"
                   >
                     <div className="px-6 pb-6 text-gray-500 leading-relaxed border-t border-gray-50 pt-4">
@@ -94,7 +94,7 @@ export default function AboutFAQ() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7, delay: 0.3 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
           className="text-center mt-12"
         >
           <p className="text-gray-500 mb-5">Still have questions? We&apos;d love to hear from you.</p>

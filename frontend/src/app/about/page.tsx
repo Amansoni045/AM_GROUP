@@ -14,12 +14,7 @@ import Clients from "@/components/ui/Clients";
 
 export default function AboutPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth"
-    >
+    <main className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth">
       <TopBar />
       <AboutHero />
       <CompanyCards />
@@ -30,6 +25,6 @@ export default function AboutPage() {
       <AboutFAQ />
       <Footer />
       <BackToTop />
-    </motion.div>
+    </main>
   );
 }

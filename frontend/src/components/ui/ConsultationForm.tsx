@@ -45,10 +45,10 @@ export default function ConsultationForm() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left: Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -50  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="inline-block border border-[#d4af37]/50 text-[#d4af37] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-8">
               Free Consultation
@@ -67,7 +67,7 @@ export default function ConsultationForm() {
               {["30-Minute Strategy Session", "Expert Industry Advisors", "Tailored Action Plan", "No Obligation Whatsoever"].map((item, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, x: -20 }}
+                  initial={{ opacity: 0, x: -20  }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2 + i * 0.1 }}
@@ -86,10 +86,10 @@ export default function ConsultationForm() {
 
           {/* Right: Form */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 50  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-10 shadow-2xl">
               {submitted ? (

@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "AM GROUP",
   description: "Empowering businesses through expert consulting, comprehensive accounting, and innovative design.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

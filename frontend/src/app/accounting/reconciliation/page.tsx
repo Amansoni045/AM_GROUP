@@ -10,18 +10,13 @@ import ReconciliationServicesList from "@/components/accounting/ReconciliationSe
 
 export default function ReconciliationPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth"
-    >
+    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
       <TopBar />
       <ReconciliationHero />
       <ReconciliationIntro />
       <ReconciliationServicesList />
       <Footer />
       <BackToTop />
-    </motion.div>
+    </main>
   );
 }

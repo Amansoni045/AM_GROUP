@@ -10,18 +10,13 @@ import MISServicesList from "@/components/accounting/MISServicesList";
 
 export default function MISReportingPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth"
-    >
+    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
       <TopBar />
       <MISHero />
       <MISIntro />
       <MISServicesList />
       <Footer />
       <BackToTop />
-    </motion.div>
+    </main>
   );
 }

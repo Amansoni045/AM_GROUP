@@ -10,18 +10,13 @@ import VATServicesList from "@/components/accounting/VATServicesList";
 
 export default function VATServicesPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth"
-    >
+    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
       <TopBar />
       <VATHero />
       <VATIntro />
       <VATServicesList />
       <Footer />
       <BackToTop />
-    </motion.div>
+    </main>
   );
 }

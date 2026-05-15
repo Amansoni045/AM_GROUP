@@ -33,10 +33,10 @@ export default function AccountingTestimonials() {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
           <div className="inline-block bg-[#6373f2]/10 px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] text-[#6373f2] mb-5">
@@ -52,11 +52,11 @@ export default function AccountingTestimonials() {
           {testimonials.map((testi, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              whileHover={{ y: -8, transition: { duration: 0.2 } }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.15 }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="bg-white rounded-3xl p-10 border border-gray-100 shadow-xl shadow-gray-200/50 relative overflow-hidden group"
             >
               {/* Background Accent */}

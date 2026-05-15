@@ -47,7 +47,7 @@ export default function OutsourcingServicesList() {
     <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="outsourcing-list">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -62,11 +62,11 @@ export default function OutsourcingServicesList() {
           {services.map((service, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -10, transition: { duration: 0.2 } }}
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="bg-white rounded-3xl p-10 border border-gray-100 shadow-xl shadow-black/5 flex flex-col group relative overflow-hidden"
             >
               <div className="absolute -top-4 -right-4 text-gray-100 text-6xl font-black opacity-40 group-hover:text-[#6373f2]/10 transition-colors">

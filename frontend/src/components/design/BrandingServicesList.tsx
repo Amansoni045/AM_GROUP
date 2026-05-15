@@ -28,7 +28,7 @@ export default function BrandingServicesList() {
         {/* What We Do & Our Approach */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -30  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
@@ -45,7 +45,7 @@ export default function BrandingServicesList() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 30  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="flex flex-col justify-center space-y-6"
@@ -60,7 +60,7 @@ export default function BrandingServicesList() {
 
         {/* Deliverables */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"

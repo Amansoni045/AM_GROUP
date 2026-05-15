@@ -20,15 +20,15 @@ export default function AboutHero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             className="inline-block border border-[#d4af37]/50 text-[#d4af37] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
           >
             About AM Group
           </motion.div>
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
             className="text-white text-5xl md:text-7xl font-bold leading-tight mb-6 font-heading"
           >
             Driving Innovation &<br />
@@ -37,7 +37,7 @@ export default function AboutHero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
             className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto"
           >
             AM Group is a multidisciplinary firm uniting Consulting, Design, Accounting and Data Analytics under one trusted name across the GCC.

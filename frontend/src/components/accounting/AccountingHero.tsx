@@ -13,10 +13,13 @@ export default function AccountingHero() {
   return (
     <section className="relative min-h-[70vh] flex flex-col bg-[#020817] overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <img
-          src="/slider-1.webp"
+        <motion.img
+          src="/accounting-hero.png"
           alt="AM Accounting Hero"
           className="w-full h-full object-cover opacity-30"
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 2, ease: "easeOut" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#020817]/80 via-[#020817]/60 to-[#020817]" />
       </div>
@@ -27,15 +30,15 @@ export default function AccountingHero() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             className="inline-block border border-[#6373f2]/50 text-[#6373f2] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[#6373f2]/10 backdrop-blur-sm"
           >
             AM Accounting
           </motion.div>
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
             className="text-white text-5xl md:text-7xl font-bold leading-tight mb-6 font-heading"
           >
             Excellence in <br />
@@ -44,7 +47,7 @@ export default function AccountingHero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
             className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
           >
             Streamlining finance and powering growth for businesses across Bahrain and the GCC with expert accounting solutions.

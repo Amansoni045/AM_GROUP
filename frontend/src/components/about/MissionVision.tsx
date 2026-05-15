@@ -16,50 +16,62 @@ export default function MissionVision() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Image + Skills */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -50  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="relative"
           >
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img src="/am-group.webp" alt="AM Group Team" className="w-full h-[420px] object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#020817]/50 to-transparent rounded-3xl" />
-            </div>
-            {/* Skills card overlay */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.4 }}
-              className="absolute -bottom-6 left-6 right-6 bg-white rounded-2xl p-6 shadow-2xl border border-gray-100"
-            >
-              {skills.map((skill, i) => (
-                <div key={i} className={i < skills.length - 1 ? "mb-4" : ""}>
-                  <div className="flex justify-between mb-1.5">
-                    <span className="text-sm font-bold text-[#020817]">{skill.label}</span>
-                    <span className="text-sm font-bold text-[#d4af37]">{skill.value}%</span>
-                  </div>
-                  <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${skill.value}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.2, delay: 0.5 + i * 0.2 }}
-                      className="h-full bg-[#d4af37] rounded-full"
-                    />
-                  </div>
+            <div className="flex flex-col gap-8">
+              <div className="rounded-3xl overflow-hidden shadow-2xl relative group">
+                <img 
+                  src="/am-group.webp" 
+                  alt="AM Group Team" 
+                  className="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#020817]/40 to-transparent" />
+                <div className="absolute bottom-6 left-6 text-white font-bold text-lg font-heading">
+                  The AM Group Team
                 </div>
-              ))}
-            </motion.div>
+              </div>
+
+              {/* Skills card below image */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {skills.map((skill, i) => (
+                    <div key={i}>
+                      <div className="flex justify-between mb-2">
+                        <span className="text-xs font-black uppercase tracking-wider text-[#020817]/60">{skill.label}</span>
+                        <span className="text-xs font-black text-[#d4af37]">{skill.value}%</span>
+                      </div>
+                      <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                        <motion.div
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.value}%` }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.4 + i * 0.1 }}
+                          className="h-full bg-[#d4af37] rounded-full"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
 
           {/* Right: Mission + Vision */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 50  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 lg:mt-0"
           >
             <div className="inline-block bg-[#020817] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6">

@@ -44,10 +44,10 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
           <div className="inline-block bg-[#6373f2]/10 px-4 py-1.5 rounded-full mb-6">
@@ -62,10 +62,10 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
               onClick={() => setCurrent(i)}
               className={`relative bg-white rounded-2xl p-8 border shadow-lg cursor-pointer transition-all duration-300 overflow-hidden group
                 ${i === current ? "border-[#6373f2] shadow-[#6373f2]/20 shadow-xl" : "border-gray-100 hover:border-gray-200 hover:shadow-md"}`}

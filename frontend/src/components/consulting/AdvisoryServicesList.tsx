@@ -31,7 +31,7 @@ export default function AdvisoryServicesList() {
     <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="advisory-list">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
@@ -48,11 +48,11 @@ export default function AdvisoryServicesList() {
           {advisoryServices.map((service, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -10, transition: { duration: 0.2, delay: 0 } }}
+              whileHover={{ y: -4, transition: { duration: 0.2, delay: 0 } }}
               className="bg-white rounded-3xl p-10 border border-gray-100 shadow-xl shadow-black/5 flex flex-col group cursor-pointer"
             >
               <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#d4af37] transition-colors duration-300">

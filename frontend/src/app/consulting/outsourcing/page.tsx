@@ -11,12 +11,7 @@ import OutsourcingWhyChoose from "@/components/consulting/OutsourcingWhyChoose";
 
 export default function OutsourcingPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth"
-    >
+    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
       <TopBar />
       <OutsourcingHero />
       <OutsourcingIntro />
@@ -24,6 +19,6 @@ export default function OutsourcingPage() {
       <OutsourcingWhyChoose />
       <Footer />
       <BackToTop />
-    </motion.div>
+    </main>
   );
 }

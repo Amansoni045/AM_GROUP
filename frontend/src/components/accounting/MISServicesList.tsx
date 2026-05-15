@@ -18,7 +18,7 @@ export default function MISServicesList() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -30  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="lg:col-span-5 space-y-6"
@@ -33,7 +33,7 @@ export default function MISServicesList() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 30  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="lg:col-span-7"

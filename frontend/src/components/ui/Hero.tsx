@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import Header from "@/components/layouts/Header";
 
 const slides = [
@@ -67,9 +68,9 @@ export default function Hero() {
         <div className="max-w-5xl">
           <motion.div
             key={`content-${current}`}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           >
             <h1 className="text-white text-5xl md:text-8xl font-bold leading-tight mb-8 drop-shadow-2xl font-heading">
               {slides[current].title}
@@ -79,23 +80,25 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.a 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center gap-3 bg-[#6373f2] text-white px-10 py-5 rounded-md font-bold transition-all group" 
-                href="#services"
-              >
-                Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.a>
-              <motion.a 
-                whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.3)" }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center justify-center gap-3 bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-md font-bold transition-all" 
-                href="#process"
-              >
-                Our Process
-              </motion.a>
+              <Link href="/#services" className="inline-block">
+                <motion.div 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center justify-center gap-3 bg-[#6373f2] text-white px-10 py-5 rounded-md font-bold transition-all group cursor-pointer" 
+                >
+                  Explore Services
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </motion.div>
+              </Link>
+              <Link href="/#process" className="inline-block">
+                <motion.div 
+                  whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.3)" }}
+                  whileTap={{ scale: 0.95 }}
+                  className="inline-flex items-center justify-center gap-3 bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-md font-bold transition-all cursor-pointer" 
+                >
+                  Our Process
+                </motion.div>
+              </Link>
             </div>
           </motion.div>
         </div>

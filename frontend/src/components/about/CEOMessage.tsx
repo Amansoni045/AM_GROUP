@@ -10,10 +10,10 @@ export default function CEOMessage() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
           <div className="inline-block border border-[#d4af37]/50 text-[#d4af37] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5">
@@ -27,10 +27,10 @@ export default function CEOMessage() {
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
           {/* Message */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -40  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-3 space-y-5"
           >
             <p className="text-gray-300 text-lg leading-relaxed">
@@ -53,10 +53,10 @@ export default function CEOMessage() {
 
           {/* CEO Card */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 40  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-2 flex flex-col items-center"
           >
             <div className="bg-white/5 border border-white/10 rounded-3xl p-8 text-center w-full backdrop-blur-sm">
@@ -75,10 +75,10 @@ export default function CEOMessage() {
 
         {/* Quote Banner */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
           className="mt-16 bg-[#d4af37]/10 border border-[#d4af37]/20 rounded-2xl p-8 text-center"
         >
           <p className="text-[#d4af37] text-lg md:text-xl font-medium italic">

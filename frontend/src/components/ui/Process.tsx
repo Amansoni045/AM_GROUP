@@ -72,7 +72,7 @@ export default function Process() {
           
           {/* Right Column: Interactive Process Steps */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 40  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -99,7 +99,7 @@ export default function Process() {
                 <AnimatePresence mode="wait">
                   <motion.div 
                     key={currentStep}
-                    initial={{ opacity: 0, x: 20 }}
+                    initial={{ opacity: 0, x: 20  }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}

@@ -23,10 +23,10 @@ export default function Services() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-6"
         >
           <div className="inline-block bg-[#6373f2]/10 px-4 py-1.5 rounded-full mb-6">
@@ -44,12 +44,11 @@ export default function Services() {
           {services.map((service, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.05 }}
-              whileHover={{ 
-                y: -8, 
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.05 }}
+              whileHover={{ y: -4, 
                 boxShadow: "0 24px 60px rgba(99,115,242,0.15)",
                 transition: { duration: 0.2, delay: 0 }
               }}

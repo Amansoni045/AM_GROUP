@@ -11,12 +11,7 @@ import ConsultingTestimonials from "@/components/consulting/ConsultingTestimonia
 
 export default function ConsultingPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth"
-    >
+    <main className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth">
       <TopBar />
       <ConsultingHero />
       <ConsultingAbout />
@@ -24,6 +19,6 @@ export default function ConsultingPage() {
       <ConsultingTestimonials />
       <Footer />
       <BackToTop />
-    </motion.div>
+    </main>
   );
 }

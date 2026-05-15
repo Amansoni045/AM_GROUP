@@ -11,12 +11,7 @@ import AnalytiksTestimonials from "@/components/analytiks/AnalytiksTestimonials"
 
 export default function AnalytiksPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth"
-    >
+    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
       <TopBar />
       <AnalytiksHero />
       <AnalytiksAbout />
@@ -24,6 +19,6 @@ export default function AnalytiksPage() {
       <AnalytiksTestimonials />
       <Footer />
       <BackToTop />
-    </motion.div>
+    </main>
   );
 }

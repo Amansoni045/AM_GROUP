@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Header() {
   const navItems = [
@@ -20,21 +21,21 @@ export default function Header() {
     >
       {/* Logo Area */}
       <div className="flex items-center">
-        <a href="/" className="flex items-center">
+        <Link href="/" className="flex items-center">
           <img src="/logo.webp" alt="AM Group Logo" className="h-12 w-auto object-contain" />
-        </a>
+        </Link>
       </div>
       
       {/* Navigation */}
       <nav className="hidden xl:flex items-center gap-6 text-white font-bold text-[13px]">
         {navItems.map((item, i) => (
-          <a 
+          <Link 
             key={i} 
             className="hover:text-[#d4af37] transition-colors px-3 py-2 border-r border-white/10 last:border-0" 
             href={item.href}
           >
             {item.name}
-          </a>
+          </Link>
         ))}
       </nav>
 

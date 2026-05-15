@@ -26,7 +26,7 @@ export default function ContentServicesList() {
         {/* What We Do & Our Approach */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -30  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
@@ -43,7 +43,7 @@ export default function ContentServicesList() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 30  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             className="flex flex-col justify-center space-y-6"
@@ -51,14 +51,14 @@ export default function ContentServicesList() {
             <h3 className="text-3xl font-bold text-[#020817] font-heading">Our Approach</h3>
             <div className="w-16 h-1 bg-[#6373f2] rounded" />
             <p className="text-gray-600 leading-relaxed text-lg">
-              We craft data-driven content that resonates with your target audience, driving engagement and building long-lasting relationships while elevating your brand's voice.
+              We craft data-driven content that resonates with your target audience, driving engagement and building long-lasting relationships while elevating your brand&apos;s voice.
             </p>
           </motion.div>
         </div>
 
         {/* Deliverables */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-12"

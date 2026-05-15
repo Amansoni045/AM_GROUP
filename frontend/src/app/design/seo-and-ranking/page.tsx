@@ -10,18 +10,13 @@ import SEOServicesList from "@/components/design/SEOServicesList";
 
 export default function SEOAndRankingPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth"
-    >
+    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
       <TopBar />
       <SEOHero />
       <SEOIntro />
       <SEOServicesList />
       <Footer />
       <BackToTop />
-    </motion.div>
+    </main>
   );
 }

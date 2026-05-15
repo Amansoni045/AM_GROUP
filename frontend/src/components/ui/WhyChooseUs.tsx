@@ -32,10 +32,10 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-6"
         >
           <div className="inline-block bg-[#020817] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6">
@@ -54,10 +54,10 @@ export default function WhyChooseUs() {
             {reasons.slice(0, 2).map((reason, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: -40 }}
+                initial={{ opacity: 0, x: -40  }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.15 }}
                 whileHover={{ 
                   y: -4, 
                   boxShadow: "0 20px 50px rgba(0,0,0,0.1)",
@@ -78,10 +78,10 @@ export default function WhyChooseUs() {
 
           {/* Column 2: Center CTA */}
           <motion.div
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
             className="bg-[#020817] rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden shadow-2xl shadow-[#020817]/30"
           >
             <div className="absolute -top-20 -right-20 w-60 h-60 bg-[#6373f2]/20 rounded-full blur-[80px]" />
@@ -113,10 +113,10 @@ export default function WhyChooseUs() {
             {reasons.slice(2).map((reason, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, x: 40 }}
+                initial={{ opacity: 0, x: 40  }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.15 }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.15 }}
                 whileHover={{ 
                   y: -4, 
                   boxShadow: "0 20px 50px rgba(0,0,0,0.1)",

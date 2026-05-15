@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 function useCountUp(target: number, duration = 2000, startCounting = false) {
   const [count, setCount] = useState(0);
@@ -61,7 +62,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Left: Image */}
           <motion.div
-            initial={{ opacity: 0, x: -60 }}
+            initial={{ opacity: 0, x: -60  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -87,7 +88,7 @@ export default function AboutSection() {
 
           {/* Right: Text */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
+            initial={{ opacity: 0, x: 60  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
@@ -114,26 +115,27 @@ export default function AboutSection() {
               At AM Group, we are driven by a commitment to excellence and a passion for creating value. Whether it&#39;s guiding a startup, supporting established enterprises, or enabling expansion into new markets, we stand by our clients every step of the way.
             </p>
 
-            <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              href="#services"
-              className="inline-flex items-center gap-3 bg-[#020817] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#6373f2] transition-all duration-300 group"
-            >
-              Explore Our Services
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </motion.a>
+            <Link href="/#services" className="inline-block">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center gap-3 bg-[#020817] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#6373f2] transition-all duration-300 group"
+              >
+                Explore Our Services
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </motion.div>
+            </Link>
           </motion.div>
         </div>
 
         {/* Bottom: Stats Banner */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="bg-[#020817] rounded-3xl px-8 py-12 grid grid-cols-2 lg:grid-cols-4 gap-10 shadow-2xl shadow-[#020817]/30"
         >
           {stats.map((stat, i) => (

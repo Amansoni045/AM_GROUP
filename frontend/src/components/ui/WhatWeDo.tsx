@@ -1,7 +1,15 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Globe2 } from "lucide-react";
+import Link from "next/link";
+import { Globe2, BarChart3, Palette, Briefcase, LineChart } from "lucide-react";
+
+const companies = [
+  { name: "AM Consulting", desc: "Strategic advisory & business growth solutions", color: "#6373f2", Icon: BarChart3, href: "/consulting" },
+  { name: "AM Design", desc: "Creative branding & visual identity excellence", color: "#d4af37", Icon: Palette, href: "/design" },
+  { name: "AM Accounting", desc: "Financial clarity & compliance expertise", color: "#059669", Icon: Briefcase, href: "/accounting" },
+  { name: "AM Analytiks", desc: "Data-driven insights & digital transformation", color: "#dc2626", Icon: LineChart, href: "/analytiks" },
+];
 
 export default function WhatWeDo() {
   return (
@@ -9,10 +17,10 @@ export default function WhatWeDo() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-[#020817] mb-4 font-heading">What we do?</h2>
@@ -23,10 +31,10 @@ export default function WhatWeDo() {
 
         {/* Two-column text */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.15 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
           className="max-w-4xl mx-auto mb-16"
         >
           <p className="text-gray-700 text-lg leading-relaxed text-center mb-6">
@@ -42,48 +50,44 @@ export default function WhatWeDo() {
           </p>
         </motion.div>
 
-        {/* 4 Companies Showcase */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {[
-            { name: "AM Consulting", desc: "Strategic advisory & business growth solutions", color: "#6373f2", icon: "📊" },
-            { name: "AM Design", desc: "Creative branding & visual identity excellence", color: "#d4af37", icon: "🎨" },
-            { name: "AM Accounting", desc: "Financial clarity & compliance expertise", color: "#059669", icon: "💼" },
-            { name: "AM Analytiks", desc: "Data-driven insights & digital transformation", color: "#dc2626", icon: "📈" },
-          ].map((company, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              whileHover={{ 
-                y: -8, 
-                boxShadow: "0 24px 60px rgba(0,0,0,0.12)",
-                transition: { duration: 0.2, delay: 0 }
-              }}
-              className="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg shadow-black/5 cursor-pointer group relative overflow-hidden"
-            >
-              {/* Top accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style={{ background: company.color }} />
-              <div className="text-4xl mb-4">{company.icon}</div>
-              <h3 className="text-xl font-bold text-[#020817] mb-2 font-heading">{company.name}</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{company.desc}</p>
-              <div className="mt-6 flex items-center gap-2 font-semibold text-sm" style={{ color: company.color }}>
-                Learn more
-                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-            </motion.div>
+          {companies.map((company, i) => (
+            <Link href={company.href} key={i} className="block h-full">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
+                whileHover={{ y: -4, 
+                  boxShadow: "0 24px 60px rgba(0,0,0,0.12)",
+                  transition: { duration: 0.2, delay: 0 }
+                }}
+                className="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg shadow-black/5 cursor-pointer group relative overflow-hidden h-full flex flex-col"
+              >
+                {/* Top accent */}
+                <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style={{ background: company.color }} />
+                <div className="mb-6 flex items-center justify-center w-14 h-14 rounded-xl" style={{ background: `${company.color}15` }}>
+                  <company.Icon className="w-7 h-7" style={{ color: company.color }} />
+                </div>
+                <h3 className="text-xl font-bold text-[#020817] mb-2 font-heading">{company.name}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed flex-grow">{company.desc}</p>
+                <div className="mt-6 flex items-center gap-2 font-semibold text-sm" style={{ color: company.color }}>
+                  Learn more
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              </motion.div>
+            </Link>
           ))}
         </div>
 
         {/* Global Firm Highlight Card */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.9 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="bg-[#020817] rounded-3xl p-10 md:p-16 flex flex-col md:flex-row items-center gap-10 relative overflow-hidden"
         >
           {/* Background decoration */}

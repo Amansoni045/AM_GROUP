@@ -69,7 +69,7 @@ function MemberCard({ name, role, color }: { name: string; role: string; color?:
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className="flex flex-col items-center text-center group"
     >
       <div
@@ -91,10 +91,10 @@ export default function TeamSection() {
     <section className="bg-white py-24 px-4 md:px-12" id="team">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
           <div className="inline-block bg-[#d4af37]/10 border border-[#d4af37]/30 px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37] mb-5">
@@ -135,10 +135,10 @@ export default function TeamSection() {
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
-              initial={{ opacity: 0, y: 10 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 justify-items-center"
             >
               {departments[activeTab].members.map((m, i) => (

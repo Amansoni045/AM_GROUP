@@ -18,12 +18,7 @@ import BackToTop from "@/components/ui/BackToTop";
 
 export default function Home() {
   return (
-    <motion.div 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth"
-    >
+    <main className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth">
       <TopBar />
       <Hero />
       <AboutSection />
@@ -37,6 +32,6 @@ export default function Home() {
       <ConsultationForm />
       <Footer />
       <BackToTop />
-    </motion.div>
+    </main>
   );
 }

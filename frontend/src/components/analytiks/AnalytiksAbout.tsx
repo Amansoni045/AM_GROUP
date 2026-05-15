@@ -11,10 +11,10 @@ export default function AnalytiksAbout() {
           
           {/* Left Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
+            initial={{ opacity: 0, x: -40  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="inline-block bg-[#020817] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 shadow-sm">
               About AM Analytiks
@@ -35,10 +35,10 @@ export default function AnalytiksAbout() {
 
           {/* Right Stats Content */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
+            initial={{ opacity: 0, x: 40  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             className="grid grid-cols-1 sm:grid-cols-2 gap-6"
           >
             {/* Stat Card 1 */}
@@ -73,10 +73,10 @@ export default function AnalytiksAbout() {
 
         {/* Memorial Section */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="bg-[#f9f9f9] rounded-[3rem] p-8 md:p-16 border border-gray-100 shadow-sm relative overflow-hidden"
         >
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-[80px]" />

@@ -23,10 +23,10 @@ export default function IndustryExpertise() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-6"
         >
           <h2 className="text-4xl md:text-6xl font-bold text-[#020817] mb-4 font-heading">Industry Expertise</h2>
@@ -45,15 +45,11 @@ export default function IndustryExpertise() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.05 }}
-              whileHover={{ 
-                y: -6, 
-                backgroundColor: "#020817",
-                transition: { duration: 0.2, delay: 0 } 
-              }}
-              className="bg-white rounded-2xl p-6 flex flex-col items-center gap-4 border border-gray-100 shadow-sm cursor-pointer group transition-all duration-300 text-center"
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.05 }}
+              whileHover={{ y: -4, boxShadow: "0 10px 30px rgba(0,0,0,0.08)", transition: { duration: 0.2 } }}
+              className="bg-white rounded-2xl p-6 flex flex-col items-center gap-4 border border-gray-100 shadow-sm cursor-pointer group text-center"
             >
-              <div className="w-14 h-14 flex items-center justify-center bg-[#6373f2]/10 rounded-xl group-hover:bg-[#6373f2]/20 transition-colors duration-300">
+              <div className="w-14 h-14 flex items-center justify-center bg-[#6373f2]/10 rounded-xl group-hover:bg-[#6373f2]/20 transition-colors duration-200">
                 <svg
                   className="w-7 h-7 text-[#d4af37]"
                   fill="none"
@@ -64,7 +60,7 @@ export default function IndustryExpertise() {
                   <path strokeLinecap="round" strokeLinejoin="round" d={industry.icon} />
                 </svg>
               </div>
-              <span className="text-sm font-semibold text-gray-700 group-hover:text-white transition-colors duration-300 leading-tight">
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-[#6373f2] transition-colors duration-200 leading-tight">
                 {industry.label}
               </span>
             </motion.div>
