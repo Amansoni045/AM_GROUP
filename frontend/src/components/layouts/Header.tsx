@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Header() {
   const navItems = [
@@ -11,7 +12,12 @@ export default function Header() {
   ];
 
   return (
-    <header className="relative z-20 flex justify-between items-center px-4 md:px-12 py-4 border-b border-white/10 bg-transparent backdrop-blur-sm">
+    <motion.header 
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative z-20 flex justify-between items-center px-4 md:px-12 py-4 border-b border-white/10 bg-transparent backdrop-blur-sm"
+    >
       {/* Logo Area */}
       <div className="flex items-center">
         <a href="#hero" className="flex items-center">
@@ -38,6 +44,6 @@ export default function Header() {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
         </svg>
       </div>
-    </header>
+    </motion.header>
   );
 }

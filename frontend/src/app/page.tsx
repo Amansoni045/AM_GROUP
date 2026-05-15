@@ -1,26 +1,42 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 import TopBar from "@/components/layouts/TopBar";
 import Footer from "@/components/layouts/Footer";
 import Hero from "@/components/ui/Hero";
-import Services from "@/components/ui/Services";
+import AboutSection from "@/components/ui/AboutSection";
+import WhatWeDo from "@/components/ui/WhatWeDo";
+import WhyChooseUs from "@/components/ui/WhyChooseUs";
+import IndustryExpertise from "@/components/ui/IndustryExpertise";
 import Process from "@/components/ui/Process";
-import StatsUpdates from "@/components/ui/StatsUpdates";
+import Services from "@/components/ui/Services";
 import Clients from "@/components/ui/Clients";
+import Testimonials from "@/components/ui/Testimonials";
+import ConsultationForm from "@/components/ui/ConsultationForm";
 import BackToTop from "@/components/ui/BackToTop";
 
 export default function Home() {
   return (
-    <div className="bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth">
+    <motion.div 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth"
+    >
       <TopBar />
       <Hero />
-      <Clients />
-      <Services />
+      <AboutSection />
+      <WhatWeDo />
+      <WhyChooseUs />
+      <IndustryExpertise />
       <Process />
-      <StatsUpdates />
+      <Services />
+      <Clients />
+      <Testimonials />
+      <ConsultationForm />
       <Footer />
       <BackToTop />
-    </div>
+    </motion.div>
   );
 }

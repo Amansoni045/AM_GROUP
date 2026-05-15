@@ -1,138 +1,78 @@
+"use client";
 import React from "react";
-import { Globe, Cpu, Smartphone, ArrowUp } from "lucide-react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+
+const services = [
+  { label: "Advisory Services", icon: "M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" },
+  { label: "Business Consulting", icon: "M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" },
+  { label: "ESG Consulting", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" },
+  { label: "Accounting & Bookkeeping", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+  { label: "VAT Advisory", icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" },
+  { label: "Audit & Compliance", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
+  { label: "Marketing & Social Media", icon: "M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" },
+  { label: "Website Development", icon: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" },
+  { label: "Application Development", icon: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" },
+  { label: "Data Analytics", icon: "M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" },
+  { label: "Governance, Risk & Compliance (GRC)", icon: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" },
+  { label: "Digital Transformation", icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" },
+];
 
 export default function Services() {
-  const services = [
-    {
-      title: "Smart Cities",
-      desc: "We are building a smart city where innovation, sustainability, and technology come together to create a better future for all.",
-      icon: Globe,
-      offset: "md:ml-0 md:mt-0"
-    },
-    {
-      title: "Digital Transformation",
-      desc: "We are leading the digital transformation journey, empowering businesses with innovative technology for a smarter and more connected future.",
-      icon: Cpu,
-      offset: "md:ml-[30%] md:mt-16"
-    },
-    {
-      title: "Smart Building",
-      desc: "We are shaping the future with smart buildings that integrate technology, efficiency, and comfort for smarter living and working environments.",
-      icon: Smartphone,
-      offset: "md:ml-[60%] md:mt-16"
-    }
-  ];
-
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2
-      }
-    }
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, x: -30 },
-    visible: { 
-      opacity: 1, 
-      x: 0,
-      transition: { duration: 0.8, ease: "easeOut" }
-    }
-  };
-
   return (
-    <section className="py-32 px-4 md:px-20 bg-[#f3f4f6] relative overflow-hidden" id="services">
-      {/* Background Decorative Elements */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 0.6, scale: 1 }}
-        transition={{ duration: 1.5 }}
-        className="absolute top-10 right-[2%] w-64 h-64 bg-white/60 rounded-[60px] -z-0"
-      ></motion.div>
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        whileInView={{ opacity: 0.8, scale: 1 }}
-        transition={{ duration: 1.5, delay: 0.2 }}
-        className="absolute top-40 right-[12%] w-32 h-32 bg-[#6373f2]/80 rounded-[30px] -z-0"
-      ></motion.div>
-      
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header Section */}
-        <div className="mb-32">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-block bg-[#c5e17a] px-5 py-2 mb-8 relative"
-          >
-             <span className="text-black text-[14px] font-bold uppercase tracking-wider relative z-10">
-              Our Area Of Services
-            </span>
-          </motion.div>
-          
-          <motion.h2 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="text-5xl md:text-7xl font-bold text-[#1a1a1a] max-w-4xl leading-[1.1] tracking-tight font-heading"
-          >
-            We Provide Innovative,<br />
-            Technology-driven Services
-          </motion.h2>
-        </div>
-
-        {/* Stepped Services Layout */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+    <section className="bg-white py-28 px-4 md:px-12 overflow-hidden" id="services">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex flex-col gap-24 md:gap-0"
+          transition={{ duration: 0.7 }}
+          className="text-center mb-6"
         >
-          {services.map((service, i) => (
-            <motion.div 
-              key={i} 
-              variants={itemVariants}
-              className={`flex flex-col md:flex-row items-start gap-8 max-w-2xl transition-all duration-700 ${service.offset}`}
-            >
-              {/* Icon & Background Card */}
-              <div className="relative flex-shrink-0 group">
-                <div className="absolute top-4 left-6 w-32 h-32 bg-white/80 rounded-[40px] -z-10 group-hover:bg-white transition-colors duration-500"></div>
-                
-                <motion.div 
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  className="w-20 h-20 bg-[#6373f2] rounded-[24px] flex items-center justify-center shadow-lg shadow-[#6373f2]/20 relative z-10 cursor-pointer"
-                >
-                  <service.icon className="w-10 h-10 text-white" strokeWidth={1.5} />
-                </motion.div>
-              </div>
+          <div className="inline-block bg-[#6373f2]/10 px-4 py-1.5 rounded-full mb-6">
+            <span className="text-[#6373f2] text-sm font-bold uppercase tracking-widest">Our Services</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold text-[#020817] mb-4 font-heading">Our Services</h2>
+          <div className="w-20 h-1 bg-[#d4af37] rounded mx-auto mb-8" />
+          <p className="text-gray-600 text-lg leading-relaxed max-w-3xl mx-auto">
+            At AM Group, we are passionate about creating real impact—delivering measurable results through strategies built on insight, innovation, and excellence.
+          </p>
+        </motion.div>
 
-              {/* Content */}
-              <div className="pt-6 pl-4">
-                <h3 className="text-2xl font-bold mb-4 text-[#1a1a1a] font-heading">{service.title}</h3>
-                <p className="text-gray-500 leading-relaxed text-[17px] font-medium max-w-sm">
-                  {service.desc}
-                </p>
+        {/* Services Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 mt-16">
+          {services.map((service, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.05 }}
+              whileHover={{ 
+                y: -8, 
+                boxShadow: "0 24px 60px rgba(99,115,242,0.15)",
+                transition: { duration: 0.2, delay: 0 }
+              }}
+              className="bg-[#f9f9f9] rounded-2xl p-6 flex flex-col items-center gap-4 border border-gray-100 shadow-sm cursor-pointer group transition-all duration-300 text-center"
+            >
+              <div className="w-16 h-16 flex items-center justify-center bg-[#d4af37]/10 rounded-2xl group-hover:bg-[#d4af37] transition-colors duration-300 shadow-sm">
+                <svg
+                  className="w-8 h-8 text-[#d4af37] group-hover:text-white transition-colors duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d={service.icon} />
+                </svg>
               </div>
+              <span className="text-sm font-semibold text-gray-700 group-hover:text-[#020817] transition-colors duration-300 leading-tight">
+                {service.label}
+              </span>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
-
-      {/* Bottom Right Back to Top Button */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        className="absolute bottom-10 right-10"
-      >
-        <a href="#hero" className="w-12 h-12 border-2 border-[#6373f2]/20 rounded-full flex items-center justify-center text-[#6373f2] hover:bg-[#6373f2] hover:text-white transition-all duration-300">
-           <ArrowUp className="w-5 h-5" />
-        </a>
-      </motion.div>
     </section>
   );
 }

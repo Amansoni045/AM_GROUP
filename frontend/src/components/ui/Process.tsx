@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { Workflow, ArrowUp, ArrowDown, Target, Lightbulb, TrendingUp } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -6,25 +7,24 @@ const steps = [
   {
     id: "01",
     title: "Strategic Planning",
-    desc: "We work closely with you to define your goals and develop a comprehensive strategy for success.",
+    desc: "We work closely with you to define your goals and develop a comprehensive strategy for success. Our approach ensures every step aligns with your core business objectives.",
     icon: Target,
   },
   {
     id: "02",
     title: "Creative Development",
-    desc: "Our team of experts creates innovative designs and solutions tailored to your unique needs.",
-    icon: Lightbulb,
+    desc: "Our team of experts creates innovative designs and solutions tailored to your unique needs. We blend aesthetic excellence with functional precision to make your brand stand out.",
   },
   {
     id: "03",
     title: "Implementation & Integration",
-    desc: "We ensure smooth implementation and seamless integration of technologies into your existing ecosystem.",
+    desc: "We ensure smooth implementation and seamless integration of technologies into your existing ecosystem. Our technical experts handle the complexity while you focus on growth.",
     icon: Workflow,
   },
   {
     id: "04",
     title: "Sustainable Growth",
-    desc: "We provide ongoing support and analysis to ensure your business continues to thrive in the long term.",
+    desc: "We provide ongoing support and analysis to ensure your business continues to thrive in the long term. Data-driven insights fuel our continuous improvement strategy.",
     icon: TrendingUp,
   }
 ];
@@ -36,126 +36,123 @@ export default function Process() {
   const prevStep = () => setCurrentStep((prev) => (prev - 1 + steps.length) % steps.length);
 
   React.useEffect(() => {
-    const timer = setInterval(nextStep, 6000);
+    const timer = setInterval(nextStep, 8000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="bg-[#020617] py-32 px-4 md:px-20 relative overflow-hidden" id="process">
+    <section className="bg-[#020817] py-32 px-4 md:px-12 relative overflow-hidden" id="process">
       {/* Decorative Background Elements */}
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 0.2, y: 0 }}
-        transition={{ duration: 1 }}
-        className="absolute top-10 right-10 flex flex-col gap-4"
-      >
-        <div className="flex gap-4">
-          <div className="w-16 h-16 bg-white/10 rounded-lg"></div>
-          <div className="w-16 h-16 bg-white/10 rounded-lg"></div>
-        </div>
-        <div className="flex gap-4 justify-end">
-          <div className="w-16 h-16 bg-white/10 rounded-lg"></div>
-        </div>
-      </motion.div>
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#6373f2]/5 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-[#d4af37]/5 blur-[120px] rounded-full pointer-events-none" />
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-          {/* Left Column: Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Left Column: Premium Image Illustration */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="relative group"
+            transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+            className="relative"
           >
-            <div className="relative rounded-[40px] overflow-hidden aspect-square shadow-2xl shadow-[#6373f2]/10 border border-white/5">
+            <div className="relative rounded-[40px] overflow-hidden aspect-square shadow-2xl shadow-black/40 border border-white/10 group">
               <img 
                 src="/digital_hands_process.png" 
-                alt="Digital Collaboration" 
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                alt="AM Group Process Illustration" 
+                className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#020617]/60 to-transparent"></div>
+              {/* Gold accent overlay bottom-left */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#020817]/40 via-transparent to-transparent pointer-events-none" />
             </div>
-            {/* Dynamic Glows */}
-            <div className="absolute -top-20 -left-20 w-64 h-64 bg-[#6373f2]/20 rounded-full blur-[100px] -z-10 animate-pulse"></div>
-            <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-purple-500/10 rounded-full blur-[100px] -z-10 animate-pulse delay-1000"></div>
-            
-            {/* Subtle glow behind image */}
-            <div className="absolute -inset-4 bg-[#6373f2]/10 blur-[80px] -z-10"></div>
+            {/* Ambient Glows */}
+            <div className="absolute -top-10 -left-10 w-48 h-48 bg-[#6373f2]/20 rounded-full blur-[80px] -z-10 animate-pulse" />
+            <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#d4af37]/10 rounded-full blur-[80px] -z-10 animate-pulse" style={{ animationDelay: '1s' }} />
           </motion.div>
           
-          {/* Right Column: Content */}
+          {/* Right Column: Interactive Process Steps */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="inline-block bg-[#c5e17a] px-4 py-1.5 mb-8"
-            >
-              <span className="text-black text-[13px] font-bold uppercase tracking-widest">
-                Work Process
+            {/* Label */}
+            <div className="inline-block bg-[#d4af37]/10 px-4 py-1.5 rounded-full mb-8 border border-[#d4af37]/20">
+              <span className="text-[#d4af37] text-xs font-bold uppercase tracking-[0.3em]">
+                Our Process
               </span>
-            </motion.div>
+            </div>
             
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight font-heading">
-              Proven Process For<br />
-              Growing Your Business.
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-[1.1] font-heading">
+              A Strategic Framework<br />
+              For Your <span className="text-[#6373f2]">Success</span>
             </h2>
             
-            <p className="text-gray-400 text-lg mb-12 leading-relaxed max-w-lg font-medium">
-              We provide innovative solution that ensure long-term growth & stability, driving your business success.
+            <p className="text-gray-400 text-lg mb-12 leading-relaxed max-w-xl">
+              We guide our clients through a meticulously designed journey, transforming complex challenges into clear, actionable, and profitable outcomes.
             </p>
             
-            <div className="flex items-center gap-8">
-              {/* Main Step Card */}
-              <div className="flex-grow min-h-[380px] relative">
+            <div className="flex flex-col md:flex-row items-stretch gap-8">
+              {/* Dynamic Step Card */}
+              <div className="flex-grow min-h-[360px] relative">
                 <AnimatePresence mode="wait">
                   <motion.div 
                     key={currentStep}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.5 }}
-                    className="absolute inset-0 bg-[#6373f2] p-10 rounded-[32px] overflow-hidden group shadow-2xl shadow-[#6373f2]/20 cursor-pointer"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="absolute inset-0 bg-gradient-to-br from-[#111827] to-[#020817] p-10 rounded-[32px] border border-white/5 shadow-2xl overflow-hidden group"
                   >
                     {/* Large Background Number */}
-                    <div className="absolute top-2 right-6 text-[120px] font-black text-white/10 select-none leading-none">
+                    <div className="absolute top-2 right-6 text-[100px] font-black text-white/[0.03] select-none leading-none group-hover:text-[#6373f2]/10 transition-colors duration-500">
                       {steps[currentStep].id}
                     </div>
                     
-                    <div className="bg-white w-16 h-16 rounded-2xl flex items-center justify-center mb-12 shadow-lg">
-                      {React.createElement(steps[currentStep].icon, { className: "w-9 h-9 text-[#6373f2]", strokeWidth: 2.5 })}
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#6373f2] to-[#4f46e5] flex items-center justify-center mb-10 shadow-lg shadow-[#6373f2]/20">
+                      {React.createElement(steps[currentStep].icon || Lightbulb, { className: "w-8 h-8 text-white", strokeWidth: 2 })}
                     </div>
                     
-                    <h3 className="text-3xl font-bold text-white mb-6 font-heading">{steps[currentStep].title}</h3>
-                    <p className="text-white/80 text-lg leading-relaxed font-medium">
+                    <h3 className="text-3xl font-bold text-white mb-4 font-heading">{steps[currentStep].title}</h3>
+                    <p className="text-gray-400 text-lg leading-relaxed">
                       {steps[currentStep].desc}
                     </p>
                   </motion.div>
                 </AnimatePresence>
               </div>
               
-              {/* Vertical Controls */}
-              <div className="flex flex-col items-center gap-6">
+              {/* Vertical/Horizontal Controls */}
+              <div className="flex md:flex-col justify-center items-center gap-4">
                 <button 
                   onClick={prevStep}
-                  className="w-14 h-14 border-2 border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#6373f2] hover:border-white transition-all duration-300 group"
+                  className="w-12 h-12 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#6373f2] hover:border-[#6373f2] transition-all duration-300 group"
+                  aria-label="Previous step"
                 >
-                  <ArrowUp className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
+                  <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform hidden md:block" />
+                  <ArrowUp className="w-5 h-5 -rotate-90 group-hover:-translate-x-0.5 transition-transform md:hidden" />
                 </button>
-                <div className="w-0.5 h-24 bg-gradient-to-b from-white/20 via-white/40 to-white/20"></div>
+                <div className="w-px h-16 bg-gradient-to-b from-transparent via-white/20 to-transparent hidden md:block"></div>
+                <div className="h-px w-16 bg-gradient-to-r from-transparent via-white/20 to-transparent md:hidden"></div>
                 <button 
                   onClick={nextStep}
-                  className="w-14 h-14 border-2 border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-white hover:text-[#6373f2] hover:border-white transition-all duration-300 group"
+                  className="w-12 h-12 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#6373f2] hover:border-[#6373f2] transition-all duration-300 group"
+                  aria-label="Next step"
                 >
-                  <ArrowDown className="w-6 h-6 group-hover:translate-y-1 transition-transform" />
+                  <ArrowDown className="w-5 h-5 group-hover:translate-y-0.5 transition-transform hidden md:block" />
+                  <ArrowDown className="w-5 h-5 -rotate-90 group-hover:translate-x-0.5 transition-transform md:hidden" />
                 </button>
               </div>
+            </div>
+
+            {/* Step Indicators */}
+            <div className="flex gap-2 mt-8">
+              {steps.map((_, idx) => (
+                <div 
+                  key={idx} 
+                  className={`h-1 rounded-full transition-all duration-500 ${currentStep === idx ? 'w-12 bg-[#6373f2]' : 'w-4 bg-white/10'}`} 
+                />
+              ))}
             </div>
           </motion.div>
         </div>
@@ -163,8 +160,3 @@ export default function Process() {
     </section>
   );
 }
-
-
-
-
-
