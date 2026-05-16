@@ -90,15 +90,6 @@ export default function Hero() {
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </motion.div>
               </Link>
-              <Link href="/#process" className="inline-block">
-                <motion.div 
-                  whileHover={{ scale: 1.05, backgroundColor: "rgba(255, 255, 255, 0.3)" }}
-                  whileTap={{ scale: 0.95 }}
-                  className="inline-flex items-center justify-center gap-3 bg-white/20 backdrop-blur-md text-white px-10 py-5 rounded-md font-bold transition-all cursor-pointer" 
-                >
-                  Our Process
-                </motion.div>
-              </Link>
             </div>
           </motion.div>
         </div>

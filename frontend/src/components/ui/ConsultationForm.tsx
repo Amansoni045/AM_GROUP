@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 import { Send, CheckCircle } from "lucide-react";
 
 const services = [
-  "Advisory Services",
-  "Business Consulting",
-  "ESG Consulting",
   "Accounting & Bookkeeping",
-  "VAT Advisory",
-  "Audit & Compliance",
-  "Marketing & Social Media",
-  "Website Development",
+  "Advisory Services",
   "Application Development",
+  "Audit & Compliance",
+  "Business Consulting",
   "Data Analytics",
-  "Governance, Risk & Compliance (GRC)",
   "Digital Transformation",
+  "ESG Consulting",
+  "Governance, Risk & Compliance (GRC)",
+  "Marketing & Social Media",
+  "VAT Advisory",
+  "Website Development",
 ];
 
 export default function ConsultationForm() {

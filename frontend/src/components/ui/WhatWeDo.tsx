@@ -6,9 +6,9 @@ import { Globe2, BarChart3, Palette, Briefcase, LineChart } from "lucide-react";
 
 const companies = [
   { name: "AM Consulting", desc: "Strategic advisory & business growth solutions", color: "#6373f2", Icon: BarChart3, href: "/consulting" },
-  { name: "AM Design", desc: "Creative branding & visual identity excellence", color: "#d4af37", Icon: Palette, href: "/design" },
   { name: "AM Accounting", desc: "Financial clarity & compliance expertise", color: "#059669", Icon: Briefcase, href: "/accounting" },
   { name: "AM Analytiks", desc: "Data-driven insights & digital transformation", color: "#dc2626", Icon: LineChart, href: "/analytiks" },
+  { name: "AM Design", desc: "Creative branding & visual identity excellence", color: "#d4af37", Icon: Palette, href: "/design" },
 ];
 
 export default function WhatWeDo() {
@@ -39,7 +39,7 @@ export default function WhatWeDo() {
         >
           <p className="text-gray-700 text-lg leading-relaxed text-center mb-6">
             At AM Group, we bring together{" "}
-            <span className="font-bold text-[#020817]">Consulting, Design, Accounting and Data Analytics</span>{" "}
+            <span className="font-bold text-[#020817]">Consulting, Advisory, Accounting, Design, Social Media Management, and Data Automation and Analytics</span>{" "}
             to deliver integrated solutions that help businesses thrive in today&#39;s competitive landscape. Our multidisciplinary expertise ensures that clients receive strategic guidance, creative branding, and financial clarity&#8212;all under one trusted name.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed text-center mb-6">

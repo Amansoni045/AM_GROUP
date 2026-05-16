@@ -107,9 +107,7 @@ export default function AboutSection() {
             <div className="w-16 h-1 bg-[#d4af37] rounded mb-8" />
 
             <p className="text-gray-600 text-lg leading-relaxed mb-6">
-              AM Group is a multidisciplinary firm bringing together{" "}
-              <span className="font-bold text-[#020817]">Consulting, Design, Accounting and Data Analytics</span>{" "}
-              under one trusted name. Founded with a vision to empower businesses and entrepreneurs across the GCC, we provide integrated solutions that address today&#39;s complex challenges with clarity and precision.
+              AM Group is a multidisciplinary firm that brings together <span className="font-bold text-[#020817]">Consulting, Advisory, Accounting, Design, Social Media Management, and Data Automation and Analytics</span> under one trusted name. Founded with a vision to empower businesses and entrepreneurs across the GCC, we provide integrated solutions that address today&#39;s complex challenges with clarity and precision.
             </p>
             <p className="text-gray-600 text-lg leading-relaxed mb-8">
               At AM Group, we are driven by a commitment to excellence and a passion for creating value. Whether it&#39;s guiding a startup, supporting established enterprises, or enabling expansion into new markets, we stand by our clients every step of the way.

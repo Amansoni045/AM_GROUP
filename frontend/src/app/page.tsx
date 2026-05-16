@@ -7,9 +7,7 @@ import Footer from "@/components/layouts/Footer";
 import Hero from "@/components/ui/Hero";
 import AboutSection from "@/components/ui/AboutSection";
 import WhatWeDo from "@/components/ui/WhatWeDo";
-import WhyChooseUs from "@/components/ui/WhyChooseUs";
 import IndustryExpertise from "@/components/ui/IndustryExpertise";
-import Process from "@/components/ui/Process";
 import Services from "@/components/ui/Services";
 import Clients from "@/components/ui/Clients";
 import Testimonials from "@/components/ui/Testimonials";
@@ -23,9 +21,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <WhatWeDo />
-      <WhyChooseUs />
       <IndustryExpertise />
-      <Process />
       <Services />
       <Clients />
       <Testimonials />
