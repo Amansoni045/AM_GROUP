@@ -69,7 +69,7 @@ export default function OutsourcingServicesList() {
               whileHover={{ y: -4, transition: { duration: 0.2 } }}
               className="bg-white rounded-3xl p-10 border border-gray-100 shadow-xl shadow-black/5 flex flex-col group relative overflow-hidden"
             >
-              <div className="absolute -top-4 -right-4 text-gray-100 text-6xl font-black opacity-40 group-hover:text-[#6373f2]/10 transition-colors">
+              <div className="absolute top-6 right-8 text-gray-100 text-7xl font-black opacity-30 group-hover:text-[#6373f2]/10 transition-colors select-none pointer-events-none">
                 {service.number}
               </div>
               <div className="w-16 h-16 bg-[#6373f2]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#6373f2] transition-colors duration-300">

@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Award, Users, Rocket, Globe } from "lucide-react";
 
 const reasons = [
@@ -76,9 +77,11 @@ export default function ESGWhyChooseUs() {
                 <p className="text-gray-500 text-sm leading-relaxed mb-6">
                   {reason.desc}
                 </p>
-                <div className="flex items-center gap-2 text-[#d4af37] text-xs font-bold uppercase tracking-widest cursor-pointer group-hover:gap-3 transition-all">
-                  Learn more <Rocket className="w-3 h-3" />
-                </div>
+                <Link href="/about">
+                  <div className="flex items-center gap-2 text-[#d4af37] text-xs font-bold uppercase tracking-widest cursor-pointer group-hover:gap-3 transition-all">
+                    Learn more <Rocket className="w-3 h-3" />
+                  </div>
+                </Link>
               </div>
             </motion.div>
           ))}

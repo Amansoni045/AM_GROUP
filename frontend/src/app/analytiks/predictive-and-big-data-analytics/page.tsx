@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import TopBar from "@/components/layouts/TopBar";
-import Footer from "@/components/layouts/Footer";
-import BackToTop from "@/components/ui/BackToTop";
 import PredictiveHero from "@/components/analytiks/PredictiveHero";
 import PredictiveIntro from "@/components/analytiks/PredictiveIntro";
 import PredictiveDetails from "@/components/analytiks/PredictiveDetails";
@@ -11,12 +8,9 @@ import PredictiveDetails from "@/components/analytiks/PredictiveDetails";
 export default function PredictiveAnalyticsPage() {
   return (
     <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
-      <TopBar />
-      <PredictiveHero />
+            <PredictiveHero />
       <PredictiveIntro />
       <PredictiveDetails />
-      <Footer />
-      <BackToTop />
-    </main>
+                </main>
   );
 }

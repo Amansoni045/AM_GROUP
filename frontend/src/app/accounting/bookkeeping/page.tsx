@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import TopBar from "@/components/layouts/TopBar";
-import Footer from "@/components/layouts/Footer";
-import BackToTop from "@/components/ui/BackToTop";
 import BookkeepingHero from "@/components/accounting/BookkeepingHero";
 import BookkeepingIntro from "@/components/accounting/BookkeepingIntro";
 import BookkeepingServicesList from "@/components/accounting/BookkeepingServicesList";
@@ -11,12 +8,9 @@ import BookkeepingServicesList from "@/components/accounting/BookkeepingServices
 export default function BookkeepingPage() {
   return (
     <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
-      <TopBar />
-      <BookkeepingHero />
+            <BookkeepingHero />
       <BookkeepingIntro />
       <BookkeepingServicesList />
-      <Footer />
-      <BackToTop />
-    </main>
+                </main>
   );
 }

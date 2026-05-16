@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
   const navItems = [
     { name: "HOME", href: "/" },
     { name: "ABOUT US", href: "/about" },
@@ -14,6 +17,7 @@ export default function Header() {
 
   return (
     <motion.header 
+      key={`header-${pathname}`}
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -33,6 +37,12 @@ export default function Header() {
             key={i} 
             className="hover:text-[#d4af37] transition-colors px-3 py-2 border-r border-white/10 last:border-0" 
             href={item.href}
+            onClick={(e) => {
+              if (item.href === '/' && window.location.pathname === '/') {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }
+            }}
           >
             {item.name}
           </Link>

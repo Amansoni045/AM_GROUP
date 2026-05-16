@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Header from "@/components/layouts/Header";
 
 const slides = [
   {
@@ -61,8 +60,7 @@ export default function Hero() {
         </AnimatePresence>
       </div>
 
-      <Header />
-
+      
       {/* Hero Content */}
       <div className="relative z-10 flex-grow flex items-center justify-center px-4 md:px-12 text-center">
         <div className="max-w-5xl">
@@ -80,7 +78,16 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Link href="/#services" className="inline-block">
+              <Link 
+                href="/#services" 
+                className="inline-block"
+                onClick={(e) => {
+                  if (window.location.pathname === '/') {
+                    e.preventDefault();
+                    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 <motion.div 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

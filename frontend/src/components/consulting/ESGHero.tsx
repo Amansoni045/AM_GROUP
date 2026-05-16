@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "@/components/layouts/Header";
 
 export default function ESGHero() {
   return (
@@ -14,8 +13,7 @@ export default function ESGHero() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#020817]/90 via-[#020817]/70 to-[#020817]" />
       </div>
-      <Header />
-      <div className="relative z-10 flex-grow flex items-center justify-center px-4 md:px-12 text-center py-20">
+            <div className="relative z-10 flex-grow flex items-center justify-center px-4 md:px-12 text-center py-20">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

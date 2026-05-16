@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   },
 };
 
+import TopBar from "@/components/layouts/TopBar";
+import Header from "@/components/layouts/Header";
+import Footer from "@/components/layouts/Footer";
+import BackToTop from "@/components/ui/BackToTop";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -23,7 +28,17 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased flex flex-col min-h-screen relative">
+        <div className="absolute top-0 w-full z-50">
+          <TopBar />
+          <Header />
+        </div>
+        <div className="flex-grow flex flex-col">
+          {children}
+        </div>
+        <Footer />
+        <BackToTop />
+      </body>
     </html>
   );
 }

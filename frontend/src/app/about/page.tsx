@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import TopBar from "@/components/layouts/TopBar";
-import Footer from "@/components/layouts/Footer";
-import BackToTop from "@/components/ui/BackToTop";
 import AboutHero from "@/components/about/AboutHero";
 import CompanyCards from "@/components/about/CompanyCards";
 import MissionVision from "@/components/about/MissionVision";
@@ -15,16 +12,13 @@ import Clients from "@/components/ui/Clients";
 export default function AboutPage() {
   return (
     <main className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth">
-      <TopBar />
-      <AboutHero />
+            <AboutHero />
       <CompanyCards />
       <MissionVision />
       <Clients />
       <CEOMessage />
       <TeamSection />
       <AboutFAQ />
-      <Footer />
-      <BackToTop />
-    </main>
+                </main>
   );
 }

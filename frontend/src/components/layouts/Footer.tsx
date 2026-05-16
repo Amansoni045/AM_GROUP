@@ -64,7 +64,17 @@ export default function Footer() {
             <ul className="flex flex-col gap-3">
               {navLinks.map((link, i) => (
                 <li key={i}>
-                  <Link href={link.href} className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2 group">
+                  <Link 
+                    href={link.href} 
+                    className="text-gray-400 hover:text-white text-sm transition-colors duration-200 flex items-center gap-2 group"
+                    onClick={(e) => {
+                      if (link.href.startsWith('/#') && window.location.pathname === '/') {
+                        e.preventDefault();
+                        const id = link.href.split('#')[1];
+                        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                  >
                     <span className="w-1.5 h-1.5 rounded-full bg-[#6373f2] opacity-0 group-hover:opacity-100 transition-opacity" />
                     {link.name}
                   </Link>

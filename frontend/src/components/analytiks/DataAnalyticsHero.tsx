@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "@/components/layouts/Header";
 
 export default function DataAnalyticsHero() {
   return (
@@ -14,8 +13,7 @@ export default function DataAnalyticsHero() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#040b1e]/80 via-[#040b1e]/60 to-[#040b1e]" />
       </div>
-      <Header />
-      <div className="relative z-10 flex-grow flex items-center justify-center px-4 md:px-12 text-center py-20">
+            <div className="relative z-10 flex-grow flex items-center justify-center px-4 md:px-12 text-center py-20">
         <div className="max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

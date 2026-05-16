@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "@/components/layouts/Header";
 
 const marqueeItems = [
   "Innovation", "Success", "Leadership", "Enterprise", "Business Growth", "Corporate", "Results",
@@ -22,8 +21,7 @@ export default function ConsultingHero() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#020817]/80 via-[#020817]/60 to-[#020817]" />
       </div>
-      <Header />
-      
+            
       <div className="relative z-10 flex-grow flex flex-col justify-center items-center px-4 md:px-12 text-center py-20 mt-10">
         <div className="max-w-4xl mx-auto">
           <motion.div

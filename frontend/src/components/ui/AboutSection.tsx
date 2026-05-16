@@ -117,7 +117,16 @@ export default function AboutSection() {
               {"At AM Group, we are driven by a commitment to excellence and a passion for creating value. Whether it's guiding a startup, supporting established enterprises, or enabling expansion into new markets, we stand by our clients every step of the way."}
             </p>
 
-            <Link href="/#services" className="inline-block">
+            <Link 
+              href="/#services" 
+              className="inline-block"
+              onClick={(e) => {
+                if (window.location.pathname === '/') {
+                  e.preventDefault();
+                  document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
