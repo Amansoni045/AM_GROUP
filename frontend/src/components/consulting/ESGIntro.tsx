@@ -21,10 +21,10 @@ export default function ESGIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-[#020817] mb-8 font-heading leading-tight"
+            className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading leading-tight"
           >
             Sustainable Growth Through <br className="hidden md:block" />
-            <span className="text-[#d4af37]">Responsible Business</span>: ESG Services
+            <span className="text-[var(--color-accent)]">Responsible Business</span>: ESG Services
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function ESGIntro() {
             className="max-w-4xl mx-auto space-y-6 text-gray-600 text-lg md:text-xl leading-relaxed"
           >
             <p>
-              At <strong className="text-[#020817]">AM Consulting</strong>, we help businesses integrate sustainability into their strategy through ESG Reporting and ESG Risk Assessment. Our approach ensures compliance, improves stakeholder trust, and drives long-term value creation.
+              At <strong className="text-[var(--text-primary)]">AM Consulting</strong>, we help businesses integrate sustainability into their strategy through ESG Reporting and ESG Risk Assessment. Our approach ensures compliance, improves stakeholder trust, and drives long-term value creation.
             </p>
             <p>
               We help organizations embed ESG principles into their operations, improve compliance, and build long-term value through targeted strategic roadmaps.
@@ -50,12 +50,12 @@ export default function ESGIntro() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-center gap-4 bg-[#f9f9f9] p-5 rounded-xl border border-gray-100 group hover:bg-white hover:shadow-lg transition-all duration-300"
+              className="flex items-center gap-4 bg-[var(--bg-alt)] p-5 rounded-xl border border-gray-100 group hover:bg-white hover:shadow-lg transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-full bg-[#059669]/10 flex items-center justify-center group-hover:bg-[#059669] transition-colors">
-                <CheckCircle2 className="w-5 h-5 text-[#059669] group-hover:text-white" />
+              <div className="w-10 h-10 rounded-full bg-[var(--color-accent-soft)] flex items-center justify-center group-hover:bg-[var(--color-accent-soft)] transition-colors">
+                <CheckCircle2 className="w-5 h-5 text-[var(--color-accent)] group-hover:text-[var(--text-primary)]" />
               </div>
-              <span className="font-bold text-[#020817] text-sm md:text-base">{pillar}</span>
+              <span className="font-bold text-[var(--text-primary)] text-sm md:text-base">{pillar}</span>
             </motion.div>
           ))}
         </div>

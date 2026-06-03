@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AM GROUP",
-  description: "Empowering businesses through expert consulting, comprehensive accounting, and innovative design.",
+  title: "AM Group | Consulting, Design, Accounting & Analytics",
+  description: "AM Group unites consulting, design, accounting, and analytics to deliver integrated solutions that drive sustainable business growth across the GCC.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -11,7 +11,6 @@ export const metadata: Metadata = {
   },
 };
 
-import TopBar from "@/components/layouts/TopBar";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 import BackToTop from "@/components/ui/BackToTop";
@@ -22,17 +21,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body className="antialiased flex flex-col min-h-screen relative">
-        <div className="absolute top-0 w-full z-50">
-          <TopBar />
-          <Header />
-        </div>
+      <body className="antialiased flex flex-col min-h-screen">
+        <Header />
         <div className="flex-grow flex flex-col">
           {children}
         </div>

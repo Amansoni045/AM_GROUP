@@ -11,7 +11,7 @@ export default function OutsourcingIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[#6373f2] text-xl font-bold tracking-widest uppercase mb-4"
+            className="text-[var(--color-accent)] text-xl font-bold tracking-widest uppercase mb-4"
           >
             Efficiency. Expertise. Excellence.
           </motion.div>
@@ -20,9 +20,9 @@ export default function OutsourcingIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-3xl md:text-5xl font-bold text-[#020817] mb-8 font-heading leading-tight"
+            className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading leading-tight"
           >
-            Streamline Operations for <span className="text-[#d4af37]">Strategic Growth</span>
+            Streamline Operations for <span className="text-[var(--color-accent)]">Strategic Growth</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ export default function OutsourcingIntro() {
             className="max-w-4xl mx-auto space-y-6 text-gray-600 text-lg md:text-xl leading-relaxed"
           >
             <p>
-              At <strong className="text-[#020817]">AM Consulting</strong>, we help organizations optimize operations by outsourcing non-core functions, enabling teams to focus on strategic growth. Our approach combines skilled talent, technology, and industry best practices to deliver scalable, compliant, and high-performance solutions.
+              At <strong className="text-[var(--text-primary)]">AM Consulting</strong>, we help organizations optimize operations by outsourcing non-core functions, enabling teams to focus on strategic growth. Our approach combines skilled talent, technology, and industry best practices to deliver scalable, compliant, and high-performance solutions.
             </p>
             <p>
               We empower organizations to streamline processes, improve efficiency, and enhance operational performance through targeted Corporate Outsourcing solutions.

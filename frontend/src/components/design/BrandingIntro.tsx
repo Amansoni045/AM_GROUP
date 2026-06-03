@@ -11,9 +11,9 @@ export default function BrandingIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-[#020817] mb-8 font-heading"
+            className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading"
           >
-            Create Identity. <span className="text-[#d4af37]">Build Recognition.</span> Inspire Trust.
+            Create Identity. <span className="text-[var(--color-accent)]">Build Recognition.</span> Inspire Trust.
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function BrandingIntro() {
             className="max-w-3xl mx-auto text-gray-600 text-lg md:text-xl leading-relaxed space-y-6"
           >
             <p>
-              At <strong className="text-[#020817]">AM Design</strong>, we build brand identities that communicate who you are and what you stand for.
+              At <strong className="text-[var(--text-primary)]">AM Design</strong>, we build brand identities that communicate who you are and what you stand for.
             </p>
             <p>
               From logo design to full brand systems, we craft visual identities that connect with your audience and leave a lasting impression.

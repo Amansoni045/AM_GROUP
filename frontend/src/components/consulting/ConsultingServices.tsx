@@ -44,7 +44,7 @@ const services = [
 
 export default function ConsultingServices() {
   return (
-    <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="consulting-services">
+    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="consulting-services">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,13 +53,13 @@ export default function ConsultingServices() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-block border border-[#d4af37]/50 text-[#d4af37] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5 bg-[#d4af37]/5">
+          <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5 bg-[var(--color-primary)]/5">
             Core Expertise
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#020817] font-heading">
-            Our Consulting <span className="text-[#6373f2]">Solutions</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading">
+            Our Consulting <span className="text-[var(--color-accent)]">Solutions</span>
           </h2>
-          <div className="w-16 h-1 bg-[#d4af37] rounded mx-auto mt-6" />
+          <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto mt-6" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -80,7 +80,7 @@ export default function ConsultingServices() {
                 >
                   <service.icon className="w-7 h-7" style={{ color: service.color }} strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-bold text-[#020817] mb-3 font-heading">{service.title}</h3>
+                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-3 font-heading">{service.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed flex-grow">{service.desc}</p>
                 
                 <div className="mt-8 flex items-center gap-2 font-bold text-sm" style={{ color: service.color }}>
@@ -97,14 +97,14 @@ export default function ConsultingServices() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
-            className="bg-[#020817] rounded-2xl p-8 shadow-xl relative overflow-hidden flex flex-col justify-center items-center text-center h-full"
+            className="bg-[var(--bg-alt)] rounded-2xl p-8 shadow-xl relative overflow-hidden flex flex-col justify-center items-center text-center h-full"
           >
-            <div className="absolute top-0 right-0 w-40 h-40 bg-[#d4af37]/20 rounded-full blur-[50px] -z-0" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-[#6373f2]/20 rounded-full blur-[50px] -z-0" />
+            <div className="absolute top-0 right-0 w-40 h-40 bg-[var(--color-primary)]/20 rounded-full blur-[50px] -z-0" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-[var(--color-accent-soft)] rounded-full blur-[50px] -z-0" />
             <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-white mb-4 font-heading">Ready to transform your business?</h3>
-              <p className="text-gray-400 text-sm mb-8">Book a free consultation with our advisory experts today.</p>
-              <Link href="/#consultation" className="inline-flex items-center gap-2 bg-[#d4af37] text-[#020817] px-6 py-3 rounded-xl font-bold hover:bg-white transition-colors">
+              <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4 font-heading">Ready to transform your business?</h3>
+              <p className="text-[var(--text-secondary)] text-sm mb-8">Book a free consultation with our advisory experts today.</p>
+              <Link href="/#consultation" className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-[var(--text-primary)] px-6 py-3 rounded-xl font-bold hover:bg-white transition-colors">
                 Let's Talk <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>

@@ -33,7 +33,7 @@ const advisoryServices = [
 
 export default function AdvisoryServicesList() {
   return (
-    <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="advisory-list">
+    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="advisory-list">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -41,10 +41,10 @@ export default function AdvisoryServicesList() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#020817] mb-4 font-heading">
-            Our <span className="text-[#6373f2]">Financial</span> Advisory Services
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-4 font-heading">
+            Our <span className="text-[var(--color-accent)]">Financial</span> Advisory Services
           </h2>
-          <p className="text-[#d4af37] text-2xl font-bold tracking-widest uppercase mb-12">
+          <p className="text-[var(--color-accent)] text-2xl font-bold tracking-widest uppercase mb-12">
             Restructure. Invest. Rise.
           </p>
         </motion.div>
@@ -60,16 +60,16 @@ export default function AdvisoryServicesList() {
                 whileHover={{ y: -4, transition: { duration: 0.2, delay: 0 } }}
                 className="bg-white rounded-3xl p-10 border border-gray-100 shadow-xl shadow-black/5 flex flex-col group cursor-pointer h-full"
               >
-                <div className="w-16 h-16 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#d4af37] transition-colors duration-300">
-                  <service.icon className="w-8 h-8 text-[#d4af37] group-hover:text-white transition-colors duration-300" strokeWidth={1.5} />
+                <div className="w-16 h-16 bg-[var(--color-primary)]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--color-primary)] transition-colors duration-300">
+                  <service.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-[var(--text-primary)] transition-colors duration-300" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[#6373f2] transition-colors">
+                <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-8 text-sm flex-grow">
                   {service.desc}
                 </p>
-                <div className="flex items-center gap-2 text-[#d4af37] font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
+                <div className="flex items-center gap-2 text-[var(--color-accent)] font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
                   Learn more
                   <ArrowUpRight className="w-4 h-4" />
                 </div>

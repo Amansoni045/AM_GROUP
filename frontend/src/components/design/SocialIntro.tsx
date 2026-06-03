@@ -11,9 +11,9 @@ export default function SocialIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-[#020817] mb-8 font-heading"
+            className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading"
           >
-            Connect. Engage. <span className="text-[#d4af37]">Grow.</span>
+            Connect. Engage. <span className="text-[var(--color-accent)]">Grow.</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function SocialIntro() {
             className="max-w-3xl mx-auto text-gray-600 text-lg md:text-xl leading-relaxed space-y-6"
           >
             <p>
-              <strong className="text-[#020817]">AM Design</strong> helps brands build meaningful presence across leading platforms.
+              <strong className="text-[var(--text-primary)]">AM Design</strong> helps brands build meaningful presence across leading platforms.
             </p>
             <p>
               We create targeted content, manage campaigns, and increase engagement with purpose.

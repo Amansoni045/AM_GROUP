@@ -11,9 +11,9 @@ export default function DataAnalyticsIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-[#020817] mb-8 font-heading"
+            className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading"
           >
-            Refining Capabilities in <span className="text-[#d4af37]">Digital and Converge Space</span>
+            Refining Capabilities in <span className="text-[var(--color-accent)]">Digital and Converge Space</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

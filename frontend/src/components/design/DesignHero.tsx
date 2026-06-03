@@ -2,66 +2,75 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const marqueeItems = [
-  "Branding", "Creativity", "Graphics", "Visuals",
-  "Branding", "Creativity", "Graphics", "Visuals",
-  "Branding", "Creativity", "Graphics", "Visuals"
-];
-
 export default function DesignHero() {
   return (
-    <section className="relative min-h-[70vh] flex flex-col bg-[#020817] overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <motion.img
-          src="/design-hero.png"
-          alt="AM Design Hero"
-          className="w-full h-full object-cover opacity-30"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 2, ease: "easeOut" }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020817]/80 via-[#020817]/60 to-[#020817]" />
-      </div>
-            
-      <div className="relative z-10 flex-grow flex flex-col justify-center items-center px-4 md:px-12 text-center py-20 mt-10">
-        <div className="max-w-4xl mx-auto">
+    <section
+      style={{
+        background: "linear-gradient(135deg, #f8fafc 0%, #fff 55%, #faf7f0 100%)",
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
+        position: "relative",
+      }}
+    >
+      <div style={{ position: "absolute", top: 0, left: 0, width: "400px", height: "400px", background: "radial-gradient(circle at top left, rgba(180,151,90,0.11) 0%, transparent 65%)", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", bottom: 0, right: 0, width: "400px", height: "400px", background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.07) 0%, transparent 65%)", pointerEvents: "none" }} />
+
+      <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "6rem 2rem 4rem", minHeight: "62vh" }}>
+        <div style={{ maxWidth: "820px" }}>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="inline-block border border-[#6373f2]/50 text-[#6373f2] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[#6373f2]/10 backdrop-blur-sm"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            style={{
+              display: "inline-block",
+              border: "1px solid #B4975A",
+              color: "#B4975A",
+              background: "rgba(180,151,90,0.08)",
+              padding: "0.35rem 1.2rem",
+              borderRadius: "999px",
+              fontSize: "0.68rem",
+              fontWeight: 700,
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              marginBottom: "1.5rem",
+              fontFamily: "var(--font-body)",
+            }}
           >
             AM Design
           </motion.div>
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className="text-white text-5xl md:text-7xl font-bold leading-tight mb-6 font-heading"
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)", fontWeight: 600, color: "#0F172A", lineHeight: 1.05, marginBottom: "1.25rem", letterSpacing: "-0.02em" }}
           >
-            Creative <br />
-            <span className="text-[#d4af37]">Excellence</span>
+            Creative Branding &<br /><span style={{ color: "#B4975A" }}>Digital Excellence</span>
           </motion.h1>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
-            className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed"
+            transition={{ duration: 0.65, delay: 0.3 }}
+            style={{ fontFamily: "var(--font-body)", fontSize: "clamp(0.95rem, 1.3vw, 1.1rem)", color: "#475569", lineHeight: 1.75, maxWidth: "580px", margin: "0 auto" }}
           >
-            Building meaningful visual identities and digital experiences that help brands stand out and connect with their audiences.
+            Building powerful brands and digital experiences that captivate audiences and elevate businesses across the GCC.
           </motion.p>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            style={{ width: "48px", height: "2px", background: "#B4975A", margin: "1.75rem auto 0", transformOrigin: "center" }}
+          />
         </div>
       </div>
 
-      {/* Marquee at the bottom of hero */}
-      <div className="relative z-10 w-full border-y border-white/10 bg-white/5 backdrop-blur-md overflow-hidden py-4">
+      {/* Marquee */}
+      <div style={{ borderTop: "1px solid #E2E8F0", background: "#F8FAFC", overflow: "hidden", padding: "0.9rem 0", position: "relative", zIndex: 1 }}>
         <div className="flex animate-marquee whitespace-nowrap">
-          {marqueeItems.map((item, index) => (
-            <div key={index} className="flex items-center mx-6 group">
-              <span className="text-[#d4af37] mr-6">✦</span>
-              <span className="text-white/70 font-bold uppercase tracking-[0.15em] text-sm group-hover:text-white transition-colors duration-300">
-                {item}
-              </span>
+          {["Branding","Web Design","Social Media","SEO","PPC","Content","Digital Marketing","Branding","Web Design","Social Media","SEO","PPC","Content","Digital Marketing"].map((item, idx) => (
+            <div key={idx} style={{ display: "flex", alignItems: "center", margin: "0 1.75rem" }}>
+              <span style={{ color: "#B4975A", marginRight: "1.25rem", fontSize: "0.65rem" }}>✦</span>
+              <span style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#64748B" }}>{item}</span>
             </div>
           ))}
         </div>

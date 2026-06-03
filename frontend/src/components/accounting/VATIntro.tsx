@@ -11,9 +11,9 @@ export default function VATIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-[#020817] mb-8 font-heading"
+            className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading"
           >
-            Comprehensive <span className="text-[#d4af37]">VAT Solutions</span>
+            Comprehensive <span className="text-[var(--color-accent)]">VAT Solutions</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -4,35 +4,73 @@ import { motion } from "framer-motion";
 
 export default function RegulatoryHero() {
   return (
-    <section className="relative min-h-[50vh] flex flex-col bg-[#040b1e] overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/slider-2.webp"
-          alt="Regulatory Services"
-          className="w-full h-full object-cover opacity-40"
+    <section
+      style={{
+        background: "linear-gradient(135deg, #f8fafc 0%, #fff 55%, #faf7f0 100%)",
+        minHeight: "46vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        padding: "5rem 2rem",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <div style={{ position: "absolute", top: 0, left: 0, width: "300px", height: "300px", background: "radial-gradient(circle at top left, rgba(180,151,90,0.12) 0%, transparent 65%)" }} />
+      <div style={{ position: "absolute", bottom: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.08) 0%, transparent 65%)" }} />
+      <div style={{ maxWidth: "820px", position: "relative", zIndex: 1 }}>
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          style={{
+            display: "inline-block",
+            border: "1px solid #B4975A",
+            color: "#B4975A",
+            background: "rgba(180,151,90,0.08)",
+            padding: "0.35rem 1.2rem",
+            borderRadius: "999px",
+            fontSize: "0.68rem",
+            fontWeight: 700,
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            marginBottom: "1.5rem",
+            fontFamily: "var(--font-body)",
+          }}
+        >
+          Regulatory Advisory
+        </motion.div>
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+          style={{
+            fontFamily: "var(--font-heading)",
+            fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
+            fontWeight: 600,
+            color: "#0F172A",
+            lineHeight: 1.1,
+            marginBottom: "1.25rem",
+            letterSpacing: "-0.02em",
+          }}
+        >
+          Navigate Compliance with<br /><span style={{ color: "#B4975A" }}>Confidence</span>
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, delay: 0.25 }}
+          style={{ fontFamily: "var(--font-body)", fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", color: "#475569", lineHeight: 1.75, maxWidth: "560px", margin: "0 auto 0" }}
+        >
+          Expert regulatory advisory ensuring your business stays compliant in an ever-evolving GCC landscape.
+        </motion.p>
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          style={{ width: "48px", height: "2px", background: "#B4975A", margin: "1.75rem auto 0", transformOrigin: "center" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#040b1e]/90 via-[#040b1e]/70 to-[#040b1e]" />
-      </div>
-            <div className="relative z-10 flex-grow flex items-center justify-center px-4 md:px-12 text-center py-20">
-        <div className="max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="inline-block border border-[#d4af37]/50 text-[#d4af37] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
-          >
-            Excellence in Financial Planning
-          </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className="text-white text-5xl md:text-7xl font-bold leading-tight mb-6 font-heading"
-          >
-            Regulatory Services
-          </motion.h1>
-          <div className="w-20 h-1 bg-[#6373f2] mx-auto rounded-full" />
-        </div>
       </div>
     </section>
   );

@@ -1,81 +1,211 @@
 @import "tailwindcss";
 
+/* ============================================
+   AM GROUP — PREMIUM LIGHT BUSINESS DESIGN
+   ============================================ */
+
 :root {
-  --background: #f9f9f9;
-  --foreground: #1a1a1a;
-  --threedots-navy: #040b1e;
-  --threedots-blue: #6373f2;
-  --threedots-lime: #c5e17a;
-  --threedots-dark-blue: #0a122a;
+  /* Core Brand Colors - Lighter, more premium palette */
+  --color-primary:    #0F172A; /* Slate 900 */
+  --color-primary-light: #1E293B;
+  --color-accent:     #B4975A; /* Elegant Muted Gold */
+  --color-accent-light: #CBB279;
+  --color-accent-soft: rgba(180, 151, 90, 0.1);
+  --color-blue-soft:  #F0F4F8; /* Very light cool gray/blue */
+
+  /* Text Colors */
+  --text-primary:     #0F172A;
+  --text-secondary:   #475569;
+  --text-muted:       #64748B;
+  --text-light:       #94A3B8;
+
+  /* Section Backgrounds */
+  --bg-main:          #FFFFFF;
+  --bg-alt:           #F8FAFC; /* Very soft slate/gray */
+  --bg-surface:       #FFFFFF;
+
+  /* Borders */
+  --border-light:     #E2E8F0;
+  --border-medium:    #CBD5E1;
+  --border-dark:      #94A3B8;
+
+  /* Spacing scale */
+  --section-py:       6rem;
+
+  /* Typography */
+  --font-heading:     'Cormorant Garamond', 'Georgia', serif;
+  --font-body:        'Inter', 'Helvetica Neue', sans-serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-threedots-navy: var(--threedots-navy);
-  --color-threedots-blue: var(--threedots-blue);
-  --color-threedots-lime: var(--threedots-lime);
-  --color-threedots-dark-blue: var(--threedots-dark-blue);
+  --color-background: var(--bg-main);
+  --color-foreground: var(--text-primary);
+  --color-am-primary: var(--color-primary);
+  --color-am-accent:  var(--color-accent);
 }
 
-html {
-  scroll-behavior: smooth;
+/* ============ BASE ============ */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: 'Manrope', sans-serif;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6, .font-heading {
-  font-family: 'Space Grotesk', sans-serif;
+/* ============ TYPOGRAPHY ============ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
 }
 
-/* Custom Styles */
-.glass-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+/* ============ SECTION UTILITIES ============ */
+.section-py {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
 }
 
-.hero-gradient-overlay {
-  background: linear-gradient(to bottom, rgba(4, 11, 30, 0.4), rgba(4, 11, 30, 0.9));
+.section-px {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
-.grid-pattern {
-  background-image: radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
+@media (min-width: 768px) {
+  .section-px {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
-.client-logo-border {
-  border-right: 1px solid #e5e7eb;
-  border-bottom: 1px solid #e5e7eb;
+@media (min-width: 1280px) {
+  .section-px {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
 }
 
-/* Infinite Scroll Animation */
+.container-max {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ============ DIVIDER ============ */
+.gold-divider {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--color-accent);
+  margin: 1.25rem 0;
+}
+
+/* ============ LABEL / EYEBROW ============ */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+/* ============ BUTTONS ============ */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-primary);
+  color: #FFFFFF;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 0.875rem 2rem;
+  border: 1px solid var(--color-primary);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: transparent;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 0.875rem 2rem;
+  border: 1px solid var(--border-medium);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--bg-alt);
+}
+
+/* ============ MARQUEE ============ */
 @keyframes marquee {
-  0% { transform: translateX(0); }
+  0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 @keyframes marquee-reverse {
-  0% { transform: translateX(-50%); }
+  0%   { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
 
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 80s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
 .animate-marquee-reverse {
   display: flex;
   width: max-content;
-  animation: marquee-reverse 80s linear infinite;
+  animation: marquee-reverse 60s linear infinite;
 }
 
-.animate-marquee:hover, .animate-marquee-reverse:hover {
-  animation-play-state: paused;
+/* ============ FORM ============ */
+.am-input {
+  width: 100%;
+  background: var(--bg-main);
+  border: 1px solid var(--border-light);
+  padding: 1rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.am-input:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
+}
+
+.am-input::placeholder {
+  color: var(--text-light);
 }

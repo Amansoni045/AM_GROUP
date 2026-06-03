@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function GRCDetails() {
   return (
-    <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="grc-details">
+    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="grc-details">
       <div className="max-w-7xl mx-auto space-y-24">
         
         {/* Governance Framework */}
@@ -16,8 +16,8 @@ export default function GRCDetails() {
             viewport={{ once: true }}
             className="flex flex-col justify-center space-y-6"
           >
-            <h3 className="text-3xl font-bold text-[#020817] font-heading">Governance Framework</h3>
-            <div className="w-16 h-1 bg-[#6373f2] rounded" />
+            <h3 className="text-3xl font-bold text-[var(--text-primary)] font-heading">Governance Framework</h3>
+            <div className="w-16 h-1 bg-[var(--color-accent-soft)] rounded" />
             <p className="text-gray-600 leading-relaxed text-lg">
               The governance framework focuses on reassessing the organization’s core values, vision, and mission to ensure alignment with long-term goals, while simultaneously reviewing and strengthening the existing organizational structure. It includes redesigning charters, policies, and procedures to improve clarity, accountability, and compliance.
             </p>
@@ -31,7 +31,7 @@ export default function GRCDetails() {
             viewport={{ once: true }}
             className="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
           >
-            <h3 className="text-2xl font-bold text-[#020817] mb-6 font-heading">Risk Management</h3>
+            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6 font-heading">Risk Management</h3>
             <div className="space-y-6">
               {[
                 {
@@ -51,8 +51,8 @@ export default function GRCDetails() {
                 }
               ].map((item, idx) => (
                 <div key={idx}>
-                  <h4 className="font-bold text-[#020817] mb-2 flex items-center gap-2">
-                    <span className="text-[#d4af37]">{item.num}</span> {item.title}
+                  <h4 className="font-bold text-[var(--text-primary)] mb-2 flex items-center gap-2">
+                    <span className="text-[var(--color-accent)]">{item.num}</span> {item.title}
                   </h4>
                   <p className="text-gray-600 text-[15px] leading-relaxed pl-6">{item.desc}</p>
                 </div>
@@ -68,11 +68,11 @@ export default function GRCDetails() {
           viewport={{ once: true }}
           className="bg-white rounded-3xl p-10 md:p-16 border border-gray-100 shadow-lg relative overflow-hidden"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4af37]/5 rounded-full blur-[40px]" />
-          <h3 className="text-3xl font-bold text-[#020817] mb-8 font-heading text-center">Compliance & Regulatory</h3>
+          <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-primary)]/5 rounded-full blur-[40px]" />
+          <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-8 font-heading text-center">Compliance & Regulatory</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
             <div>
-              <h4 className="text-xl font-bold text-[#6373f2] mb-4">Regulatory Risk Management</h4>
+              <h4 className="text-xl font-bold text-[var(--color-accent)] mb-4">Regulatory Risk Management</h4>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Regulatory risk management involves the preparation and implementation of robust compliance and AML policies and procedures, supported by appropriate software solutions for compliance, AML, and sanctions monitoring. It also includes ensuring adherence to data privacy laws such as GDPR and PDPL, along with regular compliance and AML training for relevant stakeholders.
               </p>
@@ -81,7 +81,7 @@ export default function GRCDetails() {
               </p>
             </div>
             <div>
-              <h4 className="text-xl font-bold text-[#6373f2] mb-4">Regulatory Risk Assurance</h4>
+              <h4 className="text-xl font-bold text-[var(--color-accent)] mb-4">Regulatory Risk Assurance</h4>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Regulatory risk assurance provides independent and structured assurance over the effectiveness of regulatory compliance across the organization, including AML, KYC, and sanctions risk management practices. It also covers data privacy and vendor risk assurance to ensure third-party and information protection risks are adequately managed.
               </p>
@@ -99,23 +99,23 @@ export default function GRCDetails() {
           viewport={{ once: true }}
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-[#020817] font-heading mb-4">IT & IS Solutions</h3>
-            <div className="w-16 h-1 bg-[#d4af37] rounded mx-auto" />
+            <h3 className="text-3xl font-bold text-[var(--text-primary)] font-heading mb-4">IT & IS Solutions</h3>
+            <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
-              <CheckCircle2 className="w-8 h-8 text-[#d4af37] shrink-0" />
+              <CheckCircle2 className="w-8 h-8 text-[var(--color-accent)] shrink-0" />
               <div>
-                <h4 className="font-bold text-[#020817] text-lg mb-2">01. Information Technology Solutions</h4>
+                <h4 className="font-bold text-[var(--text-primary)] text-lg mb-2">01. Information Technology Solutions</h4>
                 <p className="text-gray-600 leading-relaxed text-[15px]">
                   Offer integrated GRC, ORM, IFRS 9, regulatory risk and AML, and accounting software solutions to enhance governance, compliance, and financial management.
                 </p>
               </div>
             </div>
             <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
-              <CheckCircle2 className="w-8 h-8 text-[#d4af37] shrink-0" />
+              <CheckCircle2 className="w-8 h-8 text-[var(--color-accent)] shrink-0" />
               <div>
-                <h4 className="font-bold text-[#020817] text-lg mb-2">02. Information Security Solutions</h4>
+                <h4 className="font-bold text-[var(--text-primary)] text-lg mb-2">02. Information Security Solutions</h4>
                 <p className="text-gray-600 leading-relaxed text-[15px]">
                   Deliver information security solutions covering risk and cyber assessments, policies, outsourcing, vulnerability checks, and software advisory.
                 </p>

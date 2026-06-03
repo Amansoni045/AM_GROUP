@@ -11,9 +11,9 @@ export default function GRCIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-[#020817] mb-8 font-heading"
+            className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading"
           >
-            Strengthen your core values & <span className="text-[#d4af37]">align structure</span>
+            Strengthen your core values & <span className="text-[var(--color-accent)]">align structure</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

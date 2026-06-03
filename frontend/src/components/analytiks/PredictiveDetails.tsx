@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function PredictiveDetails() {
   return (
-    <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="predictive-details">
+    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="predictive-details">
       <div className="max-w-7xl mx-auto">
         
         {/* Handling Large Datasets */}
@@ -15,8 +15,8 @@ export default function PredictiveDetails() {
             viewport={{ once: true }}
             className="flex flex-col justify-center space-y-6"
           >
-            <h3 className="text-3xl font-bold text-[#020817] font-heading">Handling Large Datasets</h3>
-            <div className="w-16 h-1 bg-[#6373f2] rounded" />
+            <h3 className="text-3xl font-bold text-[var(--text-primary)] font-heading">Handling Large Datasets</h3>
+            <div className="w-16 h-1 bg-[var(--color-accent-soft)] rounded" />
             <p className="text-gray-600 leading-relaxed text-lg">
               Big data analytics is the process of examining large data sets to uncover hidden patterns, unknown correlations, market trends, customer preferences and other useful business information. 
             </p>
@@ -31,14 +31,14 @@ export default function PredictiveDetails() {
             viewport={{ once: true }}
             className="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
           >
-            <h3 className="text-2xl font-bold text-[#020817] mb-6 font-heading">Predictive Analytics</h3>
+            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6 font-heading">Predictive Analytics</h3>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
               Predictive Analytics is a next major development to Big Data Analytics wherein, technologies that are capable of handling large data sets can generate business interest trigger points that delve into the calculations used for predicting any future decisions.
             </p>
-            <h4 className="font-bold text-[#020817] mb-4">Applied areas of Predictive Analytics:</h4>
+            <h4 className="font-bold text-[var(--text-primary)] mb-4">Applied areas of Predictive Analytics:</h4>
             <div className="flex gap-4 flex-wrap">
               {['Insurance', 'Telecom', 'Wind-Mill'].map((area, idx) => (
-                <div key={idx} className="bg-[#d4af37]/10 text-[#d4af37] px-4 py-2 rounded-lg font-bold">
+                <div key={idx} className="bg-[var(--color-primary)]/10 text-[var(--color-accent)] px-4 py-2 rounded-lg font-bold">
                   {area}
                 </div>
               ))}

@@ -30,7 +30,7 @@ export default function AboutFAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="faq">
+    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="faq">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,14 +39,14 @@ export default function AboutFAQ() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-block bg-[#020817] text-white px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5">
+          <div className="inline-block bg-[var(--bg-alt)] text-[var(--text-primary)] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5">
             FAQs
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#020817] font-heading mb-4">
-            Need Help? <span className="text-[#6373f2]">Start Here.</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading mb-4">
+            Need Help? <span className="text-[var(--color-accent)]">Start Here.</span>
           </h2>
           <p className="text-gray-500 text-lg">At the forefront of change, we turn challenges into opportunities for growth.</p>
-          <div className="w-16 h-1 bg-[#d4af37] rounded mx-auto mt-6" />
+          <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto mt-6" />
         </motion.div>
 
         <div className="space-y-4">
@@ -63,10 +63,10 @@ export default function AboutFAQ() {
                 onClick={() => setOpen(open === i ? null : i)}
                 className="w-full flex justify-between items-center p-6 text-left group"
               >
-                <span className={`font-bold text-base transition-colors duration-200 ${open === i ? "text-[#6373f2]" : "text-[#020817] group-hover:text-[#6373f2]"}`}>
+                <span className={`font-bold text-base transition-colors duration-200 ${open === i ? "text-[var(--color-accent)]" : "text-[var(--text-primary)] group-hover:text-[var(--color-accent)]"}`}>
                   {faq.q}
                 </span>
-                <span className={`flex-shrink-0 ml-4 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${open === i ? "bg-[#6373f2] text-white" : "bg-gray-100 text-gray-400"}`}>
+                <span className={`flex-shrink-0 ml-4 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${open === i ? "bg-[var(--color-accent-soft)] text-[var(--text-primary)]" : "bg-gray-100 text-[var(--text-secondary)]"}`}>
                   {open === i ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                 </span>
               </button>
@@ -102,7 +102,7 @@ export default function AboutFAQ() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             href="/#consultation"
-            className="inline-flex items-center gap-3 bg-[#020817] text-white px-8 py-4 rounded-xl font-bold hover:bg-[#6373f2] transition-all duration-300"
+            className="inline-flex items-center gap-3 bg-[var(--bg-alt)] text-[var(--text-primary)] px-8 py-4 rounded-xl font-bold hover:bg-[var(--color-accent-soft)] transition-all duration-300"
           >
             Let&apos;s Talk
           </motion.a>

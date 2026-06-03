@@ -39,9 +39,9 @@ export default function ESGReporting() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-bold text-[#020817] mb-6 font-heading"
+            className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-6 font-heading"
           >
-            ESG Reporting – <span className="text-[#d4af37]">Transparency</span> that Builds Trust
+            ESG Reporting – <span className="text-[var(--color-accent)]">Transparency</span> that Builds Trust
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -62,16 +62,16 @@ export default function ESGReporting() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex flex-col md:flex-row items-center gap-6 bg-[#f9f9f9] p-8 rounded-3xl border border-gray-100 group hover:bg-[#020817] transition-all duration-500 cursor-pointer"
+              className="flex flex-col md:flex-row items-center gap-6 bg-[var(--bg-alt)] p-8 rounded-3xl border border-gray-100 group hover:bg-[var(--bg-alt)] transition-all duration-500 cursor-pointer"
             >
-              <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-white flex items-center justify-center text-3xl font-bold text-[#059669] shadow-sm group-hover:bg-[#059669] group-hover:text-white transition-all duration-500">
+              <div className="flex-shrink-0 w-20 h-20 rounded-2xl bg-white flex items-center justify-center text-3xl font-bold text-[var(--color-accent)] shadow-sm group-hover:bg-[var(--color-accent-soft)] group-hover:text-[var(--text-primary)] transition-all duration-500">
                 {step.number}
               </div>
               <div className="flex-grow text-center md:text-left">
-                <h3 className="text-2xl font-bold text-[#020817] mb-2 font-heading group-hover:text-white transition-colors">
+                <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-2 font-heading group-hover:text-[var(--text-primary)] transition-colors">
                   {step.title}
                 </h3>
-                <p className="text-gray-500 group-hover:text-gray-400 transition-colors leading-relaxed">
+                <p className="text-gray-500 group-hover:text-[var(--text-secondary)] transition-colors leading-relaxed">
                   {step.desc}
                 </p>
               </div>

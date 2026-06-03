@@ -36,9 +36,9 @@ export default function OutsourcingWhyChoose() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold text-[#020817] mb-8 font-heading">
+            <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading">
               Why Outsource with <br />
-              <span className="text-[#d4af37]">AM Consulting</span>
+              <span className="text-[var(--color-accent)]">AM Consulting</span>
             </h2>
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
@@ -55,15 +55,15 @@ export default function OutsourcingWhyChoose() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-[#f9f9f9] p-8 rounded-3xl border border-gray-100 hover:bg-[#020817] hover:text-white transition-all duration-500 group"
+                className="bg-[var(--bg-alt)] p-8 rounded-3xl border border-gray-100 hover:bg-[var(--bg-alt)] hover:text-[var(--text-primary)] transition-all duration-500 group"
               >
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[#6373f2] transition-colors">
-                  <benefit.icon className="w-6 h-6 text-[#6373f2] group-hover:text-white transition-colors" />
+                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-[var(--color-accent-soft)] transition-colors">
+                  <benefit.icon className="w-6 h-6 text-[var(--color-accent)] group-hover:text-[var(--text-primary)] transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 font-heading">
                   {benefit.title}
                 </h3>
-                <p className="text-gray-500 group-hover:text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-500 group-hover:text-[var(--text-secondary)] text-sm leading-relaxed">
                   {benefit.desc}
                 </p>
               </motion.div>

@@ -13,7 +13,7 @@ const components = [
 
 export default function MISServicesList() {
   return (
-    <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="mis-list">
+    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="mis-list">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
@@ -23,10 +23,10 @@ export default function MISServicesList() {
             viewport={{ once: true }}
             className="lg:col-span-5 space-y-6"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-[#020817] font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] font-heading">
               Our MIS Report Service
             </h2>
-            <div className="w-16 h-1 bg-[#6373f2] rounded" />
+            <div className="w-16 h-1 bg-[var(--color-accent-soft)] rounded" />
             <p className="text-gray-600 leading-relaxed mt-6">
               We understand that every organisation has its own unique needs and challenges. That's why we offer an all-inclusive suite of MIS reporting services, customised to address your specific requirements and help you with the insights needed to achieve your goals.
             </p>
@@ -39,7 +39,7 @@ export default function MISServicesList() {
             className="lg:col-span-7"
           >
             <div className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50">
-              <h3 className="text-2xl font-bold text-[#020817] mb-8 font-heading text-center">
+              <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-8 font-heading text-center">
                 What Is Included in the MIS Report?
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -47,12 +47,12 @@ export default function MISServicesList() {
                   <motion.div
                     key={i}
                     whileHover={{ scale: 1.02 }}
-                    className="flex items-center gap-4 bg-[#f9f9f9] p-4 rounded-xl border border-gray-100 group"
+                    className="flex items-center gap-4 bg-[var(--bg-alt)] p-4 rounded-xl border border-gray-100 group"
                   >
-                    <span className="text-xl font-bold text-[#d4af37] font-heading opacity-70 group-hover:opacity-100 transition-opacity">
+                    <span className="text-xl font-bold text-[var(--color-accent)] font-heading opacity-70 group-hover:opacity-100 transition-opacity">
                       {item.num}
                     </span>
-                    <span className="font-bold text-[#020817]">{item.title}</span>
+                    <span className="font-bold text-[var(--text-primary)]">{item.title}</span>
                   </motion.div>
                 ))}
               </div>

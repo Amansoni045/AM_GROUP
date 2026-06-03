@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function FraudDetails() {
   return (
-    <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="fraud-details">
+    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="fraud-details">
       <div className="max-w-7xl mx-auto space-y-24">
         
         {/* Using Analytics */}
@@ -16,8 +16,8 @@ export default function FraudDetails() {
             viewport={{ once: true }}
             className="flex flex-col justify-center space-y-6"
           >
-            <h3 className="text-3xl font-bold text-[#020817] font-heading">Using Analytics to Protect Yourself</h3>
-            <div className="w-16 h-1 bg-[#6373f2] rounded" />
+            <h3 className="text-3xl font-bold text-[var(--text-primary)] font-heading">Using Analytics to Protect Yourself</h3>
+            <div className="w-16 h-1 bg-[var(--color-accent-soft)] rounded" />
             <p className="text-gray-600 leading-relaxed text-lg">
               Departments such as internal audit and compliance can play a critical role in FCPA compliance by implementing effective monitoring techniques. This shines a light on potential violations and helps develop a culture in which employees know their activities will be reviewed for possible ethical breaches.
             </p>
@@ -31,7 +31,7 @@ export default function FraudDetails() {
             viewport={{ once: true }}
             className="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
           >
-            <h3 className="text-2xl font-bold text-[#020817] mb-6 font-heading">Key Elements Uncovered by Software</h3>
+            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6 font-heading">Key Elements Uncovered by Software</h3>
             <div className="space-y-4">
               {[
                 "Payments to vendors on watch lists or government contractors require strict review to prevent compliance or fraud risks.",
@@ -42,7 +42,7 @@ export default function FraudDetails() {
                 "Cash or government-related payments need scrutiny to confirm legitimacy and compliance with financial regulations."
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#d4af37] shrink-0 mt-1" />
+                  <CheckCircle2 className="w-5 h-5 text-[var(--color-accent)] shrink-0 mt-1" />
                   <p className="text-gray-600 text-[15px] leading-relaxed">{item}</p>
                 </div>
               ))}
@@ -57,8 +57,8 @@ export default function FraudDetails() {
           viewport={{ once: true }}
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-[#020817] font-heading mb-4">Educational Resources</h3>
-            <div className="w-16 h-1 bg-[#d4af37] rounded mx-auto" />
+            <h3 className="text-3xl font-bold text-[var(--text-primary)] font-heading mb-4">Educational Resources</h3>
+            <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto" />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

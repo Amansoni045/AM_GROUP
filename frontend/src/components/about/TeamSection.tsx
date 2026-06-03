@@ -78,7 +78,7 @@ function MemberCard({ name, role, color }: { name: string; role: string; color?:
       >
         {getInitials(name)}
       </div>
-      <p className="text-sm font-bold text-[#020817]">{name}</p>
+      <p className="text-sm font-bold text-[var(--text-primary)]">{name}</p>
       <p className="text-xs text-gray-500 mt-0.5">{role}</p>
     </motion.div>
   );
@@ -97,18 +97,18 @@ export default function TeamSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-block bg-[#d4af37]/10 border border-[#d4af37]/30 px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] text-[#d4af37] mb-5">
+          <div className="inline-block bg-[var(--color-primary)]/10 border border-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-5">
             Meet Our Team
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#020817] font-heading">
-            People Behind <span className="text-[#6373f2]">AM Group</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading">
+            People Behind <span className="text-[var(--color-accent)]">AM Group</span>
           </h2>
-          <div className="w-16 h-1 bg-[#d4af37] rounded mx-auto mt-6" />
+          <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto mt-6" />
         </motion.div>
 
         {/* Leadership */}
         <div className="mb-20">
-          <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400 text-center mb-10">Leadership</h3>
+          <h3 className="text-xs font-bold uppercase tracking-widest text-[var(--text-secondary)] text-center mb-10">Leadership</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
             {leadership.map((m, i) => (
               <MemberCard key={i} name={m.name} role={m.role} color="#020817" />
@@ -117,14 +117,14 @@ export default function TeamSection() {
         </div>
 
         {/* Department Tabs */}
-        <div className="bg-[#f9f9f9] rounded-3xl p-8 border border-gray-100">
+        <div className="bg-[var(--bg-alt)] rounded-3xl p-8 border border-gray-100">
           <div className="flex flex-wrap gap-3 justify-center mb-10">
             {departments.map((dept, i) => (
               <button
                 key={i}
                 onClick={() => setActiveTab(i)}
                 className={`px-5 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
-                  activeTab === i ? "text-white shadow-lg" : "bg-white text-gray-500 border border-gray-200 hover:border-gray-300"
+                  activeTab === i ? "text-[var(--text-primary)] shadow-lg" : "bg-white text-gray-500 border border-gray-200 hover:border-gray-300"
                 }`}
                 style={activeTab === i ? { background: dept.color } : {}}
               >

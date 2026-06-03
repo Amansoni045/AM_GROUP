@@ -21,9 +21,9 @@ export default function RiskIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-[#020817] mb-8 font-heading"
+            className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading"
           >
-            Guiding <span className="text-[#d4af37]">Sustainable</span> Business Growth
+            Guiding <span className="text-[var(--color-accent)]">Sustainable</span> Business Growth
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function RiskIntro() {
             className="max-w-4xl mx-auto space-y-6 text-gray-600 text-lg md:text-xl leading-relaxed"
           >
             <p>
-              At <strong className="text-[#020817]">AM Consulting</strong>, we provide end-to-end advisory services across Bahrain and the GCC, helping organizations restructure, mitigate risks, ensure compliance, and embrace digital transformation. With over 45 years of collective expertise, we are your trusted partner for business excellence.
+              At <strong className="text-[var(--text-primary)]">AM Consulting</strong>, we provide end-to-end advisory services across Bahrain and the GCC, helping organizations restructure, mitigate risks, ensure compliance, and embrace digital transformation. With over 45 years of collective expertise, we are your trusted partner for business excellence.
             </p>
             <p>
               Our approach is holistic and data-driven. We start by analyzing your financial landscape, identifying gaps and opportunities, and building strategies that deliver sustainable growth and resilience.
@@ -49,10 +49,10 @@ export default function RiskIntro() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="flex items-center gap-4 bg-[#f9f9f9] p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group"
+              className="flex items-center gap-4 bg-[var(--bg-alt)] p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow group"
             >
-              <CheckCircle2 className="w-6 h-6 text-[#d4af37] group-hover:scale-110 transition-transform" />
-              <span className="font-bold text-[#020817]">{principle}</span>
+              <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)] group-hover:scale-110 transition-transform" />
+              <span className="font-bold text-[var(--text-primary)]">{principle}</span>
             </motion.div>
           ))}
         </div>

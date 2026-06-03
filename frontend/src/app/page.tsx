@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
 import Hero from "@/components/ui/Hero";
 import AboutSection from "@/components/ui/AboutSection";
 import WhatWeDo from "@/components/ui/WhatWeDo";
@@ -13,15 +10,15 @@ import ConsultationForm from "@/components/ui/ConsultationForm";
 
 export default function Home() {
   return (
-    <main className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth">
-            <Hero />
+    <main>
+      <Hero />
       <AboutSection />
       <WhatWeDo />
-      <IndustryExpertise />
       <Services />
+      <IndustryExpertise />
       <Clients />
       <Testimonials />
       <ConsultationForm />
-                </main>
+    </main>
   );
 }

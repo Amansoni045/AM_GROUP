@@ -50,7 +50,7 @@ const services = [
 
 export default function AccountingServices() {
   return (
-    <section className="bg-[#f9f9f9] py-24 px-4 md:px-12" id="accounting-services">
+    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="accounting-services">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -59,13 +59,13 @@ export default function AccountingServices() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-block border border-[#d4af37]/50 text-[#d4af37] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5 bg-[#d4af37]/5">
+          <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5 bg-[var(--color-primary)]/5">
             Core Expertise
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#020817] font-heading">
-            Our Accounting <span className="text-[#6373f2]">Solutions</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading">
+            Our Accounting <span className="text-[var(--color-accent)]">Solutions</span>
           </h2>
-          <div className="w-16 h-1 bg-[#d4af37] rounded mx-auto mt-6" />
+          <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto mt-6" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -87,7 +87,7 @@ export default function AccountingServices() {
               >
                 <service.icon className="w-7 h-7" style={{ color: service.color }} strokeWidth={1.5} />
               </div>
-              <h3 className="text-xl font-bold text-[#020817] mb-3 font-heading">{service.title}</h3>
+              <h3 className="text-xl font-bold text-[var(--text-primary)] mb-3 font-heading">{service.title}</h3>
               <p className="text-gray-500 text-sm leading-relaxed flex-grow">{service.desc}</p>
               
               <div className="mt-8 flex items-center gap-2 font-bold text-sm" style={{ color: service.color }}>

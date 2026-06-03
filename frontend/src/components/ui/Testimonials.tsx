@@ -1,29 +1,25 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
     quote: "Working with AM Consulting has been a turning point for us at 9 Origins Coffee. Their team analyzed our marketing and business strategies in depth, helping us revive operations and define a clear growth path. With their hands-on consulting and practical recommendations, we've seen great improvement in customer engagement and profitability. They truly understand what it takes to help a business grow sustainably and remain a trusted partner in our success journey.",
     company: "9 Origins Coffee",
-    role: "CEO",
+    role: "Chief Executive Officer",
     initial: "9",
-    color: "#6373f2"
   },
   {
-    quote: "We partnered with AM Accounting to bring structure and clarity to our financial management. Their team helped us set up proper systems, streamline reporting, and establish strong internal procedures. This made our operations smoother and gave us complete confidence in our financial accuracy. They've been professional, responsive, and a valuable part of our clinic's continued growth, helping us maintain stability and focus on what truly matters—our patients and our services.",
+    quote: "We partnered with AM Accounting to bring structure and clarity to our financial management. Their team helped us set up proper systems, streamline reporting, and establish strong internal procedures. This made our operations smoother and gave us complete confidence in our financial accuracy. They've been professional, responsive, and a valuable part of our clinic's continued growth.",
     company: "All Care Pet Clinic",
     role: "Marketing Director",
     initial: "A",
-    color: "#059669"
   },
   {
-    quote: "AM Accounting has been our trusted partner for quite some time. They've done an excellent job maintaining our books, managing compliance, and guiding us through the Tamkeen support process. Their attention to detail and proactive guidance have been a huge asset for us. The team is professional, reliable, and always available for support. Highly recommended for any business looking for accuracy, structure, and dependable financial expertise without any financial concerns.",
+    quote: "AM Accounting has been our trusted partner for quite some time. They've done an excellent job maintaining our books, managing compliance, and guiding us through the Tamkeen support process. Their attention to detail and proactive guidance have been a huge asset for us. The team is professional, reliable, and always available for support. Highly recommended.",
     company: "Ibtisama Aesthetic Dental Clinic",
-    role: "Doctor",
+    role: "Clinic Director",
     initial: "I",
-    color: "#d4af37"
   },
 ];
 
@@ -35,98 +31,258 @@ export default function Testimonials() {
   const prev = () => setCurrent((c) => (c - 1 + total) % total);
 
   useEffect(() => {
-    const timer = setInterval(next, 8000);
+    const timer = setInterval(next, 9000);
     return () => clearInterval(timer);
   }, []);
 
+  const t = testimonials[current];
+
   return (
-    <section className="bg-[#f9f9f9] py-28 px-4 md:px-12 overflow-hidden" id="testimonials">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-16"
+    <section
+      id="testimonials"
+      style={{
+        background: "var(--bg-alt)",
+        paddingTop: "var(--section-py)",
+        paddingBottom: "var(--section-py)",
+      }}
+      className="section-px"
+    >
+      <div className="container-max">
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr",
+            gap: "5rem",
+            alignItems: "center",
+          }}
+          className="testimonial-layout"
         >
-          <div className="inline-block bg-[#6373f2]/10 px-4 py-1.5 rounded-full mb-6">
-            <span className="text-[#6373f2] text-sm font-bold uppercase tracking-widest">Client Stories</span>
-          </div>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#020817] mb-4 font-heading">Hear From Our Customers</h2>
-          <div className="w-20 h-1 bg-[#d4af37] rounded mx-auto" />
-        </motion.div>
+          {/* Left — heading & nav */}
+          <div>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
+              <span className="eyebrow">Client Stories</span>
+              <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
+            </div>
 
-        {/* Cards Row */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {testimonials.map((t, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
-              onClick={() => setCurrent(i)}
-              className={`relative bg-white rounded-2xl p-8 border shadow-lg cursor-pointer transition-all duration-300 overflow-hidden group
-                ${i === current ? "border-[#6373f2] shadow-[#6373f2]/20 shadow-xl" : "border-gray-100 hover:border-gray-200 hover:shadow-md"}`}
+            <h2
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
+                fontWeight: 600,
+                color: "var(--text-primary)",
+                lineHeight: 1.1,
+                letterSpacing: "-0.01em",
+                marginBottom: "2.5rem",
+              }}
             >
-              {/* Bottom accent bar */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-1 rounded-b-2xl transition-all duration-500"
-                style={{ background: i === current ? t.color : "#e5e7eb" }}
-              />
+              What Our{" "}
+              <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>
+                Clients Say
+              </em>
+            </h2>
 
-              {/* Large gold quote mark */}
-              <div className="text-7xl font-black leading-none mb-4" style={{ color: `${t.color}30` }}>&ldquo;&rdquo;</div>
-              
-              <p className="text-gray-600 text-sm leading-relaxed mb-8 line-clamp-5">
-                {t.quote}
-              </p>
-
-              {/* Author */}
-              <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
-                <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-lg flex-shrink-0"
-                  style={{ background: t.color }}
-                >
-                  {t.initial}
-                </div>
-                <div>
-                  <div className="font-bold text-sm" style={{ color: t.color }}>{t.company}</div>
-                  <div className="text-gray-400 text-xs">{t.role}</div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Navigation */}
-        <div className="flex items-center justify-center gap-6">
-          <button
-            onClick={prev}
-            className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500 hover:border-[#6373f2] hover:text-[#6373f2] transition-all duration-300"
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <div className="flex gap-3">
-            {testimonials.map((_, i) => (
+            {/* Navigation */}
+            <div style={{ display: "flex", gap: "1rem", marginBottom: "2.5rem" }}>
               <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`transition-all duration-300 rounded-full ${
-                  i === current ? "w-8 h-3 bg-[#6373f2]" : "w-3 h-3 bg-gray-300 hover:bg-gray-400"
-                }`}
-              />
-            ))}
+                onClick={prev}
+                style={{
+                  width: "52px",
+                  height: "52px",
+                  border: "1px solid var(--border-medium)",
+                  background: "var(--bg-main)",
+                  color: "var(--text-primary)",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transition: "all 0.3s ease",
+                  borderRadius: "50%",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLButtonElement).style.background = "var(--color-primary)";
+                  (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--color-primary)";
+                  (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLButtonElement).style.background = "var(--bg-main)";
+                  (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border-medium)";
+                  (e.currentTarget as HTMLButtonElement).style.color = "var(--text-primary)";
+                }}
+                aria-label="Previous testimonial"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 18l-6-6 6-6" />
+                </svg>
+              </button>
+              <button
+                onClick={next}
+                style={{
+                  width: "52px",
+                  height: "52px",
+                  border: "1px solid var(--border-medium)",
+                  background: "var(--bg-main)",
+                  color: "var(--text-primary)",
+                  cursor: "pointer",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  transition: "all 0.3s ease",
+                  borderRadius: "50%",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLButtonElement).style.background = "var(--color-primary)";
+                  (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--color-primary)";
+                  (e.currentTarget as HTMLButtonElement).style.color = "#FFFFFF";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLButtonElement).style.background = "var(--bg-main)";
+                  (e.currentTarget as HTMLButtonElement).style.borderColor = "var(--border-medium)";
+                  (e.currentTarget as HTMLButtonElement).style.color = "var(--text-primary)";
+                }}
+                aria-label="Next testimonial"
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 18l6-6-6-6" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Dots */}
+            <div style={{ display: "flex", gap: "0.5rem" }}>
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  aria-label={`Testimonial ${i + 1}`}
+                  style={{
+                    height: "3px",
+                    width: i === current ? "48px" : "24px",
+                    background: i === current ? "var(--color-primary)" : "var(--border-medium)",
+                    border: "none",
+                    cursor: "pointer",
+                    padding: 0,
+                    transition: "width 0.4s ease, background 0.3s ease",
+                  }}
+                />
+              ))}
+            </div>
           </div>
-          <button
-            onClick={next}
-            className="w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500 hover:border-[#6373f2] hover:text-[#6373f2] transition-all duration-300"
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
+
+          {/* Right — testimonial card */}
+          <div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
+                style={{
+                  background: "var(--bg-main)",
+                  border: "1px solid var(--border-light)",
+                  boxShadow: "0 10px 40px rgba(15, 23, 42, 0.04)",
+                  padding: "4rem",
+                  position: "relative",
+                }}
+              >
+                {/* Quote mark */}
+                <div
+                  style={{
+                    fontFamily: "var(--font-heading)",
+                    fontSize: "6rem",
+                    lineHeight: 0.8,
+                    color: "var(--color-accent-soft)",
+                    position: "absolute",
+                    top: "2.5rem",
+                    left: "2.5rem",
+                    pointerEvents: "none",
+                  }}
+                >
+                  &ldquo;
+                </div>
+
+                <p
+                  style={{
+                    fontFamily: "var(--font-heading)",
+                    fontSize: "clamp(1.25rem, 1.75vw, 1.5rem)",
+                    fontStyle: "italic",
+                    fontWeight: 500,
+                    color: "var(--text-primary)",
+                    lineHeight: 1.75,
+                    marginBottom: "3rem",
+                    position: "relative",
+                    zIndex: 2,
+                    marginTop: "1.5rem",
+                  }}
+                >
+                  {t.quote}
+                </p>
+
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1.25rem",
+                    paddingTop: "2rem",
+                    borderTop: "1px solid var(--border-light)",
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "52px",
+                      height: "52px",
+                      background: "var(--bg-alt)",
+                      border: "1px solid var(--border-medium)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontFamily: "var(--font-heading)",
+                      fontSize: "1.5rem",
+                      fontWeight: 600,
+                      color: "var(--color-primary)",
+                      flexShrink: 0,
+                      borderRadius: "50%",
+                    }}
+                  >
+                    {t.initial}
+                  </div>
+                  <div>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: "0.95rem",
+                        fontWeight: 600,
+                        color: "var(--text-primary)",
+                      }}
+                    >
+                      {t.company}
+                    </div>
+                    <div
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: "0.8rem",
+                        color: "var(--text-muted)",
+                        marginTop: "0.125rem",
+                        letterSpacing: "0.04em",
+                      }}
+                    >
+                      {t.role}
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
+
+      <style>{`
+        @media (min-width: 1024px) {
+          .testimonial-layout {
+            grid-template-columns: 1fr 1.3fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

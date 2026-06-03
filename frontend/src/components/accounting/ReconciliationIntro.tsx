@@ -11,9 +11,9 @@ export default function ReconciliationIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-[#020817] mb-8 font-heading"
+            className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading"
           >
-            Accurate and Verifiable <span className="text-[#d4af37]">Financial Records</span>
+            Accurate and Verifiable <span className="text-[var(--color-accent)]">Financial Records</span>
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -23,7 +23,7 @@ export default function ReconciliationIntro() {
             className="max-w-3xl mx-auto text-gray-600 text-lg md:text-xl leading-relaxed"
           >
             <p>
-              At <strong className="text-[#020817]">AM Accounting Service</strong> we make sure that your financial records are both accurate and verifiable, with thorough reconciliation processes that are backed by clear documentation and reliable oversight.
+              At <strong className="text-[var(--text-primary)]">AM Accounting Service</strong> we make sure that your financial records are both accurate and verifiable, with thorough reconciliation processes that are backed by clear documentation and reliable oversight.
             </p>
           </motion.div>
         </div>

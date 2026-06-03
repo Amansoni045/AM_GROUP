@@ -34,11 +34,11 @@ export default function ESGFAQ() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-[#6373f2]/10 text-[#6373f2] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+          <div className="inline-flex items-center gap-2 bg-[var(--color-accent-soft)] text-[var(--color-accent)] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
             <HelpCircle className="w-4 h-4" /> FAQ
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#020817] font-heading mb-6">
-            Frequently <span className="text-[#d4af37]">Asked</span> Questions
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading mb-6">
+            Frequently <span className="text-[var(--color-accent)]">Asked</span> Questions
           </h2>
         </motion.div>
 
@@ -50,16 +50,16 @@ export default function ESGFAQ() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-[#f9f9f9] rounded-2xl overflow-hidden border border-gray-100 transition-all duration-300 shadow-sm hover:shadow-md"
+              className="bg-[var(--bg-alt)] rounded-2xl overflow-hidden border border-gray-100 transition-all duration-300 shadow-sm hover:shadow-md"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
                 className="w-full flex items-center justify-between p-6 text-left group"
               >
-                <span className={`text-lg font-bold transition-colors ${openIndex === i ? 'text-[#6373f2]' : 'text-[#020817] group-hover:text-[#6373f2]'}`}>
+                <span className={`text-lg font-bold transition-colors ${openIndex === i ? 'text-[var(--color-accent)]' : 'text-[var(--text-primary)] group-hover:text-[var(--color-accent)]'}`}>
                   {faq.question}
                 </span>
-                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${openIndex === i ? 'bg-[#6373f2] text-white rotate-180' : 'bg-white text-gray-400 group-hover:text-[#6373f2]'}`}>
+                <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all ${openIndex === i ? 'bg-[var(--color-accent-soft)] text-[var(--text-primary)] rotate-180' : 'bg-white text-[var(--text-secondary)] group-hover:text-[var(--color-accent)]'}`}>
                   {openIndex === i ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                 </div>
               </button>
@@ -71,7 +71,7 @@ export default function ESGFAQ() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    <div className="p-6 pt-0 text-gray-500 leading-relaxed border-t border-gray-100/50">
+                    <div className="p-6 pt-0 text-gray-500 leading-relaxed border-t border-[var(--border-light)]">
                       {faq.answer}
                     </div>
                   </motion.div>

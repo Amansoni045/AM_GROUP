@@ -21,9 +21,9 @@ export default function MISIntro() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-bold text-[#020817] mb-8 font-heading"
+            className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] mb-8 font-heading"
           >
-            Customized <span className="text-[#d4af37]">MIS Reporting</span> Tailored to Your Needs
+            Customized <span className="text-[var(--color-accent)]">MIS Reporting</span> Tailored to Your Needs
           </motion.h2>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -48,10 +48,10 @@ export default function MISIntro() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h3 className="text-3xl font-bold text-[#020817] mb-4 font-heading">
+            <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-4 font-heading">
               Benefits of MIS Report
             </h3>
-            <div className="w-16 h-1 bg-[#d4af37] mx-auto rounded-full" />
+            <div className="w-16 h-1 bg-[var(--color-primary)] mx-auto rounded-full" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -62,10 +62,10 @@ export default function MISIntro() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-start gap-4 p-6 rounded-2xl border border-gray-100 shadow-sm bg-[#f9f9f9] hover:bg-white hover:shadow-md transition-all group"
+                className="flex items-start gap-4 p-6 rounded-2xl border border-gray-100 shadow-sm bg-[var(--bg-alt)] hover:bg-white hover:shadow-md transition-all group"
               >
-                <CheckCircle2 className="w-6 h-6 text-[#d4af37] shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="font-bold text-[#020817]">{benefit}</span>
+                <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)] shrink-0 group-hover:scale-110 transition-transform" />
+                <span className="font-bold text-[var(--text-primary)]">{benefit}</span>
               </motion.div>
             ))}
           </div>

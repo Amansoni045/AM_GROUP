@@ -4,42 +4,123 @@ import { motion } from "framer-motion";
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[60vh] flex flex-col bg-[#040b1e] overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/WhatsApp-Image-2025-10-05-at-19.49.59-1.webp"
-          alt="AM Group About"
-          className="w-full h-full object-cover opacity-40"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#040b1e]/60 via-[#040b1e]/50 to-[#040b1e]/90" />
-      </div>
-            <div className="relative z-10 flex-grow flex items-center justify-center px-4 md:px-12 text-center py-20">
-        <div className="max-w-4xl">
+    <section
+      style={{
+        position: "relative",
+        minHeight: "60vh",
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
+        background: "linear-gradient(135deg, #f8fafc 0%, #ffffff 60%, #faf7f0 100%)",
+      }}
+    >
+      {/* Decorative gold accent top-left */}
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "320px",
+          height: "320px",
+          background: "radial-gradient(circle at top left, rgba(180,151,90,0.12) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }}
+      />
+      {/* Decorative accent bottom-right */}
+      <div
+        style={{
+          position: "absolute",
+          bottom: 0,
+          right: 0,
+          width: "400px",
+          height: "300px",
+          background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.08) 0%, transparent 70%)",
+          pointerEvents: "none",
+        }}
+      />
+
+      <div
+        style={{
+          position: "relative",
+          zIndex: 10,
+          flexGrow: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          padding: "5rem 2rem",
+          textAlign: "center",
+        }}
+      >
+        <div style={{ maxWidth: "860px" }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="inline-block border border-[#d4af37]/50 text-[#d4af37] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6"
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+            style={{
+              display: "inline-block",
+              border: "1px solid var(--color-accent)",
+              color: "var(--color-accent)",
+              padding: "0.375rem 1.25rem",
+              borderRadius: "999px",
+              fontSize: "0.7rem",
+              fontWeight: 700,
+              letterSpacing: "0.2em",
+              textTransform: "uppercase",
+              marginBottom: "1.75rem",
+              fontFamily: "var(--font-body)",
+            }}
           >
             About AM Group
           </motion.div>
+
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className="text-white text-5xl md:text-7xl font-bold leading-tight mb-6 font-heading"
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(2.8rem, 6vw, 5rem)",
+              fontWeight: 600,
+              color: "var(--text-primary)",
+              lineHeight: 1.1,
+              marginBottom: "1.5rem",
+              letterSpacing: "-0.02em",
+            }}
           >
             Driving Innovation &<br />
-            <span className="text-[#d4af37]">Growth Globally</span>
+            <span style={{ color: "var(--color-accent)" }}>Growth Globally</span>
           </motion.h1>
+
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
-            className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto"
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.35 }}
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "clamp(1rem, 1.5vw, 1.15rem)",
+              color: "var(--text-secondary)",
+              lineHeight: 1.75,
+              maxWidth: "640px",
+              margin: "0 auto",
+            }}
           >
-            AM Group is a multidisciplinary firm uniting Consulting, Design, Accounting and Data Analytics under one trusted name across the GCC.
+            AM Group is a multidisciplinary firm uniting Consulting, Design, Accounting
+            and Data Analytics under one trusted name across the GCC.
           </motion.p>
+
+          {/* Gold divider */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            style={{
+              width: "60px",
+              height: "2px",
+              background: "var(--color-accent)",
+              margin: "2rem auto 0",
+              transformOrigin: "left",
+            }}
+          />
         </div>
       </div>
     </section>
