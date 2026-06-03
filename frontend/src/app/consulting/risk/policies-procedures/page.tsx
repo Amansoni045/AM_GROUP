@@ -77,11 +77,11 @@ export default function PoliciesProceduresPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block bg-[#dc2626]/20 px-4 py-1.5 rounded-full mb-6 border border-[#dc2626]/30">
-              <span className="text-[#dc2626] text-sm font-bold uppercase tracking-widest">Risk Advisory</span>
+            <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[var(--color-primary)]/5">
+              <span className="tracking-[0.2em]">Risk Advisory</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              Policies & <span className="text-[#dc2626]">Procedures</span> (SOPs)
+              Policies & <span className="text-[var(--color-accent)]">Procedures</span> (SOPs)
             </h1>
             <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
               Strong Substance. Stronger Standing. Building a clear roadmap for day-to-day operations and organizational success.
@@ -101,9 +101,9 @@ export default function PoliciesProceduresPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-[#020817] mb-8 font-heading leading-tight">
-                The Backbone of a <span className="text-[#dc2626]">Successful</span> Organization
+                The Backbone of a <span className="text-[var(--color-accent)]">Successful</span> Organization
               </h2>
-              <div className="w-20 h-1.5 bg-[#d4af37] rounded-full mb-8" />
+              <div className="w-16 h-1 bg-[var(--color-primary)] rounded mb-8" />
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
                   At AM Consulting, we recognize that well-defined policies and procedures are the foundation for consistent and efficient operations.
@@ -118,7 +118,7 @@ export default function PoliciesProceduresPage() {
             </motion.div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-[#dc2626]/5 rounded-[3rem] rotate-3 scale-105 -z-10" />
+              <div className="absolute inset-0 bg-[var(--color-accent-soft)] rounded-[3rem] rotate-3 scale-105 -z-10" />
               <img 
                 src="/am-group.webp" 
                 alt="Risk Strategy" 
@@ -147,12 +147,12 @@ export default function PoliciesProceduresPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] group hover:bg-[#dc2626] transition-all duration-500"
+                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] group hover:bg-[var(--color-primary)] transition-all duration-500"
               >
-                <div className="w-16 h-16 bg-[#dc2626]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white transition-colors duration-500">
-                  <step.icon className="w-8 h-8 text-[#dc2626] group-hover:text-[#dc2626]" strokeWidth={1.5} />
+                <div className="w-16 h-16 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white transition-colors duration-500">
+                  <step.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-[var(--color-primary)]" strokeWidth={1.5} />
                 </div>
-                <div className="text-sm font-black text-[#dc2626]/20 mb-2 group-hover:text-white/30 transition-colors">{step.id}</div>
+                <div className="text-sm font-black text-[var(--color-accent)]/20 mb-2 group-hover:text-white/30 transition-colors">{step.id}</div>
                 <h3 className="text-2xl font-bold text-[#020817] mb-4 font-heading group-hover:text-white transition-colors">
                   {step.title}
                 </h3>
@@ -169,9 +169,9 @@ export default function PoliciesProceduresPage() {
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="bg-[#020817] rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#dc2626]/10 rounded-full blur-[100px] -z-0" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-accent-soft)] rounded-full blur-[100px] -z-0" />
             
-            <h2 className="text-3xl md:text-5xl font-bold mb-16 font-heading text-center">Type of Key <span className="text-[#dc2626]">Policies</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-16 font-heading text-center">Type of Key <span className="text-[var(--color-accent)]">Policies</span></h2>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 relative z-10">
               {keyPolicies.map((policy, i) => (
@@ -181,9 +181,9 @@ export default function PoliciesProceduresPage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
-                  className="bg-white/5 border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-[#dc2626] hover:border-[#dc2626] transition-all duration-300"
+                  className="bg-white/5 border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-[var(--color-accent)] hover:border-[var(--color-accent)] transition-all duration-300"
                 >
-                  <policy.icon className="w-10 h-10 text-[#dc2626] mb-6 group-hover:text-white transition-colors" />
+                  <policy.icon className="w-10 h-10 text-[var(--color-accent)] mb-6 group-hover:text-white transition-colors" />
                   <span className="font-bold text-sm text-white/90 group-hover:text-white">{policy.name}</span>
                 </motion.div>
               ))}
@@ -195,17 +195,15 @@ export default function PoliciesProceduresPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[#dc2626] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)] pointer-events-none" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Build Your Foundation for Success</h2>
             <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
               Connect with our risk advisory experts to develop robust policies and procedures tailored to your organization’s goals.
             </p>
-            <Link href="/#consultation">
-              <button className="bg-white text-[#dc2626] px-10 py-4 rounded-xl font-bold hover:bg-[#020817] hover:text-white transition-all duration-300 flex items-center gap-3 mx-auto">
-                Schedule a Consultation
-                <ArrowRight className="w-5 h-5" />
-              </button>
+            <Link href="/#consultation" className="btn-white mx-auto">
+              Schedule a Consultation
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

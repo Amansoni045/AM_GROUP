@@ -104,7 +104,7 @@ export default function ConsultingServices() {
             <div className="relative z-10">
               <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4 font-heading">Ready to transform your business?</h3>
               <p className="text-[var(--text-secondary)] text-sm mb-8">Book a free consultation with our advisory experts today.</p>
-              <Link href="/#consultation" className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-[var(--text-primary)] px-6 py-3 rounded-xl font-bold hover:bg-white transition-colors">
+              <Link href="/#consultation" className="btn-primary">
                 Let's Talk <ArrowUpRight className="w-4 h-4" />
               </Link>
             </div>

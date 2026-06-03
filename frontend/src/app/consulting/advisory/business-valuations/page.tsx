@@ -46,11 +46,11 @@ export default function BusinessValuationsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block bg-[#d4af37]/20 px-4 py-1.5 rounded-full mb-6 border border-[#d4af37]/30">
-              <span className="text-[#d4af37] text-sm font-bold uppercase tracking-widest">Financial Advisory</span>
+            <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[var(--color-primary)]/5">
+              <span className="tracking-[0.2em]">Financial Advisory</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              Business <span className="text-[#d4af37]">Valuations</span>
+              Business <span className="text-[var(--color-accent)]">Valuations</span>
             </h1>
             <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
               Leading business valuation firm in Bahrain and Saudi Arabia, supporting clients in determining the fair value of their businesses.
@@ -70,9 +70,9 @@ export default function BusinessValuationsPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-[#020817] mb-8 font-heading leading-tight">
-                Accurate, Reliable, and <span className="text-[#6373f2]">Defensible</span> Valuations
+                Accurate, Reliable, and <span className="text-[var(--color-accent)]">Defensible</span> Valuations
               </h2>
-              <div className="w-20 h-1.5 bg-[#d4af37] rounded-full mb-8" />
+              <div className="w-16 h-1 bg-[var(--color-primary)] rounded mb-8" />
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
                   Business valuation is the process of assessing the economic value of a business and is often required for strategic decision-making. 
@@ -96,7 +96,7 @@ export default function BusinessValuationsPage() {
                   transition={{ delay: i * 0.05 }}
                   className="bg-[#f9f9f9] p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group"
                 >
-                  <span className="text-[#6373f2] font-black text-xl block mb-2 opacity-40 group-hover:opacity-100 transition-opacity">{point.id}</span>
+                  <span className="text-[var(--color-accent)] font-black text-xl block mb-2 opacity-40 group-hover:opacity-100 transition-opacity">{point.id}</span>
                   <p className="font-bold text-[#020817] text-sm leading-tight">{point.title}</p>
                 </motion.div>
               ))}
@@ -123,10 +123,10 @@ export default function BusinessValuationsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/5 border border-white/10 p-10 rounded-3xl hover:border-[#d4af37]/50 transition-all duration-300 group"
+                className="bg-white/5 border border-white/10 p-10 rounded-3xl hover:border-[var(--color-accent)]/50 transition-all duration-300 group"
               >
-                <div className="w-14 h-14 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#d4af37] transition-colors">
-                  <item.icon className="w-7 h-7 text-[#d4af37] group-hover:text-white transition-colors" />
+                <div className="w-14 h-14 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--color-accent)] transition-colors">
+                  <item.icon className="w-7 h-7 text-[var(--color-accent)] group-hover:text-white transition-colors" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4 font-heading">
                   {item.title}
@@ -144,7 +144,7 @@ export default function BusinessValuationsPage() {
       <section className="py-24 px-4 md:px-12 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="bg-[#f9f9f9] rounded-[3rem] p-12 md:p-20 border border-gray-100 relative">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#d4af37]/5 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-accent-soft)] rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl" />
             
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -160,20 +160,20 @@ export default function BusinessValuationsPage() {
                     "Capitalization of Earnings"
                   ].map((method, i) => (
                     <div key={i} className="flex items-center gap-4 bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
-                      <div className="w-2 h-2 bg-[#d4af37] rounded-full" />
+                      <div className="w-2 h-2 bg-[var(--color-accent)] rounded-full" />
                       <span className="font-bold text-[#020817]">{method}</span>
                     </div>
                   ))}
                 </div>
               </div>
-              <div className="bg-[#020817] p-12 rounded-[2rem] text-white shadow-2xl">
-                <PieChart className="w-16 h-16 text-[#d4af37] mb-8" />
+              <div className="relative bg-[#020817] p-12 rounded-[2rem] text-white shadow-2xl">
+                <PieChart className="w-16 h-16 text-[var(--color-accent)] mb-8" />
                 <h3 className="text-2xl font-bold mb-6 font-heading">Comprehensive Disclosures</h3>
                 <p className="text-white/70 leading-relaxed italic mb-8">
                   "Our reports also include detailed financial forecasts, key assumptions, and an exhaustive appendix to meet specific regulatory and stakeholder requirements."
                 </p>
                 <Link href="/#consultation">
-                  <button className="flex items-center gap-2 text-[#d4af37] font-bold hover:gap-3 transition-all">
+                  <button className="flex items-center gap-2 text-[var(--color-accent)] font-bold hover:gap-3 transition-all">
                     Request Sample Report <ArrowRight className="w-5 h-5" />
                   </button>
                 </Link>
@@ -186,16 +186,14 @@ export default function BusinessValuationsPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[#020817] rounded-3xl p-12 text-center text-white shadow-2xl">
+          <div className="bg-[#020817] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Determine Your Business Worth</h2>
             <p className="text-white/60 text-lg mb-10 max-w-2xl mx-auto font-medium">
               Get an accurate and defensible valuation report from the leading firm in Bahrain and Saudi Arabia.
             </p>
-            <Link href="/#consultation">
-              <button className="bg-[#d4af37] text-white px-10 py-4 rounded-xl font-bold hover:bg-white hover:text-[#020817] transition-all duration-300 flex items-center gap-3 mx-auto shadow-xl shadow-[#d4af37]/20">
-                Get Valuation Quote
-                <ArrowRight className="w-5 h-5" />
-              </button>
+            <Link href="/#consultation" className="btn-gold mx-auto">
+              Get Valuation Quote
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

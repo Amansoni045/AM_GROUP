@@ -55,12 +55,12 @@ export default function OperationalRiskManagementPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block bg-[#dc2626]/20 px-4 py-1.5 rounded-full mb-6 border border-[#dc2626]/30">
-              <span className="text-[#dc2626] text-sm font-bold uppercase tracking-widest">Risk Advisory</span>
+            <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[var(--color-primary)]/5">
+              <span className="tracking-[0.2em]">Risk Advisory</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
               Operational <br />
-              <span className="text-[#dc2626]">Risk Management</span>
+              <span className="text-[var(--color-accent)]">Risk Management</span>
             </h1>
             <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
               Transforming end-to-end risk functions. Connecting data and insights across processes to establish strong controls.
@@ -80,9 +80,9 @@ export default function OperationalRiskManagementPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[#020817] mb-8 font-heading">
-                Holistic Operational <span className="text-[#dc2626]">Excellence</span>
+                Holistic Operational <span className="text-[var(--color-accent)]">Excellence</span>
               </h2>
-              <div className="w-20 h-1.5 bg-[#d4af37] rounded-full mb-8" />
+              <div className="w-16 h-1 bg-[var(--color-primary)] rounded mb-8" />
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
                   AM Consulting helps organizations assess, build, and integrate operational risks into a comprehensive risk management program to strengthen overall capabilities.
@@ -94,7 +94,7 @@ export default function OperationalRiskManagementPage() {
             </motion.div>
             
             <div className="relative grid grid-cols-2 gap-4">
-              <div className="absolute inset-0 bg-[#dc2626]/5 rounded-3xl blur-3xl -z-10" />
+              <div className="absolute inset-0 bg-[var(--color-accent-soft)] rounded-3xl blur-3xl -z-10" />
               {opRiskSteps.map((step, i) => (
                 <motion.div
                   key={i}
@@ -104,7 +104,7 @@ export default function OperationalRiskManagementPage() {
                   transition={{ delay: i * 0.1 }}
                   className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center group hover:bg-[#020817] transition-all duration-300"
                 >
-                  <step.icon className="w-10 h-10 text-[#dc2626] mb-4 group-hover:text-white transition-colors" />
+                  <step.icon className="w-10 h-10 text-[var(--color-accent)] mb-4 group-hover:text-white transition-colors" />
                   <h4 className="font-bold text-[#020817] group-hover:text-white text-sm transition-colors">{step.title}</h4>
                 </motion.div>
               ))}
@@ -131,13 +131,13 @@ export default function OperationalRiskManagementPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] flex gap-8 items-start group hover:border-[#dc2626]/30 transition-all duration-500"
+                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] flex gap-8 items-start group hover:border-[var(--color-accent)]/30 transition-all duration-500"
               >
-                <div className="w-16 h-16 bg-[#dc2626]/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#dc2626] transition-colors duration-500">
-                  <item.icon className="w-8 h-8 text-[#dc2626] group-hover:text-white transition-colors" />
+                <div className="w-16 h-16 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--color-accent)] transition-colors duration-500">
+                  <item.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-white transition-colors" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[#dc2626] transition-colors">{item.title}</h3>
+                  <h3 className="text-2xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">{item.title}</h3>
                   <p className="text-gray-500 leading-relaxed text-sm">{item.desc}</p>
                 </div>
               </motion.div>
@@ -155,7 +155,7 @@ export default function OperationalRiskManagementPage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto"
           >
-            <Database className="w-16 h-16 text-[#dc2626] mx-auto mb-8" />
+            <Database className="w-16 h-16 text-[var(--color-accent)] mx-auto mb-8" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Leveraging Technology</h2>
             <p className="text-white/70 text-xl leading-relaxed italic">
               "AM Consulting connects data and insights across processes, establishes strong controls, and enables your organization to stay at the leading edge of operational risk management."
@@ -167,17 +167,15 @@ export default function OperationalRiskManagementPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[#dc2626] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)] pointer-events-none" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Strengthen Your Operational Resilience</h2>
             <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
               Join the forward-thinking organizations that trust AM Consulting for operational risk excellence.
             </p>
-            <Link href="/#consultation">
-              <button className="bg-white text-[#dc2626] px-10 py-4 rounded-xl font-bold hover:bg-[#020817] hover:text-white transition-all duration-300 flex items-center gap-3 mx-auto">
-                Schedule a Consultation
-                <ArrowRight className="w-5 h-5" />
-              </button>
+            <Link href="/#consultation" className="btn-white mx-auto">
+              Schedule a Consultation
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

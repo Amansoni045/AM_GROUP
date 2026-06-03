@@ -58,11 +58,11 @@ export default function RestructuringServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block bg-[#6373f2]/20 px-4 py-1.5 rounded-full mb-6 border border-[#6373f2]/30">
-              <span className="text-[#6373f2] text-sm font-bold uppercase tracking-widest">Turnaround Advisory</span>
+            <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[var(--color-primary)]/5">
+              <span className="tracking-[0.2em]">Turnaround Advisory</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              Restructuring <span className="text-[#6373f2]">Services</span>
+              Restructuring <span className="text-[var(--color-accent)]">Services</span>
             </h1>
             <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
               Excellence in Financial Analysis. Supporting businesses in Bahrain and Saudi Arabia to adapt, evolve, and thrive in changing economic conditions.
@@ -82,9 +82,9 @@ export default function RestructuringServicesPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[#020817] mb-8 font-heading">
-                Adapt. Streamline. <span className="text-[#d4af37]">Recover.</span>
+                Adapt. Streamline. <span className="text-[var(--color-accent)]">Recover.</span>
               </h2>
-              <div className="w-20 h-1.5 bg-[#d4af37] rounded-full mb-8" />
+              <div className="w-16 h-1 bg-[var(--color-primary)] rounded mb-8" />
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
                   AM Consulting supports businesses that have strong market presence but need to adapt to evolving challenges. Our focus is on improving financial stability and streamlining operations.
@@ -96,12 +96,12 @@ export default function RestructuringServicesPage() {
               
               <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <div className="bg-[#f9f9f9] p-8 rounded-2xl border border-gray-100 shadow-sm">
-                  <Workflow className="w-10 h-10 text-[#6373f2] mb-6" />
+                  <Workflow className="w-10 h-10 text-[var(--color-accent)] mb-6" />
                   <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading">Business Restructuring</h3>
                   <p className="text-gray-600 text-sm">Reorganizing models and management structures to enhance efficiency.</p>
                 </div>
                 <div className="bg-[#f9f9f9] p-8 rounded-2xl border border-gray-100 shadow-sm">
-                  <Landmark className="w-10 h-10 text-[#d4af37] mb-6" />
+                  <Landmark className="w-10 h-10 text-[var(--color-accent)] mb-6" />
                   <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading">Debt Restructuring</h3>
                   <p className="text-gray-600 text-sm">Negotiating terms and improving cash flow to restore creditworthiness.</p>
                 </div>
@@ -116,11 +116,11 @@ export default function RestructuringServicesPage() {
               className="bg-[#020817] p-10 md:p-14 rounded-[3rem] text-white shadow-2xl relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <h3 className="text-2xl font-bold mb-10 font-heading text-[#d4af37]">Focused Focus Areas</h3>
+              <h3 className="text-2xl font-bold mb-10 font-heading text-[var(--color-accent)]">Focused Focus Areas</h3>
               <ul className="space-y-6">
                 {businessRestructuringAreas.map((area, i) => (
                   <li key={i} className="flex items-center gap-4 group">
-                    <div className="w-2 h-2 bg-[#d4af37] rounded-full group-hover:scale-150 transition-transform" />
+                    <div className="w-2 h-2 bg-[var(--color-accent)] rounded-full group-hover:scale-150 transition-transform" />
                     <span className="text-white/80 font-medium group-hover:text-white transition-colors">{area}</span>
                   </li>
                 ))}
@@ -148,12 +148,12 @@ export default function RestructuringServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] group hover:bg-[#6373f2] transition-all duration-500"
+                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] group hover:bg-[var(--color-primary)] transition-all duration-500"
               >
-                <div className="w-16 h-16 bg-[#6373f2]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white transition-colors duration-500">
-                  <step.icon className="w-8 h-8 text-[#6373f2] group-hover:text-[#6373f2]" strokeWidth={1.5} />
+                <div className="w-16 h-16 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white transition-colors duration-500">
+                  <step.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-[var(--color-primary)]" strokeWidth={1.5} />
                 </div>
-                <div className="text-sm font-black text-[#6373f2]/20 mb-2 group-hover:text-white/30 transition-colors">0{i+1}</div>
+                <div className="text-sm font-black text-[var(--color-accent)]/20 mb-2 group-hover:text-white/30 transition-colors">0{i+1}</div>
                 <h3 className="text-2xl font-bold text-[#020817] mb-4 font-heading group-hover:text-white transition-colors">
                   {step.title}
                 </h3>
@@ -175,9 +175,9 @@ export default function RestructuringServicesPage() {
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 font-heading leading-tight">
-                  Driving Sustainable <span className="text-[#6373f2]">Value</span> & Recovery
+                  Driving Sustainable <span className="text-[var(--color-accent)]">Value</span> & Recovery
                 </h2>
-                <div className="w-20 h-1 bg-[#d4af37] mb-8" />
+                <div className="w-16 h-1 bg-[var(--color-accent)] mb-8" />
                 <p className="text-white/70 text-lg leading-relaxed mb-8">
                   We specialize in helping businesses regain their competitive edge through cost optimization, resource allocation, and strategic redesign.
                 </p>
@@ -189,16 +189,16 @@ export default function RestructuringServicesPage() {
                     "Market Resilience"
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-[#6373f2]" />
+                      <CheckCircle2 className="w-5 h-5 text-[var(--color-accent)]" />
                       <span className="font-medium text-sm">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="relative">
-                <div className="aspect-square bg-[#6373f2]/10 rounded-full flex items-center justify-center p-10 border border-white/10">
-                  <div className="aspect-square bg-[#6373f2]/20 rounded-full flex items-center justify-center p-10 w-full border border-white/10">
-                    <RefreshCw className="w-32 h-32 text-[#6373f2] animate-spin-slow" />
+                <div className="aspect-square bg-[var(--color-accent-soft)] rounded-full flex items-center justify-center p-10 border border-white/10">
+                  <div className="aspect-square bg-[var(--color-accent-soft)]/20 rounded-full flex items-center justify-center p-10 w-full border border-white/10">
+                    <RefreshCw className="w-32 h-32 text-[var(--color-accent)] animate-spin-slow" />
                   </div>
                 </div>
               </div>
@@ -210,17 +210,15 @@ export default function RestructuringServicesPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[#6373f2] rounded-3xl p-12 text-center text-white shadow-2xl shadow-[#6373f2]/30 relative overflow-hidden">
+          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
             <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Regain Your Competitive Edge</h2>
             <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
               Let our restructuring experts help you navigate economic challenges and build a resilient future for your business.
             </p>
-            <Link href="/#consultation">
-              <button className="bg-white text-[#6373f2] px-10 py-4 rounded-xl font-bold hover:bg-[#020817] hover:text-white transition-all duration-300 flex items-center gap-3 mx-auto">
-                Discuss Your Situation
-                <ArrowRight className="w-5 h-5" />
-              </button>
+            <Link href="/#consultation" className="btn-white mx-auto">
+              Discuss Your Situation
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

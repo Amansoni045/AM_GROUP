@@ -54,11 +54,11 @@ export default function AMLCFTPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block bg-[#d4af37]/20 px-4 py-1.5 rounded-full mb-6 border border-[#d4af37]/30">
-              <span className="text-[#d4af37] text-sm font-bold uppercase tracking-widest">Regulatory Advisory</span>
+            <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[var(--color-primary)]/5">
+              <span className="tracking-[0.2em]">Regulatory Advisory</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              AML/CFT <span className="text-[#d4af37]">Compliance</span>
+              AML/CFT <span className="text-[var(--color-accent)]">Compliance</span>
             </h1>
             <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
               Excellence in Regulatory Advisory. safeguard your business and build stakeholder confidence with our comprehensive AML/CFT services.
@@ -78,9 +78,9 @@ export default function AMLCFTPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-[#020817] mb-8 font-heading leading-tight">
-                Your Trusted Partner for <span className="text-[#6373f2]">Financial</span> Integrity
+                Your Trusted Partner for <span className="text-[var(--color-accent)]">Financial</span> Integrity
               </h2>
-              <div className="w-20 h-1.5 bg-[#d4af37] rounded-full mb-8" />
+              <div className="w-16 h-1 bg-[var(--color-primary)] rounded mb-8" />
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
                   In today’s dynamic regulatory environment, maintaining compliance with financial regulations is essential. AM Consulting serves as your trusted partner for Anti-Money Laundering (AML) and Counter-Financing of Terrorism (CFT) compliance.
@@ -95,7 +95,7 @@ export default function AMLCFTPage() {
             </motion.div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-[#6373f2]/5 rounded-[3rem] rotate-3 scale-105 -z-10" />
+              <div className="absolute inset-0 bg-[var(--color-accent-soft)] rounded-[3rem] rotate-3 scale-105 -z-10" />
               <img 
                 src="/am-group.webp" 
                 alt="AML Team" 
@@ -127,12 +127,12 @@ export default function AMLCFTPage() {
                 className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] hover:shadow-2xl hover:shadow-black/10 transition-all duration-300 group"
               >
                 <div className="flex justify-between items-start mb-8">
-                  <div className="w-14 h-14 bg-[#d4af37]/10 rounded-2xl flex items-center justify-center group-hover:bg-[#d4af37] transition-colors">
-                    <service.icon className="w-7 h-7 text-[#d4af37] group-hover:text-white transition-colors" />
+                  <div className="w-14 h-14 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors">
+                    <service.icon className="w-7 h-7 text-[var(--color-accent)] group-hover:text-white transition-colors" />
                   </div>
-                  <span className="text-sm font-black text-gray-200 group-hover:text-[#6373f2]/20 transition-colors">{service.id}</span>
+                  <span className="text-sm font-black text-gray-200 group-hover:text-[var(--color-accent)]/20 transition-colors">{service.id}</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[#6373f2] transition-colors">
+                <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-gray-500 leading-relaxed text-sm">
@@ -157,8 +157,8 @@ export default function AMLCFTPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {riskApproach.map((step, i) => (
                   <div key={i} className="flex items-center gap-4 bg-white/5 p-6 rounded-2xl border border-white/10 hover:bg-white/10 transition-colors group">
-                    <div className="w-10 h-10 rounded-full bg-[#d4af37]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#d4af37] transition-colors">
-                      <span className="text-[#d4af37] font-bold group-hover:text-white transition-colors">{i+1}</span>
+                    <div className="w-10 h-10 rounded-full bg-[var(--color-accent-soft)] flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--color-accent)] transition-colors">
+                      <span className="text-[var(--color-accent)] font-bold group-hover:text-white transition-colors">{i+1}</span>
                     </div>
                     <span className="font-bold text-white/90">{step}</span>
                   </div>
@@ -170,13 +170,13 @@ export default function AMLCFTPage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-[#d4af37]/10 p-12 rounded-[3rem] border border-[#d4af37]/20"
+              className="bg-[var(--color-accent-soft)] p-12 rounded-[3rem] border border-[var(--color-accent)]/20"
             >
-              <h3 className="text-2xl font-bold mb-8 font-heading text-[#d4af37]">Benefits of Assessing AML/CFT Risk</h3>
+              <h3 className="text-2xl font-bold mb-8 font-heading text-[var(--color-accent)]">Benefits of Assessing AML/CFT Risk</h3>
               <div className="space-y-8">
                 {benefits.map((benefit, i) => (
                   <div key={i} className="flex gap-4">
-                    <CheckCircle2 className="w-6 h-6 text-[#d4af37] flex-shrink-0" />
+                    <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)] flex-shrink-0" />
                     <div>
                       <h4 className="font-bold text-white mb-1">{benefit.title}</h4>
                       <p className="text-white/60 text-sm">{benefit.desc}</p>
@@ -192,17 +192,15 @@ export default function AMLCFTPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[#6373f2] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)] pointer-events-none" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Safeguard Your Business</h2>
             <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
               Maintain compliance and build stakeholder confidence with our expert AML services.
             </p>
-            <Link href="/#consultation">
-              <button className="bg-white text-[#6373f2] px-10 py-4 rounded-xl font-bold hover:bg-[#020817] hover:text-white transition-all duration-300 flex items-center gap-3 mx-auto">
-                Schedule a Consultation
-                <ArrowRight className="w-5 h-5" />
-              </button>
+            <Link href="/#consultation" className="btn-white mx-auto">
+              Schedule a Consultation
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

@@ -71,12 +71,12 @@ export default function ESRPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block bg-[#6373f2]/20 px-4 py-1.5 rounded-full mb-6 border border-[#6373f2]/30">
-              <span className="text-[#6373f2] text-sm font-bold uppercase tracking-widest">Regulatory Services</span>
+            <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[var(--color-primary)]/5">
+              <span className="tracking-[0.2em]">Regulatory Services</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
               Strong Substance. <br />
-              <span className="text-[#6373f2]">Stronger Standing.</span>
+              <span className="text-[var(--color-accent)]">Stronger Standing.</span>
             </h1>
             <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
               Expert guidance and end-to-end ESR compliance services to navigate the complexities of Bahrain’s regulatory environment.
@@ -96,9 +96,9 @@ export default function ESRPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-4xl font-bold text-[#020817] mb-8 font-heading leading-tight">
-                Economic Substance <span className="text-[#6373f2]">Regulations</span> (ESR)
+                Economic Substance <span className="text-[var(--color-accent)]">Regulations</span> (ESR)
               </h2>
-              <div className="w-20 h-1.5 bg-[#d4af37] rounded-full mb-8" />
+              <div className="w-16 h-1 bg-[var(--color-primary)] rounded mb-8" />
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
                   In Bahrain, all businesses registered with a Commercial Registration (CR) are required to comply with ESR. These regulations ensure that entities demonstrate substantial economic presence and operations within Bahrain.
@@ -110,7 +110,7 @@ export default function ESRPage() {
             </motion.div>
             
             <div className="relative">
-              <div className="absolute inset-0 bg-[#6373f2]/5 rounded-[3rem] rotate-3 scale-105 -z-10" />
+              <div className="absolute inset-0 bg-[var(--color-accent-soft)] rounded-[3rem] rotate-3 scale-105 -z-10" />
               <img 
                 src="/am-group.webp" 
                 alt="Regulatory Advisory" 
@@ -141,10 +141,10 @@ export default function ESRPage() {
                 transition={{ delay: i * 0.05 }}
                 className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group flex items-center gap-4"
               >
-                <div className="w-10 h-10 bg-[#d4af37]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <span className="text-[#d4af37] font-bold text-xs">{item.id}</span>
+                <div className="w-10 h-10 bg-[var(--color-accent-soft)] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-[var(--color-accent)] font-bold text-xs">{item.id}</span>
                 </div>
-                <span className="font-bold text-[#020817] text-sm group-hover:text-[#6373f2] transition-colors">{item.title}</span>
+                <span className="font-bold text-[#020817] text-sm group-hover:text-[var(--color-accent)] transition-colors">{item.title}</span>
               </motion.div>
             ))}
           </div>
@@ -155,7 +155,7 @@ export default function ESRPage() {
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="bg-[#020817] rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#6373f2]/10 rounded-full blur-[100px] -z-0" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-accent-soft)] rounded-full blur-[100px] -z-0" />
             
             <h2 className="text-3xl md:text-4xl font-bold mb-12 font-heading text-center">Economic Substance Test Requirements</h2>
             
@@ -167,8 +167,8 @@ export default function ESRPage() {
                 "Board of Directors must possess necessary authority and knowledge for strategic decisions."
               ].map((req, i) => (
                 <div key={i} className="flex gap-6 items-start">
-                  <div className="w-12 h-12 bg-[#6373f2]/20 rounded-2xl flex items-center justify-center flex-shrink-0 border border-white/10">
-                    <CheckCircle2 className="w-6 h-6 text-[#6373f2]" />
+                  <div className="w-12 h-12 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center flex-shrink-0 border border-white/10">
+                    <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)]" />
                   </div>
                   <p className="text-white/70 leading-relaxed">{req}</p>
                 </div>
@@ -198,11 +198,11 @@ export default function ESRPage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-[#f9f9f9] p-10 rounded-[2.5rem] border border-gray-100 flex gap-8 items-start group"
               >
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm group-hover:bg-[#6373f2] transition-all duration-300">
-                  <service.icon className="w-8 h-8 text-[#6373f2] group-hover:text-white transition-colors" />
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm group-hover:bg-[var(--color-accent)] transition-all duration-300">
+                  <service.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-white transition-colors" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[#6373f2] transition-colors">{service.title}</h3>
+                  <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">{service.title}</h3>
                   <p className="text-gray-500 leading-relaxed text-sm">{service.desc}</p>
                 </div>
               </motion.div>
@@ -249,17 +249,15 @@ export default function ESRPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[#6373f2] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)] pointer-events-none" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Secure Your Compliance Status</h2>
             <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
               Join the leading companies in Bahrain that trust AM Consulting for their ESR compliance needs.
             </p>
-            <Link href="/#consultation">
-              <button className="bg-white text-[#6373f2] px-10 py-4 rounded-xl font-bold hover:bg-[#020817] hover:text-white transition-all duration-300 flex items-center gap-3 mx-auto">
-                Schedule a Consultation
-                <ArrowRight className="w-5 h-5" />
-              </button>
+            <Link href="/#consultation" className="btn-white mx-auto">
+              Schedule a Consultation
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

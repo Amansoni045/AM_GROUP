@@ -73,11 +73,11 @@ export default function MergersAcquisitionsPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block bg-[#6373f2]/20 px-4 py-1.5 rounded-full mb-6 border border-[#6373f2]/30">
-              <span className="text-[#6373f2] text-sm font-bold uppercase tracking-widest">Advisory Services</span>
+            <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[var(--color-primary)]/5">
+              <span className="tracking-[0.2em]">Advisory Services</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              Mergers & <span className="text-[#6373f2]">Acquisitions</span>
+              Mergers & <span className="text-[var(--color-accent)]">Acquisitions</span>
             </h1>
             <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
               Excellence in Financial Analysis. AM Consulting supports businesses through every stage of mergers, acquisitions, joint ventures, and strategic alliances.
@@ -99,7 +99,7 @@ export default function MergersAcquisitionsPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#020817] mb-8 font-heading">
                 Strategic Guidance for Complex Transactions
               </h2>
-              <div className="w-20 h-1.5 bg-[#d4af37] rounded-full mb-8" />
+              <div className="w-16 h-1 bg-[var(--color-primary)] rounded mb-8" />
               <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
                 <p>
                   We help you evaluate opportunities, define the right growth strategy, and determine whether a merger, acquisition, or joint venture aligns with your business objectives.
@@ -131,7 +131,7 @@ export default function MergersAcquisitionsPage() {
                   "Exit Strategy Planning"
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-4 text-gray-700">
-                    <CheckCircle2 className="w-6 h-6 text-[#6373f2]" />
+                    <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)]" />
                     <span className="font-medium">{item}</span>
                   </li>
                 ))}
@@ -146,7 +146,7 @@ export default function MergersAcquisitionsPage() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-heading">Our Process</h2>
-            <div className="w-24 h-1 bg-[#d4af37] mx-auto rounded-full" />
+            <div className="w-16 h-1 bg-[var(--color-accent)] mx-auto rounded-full" />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -159,10 +159,10 @@ export default function MergersAcquisitionsPage() {
                 transition={{ delay: i * 0.1 }}
                 className="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-300 group"
               >
-                <div className="text-5xl font-black text-white/10 group-hover:text-[#6373f2]/20 transition-colors mb-6 font-heading">
+                <div className="text-5xl font-black text-white/10 group-hover:text-[var(--color-accent)]/20 transition-colors mb-6 font-heading">
                   {feature.number}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 font-heading group-hover:text-[#6373f2] transition-colors">
+                <h3 className="text-xl font-bold text-white mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-white/60 leading-relaxed text-sm">
@@ -178,7 +178,7 @@ export default function MergersAcquisitionsPage() {
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="bg-[#f9f9f9] rounded-[3rem] p-12 md:p-20 overflow-hidden relative border border-gray-100 shadow-2xl shadow-black/5">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-[#6373f2]/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-accent-soft)] rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold text-[#020817] mb-10 font-heading">
@@ -201,7 +201,7 @@ export default function MergersAcquisitionsPage() {
                     { label: "Transaction Screening", icon: TrendingUp }
                   ].map((item, i) => (
                     <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
-                      <item.icon className="w-8 h-8 text-[#d4af37]" />
+                      <item.icon className="w-8 h-8 text-[var(--color-accent)]" />
                       <span className="font-bold text-[#020817]">{item.label}</span>
                     </div>
                   ))}
@@ -215,7 +215,7 @@ export default function MergersAcquisitionsPage() {
       {/* How We Are Different */}
       <section className="py-24 px-4 md:px-12 bg-[#020817] text-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-16 font-heading">How We Are <span className="text-[#6373f2]">Different</span></h2>
+          <h2 className="text-3xl md:text-5xl font-bold mb-16 font-heading">How We Are <span className="text-[var(--color-accent)]">Different</span></h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {differentiators.map((item, i) => (
@@ -227,7 +227,7 @@ export default function MergersAcquisitionsPage() {
                 transition={{ delay: i * 0.2 }}
                 className="relative"
               >
-                <div className="w-20 h-20 bg-[#6373f2] rounded-3xl mx-auto mb-8 flex items-center justify-center rotate-3 group-hover:rotate-6 transition-transform">
+                <div className="w-20 h-20 bg-[var(--color-accent)] rounded-3xl mx-auto mb-8 flex items-center justify-center rotate-3 group-hover:rotate-6 transition-transform">
                   <span className="text-white text-3xl font-bold">0{i+1}</span>
                 </div>
                 <h3 className="text-2xl font-bold mb-4 font-heading">{item.title}</h3>
@@ -243,16 +243,14 @@ export default function MergersAcquisitionsPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[#6373f2] rounded-3xl p-12 text-center text-white shadow-2xl shadow-[#6373f2]/20">
+          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Ready to Start Your Journey?</h2>
             <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
               Connect with our M&A experts to discuss how we can help you achieve your strategic growth objectives.
             </p>
-            <Link href="/#consultation">
-              <button className="bg-white text-[#6373f2] px-10 py-4 rounded-xl font-bold hover:bg-[#020817] hover:text-white transition-all duration-300 flex items-center gap-3 mx-auto">
-                Schedule a Consultation
-                <ArrowRight className="w-5 h-5" />
-              </button>
+            <Link href="/#consultation" className="btn-white mx-auto">
+              Schedule a Consultation
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

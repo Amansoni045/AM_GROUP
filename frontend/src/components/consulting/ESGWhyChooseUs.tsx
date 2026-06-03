@@ -40,7 +40,7 @@ export default function ESGWhyChooseUs() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-[var(--color-primary)] text-[var(--text-primary)] px-4 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider mb-6"
+            className="inline-flex items-center gap-2 bg-[var(--color-accent-soft)] text-[var(--color-accent)] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6"
           >
             <Award className="w-4 h-4" /> Why choose us
           </motion.div>

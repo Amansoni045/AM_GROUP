@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Plus, Minus } from "lucide-react";
+import Link from "next/link";
 
 const faqs = [
   {
@@ -98,14 +99,12 @@ export default function AboutFAQ() {
           className="text-center mt-12"
         >
           <p className="text-gray-500 mb-5">Still have questions? We&apos;d love to hear from you.</p>
-          <motion.a
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <Link
             href="/#consultation"
-            className="inline-flex items-center gap-3 bg-[var(--bg-alt)] text-[var(--text-primary)] px-8 py-4 rounded-xl font-bold hover:bg-[var(--color-accent-soft)] transition-all duration-300"
+            className="btn-primary"
           >
             Let&apos;s Talk
-          </motion.a>
+          </Link>
         </motion.div>
       </div>
     </section>
