@@ -10,9 +10,6 @@ const clients = [
 ];
 
 export default function Clients() {
-  const row1 = [...clients, ...clients, ...clients];
-  const row2 = [...[...clients].reverse(), ...[...clients].reverse(), ...clients];
-
   return (
     <section
       id="clients"
@@ -75,91 +72,51 @@ export default function Clients() {
         </div>
       </div>
 
-      {/* Marquee rows */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
-        {/* Row 1 */}
-        <div
-          style={{
+      {/* Static Grid */}
+      <div style={{ overflowX: "auto" }}>
+        <div 
+          className="container-max"
+          style={{ 
+            display: "grid", 
+            gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
             borderTop: "1px solid var(--border-light)",
-            borderBottom: "1px solid var(--border-light)",
-            background: "var(--bg-alt)",
-            overflow: "hidden",
+            borderLeft: "1px solid var(--border-light)",
+            background: "var(--bg-main)"
           }}
         >
-          <div className="animate-marquee">
-            {row1.map((client, i) => (
-              <div
-                key={`r1-${i}`}
+          {clients.map((client, i) => (
+            <div
+              key={i}
+              style={{
+                padding: "2rem 1.5rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRight: "1px solid var(--border-light)",
+                borderBottom: "1px solid var(--border-light)",
+                height: "100px",
+                background: "var(--bg-main)",
+                transition: "background 0.3s ease"
+              }}
+              onMouseEnter={e => e.currentTarget.style.background = "var(--bg-alt)"}
+              onMouseLeave={e => e.currentTarget.style.background = "var(--bg-main)"}
+            >
+              <span
                 style={{
-                  flexShrink: 0,
-                  width: "220px",
-                  borderRight: "1px solid var(--border-light)",
-                  padding: "2rem 1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: "100px",
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.8rem",
+                  fontWeight: 600,
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                  color: "var(--text-muted)",
+                  textAlign: "center",
+                  lineHeight: 1.4,
                 }}
               >
-                <span
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.8rem",
-                    fontWeight: 600,
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    color: "var(--text-muted)",
-                    textAlign: "center",
-                    lineHeight: 1.4,
-                  }}
-                >
-                  {client}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Row 2 */}
-        <div
-          style={{
-            borderBottom: "1px solid var(--border-light)",
-            background: "var(--bg-main)",
-            overflow: "hidden",
-          }}
-        >
-          <div className="animate-marquee-reverse">
-            {row2.map((client, i) => (
-              <div
-                key={`r2-${i}`}
-                style={{
-                  flexShrink: 0,
-                  width: "220px",
-                  borderRight: "1px solid var(--border-light)",
-                  padding: "2rem 1.5rem",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  height: "100px",
-                }}
-              >
-                <span
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.8rem",
-                    fontWeight: 600,
-                    letterSpacing: "0.1em",
-                    textTransform: "uppercase",
-                    color: "var(--text-muted)",
-                    textAlign: "center",
-                    lineHeight: 1.4,
-                  }}
-                >
-                  {client}
-                </span>
-              </div>
-            ))}
-          </div>
+                {client}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

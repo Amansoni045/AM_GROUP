@@ -60,15 +60,11 @@ export default function CEOMessage() {
             className="lg:col-span-2 flex flex-col items-center"
           >
             <div className="bg-[var(--bg-alt)] border border-[var(--border-light)] rounded-3xl p-8 text-center w-full backdrop-blur-sm">
-              <div className="w-32 h-32 rounded-full border-4 border-[var(--color-accent)] mx-auto mb-6 overflow-hidden bg-[var(--color-primary)]/10 flex items-center justify-center">
-                <span className="text-5xl font-bold text-[var(--color-accent)]">RM</span>
+              <div className="w-48 h-48 rounded-full border-[6px] border-[var(--color-accent)] mx-auto mb-8 overflow-hidden bg-[var(--color-primary)]/10 flex items-center justify-center shadow-lg">
+                <span className="text-6xl font-bold text-[var(--color-accent)]">RM</span>
               </div>
-              <h3 className="text-[var(--text-primary)] text-xl font-bold font-heading mb-1">Ravi Mehta</h3>
-              <p className="text-[var(--color-accent)] text-sm font-medium mb-6">Chief Executive Officer</p>
-              <div className="w-12 h-0.5 bg-[var(--color-primary)]/50 mx-auto mb-6" />
-              <blockquote className="text-[var(--text-secondary)] text-sm leading-relaxed italic">
-                &ldquo;We build partnerships, not transactions, focusing on open communication, collaboration, and long-term impact.&rdquo;
-              </blockquote>
+              <h3 className="text-[var(--text-primary)] text-2xl font-bold font-heading mb-1">Ravi Mehta</h3>
+              <p className="text-[var(--color-accent)] text-md font-medium">Chief Executive Officer</p>
             </div>
           </motion.div>
         </div>

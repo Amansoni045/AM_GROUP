@@ -74,8 +74,9 @@ export default function MissionVision() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="mt-8 lg:mt-0"
           >
-            <div className="inline-block bg-[var(--bg-alt)] text-[var(--text-primary)] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6">
-              Get To Know Us
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
+              <span className="eyebrow">Get To Know Us</span>
+              <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-tight mb-10 font-heading">
               Driving Innovation and<br />
@@ -90,11 +91,11 @@ export default function MissionVision() {
                 </div>
                 <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2 font-heading">Our Mission</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  To deliver tailored consulting, design, and accounting solutions that foster sustainable growth, operational efficiency, and market relevance for businesses across the Gulf region.
+                  To deliver tailored consulting, design, accounting and technical solutions that foster sustainable growth, operational efficiency, and market relevance for businesses across the Gulf region.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-md">
-                <div className="w-10 h-10 bg-[var(--color-primary)]/10 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-10 h-10 bg-[var(--color-accent-soft)] rounded-xl flex items-center justify-center mb-4">
                   <svg className="w-5 h-5 text-[var(--color-accent)]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />

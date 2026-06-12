@@ -108,7 +108,7 @@ export default function TeamSection() {
 
         {/* Leadership */}
         <div className="mb-20">
-          <h3 className="text-xs font-bold uppercase tracking-widest text-[var(--text-secondary)] text-center mb-10">Leadership</h3>
+          <h3 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-[var(--color-accent)] text-center mb-14">OUR LEADERSHIP</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
             {leadership.map((m, i) => (
               <MemberCard key={i} name={m.name} role={m.role} color="#020817" />

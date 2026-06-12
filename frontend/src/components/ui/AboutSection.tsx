@@ -209,9 +209,9 @@ export default function AboutSection() {
             <p
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "1.05rem",
+                fontSize: "clamp(1rem, 1.5vw, 1.15rem)",
                 color: "var(--text-secondary)",
-                lineHeight: 1.8,
+                lineHeight: 1.75,
                 marginBottom: "1.25rem",
               }}
             >
@@ -224,9 +224,9 @@ export default function AboutSection() {
             <p
               style={{
                 fontFamily: "var(--font-body)",
-                fontSize: "1.05rem",
+                fontSize: "clamp(1rem, 1.5vw, 1.15rem)",
                 color: "var(--text-secondary)",
-                lineHeight: 1.8,
+                lineHeight: 1.75,
                 marginBottom: "2rem",
               }}
             >
@@ -238,7 +238,7 @@ export default function AboutSection() {
               <div className="bg-[var(--bg-alt)] rounded-xl p-5 border border-[var(--border-light)] shadow-sm">
                 <h3 className="text-base font-bold text-[var(--text-primary)] mb-2 font-heading">Our Mission</h3>
                 <p className="text-[var(--text-secondary)] text-xs leading-relaxed">
-                  To deliver tailored consulting, design, and accounting solutions that foster sustainable growth, operational efficiency, and market relevance for businesses across the Gulf region.
+                  To deliver tailored consulting, design, accounting and technical solutions that foster sustainable growth, operational efficiency, and market relevance for businesses across the Gulf region.
                 </p>
               </div>
               <div className="bg-[var(--bg-alt)] rounded-xl p-5 border border-[var(--border-light)] shadow-sm">
