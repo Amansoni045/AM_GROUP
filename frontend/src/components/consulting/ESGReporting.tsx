@@ -32,7 +32,7 @@ const reportingSteps = [
 
 export default function ESGReporting() {
   return (
-    <section className="bg-white py-24 px-4 md:px-12 relative" id="esg-reporting">
+    <section className="bg-[var(--bg-main)] py-24 px-4 md:px-12 relative" id="esg-reporting">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-20">
           <motion.h2

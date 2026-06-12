@@ -22,14 +22,144 @@ export default function Services() {
     <section
       id="services"
       style={{
-        background: "var(--bg-main)",
+        background: "var(--bg-alt)",
         paddingTop: "var(--section-py)",
         paddingBottom: "var(--section-py)",
       }}
       className="section-px"
     >
       <div className="container-max">
-        {/* Header */}
+        {/* Services for Every Business Need Section */}
+        <div style={{ marginBottom: "5.5rem" }}>
+          {/* Header */}
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              alignItems: "flex-end",
+              justifyContent: "space-between",
+              gap: "2rem",
+              marginBottom: "3.5rem",
+            }}
+          >
+            <h2
+              style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
+                fontWeight: 600,
+                color: "var(--text-primary)",
+                lineHeight: 1.1,
+                letterSpacing: "-0.01em",
+                maxWidth: "500px",
+              }}
+            >
+              Services for <br />
+              Every <span style={{ color: "var(--color-accent)", fontStyle: "italic" }}>Business Need</span>
+            </h2>
+            <p
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "1.05rem",
+                color: "var(--text-secondary)",
+                lineHeight: 1.75,
+                maxWidth: "460px",
+              }}
+            >
+              Whether you need one service or all four, we scale to fit your business — with no unnecessary complexity and no wasted time.
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                title: "AM Consulting",
+                items: [
+                  "Advisory Services",
+                  "Business Consulting",
+                  "ESG & Sustainability",
+                  "Governance, Risk & Compliance",
+                  "Market Entry Strategy"
+                ]
+              },
+              {
+                title: "AM Accounting",
+                items: [
+                  "Accounting & Bookkeeping",
+                  "VAT Advisory & Filing",
+                  "Audit & Compliance",
+                  "Financial Reporting",
+                  "Tamkeen & Government Programs"
+                ]
+              },
+              {
+                title: "AM Design",
+                items: [
+                  "Brand Identity & Logo Design",
+                  "Website Design & Development",
+                  "Social Media Management",
+                  "Marketing Collateral",
+                  "Application Development"
+                ]
+              },
+              {
+                title: "AM Technology",
+                items: [
+                  "Data Analytics & Business Intelligence",
+                  "Digital Transformation",
+                  "Performance Dashboards",
+                  "Automation & Integration",
+                  "Technology Advisory"
+                ]
+              }
+            ].map((div, idx) => (
+              <motion.div
+                key={div.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.08 }}
+                className="info-card group"
+              >
+                <div className="info-card-top-bar" />
+                <h3 className="info-card-title border-b border-[var(--border-light)] pb-3 mb-4">
+                  {div.title}
+                </h3>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.85rem", flexGrow: 1 }}>
+                  {div.items.map((item) => (
+                    <li
+                      key={item}
+                      style={{
+                        fontFamily: "var(--font-body)",
+                        fontSize: "0.875rem",
+                        color: "var(--text-secondary)",
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: "0.6rem",
+                        lineHeight: 1.4,
+                      }}
+                    >
+                      <span style={{ color: "var(--color-accent)", fontWeight: 700, flexShrink: 0 }}>→</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Section Divider */}
+        <div
+          style={{
+            height: "1px",
+            background: "var(--border-light)",
+            margin: "5.5rem 0 5rem",
+            width: "100%",
+          }}
+        />
+
+        {/* Original Grid: Our Services */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,7 +217,6 @@ export default function Services() {
           className="services-grid"
         >
           {services.map((service, i) => {
-            const cols = 4; // desktop
             const isRightEdge = (i + 1) % 2 === 0;
             return (
               <motion.div
@@ -101,7 +230,7 @@ export default function Services() {
                   borderRight: !isRightEdge ? "1px solid var(--border-light)" : "none",
                   borderBottom: "1px solid var(--border-light)",
                   display: "flex",
-                  alignItems: "flex-start",
+                  alignItems: "center",
                   gap: "1.25rem",
                   cursor: "default",
                   transition: "background 0.3s ease",
@@ -139,7 +268,7 @@ export default function Services() {
                 </div>
 
                 {/* Label */}
-                <div style={{ paddingTop: "0.25rem" }}>
+                <div>
                   <p
                     style={{
                       fontFamily: "var(--font-body)",

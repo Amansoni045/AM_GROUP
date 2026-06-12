@@ -5,7 +5,7 @@ import { Heart } from "lucide-react";
 
 export default function TechnologyAbout() {
   return (
-    <section className="bg-white py-24 px-4 md:px-12 relative overflow-hidden" id="about-technology">
+    <section className="bg-[var(--bg-main)] py-24 px-4 md:px-12 relative overflow-hidden" id="about-technology">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           
@@ -25,7 +25,7 @@ export default function TechnologyAbout() {
             </h2>
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
-                AM Data Technology is a specialized data analytics and intelligence firm under the AM Group, delivering Big Data Analytics, Business Intelligence, and Risk Assurance solutions to organizations across industries.
+                AM Technology is a specialized data analytics and intelligence firm under the AM Group, delivering Big Data Analytics, Business Intelligence, and Risk Assurance solutions to organizations across industries.
               </p>
               <p>
                 We help businesses transform complex data into meaningful insights that support informed decision-making and sustainable growth, leveraging advanced platforms such as Arbutus and Power BI.
@@ -102,7 +102,7 @@ export default function TechnologyAbout() {
               </div>
               <div className="space-y-6 text-gray-600 leading-relaxed italic">
                 <p>
-                  AM Data Technology was founded in loving memory of Mr. Nishith Seth, a visionary entrepreneur and a close friend of our CEO, Mr. Ravi Mehta. This initiative carries forward the inspiration and legacy of SSPL, serving as a tribute to Nishith’s vision of innovation, excellence, and trust.
+                  AM Technology was founded in loving memory of Mr. Nishith Seth, a visionary entrepreneur and a close friend of our CEO, Mr. Ravi Mehta. This initiative carries forward the inspiration and legacy of SSPL, serving as a tribute to Nishith’s vision of innovation, excellence, and trust.
                 </p>
                 <p>
                   Every solution we build reflects these enduring values, ensuring that his dream of creating impactful, data-driven solutions continues to inspire, empower, and shape the future for generations to come.

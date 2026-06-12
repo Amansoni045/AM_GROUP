@@ -28,7 +28,7 @@ const testimonials = [
 
 export default function TechnologyTestimonials() {
   return (
-    <section className="bg-white py-24 px-4 md:px-12 relative overflow-hidden" id="technology-testimonials">
+    <section className="bg-[var(--bg-main)] py-24 px-4 md:px-12 relative overflow-hidden" id="technology-testimonials">
       <div className="absolute top-0 left-0 w-full h-full bg-[var(--bg-alt)]/5 -z-0" style={{ clipPath: 'polygon(0 0, 100% 5%, 100% 100%, 0 95%)' }} />
       
       <div className="max-w-7xl mx-auto relative z-10">

@@ -122,7 +122,7 @@ export default function ESRPage() {
       </section>
 
       {/* CIGA Grid */}
-      <section className="py-24 px-4 md:px-12 bg-[#f9f9f9]">
+      <section className="py-24 px-4 md:px-12 bg-[#f4f3ee]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold text-[#020817] mb-6 font-heading">Core Income-Generating Activities (CIGA)</h2>
@@ -196,7 +196,7 @@ export default function ESRPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-[#f9f9f9] p-10 rounded-[2.5rem] border border-gray-100 flex gap-8 items-start group"
+                className="bg-[#f4f3ee] p-10 rounded-[2.5rem] border border-gray-100 flex gap-8 items-start group"
               >
                 <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm group-hover:bg-[var(--color-accent)] transition-all duration-300">
                   <service.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-white transition-colors" />
@@ -212,7 +212,7 @@ export default function ESRPage() {
       </section>
 
       {/* Regulatory Authorities Section */}
-      <section className="py-24 px-4 md:px-12 bg-[#f9f9f9]">
+      <section className="py-24 px-4 md:px-12 bg-[#f4f3ee]">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#020817] mb-16 font-heading">Regulatory Authorities</h2>
           <div className="flex flex-wrap justify-center gap-24 items-center">

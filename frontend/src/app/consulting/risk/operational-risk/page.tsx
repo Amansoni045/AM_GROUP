@@ -114,7 +114,7 @@ export default function OperationalRiskManagementPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-24 px-4 md:px-12 bg-[#f9f9f9]">
+      <section className="py-24 px-4 md:px-12 bg-[#f4f3ee]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold text-[#020817] mb-6 font-heading">What We Do</h2>

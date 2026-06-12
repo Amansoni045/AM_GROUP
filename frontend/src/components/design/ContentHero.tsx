@@ -6,7 +6,7 @@ export default function ContentHero() {
   return (
     <section
       style={{
-        background: "linear-gradient(135deg, #f8fafc 0%, #fff 55%, #faf7f0 100%)",
+        background: "linear-gradient(135deg, #f4f3ee 0%, #fff 55%, #faf7f0 100%)",
         minHeight: "46vh",
         display: "flex",
         alignItems: "center",

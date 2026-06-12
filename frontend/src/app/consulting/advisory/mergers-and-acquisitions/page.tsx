@@ -118,7 +118,7 @@ export default function MergersAcquisitionsPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-[#f9f9f9] p-10 rounded-3xl border border-gray-100 shadow-xl shadow-black/5"
+              className="bg-[#f4f3ee] p-10 rounded-3xl border border-gray-100 shadow-xl shadow-black/5"
             >
               <h3 className="text-2xl font-bold text-[#020817] mb-8 font-heading">Our Core Expertise</h3>
               <ul className="space-y-4">
@@ -177,7 +177,7 @@ export default function MergersAcquisitionsPage() {
       {/* Support Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-[#f9f9f9] rounded-[3rem] p-12 md:p-20 overflow-hidden relative border border-gray-100 shadow-2xl shadow-black/5">
+          <div className="bg-[#f4f3ee] rounded-[3rem] p-12 md:p-20 overflow-hidden relative border border-gray-100 shadow-2xl shadow-black/5">
             <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-accent-soft)] rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl" />
             
             <div className="relative z-10">

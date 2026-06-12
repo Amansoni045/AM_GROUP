@@ -229,82 +229,113 @@ export default function WhatWeDo() {
           ))}
         </div>
 
-        {/* GCC Presence Banner */}
+        {/* Operating Presence Section */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           style={{
-            marginTop: "3rem",
-            background: "var(--bg-main)",
-            border: "1px solid var(--border-light)",
-            padding: "3.5rem 3rem",
-            display: "flex",
-            flexWrap: "wrap",
-            alignItems: "center",
-            justifyContent: "space-between",
-            gap: "2.5rem",
+            marginTop: "6rem",
+            width: "100%",
           }}
         >
-          <div>
-            <div
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.75rem",
-                letterSpacing: "0.18em",
-                textTransform: "uppercase",
-                color: "var(--color-accent)",
-                marginBottom: "0.75rem",
-                fontWeight: 600,
-              }}
-            >
-              Our Presence
-            </div>
-            <h3
-              style={{
-                fontFamily: "var(--font-heading)",
-                fontSize: "clamp(1.75rem, 3vw, 2.25rem)",
-                fontWeight: 600,
-                color: "var(--text-primary)",
-                lineHeight: 1.2,
-              }}
-            >
-              Global Standards. Local Expertise.
-            </h3>
+          {/* Eyebrow */}
+          <div style={{ textAlign: "center", marginBottom: "0.75rem" }}>
+            <span className="eyebrow">Our Presence</span>
           </div>
 
-          <div
+          {/* Heading */}
+          <h3
             style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "1rem",
-              color: "var(--text-secondary)",
-              lineHeight: 1.75,
-              maxWidth: "400px",
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
+              fontWeight: 500,
+              color: "var(--text-primary)",
+              lineHeight: 1.2,
+              marginBottom: "1.25rem",
+              textAlign: "center",
             }}
           >
-            We combine international best practices with deep regional knowledge — helping businesses succeed in{" "}
-            <strong style={{ color: "var(--text-primary)", fontWeight: 500 }}>Bahrain, Saudi Arabia, and Oman.</strong>
-          </div>
+            Operating Across <br />
+            <span style={{ color: "var(--color-accent)", fontStyle: "italic" }}>the Gulf Region</span>
+          </h3>
 
-          <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-            {["Bahrain", "Saudi Arabia", "Oman"].map((country) => (
-              <div
-                key={country}
-                style={{
-                  fontFamily: "var(--font-body)",
-                  fontSize: "0.8rem",
-                  fontWeight: 500,
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                  color: "var(--text-primary)",
-                  border: "1px solid var(--border-medium)",
-                  padding: "0.6rem 1.25rem",
-                  borderRadius: "2rem",
-                }}
+          {/* Description */}
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "1.05rem",
+              color: "var(--text-secondary)",
+              lineHeight: 1.75,
+              maxWidth: "720px",
+              margin: "0 auto 3.5rem",
+              textAlign: "center",
+            }}
+          >
+            From our headquarters in Bahrain, we serve clients in Saudi Arabia, Oman, and UAE — navigating each market&apos;s unique regulatory, cultural, and commercial landscape.
+          </p>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                name: "Bahrain",
+                flag: "🇧🇭",
+                status: "HEADQUARTERS",
+                desc: "Headquartered in Bahrain, we partner with businesses at every stage of their journey, providing practical support across strategic, financial, regulatory, and technology matters."
+              },
+              {
+                name: "Saudi Arabia",
+                flag: "🇸🇦",
+                status: "ACTIVE OPERATIONS",
+                desc: "Supporting businesses across the Kingdom with market entry, compliance, financial advisory, and technology-driven transformation aligned with Vision 2030."
+              },
+              {
+                name: "Oman",
+                flag: "🇴🇲",
+                status: "ACTIVE OPERATIONS",
+                desc: "Partnering with businesses across Muscat to provide strategic guidance, regulatory support, financial expertise, operational improvement, and digital transformation."
+              },
+              {
+                name: "UAE",
+                flag: "🇦🇪",
+                status: "ACTIVE OPERATIONS",
+                desc: "From market entry to business growth and ongoing operations, we work alongside our clients as a trusted partner, providing support on strategic, regulatory, and operational matters."
+              }
+            ].map((country, idx) => (
+              <motion.div
+                key={country.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className="info-card group"
               >
-                {country}
-              </div>
+                <div className="info-card-top-bar" />
+                <div style={{ fontSize: "2rem", marginBottom: "1.25rem", display: "inline-block" }}>
+                  {country.flag}
+                </div>
+                <h4 className="info-card-title" style={{ marginBottom: "0.25rem" }}>
+                  {country.name}
+                </h4>
+                <div
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.7rem",
+                    fontWeight: 700,
+                    letterSpacing: "0.15em",
+                    color: "var(--color-accent)",
+                    textTransform: "uppercase",
+                    marginBottom: "1.25rem",
+                  }}
+                >
+                  {country.status}
+                </div>
+                <p className="info-card-desc" style={{ fontSize: "0.85rem", lineHeight: 1.6 }}>
+                  {country.desc}
+                </p>
+              </motion.div>
             ))}
           </div>
         </motion.div>
@@ -328,11 +359,11 @@ export default function WhatWeDo() {
           }
         }
         .division-card:hover {
-          background: var(--bg-alt) !important;
+          background: #FFFFFF !important;
         }
         .division-card:hover .division-arrow {
-          background: var(--color-primary);
-          border-color: var(--color-primary);
+          background: var(--color-accent);
+          border-color: var(--color-accent);
           color: white;
           transform: rotate(-45deg);
         }

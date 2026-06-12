@@ -227,11 +227,27 @@ export default function AboutSection() {
                 fontSize: "1.05rem",
                 color: "var(--text-secondary)",
                 lineHeight: 1.8,
-                marginBottom: "2.5rem",
+                marginBottom: "2rem",
               }}
             >
               Whether guiding a startup, supporting an established enterprise, or enabling expansion into new markets — we stand by our clients every step of the way with a commitment to creating true value.
             </p>
+
+            {/* Mission & Vision Cards */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.25rem", marginBottom: "2.5rem" }} className="mv-grid">
+              <div className="bg-[var(--bg-alt)] rounded-xl p-5 border border-[var(--border-light)] shadow-sm">
+                <h3 className="text-base font-bold text-[var(--text-primary)] mb-2 font-heading">Our Mission</h3>
+                <p className="text-[var(--text-secondary)] text-xs leading-relaxed">
+                  To deliver tailored consulting, design, and accounting solutions that foster sustainable growth, operational efficiency, and market relevance for businesses across the Gulf region.
+                </p>
+              </div>
+              <div className="bg-[var(--bg-alt)] rounded-xl p-5 border border-[var(--border-light)] shadow-sm">
+                <h3 className="text-base font-bold text-[var(--text-primary)] mb-2 font-heading">Our Vision</h3>
+                <p className="text-[var(--text-secondary)] text-xs leading-relaxed">
+                  To be the leading consultancy in Bahrain, Saudi Arabia, Oman, and UAE, empowering businesses with strategy, creative design, and financial expertise while upholding innovation, integrity and excellence.
+                </p>
+              </div>
+            </div>
 
             <Link
               href="/#services"
@@ -296,6 +312,11 @@ export default function AboutSection() {
           }
           .stats-grid > div:last-child {
             border-right: none !important;
+          }
+        }
+        @media (max-width: 640px) {
+          .mv-grid {
+            grid-template-columns: 1fr !important;
           }
         }
       `}</style>

@@ -26,7 +26,7 @@ export default function ESGFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-white py-24 px-4 md:px-12 relative overflow-hidden" id="esg-faq">
+    <section className="bg-[var(--bg-main)] py-24 px-4 md:px-12 relative overflow-hidden" id="esg-faq">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

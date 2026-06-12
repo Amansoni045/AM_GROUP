@@ -65,7 +65,7 @@ export default function RestructuringServicesPage() {
               Restructuring <span className="text-[var(--color-accent)]">Services</span>
             </h1>
             <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
-              Excellence in Financial Analysis. Supporting businesses in Bahrain and Saudi Arabia to adapt, evolve, and thrive in changing economic conditions.
+              Excellence in Financial Analysis. Supporting businesses in Bahrain, Saudi Arabia, Oman, and UAE to adapt, evolve, and thrive in changing economic conditions.
             </p>
           </motion.div>
         </div>
@@ -95,12 +95,12 @@ export default function RestructuringServicesPage() {
               </div>
               
               <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div className="bg-[#f9f9f9] p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <div className="bg-[#f4f3ee] p-8 rounded-2xl border border-gray-100 shadow-sm">
                   <Workflow className="w-10 h-10 text-[var(--color-accent)] mb-6" />
                   <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading">Business Restructuring</h3>
                   <p className="text-gray-600 text-sm">Reorganizing models and management structures to enhance efficiency.</p>
                 </div>
-                <div className="bg-[#f9f9f9] p-8 rounded-2xl border border-gray-100 shadow-sm">
+                <div className="bg-[#f4f3ee] p-8 rounded-2xl border border-gray-100 shadow-sm">
                   <Landmark className="w-10 h-10 text-[var(--color-accent)] mb-6" />
                   <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading">Debt Restructuring</h3>
                   <p className="text-gray-600 text-sm">Negotiating terms and improving cash flow to restore creditworthiness.</p>
@@ -131,7 +131,7 @@ export default function RestructuringServicesPage() {
       </section>
 
       {/* Debt Restructuring Process */}
-      <section className="py-24 px-4 md:px-12 bg-[#f9f9f9]">
+      <section className="py-24 px-4 md:px-12 bg-[#f4f3ee]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-3xl md:text-5xl font-bold text-[#020817] mb-6 font-heading">Our Debt Restructuring Process</h2>

@@ -43,7 +43,7 @@ export default function CEOMessage() {
               What sets us apart is our philosophy: we build <span className="text-[var(--color-accent)] font-bold">partnerships, not transactions</span>&mdash;focusing on open communication, collaboration, and long-term impact.
             </p>
             <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
-              Today, across Bahrain, Saudi Arabia, and Oman, our mission remains clear: to deliver integrated solutions that inspire transformation, drive innovation, and empower businesses for a brighter future.
+              Today, across Bahrain, Saudi Arabia, Oman, and UAE, our mission remains clear: to deliver integrated solutions that inspire transformation, drive innovation, and empower businesses for a brighter future.
             </p>
             <div className="pt-4">
               <p className="text-[var(--text-primary)] font-bold text-lg font-heading">Ravi Mehta</p>

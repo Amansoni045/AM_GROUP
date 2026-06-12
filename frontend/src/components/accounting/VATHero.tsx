@@ -6,7 +6,7 @@ export default function VATHero() {
   return (
     <section
       style={{
-        background: "linear-gradient(135deg, #f8fafc 0%, #fff 55%, #faf7f0 100%)",
+        background: "linear-gradient(135deg, #f4f3ee 0%, #fff 55%, #faf7f0 100%)",
         minHeight: "46vh",
         display: "flex",
         alignItems: "center",
@@ -63,7 +63,7 @@ export default function VATHero() {
           transition={{ duration: 0.65, delay: 0.25 }}
           style={{ fontFamily: "var(--font-body)", fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", color: "#475569", lineHeight: 1.75, maxWidth: "560px", margin: "0 auto 0" }}
         >
-          Navigate VAT regulations in Bahrain, KSA and Oman with confidence through our specialist advisory services.
+          Navigate VAT regulations in Bahrain, KSA, Oman, and UAE with confidence through our specialist advisory services.
         </motion.p>
         <motion.div
           initial={{ scaleX: 0 }}

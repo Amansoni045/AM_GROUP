@@ -102,7 +102,7 @@ export default function MissionVision() {
                 </div>
                 <h3 className="text-lg font-bold text-[var(--text-primary)] mb-2 font-heading">Our Vision</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">
-                  To be the leading consultancy in Bahrain, Saudi Arabia, and Oman, empowering businesses with strategy, creative design, and financial expertise while upholding innovation, integrity and excellence.
+                  To be the leading consultancy in Bahrain, Saudi Arabia, Oman, and UAE, empowering businesses with strategy, creative design, and financial expertise while upholding innovation, integrity and excellence.
                 </p>
               </div>
             </div>

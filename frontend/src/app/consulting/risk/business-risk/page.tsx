@@ -90,7 +90,7 @@ export default function BusinessRiskManagementPage() {
               </div>
             </motion.div>
             
-            <div className="bg-[#f9f9f9] p-10 md:p-16 rounded-[3rem] border border-gray-100 shadow-2xl relative overflow-hidden group">
+            <div className="bg-[#f4f3ee] p-10 md:p-16 rounded-[3rem] border border-gray-100 shadow-2xl relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-accent-soft)] rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700" />
               <ShieldAlert className="w-16 h-16 text-[var(--color-accent)] mb-8" />
               <h3 className="text-2xl font-bold text-[#020817] mb-6 font-heading">The Strategic Advantage</h3>

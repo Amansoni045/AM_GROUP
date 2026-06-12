@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "@/components/ui/Hero";
-import AboutSection from "@/components/ui/AboutSection";
 import WhatWeDo from "@/components/ui/WhatWeDo";
 import IndustryExpertise from "@/components/ui/IndustryExpertise";
 import Services from "@/components/ui/Services";
@@ -12,7 +11,6 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <AboutSection />
       <WhatWeDo />
       <Services />
       <IndustryExpertise />

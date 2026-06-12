@@ -11,7 +11,7 @@ export default function AboutHero() {
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
-        background: "linear-gradient(135deg, #f8fafc 0%, #ffffff 60%, #faf7f0 100%)",
+        background: "linear-gradient(135deg, #f4f3ee 0%, #ffffff 60%, #faf7f0 100%)",
       }}
     >
       {/* Decorative gold accent top-left */}

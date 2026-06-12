@@ -8,7 +8,7 @@ import ConsultingTestimonials from "@/components/consulting/ConsultingTestimonia
 
 export default function ConsultingPage() {
   return (
-    <main className="relative bg-[#f9f9f9] text-[#1a1a1a] font-sans scroll-smooth">
+    <main className="relative bg-[#f4f3ee] text-[#1a1a1a] font-sans scroll-smooth">
             <ConsultingHero />
       <ConsultingAbout />
       <ConsultingServices />

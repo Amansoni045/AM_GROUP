@@ -6,7 +6,7 @@ export default function DesignHero() {
   return (
     <section
       style={{
-        background: "linear-gradient(135deg, #f8fafc 0%, #fff 55%, #faf7f0 100%)",
+        background: "linear-gradient(135deg, #f4f3ee 0%, #fff 55%, #faf7f0 100%)",
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
@@ -65,7 +65,7 @@ export default function DesignHero() {
       </div>
 
       {/* Marquee */}
-      <div style={{ borderTop: "1px solid #E2E8F0", background: "#F8FAFC", overflow: "hidden", padding: "0.9rem 0", position: "relative", zIndex: 1 }}>
+      <div style={{ borderTop: "1px solid #E2E8F0", background: "#f4f3ee", overflow: "hidden", padding: "0.9rem 0", position: "relative", zIndex: 1 }}>
         <div className="flex animate-marquee whitespace-nowrap">
           {["Branding","Web Design","Social Media","SEO","PPC","Content","Digital Marketing","Branding","Web Design","Social Media","SEO","PPC","Content","Digital Marketing"].map((item, idx) => (
             <div key={idx} style={{ display: "flex", alignItems: "center", margin: "0 1.75rem" }}>

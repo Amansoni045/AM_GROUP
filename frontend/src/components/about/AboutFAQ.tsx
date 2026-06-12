@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "In which countries do you operate?",
-    a: "AM Group operates primarily across the GCC, with a strong presence in Bahrain, Saudi Arabia, and Oman. We combine international standards with deep regional expertise to serve businesses across the Gulf region.",
+    a: "AM Group operates primarily across the GCC, with a strong presence in Bahrain, Saudi Arabia, Oman, and UAE. We combine international standards with deep regional expertise to serve businesses across the Gulf region.",
   },
   {
     q: "Who are your typical clients?",
