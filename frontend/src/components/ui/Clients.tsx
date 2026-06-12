@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const clients = [
   "9 Origins Coffee", "All Care Pet Clinic", "Ibtisama Dental Clinic",
   "Al Rawabi School", "GFH", "AM Terminale", "Viacloud",
-  "CNT", "Life Co.", "Saud Bahwan", "Oman Tel", "Haji Hassan",
-  "RWAQ", "MOJ Oman", "Supreme Council", "Elm", "Nama Group",
+  "CNT", "Life Co.", "Saud Bahwan", "OMANTEL", "Haji Hassan",
+  "RWAQ", "MOJ Oman", "Supreme Council", "Elm", "Nama Group", "CBO",
 ];
 
 export default function Clients() {

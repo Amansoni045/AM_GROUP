@@ -78,19 +78,21 @@ export default function Footer() {
               <img
                 src="/logo.webp"
                 alt="AM Group"
-                style={{ height: "40px", width: "auto", objectFit: "contain", marginBottom: "1.25rem" }}
+                style={{ height: "65px", width: "auto", objectFit: "contain", marginBottom: "1.5rem" }}
               />
               <p
                 style={{
                   fontFamily: "var(--font-body)",
-                  fontSize: "0.9rem",
-                  color: "var(--text-secondary)",
-                  lineHeight: 1.75,
+                  fontSize: "1rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.1em",
+                  color: "var(--text-primary)",
+                  lineHeight: 1.5,
                   marginBottom: "1.5rem",
                   maxWidth: "280px",
                 }}
               >
-                A multidisciplinary firm bringing together Consulting, Design, Accounting, and Data Analytics under one trusted name.
+                YOUR PARTNER IN GROWTH
               </p>
               <div
                 style={{
@@ -290,7 +292,7 @@ export default function Footer() {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                    Bahrain · Saudi Arabia · Oman · UAE
+                    Bahrain
                   </div>
                 </li>
               </ul>
