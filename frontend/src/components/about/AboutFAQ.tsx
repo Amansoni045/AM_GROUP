@@ -7,7 +7,7 @@ import Link from "next/link";
 const faqs = [
   {
     q: "What services does AM Group provide?",
-    a: "We offer integrated solutions across four core areas: business consulting (AM Consulting), creative design & branding (AM Design), accounting & financial services (AM Accounting), and data analytics & digital transformation (AM Analytiks). This allows our clients to benefit from a one-stop partner for strategy, growth, and operational success.",
+    a: "We offer integrated solutions across four core areas: business consulting (AM Consulting), creative design & branding (AM Design), accounting & financial services (AM Accounting), and data analytics & digital transformation (AM Technology). This allows our clients to benefit from a one-stop partner for strategy, growth, and operational success.",
   },
   {
     q: "In which countries do you operate?",

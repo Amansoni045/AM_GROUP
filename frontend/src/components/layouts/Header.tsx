@@ -9,7 +9,7 @@ const navItems = [
   { name: "AM Consulting", href: "/consulting" },
   { name: "AM Accounting", href: "/accounting" },
   { name: "AM Design", href: "/design" },
-  { name: "AM Analytiks", href: "/analytiks" },
+  { name: "AM Technology", href: "/technology" },
 ];
 
 const socialLinks = [

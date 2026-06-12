@@ -46,7 +46,7 @@ const departments = [
     ],
   },
   {
-    name: "AM Analytiks",
+    name: "AM Technology",
     color: "#dc2626",
     members: [
       { name: "Aditi Upadhyay", role: "Sr. Manager, Data Analyst" },

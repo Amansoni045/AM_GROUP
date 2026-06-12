@@ -45,25 +45,21 @@ export default function RiskServicesList() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {riskServices.map((service, i) => (
-            <Link href={service.href} key={i}>
+            <Link href={service.href} key={i} target="_blank" rel="noopener noreferrer">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -4, transition: { duration: 0.2, delay: 0 } }}
-                className="bg-white rounded-3xl p-10 border border-gray-100 shadow-xl shadow-black/5 flex flex-col group cursor-pointer h-full"
+                className="info-card group"
               >
-                <div className="w-16 h-16 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--color-accent-soft)] transition-colors duration-300">
-                  <service.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-[var(--text-primary)] transition-colors duration-300" strokeWidth={1.5} />
+                <div className="info-card-top-bar" />
+                <div className="info-card-icon-wrapper">
+                  <service.icon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-500 leading-relaxed mb-8 text-sm flex-grow">
-                  {service.desc}
-                </p>
-                <div className="flex items-center gap-2 text-[var(--color-accent)] font-bold text-sm uppercase tracking-wider group-hover:gap-3 transition-all">
+                <h3 className="info-card-title">{service.title}</h3>
+                <p className="info-card-desc">{service.desc}</p>
+                <div className="info-card-link">
                   Learn More
                   <ArrowUpRight className="w-4 h-4" />
                 </div>

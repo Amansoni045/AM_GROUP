@@ -64,28 +64,27 @@ export default function ConsultingServices() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, i) => (
-            <Link key={i} href={service.href} className="block h-full">
+            <Link key={i} href={service.href} className="block h-full" target="_blank" rel="noopener noreferrer">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
-                whileHover={{ y: -4, boxShadow: "0 24px 60px rgba(0,0,0,0.08)", transition: { duration: 0.2, delay: 0 } }}
-                className={`bg-white rounded-2xl p-8 border border-gray-100 shadow-md group relative overflow-hidden cursor-pointer flex flex-col h-full ${i >= 3 && services.length === 5 ? 'lg:col-span-1.5' : ''}`}
+                className="info-card group"
               >
-                <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style={{ background: service.color }} />
+                <div className="info-card-top-bar" style={{ background: service.color }} />
                 <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110"
-                  style={{ background: `${service.color}15` }}
+                  className="info-card-icon-wrapper"
+                  style={{ background: `${service.color}15`, color: service.color }}
                 >
-                  <service.icon className="w-7 h-7" style={{ color: service.color }} strokeWidth={1.5} />
+                  <service.icon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-3 font-heading">{service.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-grow">{service.desc}</p>
+                <h3 className="info-card-title">{service.title}</h3>
+                <p className="info-card-desc">{service.desc}</p>
                 
-                <div className="mt-8 flex items-center gap-2 font-bold text-sm" style={{ color: service.color }}>
+                <div className="info-card-link" style={{ color: service.color }}>
                   Learn more
-                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  <ArrowUpRight className="w-4 h-4" />
                 </div>
               </motion.div>
             </Link>

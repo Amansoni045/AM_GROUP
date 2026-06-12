@@ -38,11 +38,12 @@ export default function MISServicesList() {
             viewport={{ once: true }}
             className="lg:col-span-7"
           >
-            <div className="bg-white p-8 md:p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50">
-              <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-8 font-heading text-center">
+            <div className="info-card group p-8 md:p-10">
+              <div className="info-card-top-bar" />
+              <h3 className="info-card-title mb-8 text-center z-10">
                 What Is Included in the MIS Report?
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 z-10">
                 {components.map((item, i) => (
                   <motion.div
                     key={i}

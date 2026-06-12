@@ -62,18 +62,14 @@ export default function ESGServicesList() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="bg-white rounded-3xl p-10 border border-gray-100 shadow-xl shadow-black/5 flex flex-col group"
+              className="info-card group"
             >
-              <div className="w-16 h-16 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--color-accent-soft)] transition-all duration-300 transform group-hover:rotate-6">
-                <service.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-[var(--text-primary)] transition-colors" strokeWidth={1.5} />
+              <div className="info-card-top-bar" />
+              <div className="info-card-icon-wrapper">
+                <service.icon className="w-7 h-7" strokeWidth={1.5} />
               </div>
-              <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4 font-heading leading-tight group-hover:text-[var(--color-accent)] transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-500 leading-relaxed text-sm">
-                {service.desc}
-              </p>
+              <h3 className="info-card-title">{service.title}</h3>
+              <p className="info-card-desc">{service.desc}</p>
               <div className="mt-8 pt-6 border-t border-gray-50 flex items-center justify-between">
                 <span className="text-xs font-bold text-[var(--text-secondary)] uppercase tracking-widest">ESG Excellence</span>
                 <div className="w-8 h-1 bg-[var(--color-primary)] rounded-full group-hover:w-16 transition-all duration-500" />

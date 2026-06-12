@@ -6,29 +6,29 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     client: "GlobalTech Solutions",
-    quote: "Partnering with AM Analytics has completely transformed how we make business decisions. Their team implemented advanced Power BI dashboards that gave us real-time visibility into operations and performance metrics. For the first time, we could identify trends instantly and act faster. Their expertise in translating raw data into meaningful insights has helped us operate smarter, not harder.",
+    quote: "Partnering with AM Technology has completely transformed how we make business decisions. Their team implemented advanced Power BI dashboards that gave us real-time visibility into operations and performance metrics. For the first time, we could identify trends instantly and act faster. Their expertise in translating raw data into meaningful insights has helped us operate smarter, not harder.",
     rating: 5
   },
   {
     client: "RoyalMed Healthcare",
-    quote: "With AM Analytics, we finally bridged the gap between data collection and real insight. Their team designed automated dashboards that streamlined our performance tracking, reduced manual errors, and saved countless hours. They didn’t just provide tools — they empowered our team to make smarter, evidence-based decisions every day. A true partner in digital transformation.",
+    quote: "With AM Technology, we finally bridged the gap between data collection and real insight. Their team designed automated dashboards that streamlined our performance tracking, reduced manual errors, and saved countless hours. They didn’t just provide tools — they empowered our team to make smarter, evidence-based decisions every day. A true partner in digital transformation.",
     rating: 5
   },
   {
     client: "FinEdge Investments",
-    quote: "AM Analytics helped us develop a powerful data reporting framework using Arbutus and Power BI. Their analytical precision and understanding of financial systems have given us unmatched control over our risk and compliance functions. What stood out most was their attention to detail and ability to simplify complex datasets into clear, actionable insights. They’ve become an essential part of our data-driven strategy.",
+    quote: "AM Technology helped us develop a powerful data reporting framework using Arbutus and Power BI. Their analytical precision and understanding of financial systems have given us unmatched control over our risk and compliance functions. What stood out most was their attention to detail and ability to simplify complex datasets into clear, actionable insights. They’ve become an essential part of our data-driven strategy.",
     rating: 5
   },
   {
     client: "BrightPath Logistics",
-    quote: "Working with AM Analytics gave us a completely new perspective on our business performance. Their team built a comprehensive analytics system that revealed inefficiencies we never noticed before. With their guidance, we’ve optimized routes, reduced costs, and improved turnaround times. Their blend of technical expertise and strategic understanding is what truly sets them apart.",
+    quote: "Working with AM Technology gave us a completely new perspective on our business performance. Their team built a comprehensive analytics system that revealed inefficiencies we never noticed before. With their guidance, we’ve optimized routes, reduced costs, and improved turnaround times. Their blend of technical expertise and strategic understanding is what truly sets them apart.",
     rating: 5
   }
 ];
 
-export default function AnalytiksTestimonials() {
+export default function TechnologyTestimonials() {
   return (
-    <section className="bg-white py-24 px-4 md:px-12 relative overflow-hidden" id="analytiks-testimonials">
+    <section className="bg-white py-24 px-4 md:px-12 relative overflow-hidden" id="technology-testimonials">
       <div className="absolute top-0 left-0 w-full h-full bg-[var(--bg-alt)]/5 -z-0" style={{ clipPath: 'polygon(0 0, 100% 5%, 100% 100%, 0 95%)' }} />
       
       <div className="max-w-7xl mx-auto relative z-10">
@@ -80,7 +80,7 @@ export default function AnalytiksTestimonials() {
                 </div>
                 <div>
                   <h4 className="font-bold text-[var(--text-primary)]">{testi.client}</h4>
-                  <p className="text-sm text-gray-500">Partner with AM Analytiks</p>
+                  <p className="text-sm text-gray-500">Partner with AM Technology</p>
                 </div>
               </div>
             </motion.div>

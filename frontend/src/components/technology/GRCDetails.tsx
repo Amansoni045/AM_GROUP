@@ -29,9 +29,10 @@ export default function GRCDetails() {
             initial={{ opacity: 0, x: 30  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
+            className="info-card group"
           >
-            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6 font-heading">Risk Management</h3>
+            <div className="info-card-top-bar" />
+            <h3 className="info-card-title mb-6">Risk Management</h3>
             <div className="space-y-6">
               {[
                 {
@@ -66,10 +67,10 @@ export default function GRCDetails() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-3xl p-10 md:p-16 border border-gray-100 shadow-lg relative overflow-hidden"
+          className="info-card group md:p-16"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-primary)]/5 rounded-full blur-[40px]" />
-          <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-8 font-heading text-center">Compliance & Regulatory</h3>
+          <div className="info-card-top-bar" />
+          <h3 className="info-card-title text-3xl mb-8 text-center">Compliance & Regulatory</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
             <div>
               <h4 className="text-xl font-bold text-[var(--color-accent)] mb-4">Regulatory Risk Management</h4>
@@ -103,23 +104,25 @@ export default function GRCDetails() {
             <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
-              <CheckCircle2 className="w-8 h-8 text-[var(--color-accent)] shrink-0" />
-              <div>
-                <h4 className="font-bold text-[var(--text-primary)] text-lg mb-2">01. Information Technology Solutions</h4>
-                <p className="text-gray-600 leading-relaxed text-[15px]">
-                  Offer integrated GRC, ORM, IFRS 9, regulatory risk and AML, and accounting software solutions to enhance governance, compliance, and financial management.
-                </p>
+            <div className="info-card group">
+              <div className="info-card-top-bar" />
+              <div className="info-card-icon-wrapper">
+                <CheckCircle2 className="w-7 h-7" strokeWidth={1.5} />
               </div>
+              <h4 className="info-card-title">01. Information Technology Solutions</h4>
+              <p className="info-card-desc">
+                Offer integrated GRC, ORM, IFRS 9, regulatory risk and AML, and accounting software solutions to enhance governance, compliance, and financial management.
+              </p>
             </div>
-            <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
-              <CheckCircle2 className="w-8 h-8 text-[var(--color-accent)] shrink-0" />
-              <div>
-                <h4 className="font-bold text-[var(--text-primary)] text-lg mb-2">02. Information Security Solutions</h4>
-                <p className="text-gray-600 leading-relaxed text-[15px]">
-                  Deliver information security solutions covering risk and cyber assessments, policies, outsourcing, vulnerability checks, and software advisory.
-                </p>
+            <div className="info-card group">
+              <div className="info-card-top-bar" />
+              <div className="info-card-icon-wrapper">
+                <CheckCircle2 className="w-7 h-7" strokeWidth={1.5} />
               </div>
+              <h4 className="info-card-title">02. Information Security Solutions</h4>
+              <p className="info-card-desc">
+                Deliver information security solutions covering risk and cyber assessments, policies, outsourcing, vulnerability checks, and software advisory.
+              </p>
             </div>
           </div>
         </motion.div>

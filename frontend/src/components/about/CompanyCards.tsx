@@ -27,8 +27,8 @@ const companies = [
     color: "var(--color-accent)",
   },
   {
-    name: "AM Data Analytiks",
-    href: "/analytiks",
+    name: "AM Technology",
+    href: "/technology",
     icon: "M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z",
     desc: "We deliver data strategy, predictive modeling, visualization, and business intelligence services that transform information into insights, drive smart decisions, and help organizations achieve measurable growth.",
     color: "var(--color-accent)",
@@ -57,27 +57,26 @@ export default function CompanyCards() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {companies.map((company, i) => (
-            <Link href={company.href} key={i} className="block">
+            <Link href={company.href} key={i} className="block" target="_blank" rel="noopener noreferrer">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
-                whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)", transition: { duration: 0.2, delay: 0 } }}
-                className="bg-[var(--bg-alt)] rounded-2xl p-8 border border-gray-100 shadow-md group relative overflow-hidden cursor-pointer flex flex-col h-full"
+                className="info-card group"
               >
-                <div className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl" style={{ background: company.color }} />
+                <div className="info-card-top-bar" style={{ background: company.color }} />
                 <div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-6 transition-colors duration-300"
-                  style={{ background: "var(--color-accent-soft)" }}
+                  className="info-card-icon-wrapper"
+                  style={{ background: "var(--color-accent-soft)", color: company.color }}
                 >
-                  <svg className="w-7 h-7" fill="none" stroke={company.color} strokeWidth={1.5} viewBox="0 0 24 24">
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d={company.icon} />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-3 font-heading">{company.name}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed flex-grow">{company.desc}</p>
-                <div className="mt-6 flex items-center gap-2 font-semibold text-sm" style={{ color: company.color }}>
+                <h3 className="info-card-title">{company.name}</h3>
+                <p className="info-card-desc">{company.desc}</p>
+                <div className="info-card-link" style={{ color: company.color }}>
                   Read more
                   <ArrowUpRight className="w-4 h-4" />
                 </div>

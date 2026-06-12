@@ -27,10 +27,11 @@ export default function WebServicesList() {
             initial={{ opacity: 0, x: -30  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
+            className="info-card group p-10"
           >
-            <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-8 font-heading">What We Do?</h3>
-            <ul className="space-y-4">
+            <div className="info-card-top-bar" />
+            <h3 className="info-card-title mb-8 z-10">What We Do?</h3>
+            <ul className="space-y-4 z-10">
               {whatWeDo.map((item, i) => (
                 <li key={i} className="flex items-start gap-3">
                   <Diamond className="w-5 h-5 text-[var(--color-accent)] shrink-0 mt-0.5" />
@@ -73,11 +74,12 @@ export default function WebServicesList() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              whileHover={{ y: -5 }}
-              className="flex items-center gap-4 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm group"
+              whileHover={{ y: -4, transition: { duration: 0.2 } }}
+              className="info-card group flex flex-row items-center gap-4 p-6"
             >
-              <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)] group-hover:scale-110 transition-transform" />
-              <span className="font-bold text-[var(--text-primary)]">{item}</span>
+              <div className="info-card-top-bar" />
+              <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)] group-hover:scale-110 transition-transform shrink-0 z-10" />
+              <span className="font-bold text-[var(--text-primary)] z-10">{item}</span>
             </motion.div>
           ))}
         </div>

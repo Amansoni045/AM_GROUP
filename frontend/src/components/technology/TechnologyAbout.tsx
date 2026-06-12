@@ -3,9 +3,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 
-export default function AnalytiksAbout() {
+export default function TechnologyAbout() {
   return (
-    <section className="bg-white py-24 px-4 md:px-12 relative overflow-hidden" id="about-analytiks">
+    <section className="bg-white py-24 px-4 md:px-12 relative overflow-hidden" id="about-technology">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           
@@ -17,7 +17,7 @@ export default function AnalytiksAbout() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="inline-block bg-[var(--bg-alt)] text-[var(--text-primary)] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 shadow-sm">
-              About AM Analytiks
+              About AM Technology
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] leading-tight mb-8 font-heading">
               Unlocking Value <br />
@@ -25,7 +25,7 @@ export default function AnalytiksAbout() {
             </h2>
             <div className="space-y-6 text-gray-600 text-lg leading-relaxed">
               <p>
-                AM Data Analytiks is a specialized data analytics and intelligence firm under the AM Group, delivering Big Data Analytics, Business Intelligence, and Risk Assurance solutions to organizations across industries.
+                AM Data Technology is a specialized data analytics and intelligence firm under the AM Group, delivering Big Data Analytics, Business Intelligence, and Risk Assurance solutions to organizations across industries.
               </p>
               <p>
                 We help businesses transform complex data into meaningful insights that support informed decision-making and sustainable growth, leveraging advanced platforms such as Arbutus and Power BI.
@@ -102,7 +102,7 @@ export default function AnalytiksAbout() {
               </div>
               <div className="space-y-6 text-gray-600 leading-relaxed italic">
                 <p>
-                  AM Data Analytiks was founded in loving memory of Mr. Nishith Seth, a visionary entrepreneur and a close friend of our CEO, Mr. Ravi Mehta. This initiative carries forward the inspiration and legacy of SSPL, serving as a tribute to Nishith’s vision of innovation, excellence, and trust.
+                  AM Data Technology was founded in loving memory of Mr. Nishith Seth, a visionary entrepreneur and a close friend of our CEO, Mr. Ravi Mehta. This initiative carries forward the inspiration and legacy of SSPL, serving as a tribute to Nishith’s vision of innovation, excellence, and trust.
                 </p>
                 <p>
                   Every solution we build reflects these enduring values, ensuring that his dream of creating impactful, data-driven solutions continues to inspire, empower, and shape the future for generations to come.

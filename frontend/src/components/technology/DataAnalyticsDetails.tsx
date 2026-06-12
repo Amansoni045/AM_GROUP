@@ -53,18 +53,11 @@ export default function DataAnalyticsDetails() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
-              whileHover={{ y: -4, transition: { duration: 0.2 } }}
-              className="bg-white rounded-3xl p-10 border border-gray-100 shadow-xl shadow-gray-200/50 relative overflow-hidden group"
+              className="info-card group"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-primary)]/5 rounded-full blur-[20px] transition-all duration-500 group-hover:bg-[var(--color-primary)]/10 group-hover:scale-150" />
-              <div className="relative z-10">
-                <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors border-b border-gray-100 pb-4">
-                  {service.title}
-                </h3>
-                <p className="text-gray-500 leading-relaxed text-[15px]">
-                  {service.desc}
-                </p>
-              </div>
+              <div className="info-card-top-bar" />
+              <h3 className="info-card-title">{service.title}</h3>
+              <p className="info-card-desc">{service.desc}</p>
             </motion.div>
           ))}
         </div>

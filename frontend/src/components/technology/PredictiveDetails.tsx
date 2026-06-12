@@ -29,9 +29,10 @@ export default function PredictiveDetails() {
             initial={{ opacity: 0, x: 30  }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white p-10 rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/50"
+            className="info-card group"
           >
-            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-6 font-heading">Predictive Analytics</h3>
+            <div className="info-card-top-bar" />
+            <h3 className="info-card-title mb-6">Predictive Analytics</h3>
             <p className="text-gray-600 leading-relaxed text-lg mb-8">
               Predictive Analytics is a next major development to Big Data Analytics wherein, technologies that are capable of handling large data sets can generate business interest trigger points that delve into the calculations used for predicting any future decisions.
             </p>

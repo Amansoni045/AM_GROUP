@@ -55,28 +55,27 @@ export default function VATServicesList() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
-              className="bg-white rounded-3xl p-8 md:p-10 border border-gray-100 shadow-lg relative overflow-hidden group"
+              className="info-card group"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-primary)]/5 rounded-full blur-[20px] transition-all duration-500 group-hover:bg-[var(--color-primary)]/10" />
-              
-              <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4 font-heading border-b border-gray-100 pb-4">
-                {category.title}
-              </h3>
-              
-              {category.desc && (
-                <p className="text-gray-500 text-sm mb-6 leading-relaxed">
-                  {category.desc}
-                </p>
-              )}
-              
-              <ul className="space-y-4">
-                {category.items.map((item, idx) => (
-                  <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-[var(--color-accent)] shrink-0 mt-0.5" />
-                    <span className="text-gray-600 text-[15px] leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="info-card-top-bar" />
+              <div className="relative z-10">
+                <h3 className="info-card-title border-b border-gray-100 pb-4">
+                  {category.title}
+                </h3>
+                {category.desc && (
+                  <p className="text-gray-500 text-sm mb-6 leading-relaxed">
+                    {category.desc}
+                  </p>
+                )}
+                <ul className="space-y-4">
+                  {category.items.map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <CheckCircle2 className="w-5 h-5 text-[var(--color-accent)] shrink-0 mt-0.5" />
+                      <span className="text-gray-600 text-[15px] leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </div>

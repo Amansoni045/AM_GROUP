@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export default function AnalytiksHero() {
+export default function TechnologyHero() {
   return (
     <section
       style={{
@@ -37,7 +37,7 @@ export default function AnalytiksHero() {
               fontFamily: "var(--font-body)",
             }}
           >
-            AM Analytiks
+            AM Technology
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 24 }}

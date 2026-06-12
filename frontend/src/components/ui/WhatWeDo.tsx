@@ -26,10 +26,10 @@ const divisions = [
     number: "03",
   },
   {
-    name: "AM Analytiks",
+    name: "AM Technology",
     tagline: "Data Intelligence & Digital Transformation",
     desc: "Advanced data analytics, automation, digital transformation, and app development to accelerate operational excellence.",
-    href: "/analytiks",
+    href: "/technology",
     number: "04",
   },
 ];
@@ -118,6 +118,8 @@ export default function WhatWeDo() {
             >
               <Link
                 href={div.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   display: "block",
                   padding: "3rem 2.5rem",
