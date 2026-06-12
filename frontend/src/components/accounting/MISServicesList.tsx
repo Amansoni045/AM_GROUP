@@ -47,13 +47,14 @@ export default function MISServicesList() {
                 {components.map((item, i) => (
                   <motion.div
                     key={i}
-                    whileHover={{ scale: 1.02 }}
-                    className="flex items-center gap-4 bg-[var(--bg-alt)] p-4 rounded-xl border border-gray-100 group"
+                    whileHover={{ y: -2 }}
+                    className="info-card group flex flex-row items-center gap-4 p-4 shadow-sm"
                   >
-                    <span className="text-xl font-bold text-[var(--color-accent)] font-heading opacity-70 group-hover:opacity-100 transition-opacity">
+                    <div className="info-card-top-bar" />
+                    <span className="text-xl font-bold text-[var(--color-accent)] font-heading opacity-70 group-hover:opacity-100 transition-opacity z-10">
                       {item.num}
                     </span>
-                    <span className="font-bold text-[var(--text-primary)]">{item.title}</span>
+                    <span className="font-bold text-[var(--text-primary)] z-10">{item.title}</span>
                   </motion.div>
                 ))}
               </div>

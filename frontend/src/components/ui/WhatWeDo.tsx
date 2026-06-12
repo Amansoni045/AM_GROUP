@@ -118,8 +118,6 @@ export default function WhatWeDo() {
             >
               <Link
                 href={div.href}
-                target="_blank"
-                rel="noopener noreferrer"
                 style={{
                   display: "block",
                   padding: "3rem 2.5rem",

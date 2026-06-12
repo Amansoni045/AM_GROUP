@@ -43,6 +43,7 @@
   --color-am-accent:  var(--color-accent);
   --font-sans: var(--font-body);
   --font-serif: var(--font-heading);
+  --font-heading: var(--font-heading);
 }
 
 /* ============ BASE ============ */
@@ -60,6 +61,10 @@ body {
 }
 
 /* ============ TYPOGRAPHY ============ */
+.font-heading {
+  font-family: var(--font-heading) !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;

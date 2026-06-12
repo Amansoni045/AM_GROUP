@@ -102,10 +102,13 @@ export default function OperationalRiskManagementPage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col items-center text-center group hover:bg-[#020817] transition-all duration-300"
+                  className="info-card group items-center text-center justify-center"
                 >
-                  <step.icon className="w-10 h-10 text-[var(--color-accent)] mb-4 group-hover:text-white transition-colors" />
-                  <h4 className="font-bold text-[#020817] group-hover:text-white text-sm transition-colors">{step.title}</h4>
+                  <div className="info-card-top-bar" />
+                  <div className="info-card-icon-wrapper mb-3">
+                    <step.icon className="w-7 h-7" strokeWidth={1.5} />
+                  </div>
+                  <h4 className="info-card-title text-sm mb-0">{step.title}</h4>
                 </motion.div>
               ))}
             </div>
@@ -131,14 +134,15 @@ export default function OperationalRiskManagementPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] flex gap-8 items-start group hover:border-[var(--color-accent)]/30 transition-all duration-500"
+                className="info-card group flex flex-row gap-6 items-start"
               >
-                <div className="w-16 h-16 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[var(--color-accent)] transition-colors duration-500">
-                  <item.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-white transition-colors" />
+                <div className="info-card-top-bar" />
+                <div className="info-card-icon-wrapper flex-shrink-0">
+                  <item.icon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">{item.title}</h3>
-                  <p className="text-gray-500 leading-relaxed text-sm">{item.desc}</p>
+                <div className="flex-grow">
+                  <h3 className="info-card-title">{item.title}</h3>
+                  <p className="info-card-desc">{item.desc}</p>
                 </div>
               </motion.div>
             ))}

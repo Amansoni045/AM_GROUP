@@ -157,15 +157,16 @@ export default function MergersAcquisitionsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/5 border border-white/10 p-10 rounded-3xl hover:bg-white/10 transition-all duration-300 group"
+                className="info-card group bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20 shadow-none hover:shadow-none"
               >
-                <div className="text-5xl font-black text-white/10 group-hover:text-[var(--color-accent)]/20 transition-colors mb-6 font-heading">
+                <div className="info-card-top-bar" />
+                <div className="text-5xl font-black text-white/10 group-hover:text-[var(--color-accent)]/20 transition-colors mb-6 font-heading z-10">
                   {feature.number}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">
+                <h3 className="info-card-title text-white group-hover:text-[var(--color-accent)] z-10">
                   {feature.title}
                 </h3>
-                <p className="text-white/60 leading-relaxed text-sm">
+                <p className="info-card-desc text-white/70 z-10">
                   {feature.desc}
                 </p>
               </motion.div>
@@ -200,9 +201,12 @@ export default function MergersAcquisitionsPage() {
                     { label: "Information Memorandums", icon: Briefcase },
                     { label: "Transaction Screening", icon: TrendingUp }
                   ].map((item, i) => (
-                    <div key={i} className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col gap-4">
-                      <item.icon className="w-8 h-8 text-[var(--color-accent)]" />
-                      <span className="font-bold text-[#020817]">{item.label}</span>
+                    <div key={i} className="info-card group p-6 shadow-sm">
+                      <div className="info-card-top-bar" />
+                      <div className="info-card-icon-wrapper mb-3">
+                        <item.icon className="w-7 h-7" strokeWidth={1.5} />
+                      </div>
+                      <span className="info-card-title text-base leading-tight mb-0 z-10">{item.label}</span>
                     </div>
                   ))}
                 </div>

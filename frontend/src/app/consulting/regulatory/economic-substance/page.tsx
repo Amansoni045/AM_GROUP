@@ -139,12 +139,13 @@ export default function ESRPage() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.05 }}
-                className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group flex items-center gap-4"
+                className="info-card group flex flex-row items-center gap-4 p-4 shadow-sm"
               >
-                <div className="w-10 h-10 bg-[var(--color-accent-soft)] rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="info-card-top-bar" />
+                <div className="w-8 h-8 bg-[var(--color-accent-soft)] rounded-lg flex items-center justify-center flex-shrink-0 z-10">
                   <span className="text-[var(--color-accent)] font-bold text-xs">{item.id}</span>
                 </div>
-                <span className="font-bold text-[#020817] text-sm group-hover:text-[var(--color-accent)] transition-colors">{item.title}</span>
+                <span className="font-bold text-[var(--text-primary)] text-sm group-hover:text-[var(--color-accent)] transition-colors z-10">{item.title}</span>
               </motion.div>
             ))}
           </div>
@@ -196,14 +197,15 @@ export default function ESRPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-[#f4f3ee] p-10 rounded-[2.5rem] border border-gray-100 flex gap-8 items-start group"
+                className="info-card group flex flex-row gap-6 items-start"
               >
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center flex-shrink-0 shadow-sm group-hover:bg-[var(--color-accent)] transition-all duration-300">
-                  <service.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-white transition-colors" />
+                <div className="info-card-top-bar" />
+                <div className="info-card-icon-wrapper flex-shrink-0">
+                  <service.icon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">{service.title}</h3>
-                  <p className="text-gray-500 leading-relaxed text-sm">{service.desc}</p>
+                <div className="flex-grow">
+                  <h3 className="info-card-title">{service.title}</h3>
+                  <p className="info-card-desc">{service.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -235,9 +237,10 @@ export default function ESRPage() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                 {consequences.map((item, i) => (
-                  <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-red-100 flex flex-col gap-2">
-                    <h4 className="font-bold text-red-600">{item.title}</h4>
-                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                  <div key={i} className="info-card group border-red-100/50 shadow-sm hover:border-red-500 transition-colors">
+                    <div className="info-card-top-bar" style={{ background: "#dc2626" }} />
+                    <h4 className="info-card-title text-red-600 mb-2">{item.title}</h4>
+                    <p className="info-card-desc text-gray-600">{item.desc}</p>
                   </div>
                 ))}
               </div>

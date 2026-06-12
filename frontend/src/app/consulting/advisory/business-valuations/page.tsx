@@ -94,10 +94,11 @@ export default function BusinessValuationsPage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
-                  className="bg-[#f4f3ee] p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all group"
+                  className="info-card group p-6 shadow-sm"
                 >
-                  <span className="text-[var(--color-accent)] font-black text-xl block mb-2 opacity-40 group-hover:opacity-100 transition-opacity">{point.id}</span>
-                  <p className="font-bold text-[#020817] text-sm leading-tight">{point.title}</p>
+                  <div className="info-card-top-bar" />
+                  <span className="text-[var(--color-accent)] font-black text-xl block mb-2 opacity-60 group-hover:opacity-100 transition-opacity">{point.id}</span>
+                  <p className="info-card-title text-sm leading-tight mb-0">{point.title}</p>
                 </motion.div>
               ))}
             </div>
@@ -123,15 +124,16 @@ export default function BusinessValuationsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/5 border border-white/10 p-10 rounded-3xl hover:border-[var(--color-accent)]/50 transition-all duration-300 group"
+                className="info-card group bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20 shadow-none hover:shadow-none"
               >
-                <div className="w-14 h-14 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[var(--color-accent)] transition-colors">
-                  <item.icon className="w-7 h-7 text-[var(--color-accent)] group-hover:text-white transition-colors" />
+                <div className="info-card-top-bar" />
+                <div className="info-card-icon-wrapper mb-6">
+                  <item.icon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-4 font-heading">
+                <h3 className="info-card-title text-white group-hover:text-[var(--color-accent)]">
                   {item.title}
                 </h3>
-                <p className="text-white/60 leading-relaxed text-sm">
+                <p className="info-card-desc text-white/70">
                   {item.desc}
                 </p>
               </motion.div>

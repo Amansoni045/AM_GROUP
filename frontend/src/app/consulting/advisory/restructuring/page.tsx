@@ -148,16 +148,17 @@ export default function RestructuringServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] group hover:bg-[var(--color-primary)] transition-all duration-500"
+                className="info-card group"
               >
-                <div className="w-16 h-16 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center mb-8 group-hover:bg-white transition-colors duration-500">
-                  <step.icon className="w-8 h-8 text-[var(--color-accent)] group-hover:text-[var(--color-primary)]" strokeWidth={1.5} />
+                <div className="info-card-top-bar" />
+                <div className="info-card-icon-wrapper">
+                  <step.icon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
-                <div className="text-sm font-black text-[var(--color-accent)]/20 mb-2 group-hover:text-white/30 transition-colors">0{i+1}</div>
-                <h3 className="text-2xl font-bold text-[#020817] mb-4 font-heading group-hover:text-white transition-colors">
+                <div className="text-sm font-bold text-[var(--color-accent)] mb-2">0{i+1}</div>
+                <h3 className="info-card-title">
                   {step.title}
                 </h3>
-                <p className="text-gray-500 leading-relaxed text-sm group-hover:text-white/80 transition-colors">
+                <p className="info-card-desc">
                   {step.desc}
                 </p>
               </motion.div>

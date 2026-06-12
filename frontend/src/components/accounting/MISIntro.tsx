@@ -62,10 +62,11 @@ export default function MISIntro() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex items-start gap-4 p-6 rounded-2xl border border-gray-100 shadow-sm bg-[var(--bg-alt)] hover:bg-white hover:shadow-md transition-all group"
+                className="info-card group flex flex-row items-center gap-4 p-6"
               >
-                <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)] shrink-0 group-hover:scale-110 transition-transform" />
-                <span className="font-bold text-[var(--text-primary)]">{benefit}</span>
+                <div className="info-card-top-bar" />
+                <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)] shrink-0 group-hover:scale-110 transition-transform z-10" />
+                <span className="font-bold text-[var(--text-primary)] z-10">{benefit}</span>
               </motion.div>
             ))}
           </div>

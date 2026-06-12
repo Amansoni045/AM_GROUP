@@ -124,18 +124,19 @@ export default function AMLCFTPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-xl shadow-black/[0.03] hover:shadow-2xl hover:shadow-black/10 transition-all duration-300 group"
+                className="info-card group"
               >
-                <div className="flex justify-between items-start mb-8">
-                  <div className="w-14 h-14 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors">
-                    <service.icon className="w-7 h-7 text-[var(--color-accent)] group-hover:text-white transition-colors" />
+                <div className="info-card-top-bar" />
+                <div className="flex justify-between items-start mb-6">
+                  <div className="info-card-icon-wrapper mb-0">
+                    <service.icon className="w-7 h-7" strokeWidth={1.5} />
                   </div>
-                  <span className="text-sm font-black text-gray-200 group-hover:text-[var(--color-accent)]/20 transition-colors">{service.id}</span>
+                  <span className="text-sm font-bold text-[var(--color-accent)]/40">{service.id}</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#020817] mb-4 font-heading group-hover:text-[var(--color-accent)] transition-colors">
+                <h3 className="info-card-title">
                   {service.title}
                 </h3>
-                <p className="text-gray-500 leading-relaxed text-sm">
+                <p className="info-card-desc">
                   {service.desc}
                 </p>
               </motion.div>
