@@ -7,7 +7,6 @@ import CompanyCards from "@/components/about/CompanyCards";
 import CEOMessage from "@/components/about/CEOMessage";
 import TeamSection from "@/components/about/TeamSection";
 import AboutFAQ from "@/components/about/AboutFAQ";
-import Clients from "@/components/ui/Clients";
 
 export default function AboutPage() {
   return (
@@ -15,7 +14,6 @@ export default function AboutPage() {
       <AboutHero />
       <AboutSection />
       <CompanyCards />
-      <Clients />
       <CEOMessage />
       <TeamSection />
       <AboutFAQ />

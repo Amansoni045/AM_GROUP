@@ -53,8 +53,9 @@ export default function ConsultingServices() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5 bg-[var(--color-primary)]/5">
-            Core Expertise
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
+            <span className="eyebrow">Core Expertise</span>
+            <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading">
             Our Consulting <span className="text-[var(--color-accent)]">Solutions</span>
@@ -91,23 +92,29 @@ export default function ConsultingServices() {
           ))}
           
           {/* CTA Card to balance the grid if 5 items */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
-            className="bg-[var(--bg-alt)] rounded-2xl p-8 shadow-xl relative overflow-hidden flex flex-col justify-center items-center text-center h-full"
-          >
-            <div className="absolute top-0 right-0 w-40 h-40 bg-[var(--color-primary)]/20 rounded-full blur-[50px] -z-0" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-[var(--color-accent-soft)] rounded-full blur-[50px] -z-0" />
-            <div className="relative z-10">
-              <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4 font-heading">Ready to transform your business?</h3>
-              <p className="text-[var(--text-secondary)] text-sm mb-8">Book a free consultation with our advisory experts today.</p>
-              <Link href="/#consultation" className="btn-primary">
+          <Link href="/#consultation" className="block h-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
+              className="info-card group text-center"
+              style={{ borderWidth: "2px", borderColor: "#dc2626" }}
+            >
+              <div className="info-card-top-bar" style={{ background: "#dc2626" }} />
+              <div
+                className="info-card-icon-wrapper"
+                style={{ background: "#dc262615", color: "#dc2626", margin: "0 auto 1.5rem" }}
+              >
+                <ArrowUpRight className="w-7 h-7" strokeWidth={1.5} />
+              </div>
+              <h3 className="info-card-title text-lg">Ready to transform your business?</h3>
+              <p className="info-card-desc mb-8">Book a free consultation with our advisory experts today.</p>
+              <div className="info-card-link justify-center mt-auto" style={{ color: "#dc2626" }}>
                 Let's Talk <ArrowUpRight className="w-4 h-4" />
-              </Link>
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          </Link>
         </div>
       </div>
     </section>

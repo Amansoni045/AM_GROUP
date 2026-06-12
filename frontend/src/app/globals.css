@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   line-height: 1.15;
-  color: var(--text-primary);
+  color: inherit;
   letter-spacing: -0.01em;
 }
 
@@ -117,6 +117,20 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--color-accent);
+}
+
+.pill-badge {
+  display: inline-block;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-soft);
+  padding: 0.35rem 1.2rem;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
 }
 
 /* ============ BUTTONS ============ */
@@ -313,9 +327,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .info-card:hover .info-card-icon-wrapper {
-  background: var(--color-accent);
-  color: #FFFFFF;
   transform: scale(1.05);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
 }
 
 .info-card-title {

@@ -40,9 +40,10 @@ export default function ESGWhyChooseUs() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 bg-[var(--color-accent-soft)] text-[var(--color-accent)] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6"
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}
           >
-            <Award className="w-4 h-4" /> Why choose us
+            <span className="eyebrow flex items-center gap-2"><Award className="w-4 h-4" /> Why choose us</span>
+            <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

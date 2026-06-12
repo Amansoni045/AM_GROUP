@@ -78,7 +78,7 @@ export default function Footer() {
               <img
                 src="/logo.webp"
                 alt="AM Group"
-                style={{ height: "65px", width: "auto", objectFit: "contain", marginBottom: "1.5rem" }}
+                style={{ height: "80px", width: "auto", objectFit: "contain", marginBottom: "1.5rem" }}
               />
               <p
                 style={{

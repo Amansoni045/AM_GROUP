@@ -70,7 +70,7 @@ export default function DueDiligencePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[var(--color-primary)]/5">
+            <div className="pill-badge mb-6">
               <span className="tracking-[0.2em]">Transaction Advisory</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
@@ -192,13 +192,13 @@ export default function DueDiligencePage() {
               className="bg-[var(--color-accent-soft)] p-12 rounded-[3rem] border border-[var(--color-accent)]/20"
             >
               <Briefcase className="w-12 h-12 text-[var(--color-accent)] mb-8" />
-              <h3 className="text-3xl font-bold text-white mb-6 font-heading">Sell-side (Vendor) Diligence</h3>
-              <p className="text-white/60 text-lg leading-relaxed mb-8">
+              <h3 className="text-3xl font-bold text-[#020817] mb-6 font-heading">Sell-side (Vendor) Diligence</h3>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Streamlining the transaction process by providing transparent, data-backed insights that build investor confidence and support stronger deal outcomes.
               </p>
               <ul className="space-y-4">
                 {["Investor Confidence", "Streamlined Process", "Predictable Outcomes"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white/80">
+                  <li key={i} className="flex items-center gap-3 text-gray-700">
                     <CheckCircle2 className="w-5 h-5 text-[var(--color-accent)]" />
                     <span className="font-medium">{item}</span>
                   </li>

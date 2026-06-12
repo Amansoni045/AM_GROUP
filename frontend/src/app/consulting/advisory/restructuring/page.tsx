@@ -58,7 +58,7 @@ export default function RestructuringServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-6 bg-[var(--color-primary)]/5">
+            <div className="pill-badge mb-6">
               <span className="tracking-[0.2em]">Turnaround Advisory</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
@@ -116,7 +116,7 @@ export default function RestructuringServicesPage() {
               className="bg-[#020817] p-10 md:p-14 rounded-[3rem] text-white shadow-2xl relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <h3 className="text-2xl font-bold mb-10 font-heading text-[var(--color-accent)]">Focused Focus Areas</h3>
+              <h3 className="text-2xl font-bold mb-10 font-heading text-[var(--color-accent)]">Key Focus Areas</h3>
               <ul className="space-y-6">
                 {businessRestructuringAreas.map((area, i) => (
                   <li key={i} className="flex items-center gap-4 group">

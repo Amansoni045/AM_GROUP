@@ -24,20 +24,7 @@ export default function CFOHero() {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          style={{
-            display: "inline-block",
-            border: "1px solid #B4975A",
-            color: "#B4975A",
-            background: "rgba(180,151,90,0.08)",
-            padding: "0.35rem 1.2rem",
-            borderRadius: "999px",
-            fontSize: "0.68rem",
-            fontWeight: 700,
-            letterSpacing: "0.2em",
-            textTransform: "uppercase",
-            marginBottom: "1.5rem",
-            fontFamily: "var(--font-body)",
-          }}
+          className="pill-badge mb-6"
         >
           CFO Services
         </motion.div>

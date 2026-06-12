@@ -97,8 +97,9 @@ export default function TeamSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-block bg-[var(--color-primary)]/10 border border-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-5">
-            Meet Our Team
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
+            <span className="eyebrow">Meet Our Team</span>
+            <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading">
             People Behind <span className="text-[var(--color-accent)]">AM Group</span>
@@ -108,7 +109,7 @@ export default function TeamSection() {
 
         {/* Leadership */}
         <div className="mb-20">
-          <h3 className="text-xl md:text-2xl font-bold uppercase tracking-widest text-[var(--color-accent)] text-center mb-14">OUR LEADERSHIP</h3>
+          <h3 className="text-2xl md:text-3xl font-heading font-bold uppercase tracking-widest text-[var(--color-accent)] text-center mb-14">OUR LEADERSHIP</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
             {leadership.map((m, i) => (
               <MemberCard key={i} name={m.name} role={m.role} color="#020817" />

@@ -113,10 +113,10 @@ export default function Hero() {
           <div
             style={{
               width: "100%",
-              minHeight: "clamp(340px, 35vw, 420px)",
+              minHeight: "clamp(440px, 44vw, 520px)",
               display: "flex",
               flexDirection: "column",
-              justifyContent: "center",
+              justifyContent: "flex-start",
               alignItems: "flex-start",
             }}
           >
@@ -203,6 +203,7 @@ export default function Hero() {
                     marginBottom: "2.5rem",
                     maxWidth: "560px",
                     textAlign: "left",
+                    minHeight: "8.5rem",
                   }}
                 >
                   {slide.desc}

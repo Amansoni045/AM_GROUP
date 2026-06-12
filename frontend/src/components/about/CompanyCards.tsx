@@ -46,8 +46,9 @@ export default function CompanyCards() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-block bg-[var(--color-accent-soft)] px-4 py-1.5 rounded-full mb-4">
-            <span className="text-[var(--color-accent)] text-sm font-bold uppercase tracking-widest">Our Companies</span>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
+            <span className="eyebrow">Our Companies</span>
+            <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading">
             One Group. Four <span className="text-[var(--color-accent)]">Powerful</span> Companies.

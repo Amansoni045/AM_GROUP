@@ -34,8 +34,9 @@ export default function ESGFAQ() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 bg-[var(--color-accent-soft)] text-[var(--color-accent)] px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-            <HelpCircle className="w-4 h-4" /> FAQ
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
+            <span className="eyebrow flex items-center gap-2"><HelpCircle className="w-4 h-4" /> FAQ</span>
+            <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading mb-6">
             Frequently <span className="text-[var(--color-accent)]">Asked</span> Questions

@@ -16,8 +16,9 @@ export default function CEOMessage() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="text-center mb-16"
         >
-          <div className="inline-block border border-[var(--color-accent)] text-[var(--color-accent)] px-5 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.2em] mb-5">
-            Message from the CEO
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
+            <span className="eyebrow">Message from the CEO</span>
+            <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading">
             Leading with Vision,<br /><span className="text-[var(--color-accent)]">Growing with Purpose</span>

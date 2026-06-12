@@ -35,8 +35,8 @@ export default function ContentServicesList() {
             <h3 className="info-card-title mb-8 z-10">What We Do?</h3>
             <ul className="space-y-4 z-10">
               {whatWeDo.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <Diamond className="w-5 h-5 text-[var(--color-accent)] shrink-0 mt-0.5" />
+                <li key={i} className="flex items-center gap-3">
+                  <Diamond className="w-5 h-5 text-[var(--color-accent)] fill-[var(--color-accent)] shrink-0" />
                   <span className="text-gray-600 text-lg">{item}</span>
                 </li>
               ))}
@@ -49,8 +49,8 @@ export default function ContentServicesList() {
             viewport={{ once: true }}
             className="flex flex-col justify-center space-y-6"
           >
-            <h3 className="text-3xl font-bold text-[var(--text-primary)] font-heading">Our Approach</h3>
-            <div className="w-16 h-1 bg-[var(--color-accent-soft)] rounded" />
+            <h3 className="text-3xl font-bold font-heading" style={{ color: "var(--color-accent)" }}>Our Approach</h3>
+            <div className="w-16 h-1 bg-black rounded" />
             <p className="text-gray-600 leading-relaxed text-lg">
               We craft data-driven content that resonates with your target audience, driving engagement and building long-lasting relationships while elevating your brand&apos;s voice.
             </p>
