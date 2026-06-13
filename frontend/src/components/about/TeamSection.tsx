@@ -12,7 +12,6 @@ const leadership = [
 const departments = [
   {
     name: "AM Consulting",
-    color: "#6373f2",
     members: [
       { name: "Shwetank Bhushan", role: "Director of Advisory" },
       { name: "Asitava Bose", role: "Director – Consulting" },
@@ -23,7 +22,6 @@ const departments = [
   },
   {
     name: "AM Accounting",
-    color: "#059669",
     members: [
       { name: "Anchu Prakash", role: "Manager – Finance & Operations" },
       { name: "Anima Jagdeesh", role: "Financial Manager" },
@@ -38,7 +36,6 @@ const departments = [
   },
   {
     name: "AM Design",
-    color: "#d4af37",
     members: [
       { name: "Harshita Chadha", role: "Sr. Manager – Marketing & Projects" },
       { name: "Mohamed Abdulameer", role: "Graphic Designer" },
@@ -47,7 +44,6 @@ const departments = [
   },
   {
     name: "AM Technology",
-    color: "#dc2626",
     members: [
       { name: "Aditi Upadhyay", role: "Sr. Manager, Data Analyst" },
       { name: "Sampath Raj", role: "Sr. Executive Data Analyst" },
@@ -61,9 +57,7 @@ function getInitials(name: string) {
   return name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase();
 }
 
-function MemberCard({ name, role, color }: { name: string; role: string; color?: string }) {
-  const bg = color ? `${color}20` : "#6373f220";
-  const border = color ? `${color}30` : "#6373f230";
+function MemberCard({ name, role, primary = false }: { name: string; role: string; primary?: boolean }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -74,7 +68,11 @@ function MemberCard({ name, role, color }: { name: string; role: string; color?:
     >
       <div
         className="w-20 h-20 rounded-full flex items-center justify-center mb-3 text-lg font-bold transition-transform duration-300 group-hover:scale-110"
-        style={{ background: bg, border: `2px solid ${border}`, color: color || "#6373f2" }}
+        style={{
+          background: primary ? "var(--color-primary)" : "var(--color-accent-soft)",
+          border: primary ? "2px solid var(--color-primary)" : "2px solid var(--color-accent)",
+          color: primary ? "#FFFFFF" : "var(--color-accent)",
+        }}
       >
         {getInitials(name)}
       </div>
@@ -112,13 +110,13 @@ export default function TeamSection() {
           <h3 className="text-2xl md:text-3xl font-heading font-bold uppercase tracking-widest text-[var(--color-accent)] text-center mb-14">OUR LEADERSHIP</h3>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
             {leadership.map((m, i) => (
-              <MemberCard key={i} name={m.name} role={m.role} color="#020817" />
+              <MemberCard key={i} name={m.name} role={m.role} primary={true} />
             ))}
           </div>
         </div>
 
         {/* Department Tabs */}
-        <div className="bg-[var(--bg-alt)] rounded-3xl p-8 border border-gray-100">
+        <div className="bg-[var(--bg-alt)] rounded-3xl p-8 border border-[var(--border-light)]">
           <div className="flex flex-wrap gap-3 justify-center mb-10">
             {departments.map((dept, i) => (
               <button
@@ -126,8 +124,8 @@ export default function TeamSection() {
                 onClick={() => setActiveTab(i)}
                 className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
                   activeTab === i 
-                    ? "bg-[var(--color-accent)] text-white shadow-md border border-[var(--color-accent)]" 
-                    : "bg-white text-[var(--text-secondary)] border border-gray-200 hover:border-gray-300 hover:text-[var(--text-primary)]"
+                    ? "bg-[var(--color-primary)] text-white shadow-md border border-[var(--color-primary)]" 
+                    : "bg-white text-[var(--text-secondary)] border border-[var(--border-medium)] hover:border-[var(--color-accent)] hover:text-[var(--text-primary)]"
                 }`}
               >
                 {dept.name}
@@ -144,7 +142,7 @@ export default function TeamSection() {
               className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 justify-items-center"
             >
               {departments[activeTab].members.map((m, i) => (
-                <MemberCard key={i} name={m.name} role={m.role} color={departments[activeTab].color} />
+                <MemberCard key={i} name={m.name} role={m.role} />
               ))}
             </motion.div>
           </AnimatePresence>

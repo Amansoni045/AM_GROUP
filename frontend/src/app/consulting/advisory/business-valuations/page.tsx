@@ -27,35 +27,63 @@ const reportInclusions = [
 
 export default function BusinessValuationsPage() {
   return (
-    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
             
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-[#040b1e] overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#040b1e] to-transparent z-10" />
-          <img 
-            src="/shutterstock_2302318791-1-scaled-1024x683-1.webp" 
-            alt="Business Valuations" 
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-12">
+      <section
+        style={{
+          background: "linear-gradient(135deg, #f4f3ee 0%, #fff 55%, #faf7f0 100%)",
+          minHeight: "46vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "7.5rem 2rem 5rem",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ position: "absolute", top: 0, left: 0, width: "300px", height: "300px", background: "radial-gradient(circle at top left, rgba(180,151,90,0.12) 0%, transparent 65%)" }} />
+        <div style={{ position: "absolute", bottom: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.08) 0%, transparent 65%)" }} />
+        <div style={{ maxWidth: "820px", position: "relative", zIndex: 1 }}>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="pill-badge mb-6"
           >
-            <div className="pill-badge mb-6">
-              <span className="tracking-[0.2em]">Financial Advisory</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              Business <span className="text-[var(--color-accent)]">Valuations</span>
-            </h1>
-            <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
-              Leading business valuation firm in Bahrain, Saudi Arabia, Oman, and UAE, supporting clients in determining the fair value of their businesses.
-            </p>
+            Financial Advisory
           </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
+              fontWeight: 600,
+              color: "#0F172A",
+              lineHeight: 1.1,
+              marginBottom: "1.25rem",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Business <span style={{ color: "#B4975A" }}>Valuations</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.25 }}
+            style={{ fontFamily: "var(--font-body)", fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", color: "#475569", lineHeight: 1.75, maxWidth: "600px", margin: "0 auto 0" }}
+          >
+            Leading business valuation firm in Bahrain, Saudi Arabia, Oman, and UAE, supporting clients in determining the fair value of their businesses.
+          </motion.p>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            style={{ width: "48px", height: "2px", background: "#B4975A", margin: "1.75rem auto 0", transformOrigin: "center" }}
+          />
         </div>
       </section>
 
@@ -107,11 +135,11 @@ export default function BusinessValuationsPage() {
       </section>
 
       {/* Report Section */}
-      <section className="py-24 px-4 md:px-12 bg-[#020817]">
+      <section className="py-24 px-4 md:px-12 bg-[var(--bg-alt)]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 font-heading">What Our Valuation Report Includes</h2>
-            <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-primary)] mb-6 font-heading">What Our Valuation Report Includes</h2>
+            <p className="text-[var(--text-secondary)] text-lg max-w-2xl mx-auto">
               We prepare comprehensive reports that provide a clear and well-supported assessment of your business value.
             </p>
           </div>
@@ -124,16 +152,16 @@ export default function BusinessValuationsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="info-card group bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20 shadow-none hover:shadow-none"
+                className="info-card group"
               >
                 <div className="info-card-top-bar" />
                 <div className="info-card-icon-wrapper mb-6">
                   <item.icon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
-                <h3 className="info-card-title text-white group-hover:text-[var(--color-accent)]">
+                <h3 className="info-card-title">
                   {item.title}
                 </h3>
-                <p className="info-card-desc text-white/70">
+                <p className="info-card-desc">
                   {item.desc}
                 </p>
               </motion.div>
@@ -168,14 +196,14 @@ export default function BusinessValuationsPage() {
                   ))}
                 </div>
               </div>
-              <div className="relative bg-[#020817] p-12 rounded-[2rem] text-white shadow-2xl">
+              <div className="relative bg-white p-12 rounded-[2rem] text-[var(--text-primary)] border border-[var(--border-light)] shadow-xl">
                 <PieChart className="w-16 h-16 text-[var(--color-accent)] mb-8" />
                 <h3 className="text-2xl font-bold mb-6 font-heading">Comprehensive Disclosures</h3>
-                <p className="text-white/70 leading-relaxed italic mb-8">
+                <p className="text-[var(--text-secondary)] leading-relaxed italic mb-8">
                   "Our reports also include detailed financial forecasts, key assumptions, and an exhaustive appendix to meet specific regulatory and stakeholder requirements."
                 </p>
                 <Link href="/#consultation">
-                  <button className="flex items-center gap-2 text-[var(--color-accent)] font-bold hover:gap-3 transition-all">
+                  <button className="flex items-center gap-2 text-[var(--color-accent)] font-bold hover:gap-3 transition-all cursor-pointer">
                     Request Sample Report <ArrowRight className="w-5 h-5" />
                   </button>
                 </Link>
@@ -188,12 +216,13 @@ export default function BusinessValuationsPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[#020817] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
+          <div className="bg-[var(--bg-alt)] rounded-3xl p-12 text-center border border-[var(--border-light)] shadow-xl relative overflow-hidden text-[var(--text-primary)]">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(180,151,90,0.08)_0,transparent_65%)] pointer-events-none" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Determine Your Business Worth</h2>
-            <p className="text-white/60 text-lg mb-10 max-w-2xl mx-auto font-medium">
+            <p className="text-[var(--text-secondary)] text-lg mb-10 max-w-2xl mx-auto font-medium">
               Get an accurate and defensible valuation report from the leading firm in Bahrain, Saudi Arabia, Oman, and UAE.
             </p>
-            <Link href="/#consultation" className="btn-gold mx-auto">
+            <Link href="/#consultation" className="btn-primary mx-auto">
               Get Valuation Quote
               <ArrowRight className="w-5 h-5" />
             </Link>

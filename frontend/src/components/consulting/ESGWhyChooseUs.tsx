@@ -42,7 +42,9 @@ export default function ESGWhyChooseUs() {
             viewport={{ once: true }}
             style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}
           >
-            <span className="eyebrow flex items-center gap-2"><Award className="w-4 h-4" /> Why choose us</span>
+            <span className="eyebrow" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>
+              <Award className="w-4 h-4" /> Why choose us
+            </span>
             <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
           </motion.div>
           <motion.h2
@@ -65,10 +67,12 @@ export default function ESGWhyChooseUs() {
               transition={{ delay: i * 0.1 }}
               className="relative group pt-8"
             >
-              <div className="absolute top-0 left-0 text-[var(--text-secondary)] text-6xl font-black -z-0 select-none group-hover:text-[var(--color-accent)]/10 transition-colors">
-                {reason.number}
-              </div>
               <div className="relative z-10 bg-white p-8 rounded-3xl border border-gray-100 shadow-xl shadow-black/5 group-hover:-translate-y-4 transition-transform duration-500">
+                {/* Number inside card at top-right */}
+                <div className="absolute top-8 right-8 text-[var(--text-light)] text-3xl font-heading font-black opacity-30 select-none group-hover:text-[var(--color-accent)] group-hover:opacity-100 transition-all duration-300">
+                  {reason.number}
+                </div>
+
                 <div className="w-14 h-14 bg-[var(--bg-alt)] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[var(--color-accent-soft)] transition-colors">
                   <reason.icon className="w-7 h-7 text-[var(--text-primary)] group-hover:text-[var(--text-primary)] transition-colors" />
                 </div>

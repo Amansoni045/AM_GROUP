@@ -7,7 +7,7 @@ import PPCServicesList from "@/components/design/PPCServicesList";
 
 export default function PPCAndGoogleAdsPage() {
   return (
-    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
             <PPCHero />
       <PPCIntro />
       <PPCServicesList />

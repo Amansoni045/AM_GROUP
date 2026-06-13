@@ -8,42 +8,36 @@ const services = [
     title: "Predictive & Big Data Analytics",
     desc: "We empower organizations with predictive insights using advanced data models and AI-driven analytics—helping optimize performance and forecast trends.",
     icon: Brain,
-    color: "#6373f2",
     href: "/technology/predictive-and-big-data-analytics"
   },
   {
     title: "GRC Solutions & Services",
     desc: "We provide integrated governance, risk, and compliance frameworks—ensuring effective controls, regulatory adherence, and transparency.",
     icon: ShieldCheck,
-    color: "#059669",
     href: "/technology/grc-solutions-and-services"
   },
   {
     title: "Operations & Finance Analytics",
     desc: "We optimize financial and operational efficiency through deep data insights, process automation, and performance analysis.",
     icon: LineChart,
-    color: "#d4af37",
     href: "/technology/operations-and-finance-analytics"
   },
   {
     title: "Data Analytics",
     desc: "We help clients in creating data strategies, through master data management, assisting in cleansing to enable obtaining value from data.",
     icon: Database,
-    color: "#8b5cf6",
     href: "/technology/data-analytics"
   },
   {
     title: "Fraud Management",
     desc: "We strengthen your business against risks with intelligent fraud detection, anomaly analysis, and preventive strategies.",
     icon: AlertTriangle,
-    color: "#dc2626",
     href: "/technology/fraud-management"
   },
   {
     title: "Digital Transformation",
     desc: "We help clients in developing and implementing the digital transformation strategy especially technology led change and transformation.",
     icon: Zap,
-    color: "#0ea5e9",
     href: "/technology/digital-transformation"
   }
 ];
@@ -82,17 +76,14 @@ export default function TechnologyServices() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
               className="info-card group"
             >
-              <div className="info-card-top-bar" style={{ background: service.color }} />
-              <div
-                className="info-card-icon-wrapper"
-                style={{ background: `${service.color}15`, color: service.color }}
-              >
+              <div className="info-card-top-bar" />
+              <div className="info-card-icon-wrapper">
                 <service.icon className="w-7 h-7" strokeWidth={1.5} />
               </div>
               <h3 className="info-card-title">{service.title}</h3>
               <p className="info-card-desc">{service.desc}</p>
               
-              <div className="info-card-link" style={{ color: service.color }}>
+              <div className="info-card-link">
                 Learn more
                 <ArrowUpRight className="w-4 h-4" />
               </div>

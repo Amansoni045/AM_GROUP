@@ -7,7 +7,7 @@ import DigitalDetails from "@/components/technology/DigitalDetails";
 
 export default function DigitalTransformationPage() {
   return (
-    <main className="relative bg-white text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
       <DigitalHero />
       <DigitalIntro />
       <DigitalDetails />

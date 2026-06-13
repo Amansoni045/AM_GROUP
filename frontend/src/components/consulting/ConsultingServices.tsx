@@ -9,35 +9,30 @@ const services = [
     title: "Advisory Services",
     desc: "We guide businesses through valuations, restructuring, due diligence, and feasibility studies to support informed decision-making for startups and established organizations.",
     icon: TrendingUp,
-    color: "#6373f2",
     href: "/consulting/advisory"
   },
   {
     title: "ESG Services",
     desc: "We support businesses in advancing their sustainability goals through ESG reporting, risk assessments, and certification support aligned with global standards.",
     icon: Leaf,
-    color: "#059669",
     href: "/consulting/esg"
   },
   {
     title: "Regulatory Services",
     desc: "We assist businesses in meeting regulatory requirements through expert guidance on ESR, AML, and risk management frameworks.",
     icon: Shield,
-    color: "#d4af37",
     href: "/consulting/regulatory"
   },
   {
     title: "Corporate Outsourcing",
     desc: "We enable businesses to streamline operations through professional HR, payroll, and taxation solutions for efficient workforce management.",
     icon: Users,
-    color: "#8b5cf6",
     href: "/consulting/outsourcing"
   },
   {
     title: "Business Risk Services",
     desc: "We help businesses strengthen internal controls through audits, governance frameworks, and risk analytics to enhance compliance and operational efficiency.",
     icon: LineChart,
-    color: "#dc2626",
     href: "/consulting/risk"
   }
 ];
@@ -73,17 +68,14 @@ export default function ConsultingServices() {
                 transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: i * 0.1 }}
                 className="info-card group"
               >
-                <div className="info-card-top-bar" style={{ background: service.color }} />
-                <div
-                  className="info-card-icon-wrapper"
-                  style={{ background: `${service.color}15`, color: service.color }}
-                >
+                <div className="info-card-top-bar" />
+                <div className="info-card-icon-wrapper">
                   <service.icon className="w-7 h-7" strokeWidth={1.5} />
                 </div>
                 <h3 className="info-card-title">{service.title}</h3>
                 <p className="info-card-desc">{service.desc}</p>
                 
-                <div className="info-card-link" style={{ color: service.color }}>
+                <div className="info-card-link">
                   Learn more
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
@@ -91,7 +83,7 @@ export default function ConsultingServices() {
             </Link>
           ))}
           
-          {/* CTA Card to balance the grid if 5 items */}
+          {/* CTA Card */}
           <Link href="/#consultation" className="block h-full">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -99,19 +91,19 @@ export default function ConsultingServices() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
               className="info-card group text-center"
-              style={{ borderWidth: "2px", borderColor: "#dc2626" }}
+              style={{ borderColor: "var(--color-accent)", borderWidth: "2px" }}
             >
-              <div className="info-card-top-bar" style={{ background: "#dc2626" }} />
+              <div className="info-card-top-bar" />
               <div
                 className="info-card-icon-wrapper"
-                style={{ background: "#dc262615", color: "#dc2626", margin: "0 auto 1.5rem" }}
+                style={{ margin: "0 auto 1.5rem" }}
               >
                 <ArrowUpRight className="w-7 h-7" strokeWidth={1.5} />
               </div>
               <h3 className="info-card-title text-lg">Ready to transform your business?</h3>
               <p className="info-card-desc mb-8">Book a free consultation with our advisory experts today.</p>
-              <div className="info-card-link justify-center mt-auto" style={{ color: "#dc2626" }}>
-                Let's Talk <ArrowUpRight className="w-4 h-4" />
+              <div className="info-card-link justify-center mt-auto">
+                Let&apos;s Talk <ArrowUpRight className="w-4 h-4" />
               </div>
             </motion.div>
           </Link>

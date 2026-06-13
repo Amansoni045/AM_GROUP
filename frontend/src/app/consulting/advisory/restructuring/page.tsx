@@ -39,35 +39,63 @@ const debtRestructuringSteps = [
 
 export default function RestructuringServicesPage() {
   return (
-    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
             
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-[#040b1e] overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#040b1e] to-transparent z-10" />
-          <img 
-            src="/shutterstock_2302318791-1-scaled-1024x683-1.webp" 
-            alt="Restructuring Services" 
-            className="w-full h-full object-cover opacity-25"
-          />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-12">
+      <section
+        style={{
+          background: "linear-gradient(135deg, #f4f3ee 0%, #fff 55%, #faf7f0 100%)",
+          minHeight: "46vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "7.5rem 2rem 5rem",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ position: "absolute", top: 0, left: 0, width: "300px", height: "300px", background: "radial-gradient(circle at top left, rgba(180,151,90,0.12) 0%, transparent 65%)" }} />
+        <div style={{ position: "absolute", bottom: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.08) 0%, transparent 65%)" }} />
+        <div style={{ maxWidth: "820px", position: "relative", zIndex: 1 }}>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="pill-badge mb-6"
           >
-            <div className="pill-badge mb-6">
-              <span className="tracking-[0.2em]">Turnaround Advisory</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              Restructuring <span className="text-[var(--color-accent)]">Services</span>
-            </h1>
-            <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
-              Excellence in Financial Analysis. Supporting businesses in Bahrain, Saudi Arabia, Oman, and UAE to adapt, evolve, and thrive in changing economic conditions.
-            </p>
+            Turnaround Advisory
           </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
+              fontWeight: 600,
+              color: "#0F172A",
+              lineHeight: 1.1,
+              marginBottom: "1.25rem",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Restructuring <span style={{ color: "#B4975A" }}>Services</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.25 }}
+            style={{ fontFamily: "var(--font-body)", fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", color: "#475569", lineHeight: 1.75, maxWidth: "600px", margin: "0 auto 0" }}
+          >
+            Excellence in Financial Analysis. Supporting businesses in Bahrain, Saudi Arabia, Oman, and UAE to adapt, evolve, and thrive in changing economic conditions.
+          </motion.p>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            style={{ width: "48px", height: "2px", background: "#B4975A", margin: "1.75rem auto 0", transformOrigin: "center" }}
+          />
         </div>
       </section>
 
@@ -113,15 +141,15 @@ export default function RestructuringServicesPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="bg-[#020817] p-10 md:p-14 rounded-[3rem] text-white shadow-2xl relative overflow-hidden"
+              className="bg-[var(--bg-alt)] p-10 md:p-14 rounded-[3rem] text-[var(--text-primary)] border border-[var(--border-light)] shadow-xl relative overflow-hidden"
             >
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-accent-soft)] rounded-full -translate-y-1/2 translate-x-1/2" />
               <h3 className="text-2xl font-bold mb-10 font-heading text-[var(--color-accent)]">Key Focus Areas</h3>
               <ul className="space-y-6">
                 {businessRestructuringAreas.map((area, i) => (
                   <li key={i} className="flex items-center gap-4 group">
                     <div className="w-2 h-2 bg-[var(--color-accent)] rounded-full group-hover:scale-150 transition-transform" />
-                    <span className="text-white/80 font-medium group-hover:text-white transition-colors">{area}</span>
+                    <span className="text-[var(--text-secondary)] font-medium group-hover:text-[var(--color-primary)] transition-colors">{area}</span>
                   </li>
                 ))}
               </ul>
@@ -170,7 +198,7 @@ export default function RestructuringServicesPage() {
       {/* Sustainable Growth Section */}
       <section className="py-24 px-4 md:px-12 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-[#020817] rounded-[3rem] p-12 md:p-20 relative text-white">
+          <div className="bg-[var(--bg-alt)] rounded-[3rem] p-12 md:p-20 relative text-[var(--text-primary)] border border-[var(--border-light)] shadow-xl overflow-hidden">
             <div className="absolute top-0 right-0 w-full h-full bg-[url('/grid-pattern.svg')] opacity-10 pointer-events-none" />
             
             <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -179,7 +207,7 @@ export default function RestructuringServicesPage() {
                   Driving Sustainable <span className="text-[var(--color-accent)]">Value</span> & Recovery
                 </h2>
                 <div className="w-16 h-1 bg-[var(--color-accent)] mb-8" />
-                <p className="text-white/70 text-lg leading-relaxed mb-8">
+                <p className="text-[var(--text-secondary)] text-lg leading-relaxed mb-8">
                   We specialize in helping businesses regain their competitive edge through cost optimization, resource allocation, and strategic redesign.
                 </p>
                 <div className="grid grid-cols-2 gap-6">
@@ -191,14 +219,14 @@ export default function RestructuringServicesPage() {
                   ].map((item, i) => (
                     <div key={i} className="flex items-center gap-3">
                       <CheckCircle2 className="w-5 h-5 text-[var(--color-accent)]" />
-                      <span className="font-medium text-sm">{item}</span>
+                      <span className="font-medium text-sm text-[var(--text-primary)]">{item}</span>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="relative">
-                <div className="aspect-square bg-[var(--color-accent-soft)] rounded-full flex items-center justify-center p-10 border border-white/10">
-                  <div className="aspect-square bg-[var(--color-accent-soft)]/20 rounded-full flex items-center justify-center p-10 w-full border border-white/10">
+                <div className="aspect-square bg-[var(--color-accent-soft)] rounded-full flex items-center justify-center p-10 border border-[var(--color-accent)]/20">
+                  <div className="aspect-square bg-[var(--color-accent-soft)]/20 rounded-full flex items-center justify-center p-10 w-full border border-[var(--color-accent)]/20">
                     <RefreshCw className="w-32 h-32 text-[var(--color-accent)] animate-spin-slow" />
                   </div>
                 </div>
@@ -211,14 +239,14 @@ export default function RestructuringServicesPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
-            <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
-            <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Regain Your Competitive Edge</h2>
-            <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
-              Let our restructuring experts help you navigate economic challenges and build a resilient future for your business.
+          <div className="bg-[var(--bg-alt)] rounded-3xl p-12 text-center border border-[var(--border-light)] shadow-xl relative overflow-hidden text-[var(--text-primary)]">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(180,151,90,0.08)_0,transparent_65%)] pointer-events-none" />
+            <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Secure Your Financial Future</h2>
+            <p className="text-[var(--text-secondary)] text-lg mb-10 max-w-2xl mx-auto font-medium">
+              Speak with our corporate recovery experts in Bahrain to explore your restructuring options.
             </p>
-            <Link href="/#consultation" className="btn-white mx-auto">
-              Discuss Your Situation
+            <Link href="/#consultation" className="btn-primary mx-auto">
+              Schedule a Consultation
               <ArrowRight className="w-5 h-5" />
             </Link>
           </div>

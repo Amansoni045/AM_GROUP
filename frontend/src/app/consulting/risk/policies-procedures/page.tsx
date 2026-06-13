@@ -58,35 +58,63 @@ const keyPolicies = [
 
 export default function PoliciesProceduresPage() {
   return (
-    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
             
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-[#040b1e] overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#040b1e] to-transparent z-10" />
-          <img 
-            src="/shutterstock_2302318791-1-scaled-1024x683-1.webp" 
-            alt="Policies & Procedures" 
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-12">
+      <section
+        style={{
+          background: "linear-gradient(135deg, #f4f3ee 0%, #fff 55%, #faf7f0 100%)",
+          minHeight: "46vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "7.5rem 2rem 5rem",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ position: "absolute", top: 0, left: 0, width: "300px", height: "300px", background: "radial-gradient(circle at top left, rgba(180,151,90,0.12) 0%, transparent 65%)" }} />
+        <div style={{ position: "absolute", bottom: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.08) 0%, transparent 65%)" }} />
+        <div style={{ maxWidth: "820px", position: "relative", zIndex: 1 }}>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="pill-badge mb-6"
           >
-            <div className="pill-badge mb-6">
-              <span className="tracking-[0.2em]">Risk Advisory</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              Policies & <span className="text-[var(--color-accent)]">Procedures</span> (SOPs)
-            </h1>
-            <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
-              Strong Substance. Stronger Standing. Building a clear roadmap for day-to-day operations and organizational success.
-            </p>
+            Risk Advisory
           </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
+              fontWeight: 600,
+              color: "#0F172A",
+              lineHeight: 1.1,
+              marginBottom: "1.25rem",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Policies & <span style={{ color: "#B4975A" }}>Procedures</span> (SOPs)
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.25 }}
+            style={{ fontFamily: "var(--font-body)", fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", color: "#475569", lineHeight: 1.75, maxWidth: "600px", margin: "0 auto 0" }}
+          >
+            Strong Substance. Stronger Standing. Building a clear roadmap for day-to-day operations and organizational success.
+          </motion.p>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            style={{ width: "48px", height: "2px", background: "#B4975A", margin: "1.75rem auto 0", transformOrigin: "center" }}
+          />
         </div>
       </section>
 
@@ -169,7 +197,7 @@ export default function PoliciesProceduresPage() {
       {/* Key Policies Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-[#020817] rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
+          <div className="bg-[var(--bg-alt)] rounded-[3rem] p-12 md:p-20 text-[var(--text-primary)] border border-[var(--border-light)] shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-accent-soft)] rounded-full blur-[100px] -z-0" />
             
             <h2 className="text-3xl md:text-5xl font-bold mb-16 font-heading text-center">Type of Key <span className="text-[var(--color-accent)]">Policies</span></h2>
@@ -182,10 +210,10 @@ export default function PoliciesProceduresPage() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
-                  className="bg-white/5 border border-white/10 p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-[var(--color-accent)] hover:border-[var(--color-accent)] transition-all duration-300"
+                  className="bg-white border border-[var(--border-light)] p-8 rounded-2xl flex flex-col items-center text-center group hover:bg-[var(--color-accent)] hover:border-[var(--color-accent)] transition-all duration-300 shadow-sm"
                 >
                   <policy.icon className="w-10 h-10 text-[var(--color-accent)] mb-6 group-hover:text-white transition-colors" />
-                  <span className="font-bold text-sm text-white/90 group-hover:text-white">{policy.name}</span>
+                  <span className="font-bold text-sm text-[var(--text-primary)] group-hover:text-white">{policy.name}</span>
                 </motion.div>
               ))}
             </div>
@@ -196,13 +224,13 @@ export default function PoliciesProceduresPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)] pointer-events-none" />
+          <div className="bg-[var(--bg-alt)] rounded-3xl p-12 text-center border border-[var(--border-light)] shadow-xl relative overflow-hidden text-[var(--text-primary)]">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(180,151,90,0.08)_0,transparent_65%)] pointer-events-none" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Build Your Foundation for Success</h2>
-            <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
+            <p className="text-[var(--text-secondary)] text-lg mb-10 max-w-2xl mx-auto font-medium">
               Connect with our risk advisory experts to develop robust policies and procedures tailored to your organization’s goals.
             </p>
-            <Link href="/#consultation" className="btn-white mx-auto">
+            <Link href="/#consultation" className="btn-primary mx-auto">
               Schedule a Consultation
               <ArrowRight className="w-5 h-5" />
             </Link>

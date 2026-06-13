@@ -56,19 +56,7 @@ export default function AboutHero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-            style={{
-              display: "inline-block",
-              border: "1px solid var(--color-accent)",
-              color: "var(--color-accent)",
-              padding: "0.375rem 1.25rem",
-              borderRadius: "999px",
-              fontSize: "0.7rem",
-              fontWeight: 700,
-              letterSpacing: "0.2em",
-              textTransform: "uppercase",
-              marginBottom: "1.75rem",
-              fontFamily: "var(--font-body)",
-            }}
+            className="pill-badge mb-6"
           >
             About AM Group
           </motion.div>

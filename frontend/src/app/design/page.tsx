@@ -8,7 +8,7 @@ import DesignTestimonials from "@/components/design/DesignTestimonials";
 
 export default function DesignPage() {
   return (
-    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
             <DesignHero />
       <DesignAbout />
       <DesignServices />

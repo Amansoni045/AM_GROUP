@@ -52,36 +52,63 @@ const consequences = [
 
 export default function ESRPage() {
   return (
-    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
             
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-[#040b1e] overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#040b1e] to-transparent z-10" />
-          <img 
-            src="/WhatsApp-Image-2025-09-26-at-18.26.13_23ba2070-1.webp" 
-            alt="ESR Services" 
-            className="w-full h-full object-cover opacity-30"
-          />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-12">
+      <section
+        style={{
+          background: "linear-gradient(135deg, #f4f3ee 0%, #fff 55%, #faf7f0 100%)",
+          minHeight: "46vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "7.5rem 2rem 5rem",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ position: "absolute", top: 0, left: 0, width: "300px", height: "300px", background: "radial-gradient(circle at top left, rgba(180,151,90,0.12) 0%, transparent 65%)" }} />
+        <div style={{ position: "absolute", bottom: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.08) 0%, transparent 65%)" }} />
+        <div style={{ maxWidth: "820px", position: "relative", zIndex: 1 }}>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="pill-badge mb-6"
           >
-            <div className="pill-badge mb-6">
-              <span className="tracking-[0.2em]">Regulatory Services</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              Strong Substance. <br />
-              <span className="text-[var(--color-accent)]">Stronger Standing.</span>
-            </h1>
-            <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
-              Expert guidance and end-to-end ESR compliance services to navigate the complexities of Bahrain’s regulatory environment.
-            </p>
+            Regulatory Services
           </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
+              fontWeight: 600,
+              color: "#0F172A",
+              lineHeight: 1.1,
+              marginBottom: "1.25rem",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Economic Substance <span style={{ color: "#B4975A" }}>Regulations</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.25 }}
+            style={{ fontFamily: "var(--font-body)", fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", color: "#475569", lineHeight: 1.75, maxWidth: "600px", margin: "0 auto 0" }}
+          >
+            Expert guidance and end-to-end ESR compliance services to navigate the complexities of Bahrain's regulatory environment.
+          </motion.p>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            style={{ width: "48px", height: "2px", background: "#B4975A", margin: "1.75rem auto 0", transformOrigin: "center" }}
+          />
         </div>
       </section>
 
@@ -155,7 +182,7 @@ export default function ESRPage() {
       {/* Compliance Requirements */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-[#020817] rounded-[3rem] p-12 md:p-20 text-white relative overflow-hidden">
+          <div className="bg-[var(--bg-alt)] rounded-[3rem] p-12 md:p-20 text-[var(--text-primary)] border border-[var(--border-light)] shadow-xl relative overflow-hidden">
             <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-accent-soft)] rounded-full blur-[100px] -z-0" />
             
             <h2 className="text-3xl md:text-4xl font-bold mb-12 font-heading text-center">Economic Substance Test Requirements</h2>
@@ -168,10 +195,10 @@ export default function ESRPage() {
                 "Board of Directors must possess necessary authority and knowledge for strategic decisions."
               ].map((req, i) => (
                 <div key={i} className="flex gap-6 items-start">
-                  <div className="w-12 h-12 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center flex-shrink-0 border border-white/10">
+                  <div className="w-12 h-12 bg-[var(--color-accent-soft)] rounded-2xl flex items-center justify-center flex-shrink-0 border border-[var(--color-accent)]/20">
                     <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)]" />
                   </div>
-                  <p className="text-white/70 leading-relaxed">{req}</p>
+                  <p className="text-[var(--text-secondary)] leading-relaxed">{req}</p>
                 </div>
               ))}
             </div>
@@ -227,20 +254,20 @@ export default function ESRPage() {
       {/* Consequences Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-red-50 rounded-[3rem] p-12 md:p-20 border border-red-100 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/5 rounded-full blur-[60px]" />
+          <div className="bg-[var(--bg-alt)] rounded-[3rem] p-12 md:p-20 border border-[var(--border-light)] relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-accent-soft)] rounded-full blur-[60px]" />
             <div className="relative z-10">
               <div className="flex items-center gap-4 mb-8">
-                <AlertTriangle className="w-10 h-10 text-red-600" />
-                <h2 className="text-3xl md:text-4xl font-bold text-[#020817] font-heading">Consequences of Non-Compliance</h2>
+                <AlertTriangle className="w-10 h-10 text-[var(--color-accent)]" />
+                <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-primary)] font-heading">Consequences of Non-Compliance</h2>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
                 {consequences.map((item, i) => (
-                  <div key={i} className="info-card group border-red-100/50 shadow-sm hover:border-red-500 transition-colors">
-                    <div className="info-card-top-bar" style={{ background: "#dc2626" }} />
-                    <h4 className="info-card-title text-red-600 mb-2">{item.title}</h4>
-                    <p className="info-card-desc text-gray-600">{item.desc}</p>
+                  <div key={i} className="info-card group shadow-sm">
+                    <div className="info-card-top-bar" />
+                    <h4 className="info-card-title mb-2">{item.title}</h4>
+                    <p className="info-card-desc">{item.desc}</p>
                   </div>
                 ))}
               </div>
@@ -252,13 +279,13 @@ export default function ESRPage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)] pointer-events-none" />
+          <div className="bg-[var(--bg-alt)] rounded-3xl p-12 text-center border border-[var(--border-light)] shadow-xl relative overflow-hidden text-[var(--text-primary)]">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(180,151,90,0.08)_0,transparent_65%)] pointer-events-none" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Secure Your Compliance Status</h2>
-            <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
+            <p className="text-[var(--text-secondary)] text-lg mb-10 max-w-2xl mx-auto font-medium">
               Join the leading companies in Bahrain that trust AM Consulting for their ESR compliance needs.
             </p>
-            <Link href="/#consultation" className="btn-white mx-auto">
+            <Link href="/#consultation" className="btn-primary mx-auto">
               Schedule a Consultation
               <ArrowRight className="w-5 h-5" />
             </Link>

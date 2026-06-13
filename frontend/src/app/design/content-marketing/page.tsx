@@ -7,7 +7,7 @@ import ContentServicesList from "@/components/design/ContentServicesList";
 
 export default function ContentMarketingPage() {
   return (
-    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
             <ContentHero />
       <ContentIntro />
       <ContentServicesList />

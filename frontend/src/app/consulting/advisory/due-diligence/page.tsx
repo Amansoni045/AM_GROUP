@@ -51,35 +51,63 @@ const diligenceTypes = [
 
 export default function DueDiligencePage() {
   return (
-    <main className="relative bg-white text-[#1a1a1a] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
             
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-[#040b1e] overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-[#040b1e] to-transparent z-10" />
-          <img 
-            src="/shutterstock_2302318791-1-scaled-1024x683-1.webp" 
-            alt="Due Diligence" 
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-12">
+      <section
+        style={{
+          background: "linear-gradient(135deg, #f4f3ee 0%, #fff 55%, #faf7f0 100%)",
+          minHeight: "46vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "7.5rem 2rem 5rem",
+          position: "relative",
+          overflow: "hidden",
+        }}
+      >
+        <div style={{ position: "absolute", top: 0, left: 0, width: "300px", height: "300px", background: "radial-gradient(circle at top left, rgba(180,151,90,0.12) 0%, transparent 65%)" }} />
+        <div style={{ position: "absolute", bottom: 0, right: 0, width: "300px", height: "300px", background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.08) 0%, transparent 65%)" }} />
+        <div style={{ maxWidth: "820px", position: "relative", zIndex: 1 }}>
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="pill-badge mb-6"
           >
-            <div className="pill-badge mb-6">
-              <span className="tracking-[0.2em]">Transaction Advisory</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-8 font-heading leading-tight">
-              Due <span className="text-[var(--color-accent)]">Diligence</span>
-            </h1>
-            <p className="text-white/70 text-xl max-w-3xl leading-relaxed mb-10">
-              Informed decision-making through thorough assessment. integrated insights across acquisitions, divestments, and strategic alliances.
-            </p>
+            Transaction Advisory
           </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+            style={{
+              fontFamily: "var(--font-heading)",
+              fontSize: "clamp(2.5rem, 5vw, 4.2rem)",
+              fontWeight: 600,
+              color: "#0F172A",
+              lineHeight: 1.1,
+              marginBottom: "1.25rem",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            Due <span style={{ color: "#B4975A" }}>Diligence</span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.25 }}
+            style={{ fontFamily: "var(--font-body)", fontSize: "clamp(0.95rem, 1.2vw, 1.05rem)", color: "#475569", lineHeight: 1.75, maxWidth: "600px", margin: "0 auto 0" }}
+          >
+            Informed decision-making through thorough assessment. integrated insights across acquisitions, divestments, and strategic alliances.
+          </motion.p>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            style={{ width: "48px", height: "2px", background: "#B4975A", margin: "1.75rem auto 0", transformOrigin: "center" }}
+          />
         </div>
       </section>
 
@@ -162,23 +190,23 @@ export default function DueDiligencePage() {
       </section>
 
       {/* Buy-side vs Sell-side Section */}
-      <section className="py-24 px-4 md:px-12 bg-[#020817] overflow-hidden">
+      <section className="py-24 px-4 md:px-12 bg-[var(--bg-alt)] overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/5 p-12 rounded-[3rem] border border-white/10"
+              className="bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm"
             >
               <Shield className="w-12 h-12 text-[var(--color-accent)] mb-8" />
-              <h3 className="text-3xl font-bold text-white mb-6 font-heading">Buy-side Due Diligence</h3>
-              <p className="text-white/60 text-lg leading-relaxed mb-8">
+              <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-6 font-heading">Buy-side Due Diligence</h3>
+              <p className="text-[var(--text-secondary)] text-lg leading-relaxed mb-8">
                 Helping investors identify potential risks, uncover hidden liabilities, and validate the target's financial and operational performance before acquisition.
               </p>
               <ul className="space-y-4">
                 {["Risk Mitigation", "Performance Validation", "Strategic Alignment"].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-white/80">
+                  <li key={i} className="flex items-center gap-3 text-[var(--text-secondary)]">
                     <CheckCircle2 className="w-5 h-5 text-[var(--color-accent)]" />
                     <span className="font-medium">{item}</span>
                   </li>
@@ -190,10 +218,10 @@ export default function DueDiligencePage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-[var(--color-accent-soft)] p-12 rounded-[3rem] border border-[var(--color-accent)]/20"
+              className="bg-[var(--color-accent-soft)] p-12 rounded-[3rem] border border-[var(--color-accent)]/20 shadow-sm"
             >
               <Briefcase className="w-12 h-12 text-[var(--color-accent)] mb-8" />
-              <h3 className="text-3xl font-bold text-[#020817] mb-6 font-heading">Sell-side (Vendor) Diligence</h3>
+              <h3 className="text-3xl font-bold text-[var(--text-primary)] mb-6 font-heading">Sell-side (Vendor) Diligence</h3>
               <p className="text-gray-600 text-lg leading-relaxed mb-8">
                 Streamlining the transaction process by providing transparent, data-backed insights that build investor confidence and support stronger deal outcomes.
               </p>
@@ -213,13 +241,13 @@ export default function DueDiligencePage() {
       {/* CTA Section */}
       <section className="py-24 px-4 md:px-12 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-[var(--color-primary)] rounded-3xl p-12 text-center text-white shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_0,transparent_100%)] pointer-events-none" />
+          <div className="bg-[var(--bg-alt)] rounded-3xl p-12 text-center border border-[var(--border-light)] shadow-xl relative overflow-hidden text-[var(--text-primary)]">
+            <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_top_left,rgba(180,151,90,0.08)_0,transparent_65%)] pointer-events-none" />
             <h2 className="text-3xl md:text-5xl font-bold mb-8 font-heading">Mitigate Risk, Maximize Value</h2>
-            <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto font-medium">
+            <p className="text-[var(--text-secondary)] text-lg mb-10 max-w-2xl mx-auto font-medium">
               Our integrated diligence insights help you make informed decisions with confidence.
             </p>
-            <Link href="/#consultation" className="btn-white mx-auto">
+            <Link href="/#consultation" className="btn-primary mx-auto">
               Get Started
               <ArrowRight className="w-5 h-5" />
             </Link>
