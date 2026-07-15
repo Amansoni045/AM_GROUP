@@ -11,7 +11,7 @@ const skills = [
 
 export default function MissionVision() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12 overflow-hidden" id="mission">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24 overflow-hidden" id="mission">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Image + Skills */}
@@ -27,7 +27,7 @@ export default function MissionVision() {
                 <img 
                   src="/am-group.webp" 
                   alt="AM Group Team" 
-                  className="w-full h-[450px] object-cover transition-transform duration-700 group-hover:scale-105" 
+                  className="w-full h-64 md:h-80 lg:h-[450px] object-cover transition-transform duration-700 group-hover:scale-105" 
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-6 left-6 text-white font-bold text-lg font-heading">

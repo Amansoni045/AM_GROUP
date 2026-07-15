@@ -30,7 +30,7 @@ export default function Services() {
     >
       <div className="container-max">
         {/* Services for Every Business Need Section */}
-        <div style={{ marginBottom: "5.5rem" }}>
+        <div style={{ marginBottom: "5.5rem" }} className="services-block-1">
           {/* Header */}
           <div
             style={{
@@ -65,7 +65,7 @@ export default function Services() {
                 maxWidth: "460px",
               }}
             >
-              Whether you need one service or all four, we scale to fit your business — with no unnecessary complexity and no wasted time.
+              Whether you need one service or all four, we scale to fit your business - with no unnecessary complexity and no wasted time.
             </p>
           </div>
 
@@ -157,6 +157,7 @@ export default function Services() {
             margin: "5.5rem 0 5rem",
             width: "100%",
           }}
+          className="services-divider"
         />
 
         {/* Original Grid: Our Services */}
@@ -201,7 +202,7 @@ export default function Services() {
                 maxWidth: "440px",
               }}
             >
-              At AM Group, we are passionate about creating real impact — delivering measurable results through strategies built on insight, innovation, and excellence.
+              At AM Group, we are passionate about creating real impact - delivering measurable results through strategies built on insight, innovation, and excellence.
             </p>
           </div>
         </motion.div>
@@ -210,14 +211,12 @@ export default function Services() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
             border: "1px solid var(--border-light)",
             background: "var(--bg-main)",
           }}
           className="services-grid"
         >
           {services.map((service, i) => {
-            const isRightEdge = (i + 1) % 2 === 0;
             return (
               <motion.div
                 key={i}
@@ -227,8 +226,6 @@ export default function Services() {
                 transition={{ duration: 0.5, delay: i * 0.04 }}
                 style={{
                   padding: "2rem 1.75rem",
-                  borderRight: !isRightEdge ? "1px solid var(--border-light)" : "none",
-                  borderBottom: "1px solid var(--border-light)",
                   display: "flex",
                   alignItems: "center",
                   gap: "1.25rem",
@@ -288,24 +285,59 @@ export default function Services() {
       </div>
 
       <style>{`
+        .services-grid {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .service-item {
+          border-bottom: 1px solid var(--border-light);
+          border-right: none;
+        }
+        .service-item:last-child {
+          border-bottom: none;
+        }
+
+        @media (min-width: 640px) {
+          .services-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+          }
+          .service-item {
+            border-right: 1px solid var(--border-light) !important;
+            border-bottom: 1px solid var(--border-light) !important;
+          }
+          .services-grid > div:nth-child(2n) {
+            border-right: none !important;
+          }
+          .services-grid > div:nth-last-child(-n+2) {
+            border-bottom: none !important;
+          }
+        }
+
         @media (min-width: 768px) {
           .services-grid {
             grid-template-columns: repeat(3, 1fr) !important;
           }
+          .service-item {
+            border-right: 1px solid var(--border-light) !important;
+            border-bottom: 1px solid var(--border-light) !important;
+          }
+          .services-grid > div:nth-child(2n) {
+            border-right: 1px solid var(--border-light) !important;
+          }
           .services-grid > div:nth-child(3n) {
             border-right: none !important;
           }
-          .services-grid > div:nth-child(3n+1),
-          .services-grid > div:nth-child(3n+2) {
-            border-right: 1px solid var(--border-light) !important;
+          .services-grid > div:nth-last-child(-n+3) {
+            border-bottom: none !important;
           }
         }
+
         @media (min-width: 1024px) {
           .services-grid {
             grid-template-columns: repeat(4, 1fr) !important;
           }
-          .services-grid > div:nth-child(4n) {
-            border-right: none !important;
+          .service-item {
+            border-right: 1px solid var(--border-light) !important;
+            border-bottom: 1px solid var(--border-light) !important;
           }
           .services-grid > div:nth-child(3n) {
             border-right: 1px solid var(--border-light) !important;
@@ -313,7 +345,11 @@ export default function Services() {
           .services-grid > div:nth-child(4n) {
             border-right: none !important;
           }
+          .services-grid > div:nth-last-child(-n+4) {
+            border-bottom: none !important;
+          }
         }
+
         .service-item:hover {
           background: var(--bg-alt) !important;
         }
@@ -323,6 +359,14 @@ export default function Services() {
         }
         .service-item:hover .service-svg {
           color: var(--color-accent) !important;
+        }
+        @media (max-width: 767px) {
+          .services-block-1 {
+            margin-bottom: 2.5rem !important;
+          }
+          .services-divider {
+            margin: 2.5rem 0 2rem !important;
+          }
         }
       `}</style>
     </section>

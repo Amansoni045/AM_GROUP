@@ -38,7 +38,7 @@ const esgServices = [
 
 export default function ESGServicesList() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="esg-services">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="esg-services">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

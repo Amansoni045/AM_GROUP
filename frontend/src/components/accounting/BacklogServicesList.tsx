@@ -27,7 +27,7 @@ const services = [
 
 export default function BacklogServicesList() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="backlog-list">
+    <section className="bg-[var(--bg-alt)] pt-12 pb-24 px-4 md:px-12" id="backlog-list">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { Award, Users, Rocket, Globe } from "lucide-react";
 
 const reasons = [
@@ -31,9 +30,9 @@ const reasons = [
   }
 ];
 
-export default function ESGWhyChooseUs() {
+export default function WhyChooseUs() {
   return (
-    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24 relative overflow-hidden" id="esg-why-us">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24 relative overflow-hidden" id="why-us">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.div
@@ -79,14 +78,9 @@ export default function ESGWhyChooseUs() {
                 <h3 className="text-xl font-bold text-[var(--text-primary)] mb-3 font-heading">
                   {reason.title}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed mb-6">
+                <p className="text-gray-500 text-sm leading-relaxed mb-0">
                   {reason.desc}
                 </p>
-                <Link href="/about">
-                  <div className="flex items-center gap-2 text-[var(--color-accent)] text-xs font-bold uppercase tracking-widest cursor-pointer group-hover:gap-3 transition-all">
-                    Learn more <Rocket className="w-3 h-3" />
-                  </div>
-                </Link>
               </div>
             </motion.div>
           ))}

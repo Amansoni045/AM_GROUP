@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     client: "RoyalMed Healthcare",
-    quote: "With AM Technology, we finally bridged the gap between data collection and real insight. Their team designed automated dashboards that streamlined our performance tracking, reduced manual errors, and saved countless hours. They didn’t just provide tools — they empowered our team to make smarter, evidence-based decisions every day. A true partner in digital transformation."
+    quote: "With AM Technology, we finally bridged the gap between data collection and real insight. Their team designed automated dashboards that streamlined our performance tracking, reduced manual errors, and saved countless hours. They didn’t just provide tools - they empowered our team to make smarter, evidence-based decisions every day. A true partner in digital transformation."
   },
   {
     client: "FinEdge Investments",

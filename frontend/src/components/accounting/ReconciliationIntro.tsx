@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ReconciliationIntro() {
   return (
-    <section className="bg-[var(--bg-main)] py-24 px-4 md:px-12 relative overflow-hidden" id="reconciliation-intro">
+    <section className="bg-[var(--bg-main)] compact-section px-4 md:px-12 py-24 relative overflow-hidden" id="reconciliation-intro">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2
@@ -23,7 +23,7 @@ export default function ReconciliationIntro() {
             className="max-w-3xl mx-auto text-gray-600 text-lg md:text-xl leading-relaxed"
           >
             <p>
-              At <strong className="text-[var(--text-primary)]">AM Accounting Service</strong> we make sure that your financial records are both accurate and verifiable, with thorough reconciliation processes that are backed by clear documentation and reliable oversight.
+              At <strong className="text-[var(--text-primary)]">AM Accounting</strong> we make sure that your financial records are both accurate and verifiable, with thorough reconciliation processes that are backed by clear documentation and reliable oversight.
             </p>
           </motion.div>
         </div>

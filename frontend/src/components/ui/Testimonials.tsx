@@ -14,7 +14,7 @@ const testimonials = [
     role: "MARKETING DIRECTOR",
   },
   {
-    quote: "We've been with AM Accounting for years and the consistency is remarkable. Our books are always in order, compliance is handled without stress, and they even guided us through the Tamkeen process. For any clinic or SME looking for reliable financial expertise — look no further.",
+    quote: "We've been with AM Accounting for years and the consistency is remarkable. Our books are always in order, compliance is handled without stress, and they even guided us through the Tamkeen process. For any clinic or SME looking for reliable financial expertise - look no further.",
     company: "Ibtisama Aesthetic Dental",
     role: "DOCTOR & PRACTICE OWNER",
   },
@@ -39,7 +39,7 @@ export default function Testimonials() {
             gridTemplateColumns: "1fr",
             gap: "2rem",
             alignItems: "flex-end",
-            marginBottom: "4rem",
+            marginBottom: "2.5rem",
           }}
           className="testimonial-header"
         >
@@ -97,7 +97,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="info-card"
+              className="info-card testimonial-card"
               style={{ padding: "3rem 2.5rem", display: "flex", flexDirection: "column" }}
             >
               {/* Gold Quote Mark */}
@@ -177,6 +177,11 @@ export default function Testimonials() {
           }
           .testimonial-grid {
             grid-template-columns: repeat(3, 1fr) !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .testimonial-card {
+            padding: 1.5rem 1.25rem !important;
           }
         }
       `}</style>

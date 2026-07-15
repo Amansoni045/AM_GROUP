@@ -43,9 +43,9 @@ export default function WhatWeDo() {
         paddingTop: "var(--section-py)",
         paddingBottom: "var(--section-py)",
       }}
-      className="section-px"
+      className="section-px w-full"
     >
-      <div className="container-max">
+      <div className="container-max w-full">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
@@ -92,7 +92,7 @@ export default function WhatWeDo() {
                 maxWidth: "420px",
               }}
             >
-              We bring together four specialised divisions under one trusted name — delivering integrated solutions that address the full spectrum of business needs.
+              We bring together four specialised divisions under one trusted name - delivering integrated solutions that address the full spectrum of business needs.
             </p>
           </div>
         </motion.div>
@@ -140,7 +140,7 @@ export default function WhatWeDo() {
                     style={{
                       fontFamily: "var(--font-heading)",
                       fontSize: "1.1rem",
-                      color: "var(--text-light)",
+                      color: "var(--color-accent)",
                       flexShrink: 0,
                       paddingTop: "0.2rem",
                       letterSpacing: "0.05em",
@@ -234,9 +234,10 @@ export default function WhatWeDo() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           style={{
-            marginTop: "6rem",
+            marginTop: "4rem",
             width: "100%",
           }}
+          className="presence-block"
         >
           {/* Eyebrow */}
           <div style={{ textAlign: "center", marginBottom: "0.75rem" }}>
@@ -271,7 +272,7 @@ export default function WhatWeDo() {
               textAlign: "center",
             }}
           >
-            From our headquarters in Bahrain, we serve clients in Saudi Arabia, Oman, and UAE — navigating each market&apos;s unique regulatory, cultural, and commercial landscape.
+            From our headquarters in Bahrain, we serve clients in Saudi Arabia, Oman, and UAE - navigating each market&apos;s unique regulatory, cultural, and commercial landscape.
           </p>
 
           {/* Cards Grid */}
@@ -354,6 +355,14 @@ export default function WhatWeDo() {
           .divisions-grid > div:nth-child(3) > a,
           .divisions-grid > div:nth-child(4) > a {
             border-bottom: none !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .division-card {
+            padding: 1.5rem 1.25rem !important;
+          }
+          .presence-block {
+            margin-top: 3rem !important;
           }
         }
         .division-card:hover {

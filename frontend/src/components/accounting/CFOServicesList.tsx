@@ -27,7 +27,7 @@ const services = [
 
 export default function CFOServicesList() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="cfo-list">
+    <section className="bg-[var(--bg-alt)] pt-12 pb-24 px-4 md:px-12" id="cfo-list">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
           {services.map((service, i) => (

@@ -5,7 +5,18 @@ import { usePathname } from "next/navigation";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
+  {
+    name: "About Us",
+    href: "/about",
+    dropdown: [
+      { name: "Who We Are", href: "/about#about" },
+      { name: "Our Companies", href: "/about#companies" },
+      { name: "Message from the CEO", href: "/about#ceo" },
+      { name: "Why Choose Us", href: "/about#why-us" },
+      { name: "Meet Our Team", href: "/about#team" },
+      { name: "FAQs", href: "/about#faq" },
+    ],
+  },
   { name: "AM Consulting", href: "/consulting" },
   { name: "AM Accounting", href: "/accounting" },
   { name: "AM Design", href: "/design" },
@@ -154,49 +165,74 @@ export default function Header() {
           >
             {navItems.map((item) => {
               const isActive = pathname === item.href;
+              const hasDropdown = 'dropdown' in item && item.dropdown;
               return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  style={{
-                    fontFamily: "var(--font-body)",
-                    fontSize: "0.75rem",
-                    fontWeight: 500,
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase" as const,
-                    color: isActive ? "var(--color-primary)" : "var(--text-secondary)",
-                    textDecoration: "none",
-                    position: "relative",
-                    paddingBottom: "4px",
-                    transition: "color 0.2s",
-                  }}
-                  onMouseEnter={e => {
-                    const el = e.currentTarget as HTMLAnchorElement;
-                    el.style.color = "var(--color-primary)";
-                    const underline = el.querySelector(".underline") as HTMLElement;
-                    if (underline) underline.style.width = "100%";
-                  }}
-                  onMouseLeave={e => {
-                    const el = e.currentTarget as HTMLAnchorElement;
-                    el.style.color = isActive ? "var(--color-primary)" : "var(--text-secondary)";
-                    const underline = el.querySelector(".underline") as HTMLElement;
-                    if (underline) underline.style.width = isActive ? "100%" : "0";
-                  }}
-                >
-                  {item.name}
-                  <span
-                    className="underline"
+                <div key={item.name} className="relative group py-2" style={{ display: "flex", alignItems: "center" }}>
+                  <Link
+                    href={item.href}
                     style={{
-                      position: "absolute",
-                      bottom: 0,
-                      left: 0,
-                      height: "1px",
-                      background: "var(--color-primary)",
-                      width: isActive ? "100%" : "0",
-                      transition: "width 0.3s ease",
+                      fontFamily: "var(--font-body)",
+                      fontSize: "0.75rem",
+                      fontWeight: 500,
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase" as const,
+                      color: isActive ? "var(--color-primary)" : "var(--text-secondary)",
+                      textDecoration: "none",
+                      position: "relative",
+                      paddingBottom: "4px",
+                      transition: "color 0.2s",
                     }}
-                  />
-                </Link>
+                    onMouseEnter={e => {
+                      const el = e.currentTarget as HTMLAnchorElement;
+                      el.style.color = "var(--color-primary)";
+                      const underline = el.querySelector(".underline") as HTMLElement;
+                      if (underline) underline.style.width = "100%";
+                    }}
+                    onMouseLeave={e => {
+                      const el = e.currentTarget as HTMLAnchorElement;
+                      el.style.color = isActive ? "var(--color-primary)" : "var(--text-secondary)";
+                      const underline = el.querySelector(".underline") as HTMLElement;
+                      if (underline) underline.style.width = isActive ? "100%" : "0";
+                    }}
+                  >
+                    {item.name}
+                    <span
+                      className="underline"
+                      style={{
+                        position: "absolute",
+                        bottom: 0,
+                        left: 0,
+                        height: "1px",
+                        background: "var(--color-primary)",
+                        width: isActive ? "100%" : "0",
+                        transition: "width 0.3s ease",
+                      }}
+                    />
+                  </Link>
+                  {hasDropdown && (
+                    <div className="absolute top-[80%] left-1/2 -translate-x-1/2 mt-2 w-52 bg-white border border-[var(--border-light)] rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 p-2">
+                      {item.dropdown?.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          className="block px-4 py-2 text-[0.7rem] font-semibold uppercase tracking-wider text-[var(--text-secondary)] hover:text-[var(--color-accent)] hover:bg-[var(--bg-alt)] rounded-lg transition-colors"
+                          onClick={(e) => {
+                            if (typeof window !== "undefined" && window.location.pathname === "/about") {
+                              const hash = subItem.href.split("#")[1];
+                              const targetElement = document.getElementById(hash);
+                              if (targetElement) {
+                                e.preventDefault();
+                                targetElement.scrollIntoView({ behavior: "smooth" });
+                              }
+                            }
+                          }}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </nav>
@@ -205,7 +241,7 @@ export default function Header() {
             <a
               href="/#consultation"
               className="btn-primary cta-desktop"
-              style={{ padding: "0.75rem 1.5rem", fontSize: "0.75rem" }}
+              style={{ padding: "0.75rem 1.5rem", fontSize: "0.75rem", display: "none" }}
               onClick={e => {
                 if (typeof window !== "undefined" && window.location.pathname === "/") {
                   e.preventDefault();
@@ -285,26 +321,49 @@ export default function Header() {
           <nav style={{ display: "flex", flexDirection: "column", gap: "0" }}>
             {navItems.map((item, i) => {
               const isActive = pathname === item.href;
+              const hasDropdown = 'dropdown' in item && item.dropdown;
               return (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  style={{
-                    fontFamily: "var(--font-heading)",
-                    fontSize: "2rem",
-                    fontWeight: 500,
-                    color: isActive ? "var(--color-accent)" : "var(--color-primary)",
-                    textDecoration: "none",
-                    padding: "0.75rem 0",
-                    borderBottom: "1px solid var(--border-light)",
-                    display: "block",
-                    letterSpacing: "-0.01em",
-                    transition: "color 0.2s",
-                  }}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name} style={{ borderBottom: "1px solid var(--border-light)" }}>
+                  <Link
+                    href={item.href}
+                    style={{
+                      fontFamily: "var(--font-heading)",
+                      fontSize: "1.75rem",
+                      fontWeight: 500,
+                      color: isActive ? "var(--color-accent)" : "var(--color-primary)",
+                      textDecoration: "none",
+                      padding: "0.75rem 0",
+                      display: "block",
+                      letterSpacing: "-0.01em",
+                      transition: "color 0.2s",
+                    }}
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                  {hasDropdown && (
+                    <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", paddingLeft: "1rem", paddingBottom: "0.75rem" }}>
+                      {item.dropdown?.map((subItem) => (
+                        <Link
+                          key={subItem.name}
+                          href={subItem.href}
+                          style={{
+                            fontFamily: "var(--font-body)",
+                            fontSize: "0.85rem",
+                            fontWeight: 500,
+                            color: "var(--text-secondary)",
+                            textDecoration: "none",
+                            textTransform: "uppercase",
+                            letterSpacing: "0.04em",
+                          }}
+                          onClick={() => setMobileOpen(false)}
+                        >
+                          {subItem.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               );
             })}
           </nav>

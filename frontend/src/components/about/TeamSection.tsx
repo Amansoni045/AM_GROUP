@@ -1,57 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import teamData from "@/data/team.json";
 
-const leadership = [
-  { name: "Ravi Mehta", role: "CEO – Managing Partner" },
-  { name: "Deepali Mehta", role: "Partner and Executive Director" },
-  { name: "Dr. Raed Sarhan", role: "Executive Director" },
-  { name: "Chandresh H. Mehta", role: "Executive Director" },
-];
-
-const departments = [
-  {
-    name: "AM Consulting",
-    members: [
-      { name: "Shwetank Bhushan", role: "Director of Advisory" },
-      { name: "Asitava Bose", role: "Director – Consulting" },
-      { name: "Maryam Almajed", role: "Account Analyst" },
-      { name: "Akash Mahajan", role: "Financial Consultant" },
-      { name: "Rose Maria Biju", role: "Consultant" },
-    ],
-  },
-  {
-    name: "AM Accounting",
-    members: [
-      { name: "Anchu Prakash", role: "Manager – Finance & Operations" },
-      { name: "Anima Jagdeesh", role: "Financial Manager" },
-      { name: "Abdul Niyas Thodi", role: "Senior Accountant" },
-      { name: "Shafeek Alingal", role: "Senior Accountant" },
-      { name: "Thrishna Radhakrishnan", role: "Accountant" },
-      { name: "Lekshmi Krishnan", role: "Accountant" },
-      { name: "Komal Parekh", role: "Accountant" },
-      { name: "Anju Augustine", role: "Accountant" },
-      { name: "Preeti Mishra", role: "Office Administrator" },
-    ],
-  },
-  {
-    name: "AM Design",
-    members: [
-      { name: "Harshita Chadha", role: "Sr. Manager – Marketing & Projects" },
-      { name: "Mohamed Abdulameer", role: "Graphic Designer" },
-      { name: "Shreyas Rasane", role: "Graphic Designer" },
-    ],
-  },
-  {
-    name: "AM Technology",
-    members: [
-      { name: "Aditi Upadhyay", role: "Sr. Manager, Data Analyst" },
-      { name: "Sampath Raj", role: "Sr. Executive Data Analyst" },
-      { name: "Chandanam Golvi", role: "Sr. Executive – Developer" },
-      { name: "Diya Gupta", role: "Data Analyst Executive" },
-    ],
-  },
-];
+const leadership = teamData.leadership;
+const departments = teamData.departments;
 
 function getInitials(name: string) {
   return name.split(" ").map((n) => n[0]).join("").slice(0, 2).toUpperCase();
@@ -86,7 +39,7 @@ export default function TeamSection() {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <section className="bg-[var(--bg-main)] py-24 px-4 md:px-12" id="team">
+    <section className="bg-[var(--bg-main)] pt-24 pb-8 px-4 md:px-12" id="team">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -124,7 +77,7 @@ export default function TeamSection() {
                 onClick={() => setActiveTab(i)}
                 className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all duration-300 ${
                   activeTab === i 
-                    ? "bg-[var(--color-primary)] text-white shadow-md border border-[var(--color-primary)]" 
+                    ? "bg-[var(--color-accent)] text-white shadow-md border border-[var(--color-accent)]" 
                     : "bg-white text-[var(--text-secondary)] border border-[var(--border-medium)] hover:border-[var(--color-accent)] hover:text-[var(--text-primary)]"
                 }`}
               >
@@ -139,7 +92,7 @@ export default function TeamSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-8 justify-items-center"
+              className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8 justify-items-center"
             >
               {departments[activeTab].members.map((m, i) => (
                 <MemberCard key={i} name={m.name} role={m.role} />

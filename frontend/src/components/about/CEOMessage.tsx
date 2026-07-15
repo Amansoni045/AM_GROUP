@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function CEOMessage() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12 relative overflow-hidden" id="ceo">
+    <section className="bg-[var(--bg-alt)] pt-24 pb-28 px-4 md:px-12 relative overflow-hidden" id="ceo">
       <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-accent-soft)] rounded-full blur-[150px]" />
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--color-primary)]/5 rounded-full blur-[100px]" />
 
@@ -14,7 +14,7 @@ export default function CEOMessage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-8"
         >
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
             <span className="eyebrow">Message from the CEO</span>
@@ -35,13 +35,13 @@ export default function CEOMessage() {
             className="lg:col-span-3 space-y-5"
           >
             <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
-              For over <span className="text-[var(--color-accent)] font-bold">25 years</span>, I&apos;ve witnessed the MENA region&apos;s dynamic growth. In 2016, inspired by my father&apos;s entrepreneurial spirit, I founded <span className="text-[var(--color-accent)] font-bold">AM Group</span>&mdash;uniting Consulting, Design, and Accounting under one trusted name.
+              For over <span className="text-[var(--color-accent)] font-bold">25 years</span>, I&apos;ve witnessed the MENA region&apos;s dynamic growth. In 2016, inspired by my father&apos;s entrepreneurial spirit, I founded <span className="text-[var(--color-accent)] font-bold">AM Group</span> - uniting Consulting, Design, and Accounting under one trusted name.
             </p>
             <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
               At AM, we know every business faces unique challenges. That&apos;s why our multidisciplinary team combines strategy, creativity, and financial expertise to help clients grow, build strong brands, and achieve lasting success.
             </p>
             <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
-              What sets us apart is our philosophy: we build <span className="text-[var(--color-accent)] font-bold">partnerships, not transactions</span>&mdash;focusing on open communication, collaboration, and long-term impact.
+              What sets us apart is our philosophy: we build <span className="text-[var(--color-accent)] font-bold">partnerships, not transactions</span> - focusing on open communication, collaboration, and long-term impact.
             </p>
             <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
               Today, across Bahrain, Saudi Arabia, Oman, and UAE, our mission remains clear: to deliver integrated solutions that inspire transformation, drive innovation, and empower businesses for a brighter future.
@@ -60,8 +60,8 @@ export default function CEOMessage() {
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-2 flex flex-col items-center"
           >
-            <div className="bg-[var(--bg-alt)] border border-[var(--border-light)] rounded-3xl p-8 text-center w-full backdrop-blur-sm">
-              <div className="w-48 h-48 rounded-full border-[6px] border-[var(--color-accent)] mx-auto mb-8 overflow-hidden bg-[var(--color-primary)]/10 flex items-center justify-center shadow-lg">
+            <div className="bg-white border border-[var(--border-light)] rounded-3xl p-8 text-center w-full shadow-lg shadow-black/5">
+              <div className="w-48 h-48 rounded-full border-[6px] border-[var(--color-accent)] mx-auto mb-8 overflow-hidden bg-[var(--color-primary)]/10 flex items-center justify-center shadow-md">
                 <span className="text-6xl font-bold text-[var(--color-accent)]">RM</span>
               </div>
               <h3 className="text-[var(--text-primary)] text-2xl font-bold font-heading mb-1">Ravi Mehta</h3>
@@ -69,19 +69,6 @@ export default function CEOMessage() {
             </div>
           </motion.div>
         </div>
-
-        {/* Quote Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-          className="mt-16 bg-[var(--color-primary)]/10 border border-[var(--color-accent)] rounded-2xl p-8 text-center"
-        >
-          <p className="text-[var(--color-accent)] text-lg md:text-xl font-medium italic">
-            &ldquo;We build partnerships, not transactions, focusing on open communication, collaboration, and long-term impact.&rdquo;
-          </p>
-        </motion.div>
       </div>
     </section>
   );

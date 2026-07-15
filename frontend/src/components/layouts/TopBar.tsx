@@ -19,7 +19,7 @@ export default function TopBar() {
           {socialIcons.map((icon, i) => (
             <a 
               key={i} 
-              className="px-4 py-3 border-r border-white/10 hover:text-threedots-blue transition-colors flex items-center justify-center" 
+              className="px-4 py-3 border-r border-white/10 hover:text-[var(--color-accent)] transition-colors flex items-center justify-center" 
               href={icon.url}
               target="_blank"
               rel="noopener noreferrer"

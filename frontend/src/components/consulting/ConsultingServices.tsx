@@ -39,14 +39,14 @@ const services = [
 
 export default function ConsultingServices() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="consulting-services">
+    <section className="bg-[var(--bg-alt)] pt-16 pb-8 px-4 md:px-12" id="consulting-services">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
             <span className="eyebrow">Core Expertise</span>
@@ -90,19 +90,31 @@ export default function ConsultingServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
-              className="info-card group text-center"
-              style={{ borderColor: "var(--color-accent)", borderWidth: "2px" }}
+              className="info-card group text-center h-full flex flex-col justify-between"
+              style={{
+                background: "linear-gradient(135deg, var(--bg-surface) 0%, rgba(180, 151, 90, 0.08) 100%)",
+                borderColor: "var(--color-accent)",
+                borderWidth: "1.5px",
+                color: "var(--text-primary)",
+                boxShadow: "0 10px 30px rgba(180, 151, 90, 0.08)",
+              }}
             >
-              <div className="info-card-top-bar" />
-              <div
-                className="info-card-icon-wrapper"
-                style={{ margin: "0 auto 1.5rem" }}
-              >
-                <ArrowUpRight className="w-7 h-7" strokeWidth={1.5} />
+              <div className="info-card-top-bar" style={{ background: "var(--color-accent)" }} />
+              <div>
+                <div
+                  className="info-card-icon-wrapper"
+                  style={{
+                    margin: "0 auto 1.5rem",
+                    background: "rgba(180, 151, 90, 0.15)",
+                    color: "var(--color-accent)",
+                  }}
+                >
+                  <ArrowUpRight className="w-7 h-7" strokeWidth={1.5} />
+                </div>
+                <h3 className="info-card-title text-lg">Ready to transform your business?</h3>
+                <p className="info-card-desc mb-8">Book a free consultation with our advisory experts today.</p>
               </div>
-              <h3 className="info-card-title text-lg">Ready to transform your business?</h3>
-              <p className="info-card-desc mb-8">Book a free consultation with our advisory experts today.</p>
-              <div className="info-card-link justify-center mt-auto">
+              <div className="info-card-link justify-center mt-auto" style={{ color: "var(--color-accent)" }}>
                 Let&apos;s Talk <ArrowUpRight className="w-4 h-4" />
               </div>
             </motion.div>

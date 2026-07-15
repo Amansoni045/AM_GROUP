@@ -6,19 +6,19 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const testimonials = [
   {
     client: "Maison Al Noor Interiors",
-    quote: "Partnering with AM Design completely redefined our brand identity. Their team understood our aesthetic vision from the very beginning and helped us translate it into a stunning visual language — from our logo and packaging to our online presence. The creativity, attention to detail, and professionalism they brought to every stage of the project were truly exceptional. Our clients now instantly recognize our brand, and that’s the power of great design."
+    quote: "Partnering with AM Design completely redefined our brand identity. Their team understood our aesthetic vision from the very beginning and helped us translate it into a stunning visual language - from our logo and packaging to our online presence. The creativity, attention to detail, and professionalism they brought to every stage of the project were truly exceptional. Our clients now instantly recognize our brand, and that’s the power of great design."
   },
   {
     client: "Vertex Technologies",
-    quote: "Our collaboration with AM Design went beyond visuals — it was about clarity, purpose, and impact. They built a complete brand system for us, aligning our visual identity with our company values and future goals. The result? A brand that looks global and communicates with confidence. The team’s creativity, responsiveness, and strategic input made them a true extension of our internal marketing team."
+    quote: "Our collaboration with AM Design went beyond visuals - it was about clarity, purpose, and impact. They built a complete brand system for us, aligning our visual identity with our company values and future goals. The result? A brand that looks global and communicates with confidence. The team’s creativity, responsiveness, and strategic input made them a true extension of our internal marketing team."
   },
   {
     client: "Bloom Café",
-    quote: "AM Design helped us create a warm, welcoming, and modern identity that perfectly reflects our café’s personality. From concept to execution, every detail was thoughtfully handled — menus, interiors, and digital branding all came together seamlessly. We’ve received incredible feedback from customers, and our brand presence feels stronger than ever. They didn’t just design for us — they designed with us."
+    quote: "AM Design helped us create a warm, welcoming, and modern identity that perfectly reflects our café’s personality. From concept to execution, every detail was thoughtfully handled - menus, interiors, and digital branding all came together seamlessly. We’ve received incredible feedback from customers, and our brand presence feels stronger than ever. They didn’t just design for us - they designed with us."
   },
   {
     client: "La Verne Skincare",
-    quote: "The AM Design team transformed our skincare brand into something truly elegant and aspirational. They helped us develop our packaging, brand story, and digital presence with a clear understanding of our audience. The design aesthetics elevated our brand perception overnight — customers instantly noticed the difference. AM Design doesn’t just create visuals — they create value."
+    quote: "The AM Design team transformed our skincare brand into something truly elegant and aspirational. They helped us develop our packaging, brand story, and digital presence with a clear understanding of our audience. The design aesthetics elevated our brand perception overnight - customers instantly noticed the difference. AM Design doesn’t just create visuals - they create value."
   }
 ];
 

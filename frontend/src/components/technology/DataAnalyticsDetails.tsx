@@ -13,7 +13,7 @@ const services = [
   },
   {
     title: "Power BI & Tableau Implementation",
-    desc: "We implement leading BI tools such as Power BI and Tableau to convert raw datasets into meaningful, visual insights. Our team manages the complete setup—from environment configuration to seamless tool integration with your existing systems. We ensure a smooth, transparent, and timely rollout with minimal operational disruption. Our BI consultants focus on delivering robust, user-friendly solutions that enhance visibility and decision-making across your organization."
+    desc: "We implement leading BI tools such as Power BI and Tableau to convert raw datasets into meaningful, visual insights. Our team manages the complete setup - from environment configuration to seamless tool integration with your existing systems. We ensure a smooth, transparent, and timely rollout with minimal operational disruption. Our BI consultants focus on delivering robust, user-friendly solutions that enhance visibility and decision-making across your organization."
   },
   {
     title: "Dashboard & Reports",
@@ -21,7 +21,7 @@ const services = [
   },
   {
     title: "Data Visualisation",
-    desc: "We transform complex data into compelling visual stories using Power BI and Tableau. Through carefully chosen visualization types—heat maps, charts, histograms, scatter plots, and more—we make trends and patterns easy to understand. Our visualization approach enhances clarity, supports strategic discussions, and elevates data literacy. With expertise in BI design, we ensure every visual output strengthens decision-making and aligns with business objectives."
+    desc: "We transform complex data into compelling visual stories using Power BI and Tableau. Through carefully chosen visualization types - heat maps, charts, histograms, scatter plots, and more - we make trends and patterns easy to understand. Our visualization approach enhances clarity, supports strategic discussions, and elevates data literacy. With expertise in BI design, we ensure every visual output strengthens decision-making and aligns with business objectives."
   },
   {
     title: "BI Optimisation",
@@ -31,7 +31,7 @@ const services = [
 
 export default function DataAnalyticsDetails() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="data-analytics-details">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="data-analytics-details">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

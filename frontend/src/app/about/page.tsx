@@ -5,6 +5,7 @@ import AboutHero from "@/components/about/AboutHero";
 import AboutSection from "@/components/ui/AboutSection";
 import CompanyCards from "@/components/about/CompanyCards";
 import CEOMessage from "@/components/about/CEOMessage";
+import WhyChooseUs from "@/components/about/WhyChooseUs";
 import TeamSection from "@/components/about/TeamSection";
 import AboutFAQ from "@/components/about/AboutFAQ";
 
@@ -15,6 +16,7 @@ export default function AboutPage() {
       <AboutSection />
       <CompanyCards />
       <CEOMessage />
+      <WhyChooseUs />
       <TeamSection />
       <AboutFAQ />
     </main>

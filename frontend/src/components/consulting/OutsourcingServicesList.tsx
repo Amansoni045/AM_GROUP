@@ -44,7 +44,7 @@ const services = [
 
 export default function OutsourcingServicesList() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="outsourcing-list">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="outsourcing-list">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -68,7 +68,10 @@ export default function OutsourcingServicesList() {
               transition={{ delay: i * 0.1 }}
               className="info-card group"
             >
-              <div className="absolute top-6 right-8 text-[var(--text-secondary)] text-7xl font-black opacity-30 group-hover:text-[var(--color-accent)]/10 transition-colors select-none pointer-events-none z-10">
+              <div 
+                style={{ color: "var(--color-accent)" }} 
+                className="absolute top-6 right-8 text-4xl font-bold opacity-30 group-hover:opacity-60 transition-opacity select-none pointer-events-none z-10 font-heading"
+              >
                 {service.number}
               </div>
               <div className="info-card-top-bar" />

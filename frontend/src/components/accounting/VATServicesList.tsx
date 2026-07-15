@@ -45,7 +45,7 @@ const vatCategories = [
 
 export default function VATServicesList() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="vat-list">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="vat-list">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {vatCategories.map((category, i) => (
@@ -59,7 +59,7 @@ export default function VATServicesList() {
             >
               <div className="info-card-top-bar" />
               <div className="relative z-10">
-                <h3 className="info-card-title border-b border-gray-100 pb-4">
+                <h3 className="info-card-title border-b border-gray-100 pb-4 font-bold text-[#020817]">
                   {category.title}
                 </h3>
                 {category.desc && (

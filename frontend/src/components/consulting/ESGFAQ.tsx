@@ -5,20 +5,20 @@ import { Plus, Minus, HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "What does financial advisory cover?",
-    answer: "It covers strategic planning, restructuring, investment guidance, cost optimization, and performance improvement tailored to business needs."
+    question: "What is ESG and why is it important for businesses?",
+    answer: "ESG stands for Environmental, Social, and Governance. It is a framework used to assess an organization's business practices and performance on various sustainability and ethical issues. Implementing ESG practices helps businesses comply with regional regulations, manage risks, improve brand reputation, and attract investors."
   },
   {
-    question: "How can financial advisory improve business performance?",
-    answer: "By analyzing financial data, identifying operational inefficiencies, and implementing strategic frameworks, we help businesses improve profitability, manage cash flows, and achieve scalable growth."
+    question: "Does my business in Bahrain or Saudi Arabia need ESG reporting?",
+    answer: "Yes, key regulators in the GCC region, including the Bahrain Bourse and Saudi Exchange (Tadawul), have introduced ESG reporting guidelines for listed companies. Many other businesses are adopting ESG to meet supplier compliance mandates and international client expectations."
   },
   {
-    question: "Do you only work with large companies?",
-    answer: "No, we work with organizations of all sizes—from ambitious startups looking for growth strategies to established global enterprises requiring complex restructuring and ESG compliance."
+    question: "How does AM Consulting assist with ESG compliance?",
+    answer: "We provide materiality assessments, carbon footprint calculations, sustainability reporting alignments (GRI, TCFD, ISSB), ESG risk identification, and strategic roadmaps to ensure your business meets GCC and global standards."
   },
   {
-    question: "How do you ensure confidentiality of financial data?",
-    answer: "We employ industry-leading security protocols and strict non-disclosure agreements. Our internal systems are audited regularly to ensure that all sensitive financial and strategic data remains strictly confidential."
+    question: "What is an ESG Materiality Assessment?",
+    answer: "It is a process to identify and prioritize the ESG topics that have the most significant impact on your business operations and are of the highest importance to your stakeholders. This forms the foundation of any credible ESG strategy and report."
   }
 ];
 
@@ -26,7 +26,7 @@ export default function ESGFAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="bg-[var(--bg-main)] py-24 px-4 md:px-12 relative overflow-hidden" id="esg-faq">
+    <section className="bg-[var(--bg-main)] compact-section px-4 md:px-12 py-24 relative overflow-hidden" id="esg-faq">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

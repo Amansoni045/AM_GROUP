@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ContentIntro() {
   return (
-    <section className="bg-[var(--bg-main)] py-24 px-4 md:px-12 relative overflow-hidden" id="content-intro">
+    <section className="bg-[var(--bg-main)] compact-section px-4 md:px-12 py-24 relative overflow-hidden" id="content-intro">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
           <motion.h2

@@ -142,6 +142,7 @@ export default function IndustryExpertise() {
                 border: "1px solid var(--border-light)",
                 background: "var(--bg-main)",
               }}
+              className="industry-list-grid"
             >
               {industries.map((industry, i) => {
                 const isRight = i % 2 !== 0;
@@ -197,6 +198,14 @@ export default function IndustryExpertise() {
         @media (min-width: 1024px) {
           .industry-layout {
             grid-template-columns: 1fr 1.2fr !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .industry-list-grid {
+            grid-template-columns: 1fr !important;
+          }
+          .industry-row {
+            padding: 0.875rem 1rem !important;
           }
         }
         .industry-row:hover {

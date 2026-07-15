@@ -38,7 +38,6 @@ const navLinks = [
   { name: "What We Do", href: "/#what-we-do" },
   { name: "Industry Expertise", href: "/#industries" },
   { name: "Our Services", href: "/#services" },
-  { name: "Testimonials", href: "/#testimonials" },
   { name: "Contact", href: "/#consultation" },
 ];
 
@@ -118,13 +117,13 @@ export default function Footer() {
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
-                      color: "var(--text-muted)",
+                      color: "var(--border-dark)",
                       transition: "all 0.2s ease",
                     }}
                     onMouseEnter={e => {
                       (e.currentTarget as HTMLAnchorElement).style.background = "var(--bg-alt)";
-                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--color-primary)";
-                      (e.currentTarget as HTMLAnchorElement).style.color = "var(--color-primary)";
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--color-accent)";
+                      (e.currentTarget as HTMLAnchorElement).style.color = "var(--color-accent)";
                     }}
                     onMouseLeave={e => {
                       (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
@@ -337,7 +336,7 @@ export default function Footer() {
               letterSpacing: "0.04em",
             }}
           >
-            Bahrain · KSA · Oman · UAE — Integrated Solutions for the GCC
+            Bahrain · KSA · Oman · UAE - Integrated Solutions for the GCC
           </p>
         </div>
       </div>

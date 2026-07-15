@@ -138,14 +138,30 @@ export default function DueDiligencePage() {
               </div>
             </motion.div>
             
-            <div className="relative">
-              <div className="absolute inset-0 bg-[var(--color-accent-soft)] rounded-[3rem] rotate-3 scale-105 -z-10" />
-              <img 
-                src="/am-group.webp" 
-                alt="Due Diligence Team" 
-                className="w-full h-auto rounded-[3rem] shadow-2xl"
-              />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-[#f4f3ee] p-10 rounded-3xl border border-gray-100 shadow-xl shadow-black/5"
+            >
+              <h3 className="text-2xl font-bold text-[#020817] mb-8 font-heading">Our Focus Areas</h3>
+              <ul className="space-y-4">
+                {[
+                  "Commercial Position & Competition",
+                  "Financial Quality of Earnings",
+                  "Tax Exposures & Compliance",
+                  "Operational Systems & Risks",
+                  "Vendor & Investor Transparency",
+                  "Regulatory & Legal Compliance"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-4 text-gray-700">
+                    <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)]" />
+                    <span className="font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>

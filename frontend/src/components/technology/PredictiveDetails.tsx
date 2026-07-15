@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function PredictiveDetails() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="predictive-details">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="predictive-details">
       <div className="max-w-7xl mx-auto">
         
         {/* Handling Large Datasets */}

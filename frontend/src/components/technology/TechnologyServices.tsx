@@ -6,13 +6,13 @@ import { ArrowUpRight, Brain, ShieldCheck, LineChart, Database, AlertTriangle, Z
 const services = [
   {
     title: "Predictive & Big Data Analytics",
-    desc: "We empower organizations with predictive insights using advanced data models and AI-driven analytics—helping optimize performance and forecast trends.",
+    desc: "We empower organizations with predictive insights using advanced data models and AI-driven analytics - helping optimize performance and forecast trends.",
     icon: Brain,
     href: "/technology/predictive-and-big-data-analytics"
   },
   {
     title: "GRC Solutions & Services",
-    desc: "We provide integrated governance, risk, and compliance frameworks—ensuring effective controls, regulatory adherence, and transparency.",
+    desc: "We provide integrated governance, risk, and compliance frameworks - ensuring effective controls, regulatory adherence, and transparency.",
     icon: ShieldCheck,
     href: "/technology/grc-solutions-and-services"
   },
@@ -44,7 +44,7 @@ const services = [
 
 export default function TechnologyServices() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="technology-services">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="technology-services">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

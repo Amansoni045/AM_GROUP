@@ -8,7 +8,7 @@ const slides = [
     titlePrefix: "The GCC's",
     titleAccent: "Integrated",
     titleSuffix: "Growth Partner",
-    desc: "One firm. Four disciplines. Unlimited potential. AM Group brings together consulting, accounting, design, and technology so your business gets expert support at every stage — without juggling multiple agencies.",
+    desc: "One firm. Four disciplines. Unlimited potential. AM Group brings together consulting, accounting, design, and technology so your business gets expert support at every stage - without juggling multiple agencies.",
     image: "/WhatsApp-Image-2025-09-26-at-18.30.32_83b14124 (1).webp", // Riyadh skyline background
   },
   {
@@ -54,7 +54,7 @@ export default function Hero() {
       id="hero"
       style={{
         position: "relative",
-        minHeight: "95vh",
+        minHeight: "100dvh",
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",

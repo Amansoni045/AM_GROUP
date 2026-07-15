@@ -48,7 +48,7 @@ const differentiators = [
   },
   {
     title: "Comprehensive Understanding",
-    desc: "We can provide support in any type of transaction — sell-side, buy-side, or restructuring — through a deep understanding of the process."
+    desc: "We can provide support in any type of transaction - sell-side, buy-side, or restructuring - through a deep understanding of the process."
   }
 ];
 

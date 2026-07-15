@@ -5,7 +5,6 @@ import ESGHero from "@/components/consulting/ESGHero";
 import ESGIntro from "@/components/consulting/ESGIntro";
 import ESGServicesList from "@/components/consulting/ESGServicesList";
 import ESGReporting from "@/components/consulting/ESGReporting";
-import ESGWhyChooseUs from "@/components/consulting/ESGWhyChooseUs";
 import ESGFAQ from "@/components/consulting/ESGFAQ";
 
 export default function ESGPage() {
@@ -15,7 +14,6 @@ export default function ESGPage() {
       <ESGIntro />
       <ESGServicesList />
       <ESGReporting />
-      <ESGWhyChooseUs />
       <ESGFAQ />
                 </main>
   );

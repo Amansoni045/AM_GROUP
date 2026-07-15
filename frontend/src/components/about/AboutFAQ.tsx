@@ -31,7 +31,7 @@ export default function AboutFAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="faq">
+    <section className="bg-[var(--bg-alt)] pt-12 pb-24 px-4 md:px-12" id="faq">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

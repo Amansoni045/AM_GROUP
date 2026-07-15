@@ -136,14 +136,30 @@ export default function ESRPage() {
               </div>
             </motion.div>
             
-            <div className="relative">
-              <div className="absolute inset-0 bg-[var(--color-accent-soft)] rounded-[3rem] rotate-3 scale-105 -z-10" />
-              <img 
-                src="/am-group.webp" 
-                alt="Regulatory Advisory" 
-                className="w-full h-auto rounded-[3rem] shadow-2xl"
-              />
-            </div>
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="bg-[#f4f3ee] p-10 rounded-3xl border border-gray-100 shadow-xl shadow-black/5"
+            >
+              <h3 className="text-2xl font-bold text-[#020817] mb-8 font-heading">Our Focus Areas</h3>
+              <ul className="space-y-4">
+                {[
+                  "ESR Applicability Assessments",
+                  "Core Income-Generating Activities (CIGA)",
+                  "Substance Criteria Compliance",
+                  "ESR Notification Filings",
+                  "Annual Return Preparations",
+                  "Liaison with Regulatory Authorities"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-center gap-4 text-gray-700">
+                    <CheckCircle2 className="w-6 h-6 text-[var(--color-accent)]" />
+                    <span className="font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -244,9 +260,9 @@ export default function ESRPage() {
       <section className="py-24 px-4 md:px-12 bg-[#f4f3ee]">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-[#020817] mb-16 font-heading">Regulatory Authorities</h2>
-          <div className="flex flex-wrap justify-center gap-24 items-center">
-            <img src="/logo_en-1.webp" alt="Regulatory Authority 1" className="h-28 object-contain" />
-            <img src="/حقوق-المستهلكين-2048x1024.webp" alt="Regulatory Authority 2" className="h-28 object-contain" />
+          <div className="flex flex-wrap justify-center gap-16 md:gap-24 items-center">
+            <img src="/nbr_transparent.png" alt="National Bureau for Revenue" className="h-24 object-contain" />
+            <img src="/moic_transparent.png" alt="Ministry of Industry and Commerce" className="h-24 object-contain" />
           </div>
         </div>
       </section>

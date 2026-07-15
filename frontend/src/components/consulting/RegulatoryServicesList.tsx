@@ -21,7 +21,7 @@ const regulatoryServices = [
 
 export default function RegulatoryServicesList() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="regulatory-list">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="regulatory-list">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

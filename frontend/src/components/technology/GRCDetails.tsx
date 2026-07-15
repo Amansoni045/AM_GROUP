@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function GRCDetails() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="grc-details">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="grc-details">
       <div className="max-w-7xl mx-auto space-y-24">
         
         {/* Governance Framework */}
@@ -74,20 +74,14 @@ export default function GRCDetails() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
             <div>
               <h4 className="text-xl font-bold text-[var(--color-accent)] mb-4">Regulatory Risk Management</h4>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Regulatory risk management involves the preparation and implementation of robust compliance and AML policies and procedures, supported by appropriate software solutions for compliance, AML, and sanctions monitoring. It also includes ensuring adherence to data privacy laws such as GDPR and PDPL, along with regular compliance and AML training for relevant stakeholders.
-              </p>
               <p className="text-gray-600 leading-relaxed">
-                The framework further supports the implementation of new and evolving regulations and ensures timely, accurate regulatory compliance reporting to maintain transparency and regulatory alignment.
+                We design and implement robust compliance, AML, and data privacy frameworks (including GDPR and PDPL). Supported by modern software solutions, we ensure your organization is prepared for evolving regulations, with timely reporting and ongoing stakeholder training.
               </p>
             </div>
             <div>
               <h4 className="text-xl font-bold text-[var(--color-accent)] mb-4">Regulatory Risk Assurance</h4>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Regulatory risk assurance provides independent and structured assurance over the effectiveness of regulatory compliance across the organization, including AML, KYC, and sanctions risk management practices. It also covers data privacy and vendor risk assurance to ensure third-party and information protection risks are adequately managed.
-              </p>
               <p className="text-gray-600 leading-relaxed">
-                In addition, the framework supports external assessments of the Operational Risk Management (ORM) framework and Liquidity Risk Management (LRM) framework, as required by the Central Bank of Bahrain (CBB), to ensure continued regulatory compliance and best-practice alignment.
+                We provide independent assurance over your regulatory compliance, KYC, AML, and sanctions risk practices. This includes vendor risk assessments, data privacy checks, and CBB-aligned reviews for Operational Risk (ORM) and Liquidity Risk (LRM) management.
               </p>
             </div>
           </div>

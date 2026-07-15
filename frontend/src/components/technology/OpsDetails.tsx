@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function OpsDetails() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="ops-details">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="ops-details">
       <div className="max-w-7xl mx-auto space-y-24">
         
         {/* Insight & Impact */}
@@ -32,15 +32,15 @@ export default function OpsDetails() {
           >
             <div className="info-card-top-bar" />
             <h3 className="info-card-title mb-6">The Outsourcing Advantage</h3>
-            <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              Like many other advocates for financial analytics, experts say you don't have to bring analytics expertise in-house, with all its hiring and training pressures.
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Instead of building expensive in-house analytics teams, partnering with a specialized integrator allows businesses to quickly deploy advanced analytical frameworks.
             </p>
-            <p className="text-gray-600 leading-relaxed text-lg mb-6">
-              That's where the outsourcing services segment steps in. An outside firm that also has a strong history as a system integrator can provide the integration and analytics, which ERP systems often lack, especially on the financial side.
+            <p className="text-gray-600 leading-relaxed mb-6">
+              An outside firm with a strong history as a system integrator provides the integration and analytics that standard ERP systems lack.
             </p>
-            <div className="bg-[var(--color-primary)]/10 border-l-4 border-[var(--color-accent)] p-6 rounded-r-xl">
-              <p className="font-bold text-[var(--text-primary)]">
-                SSPL offers both. The solutions and services are well designed for the clients that cater into delivering the best optimized and customized proposals.
+            <div className="bg-[var(--color-primary)]/5 border-l-4 border-[var(--color-accent)] p-5 rounded-r-xl">
+              <p className="font-semibold text-[var(--text-primary)] text-[15px] leading-relaxed">
+                AM Technology offers both - providing optimized, custom analytics solutions designed to streamline your financial systems.
               </p>
             </div>
           </motion.div>
@@ -57,7 +57,7 @@ export default function OpsDetails() {
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <h3 className="info-card-title text-3xl mb-6 text-center">Streamlining Financial Operations</h3>
             <p className="text-[var(--text-secondary)] leading-relaxed text-lg">
-              Its services and solutions help and support the users to save much more, both in terms of timely reporting and financial savings. The processes are automated to reduce dependency on manpower and solutions work from Intranet to mobile computing. Users being placed anywhere on the globe can access the reports/dashboards via a dependable internet connection, and also get around making editions w.r.t their individual requirements.
+              Our automated solutions simplify financial reporting, save costs, and reduce manual effort. With cloud-enabled access, your team can securely view real-time reports and customized dashboards from anywhere in the world.
             </p>
           </div>
         </motion.div>

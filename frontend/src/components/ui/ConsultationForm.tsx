@@ -94,7 +94,7 @@ export default function ConsultationForm() {
                 marginBottom: "3rem",
               }}
             >
-              Fill out the form to book a complimentary 30-minute consultation with our experts. We&apos;ll analyze your business needs and chart the best path forward — with no obligation.
+              Fill out the form to book a complimentary 30-minute consultation with our experts. We&apos;ll analyze your business needs and chart the best path forward - with no obligation.
             </p>
 
             {/* Benefits */}
@@ -221,6 +221,7 @@ export default function ConsultationForm() {
                 border: "1px solid var(--border-light)",
                 padding: "3.5rem",
               }}
+              className="consultation-form-card"
             >
               {submitted ? (
                 <motion.div
@@ -437,6 +438,9 @@ export default function ConsultationForm() {
         @media (max-width: 640px) {
           .form-row {
             grid-template-columns: 1fr !important;
+          }
+          .consultation-form-card {
+            padding: 1.75rem !important;
           }
         }
       `}</style>

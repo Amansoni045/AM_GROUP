@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 
 export default function FraudDetails() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="fraud-details">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="fraud-details">
       <div className="max-w-7xl mx-auto space-y-24">
         
         {/* Using Analytics */}

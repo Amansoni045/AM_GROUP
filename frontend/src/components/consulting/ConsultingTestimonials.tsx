@@ -10,11 +10,11 @@ const testimonials = [
   },
   {
     client: "Horizon Logistics",
-    quote: "The AM Consulting team brought a level of clarity and direction that transformed our business. They assessed our operations, identified inefficiencies, and implemented measurable performance frameworks that improved productivity across departments. What impressed us most was their ability to understand our challenges and deliver real, actionable solutions — not just reports. Their partnership has truly been a catalyst for our long-term success."
+    quote: "The AM Consulting team brought a level of clarity and direction that transformed our business. They assessed our operations, identified inefficiencies, and implemented measurable performance frameworks that improved productivity across departments. What impressed us most was their ability to understand our challenges and deliver real, actionable solutions - not just reports. Their partnership has truly been a catalyst for our long-term success."
   },
   {
     client: "Noor Education Group",
-    quote: "AM Consulting played a vital role in helping us develop a scalable growth strategy. From financial planning to process optimization, their consultants worked closely with our leadership team to create a practical roadmap for expansion. They bring a unique blend of deep industry knowledge and a personal approach — we never felt like just another client. Their input continues to guide many of our strategic decisions today."
+    quote: "AM Consulting played a vital role in helping us develop a scalable growth strategy. From financial planning to process optimization, their consultants worked closely with our leadership team to create a practical roadmap for expansion. They bring a unique blend of deep industry knowledge and a personal approach - we never felt like just another client. Their input continues to guide many of our strategic decisions today."
   },
   {
     client: "Al Jazeera Contracting",
@@ -93,7 +93,7 @@ export default function ConsultingTestimonials() {
       id="consulting-testimonials"
       style={{
         background: "var(--bg-main)",
-        paddingTop: "var(--section-py)",
+        paddingTop: "3rem",
         paddingBottom: "var(--section-py)",
       }}
       className="section-px relative overflow-hidden"

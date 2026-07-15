@@ -4,7 +4,6 @@ import WhatWeDo from "@/components/ui/WhatWeDo";
 import IndustryExpertise from "@/components/ui/IndustryExpertise";
 import Services from "@/components/ui/Services";
 import Clients from "@/components/ui/Clients";
-import Testimonials from "@/components/ui/Testimonials";
 import ConsultationForm from "@/components/ui/ConsultationForm";
 
 export default function Home() {
@@ -15,7 +14,6 @@ export default function Home() {
       <Services />
       <IndustryExpertise />
       <Clients />
-      <Testimonials />
       <ConsultationForm />
     </main>
   );

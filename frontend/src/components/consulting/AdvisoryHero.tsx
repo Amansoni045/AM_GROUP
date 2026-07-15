@@ -12,7 +12,7 @@ export default function AdvisoryHero() {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        padding: "5rem 2rem",
+        padding: "5.5rem 2rem 3rem",
         position: "relative",
         overflow: "hidden",
       }}

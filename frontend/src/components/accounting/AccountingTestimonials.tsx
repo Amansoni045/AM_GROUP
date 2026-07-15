@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     client: "Al Dar Trading Co.",
-    quote: "Working with AM Accounting has brought complete clarity and confidence to our financial operations. Their team set up a robust accounting system, streamlined our reporting, and helped us maintain full compliance with local regulations. What truly stands out is their responsiveness and genuine care for our business — they go beyond numbers to ensure we’re financially strong and future-ready. A reliable partner we can always count on."
+    quote: "Working with AM Accounting has brought complete clarity and confidence to our financial operations. Their team set up a robust accounting system, streamlined our reporting, and helped us maintain full compliance with local regulations. What truly stands out is their responsiveness and genuine care for our business - they go beyond numbers to ensure we’re financially strong and future-ready. A reliable partner we can always count on."
   },
   {
     client: "Ibtisama Asthetic Dental clinic",
@@ -18,7 +18,7 @@ const testimonials = [
   },
   {
     client: "Serenity Wellness Spa",
-    quote: "AM Accounting has been instrumental in organizing our finances and ensuring everything runs smoothly. From VAT submissions to monthly bookkeeping, they’ve handled every detail with precision and professionalism. Their team is approachable, transparent, and always ready with practical advice. We now have complete visibility into our accounts — and peace of mind knowing that experts are managing them."
+    quote: "AM Accounting has been instrumental in organizing our finances and ensuring everything runs smoothly. From VAT submissions to monthly bookkeeping, they’ve handled every detail with precision and professionalism. Their team is approachable, transparent, and always ready with practical advice. We now have complete visibility into our accounts - and peace of mind knowing that experts are managing them."
   }
 ];
 

@@ -29,7 +29,7 @@
   --border-dark:      #9f9d93;
 
   /* Spacing scale */
-  --section-py:       6rem;
+  --section-py:       4rem;
 
   /* Typography */
   --font-heading:     'Cormorant Garamond', 'Georgia', serif;
@@ -44,6 +44,7 @@
   --font-sans: var(--font-body);
   --font-serif: var(--font-heading);
   --font-heading: var(--font-heading);
+  --spacing-24: 4rem;
 }
 
 /* ============ BASE ============ */
@@ -58,6 +59,10 @@ body {
   font-size: 16px;
   line-height: 1.7;
   font-weight: 400;
+}
+
+input, select, textarea, button {
+  font-family: inherit;
 }
 
 /* ============ TYPOGRAPHY ============ */
@@ -82,6 +87,20 @@ h1, h2, h3, h4, h5, h6 {
 .section-px {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  :root {
+    --section-py: 2.5rem;
+  }
+  /* Compact Tailwind py-24 / py-20 sections on mobile */
+  .compact-section {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  .compact-mb {
+    margin-bottom: 2rem !important;
+  }
 }
 
 @media (min-width: 768px) {

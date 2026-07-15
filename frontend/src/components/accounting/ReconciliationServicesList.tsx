@@ -32,7 +32,7 @@ const services = [
 
 export default function ReconciliationServicesList() {
   return (
-    <section className="bg-[var(--bg-alt)] py-24 px-4 md:px-12" id="reconciliation-list">
+    <section className="bg-[var(--bg-alt)] compact-section px-4 md:px-12 py-24" id="reconciliation-list">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
