@@ -91,15 +91,26 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767px) {
   :root {
-    --section-py: 2.5rem;
+    --section-py: 2rem;
   }
-  /* Compact Tailwind py-24 / py-20 sections on mobile */
+  /* Compact Tailwind py-24 / py-20 / pt-24 / pb-24 sections on mobile */
   .compact-section {
-    padding-top: 2.5rem !important;
-    padding-bottom: 2.5rem !important;
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
   .compact-mb {
-    margin-bottom: 2rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  /* Adjust custom margins/paddings on sections */
+  section, .py-24, .py-20, .pt-24, .pb-24 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .mb-24, .mb-16 {
+    margin-bottom: 1.5rem !important;
+  }
+  .mt-24, .mt-16 {
+    margin-top: 1.5rem !important;
   }
 }
 
