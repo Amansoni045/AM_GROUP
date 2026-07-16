@@ -7,7 +7,7 @@ import AdvisoryServicesList from "@/components/consulting/AdvisoryServicesList";
 
 export default function AdvisoryPage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-consulting">
             <AdvisoryHero />
       <AdvisoryIntro />
       <AdvisoryServicesList />

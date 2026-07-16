@@ -31,7 +31,7 @@ const companies = [
     href: "/technology",
     icon: Cpu,
     desc: "We deliver data strategy, predictive modeling, visualization, and business intelligence services that transform information into insights, drive smart decisions, and help organizations achieve measurable growth.",
-    color: "var(--color-accent)",
+    color: "#0d9488",
   },
 ];
 

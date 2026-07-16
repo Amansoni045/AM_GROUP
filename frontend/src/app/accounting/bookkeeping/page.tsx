@@ -7,7 +7,7 @@ import BookkeepingServicesList from "@/components/accounting/BookkeepingServices
 
 export default function BookkeepingPage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-accounting">
             <BookkeepingHero />
       <BookkeepingIntro />
       <BookkeepingServicesList />

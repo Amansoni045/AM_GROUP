@@ -7,7 +7,7 @@ import GRCDetails from "@/components/technology/GRCDetails";
 
 export default function GRCSolutionsPage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-technology">
       <GRCHero />
       <GRCIntro />
       <GRCDetails />

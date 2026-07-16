@@ -403,3 +403,32 @@ h1, h2, h3, h4, h5, h6 {
 .info-card:hover .info-card-link {
   gap: 0.75rem;
 }
+
+/* ============ SUB-BRAND COLOR OVERRIDES ============ */
+/* AM Accounting: Blue (#016abf) */
+.brand-accounting, [data-brand="accounting"] {
+  --color-accent: #016abf;
+  --color-accent-light: #1e8ae2;
+  --color-accent-soft: rgba(1, 106, 191, 0.1);
+}
+
+/* AM Consulting: Purple (#704b81) */
+.brand-consulting, [data-brand="consulting"] {
+  --color-accent: #704b81;
+  --color-accent-light: #8e65a0;
+  --color-accent-soft: rgba(112, 75, 129, 0.1);
+}
+
+/* AM Design: Orange (#db4319) */
+.brand-design, [data-brand="design"] {
+  --color-accent: #db4319;
+  --color-accent-light: #ef5f37;
+  --color-accent-soft: rgba(219, 67, 25, 0.1);
+}
+
+/* AM Technology: Deep Teal (#0d9488) */
+.brand-technology, [data-brand="technology"] {
+  --color-accent: #0d9488;
+  --color-accent-light: #0f766e;
+  --color-accent-soft: rgba(13, 148, 136, 0.1);
+}

@@ -7,7 +7,7 @@ import BacklogServicesList from "@/components/accounting/BacklogServicesList";
 
 export default function BacklogManagementPage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-accounting">
             <BacklogHero />
       <BacklogIntro />
       <BacklogServicesList />

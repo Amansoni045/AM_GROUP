@@ -7,7 +7,7 @@ import WebServicesList from "@/components/design/WebServicesList";
 
 export default function WebsiteDesignPage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-design">
             <WebHero />
       <WebIntro />
       <WebServicesList />

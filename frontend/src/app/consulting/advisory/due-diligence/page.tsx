@@ -51,7 +51,7 @@ const diligenceTypes = [
 
 export default function DueDiligencePage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-consulting">
             
       {/* Hero Section */}
       <section

@@ -7,7 +7,7 @@ import RegulatoryServicesList from "@/components/consulting/RegulatoryServicesLi
 
 export default function RegulatoryPage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-consulting">
             <RegulatoryHero />
       <RegulatoryIntro />
       <RegulatoryServicesList />

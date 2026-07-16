@@ -7,7 +7,7 @@ import MISServicesList from "@/components/accounting/MISServicesList";
 
 export default function MISReportingPage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-accounting">
             <MISHero />
       <MISIntro />
       <MISServicesList />

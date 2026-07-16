@@ -7,7 +7,7 @@ import SocialServicesList from "@/components/design/SocialServicesList";
 
 export default function SocialMediaPage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-design">
             <SocialHero />
       <SocialIntro />
       <SocialServicesList />

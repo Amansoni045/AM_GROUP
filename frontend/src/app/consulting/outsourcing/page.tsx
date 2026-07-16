@@ -8,7 +8,7 @@ import OutsourcingWhyChoose from "@/components/consulting/OutsourcingWhyChoose";
 
 export default function OutsourcingPage() {
   return (
-    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth">
+    <main className="relative bg-[var(--bg-main)] text-[var(--text-primary)] font-sans scroll-smooth brand-consulting">
             <OutsourcingHero />
       <OutsourcingIntro />
       <OutsourcingServicesList />
