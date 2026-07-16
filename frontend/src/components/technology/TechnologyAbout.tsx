@@ -89,7 +89,7 @@ export default function TechnologyAbout() {
             </div>
             <div className="lg:col-span-8">
               <div className="flex items-center gap-3 mb-6">
-                <Heart className="w-6 h-6 text-[var(--color-accent)] fill-[#B4975A]" />
+                <Heart className="w-6 h-6 text-[#B4975A] fill-[#B4975A]" />
                 <h3 className="text-2xl font-bold text-[var(--text-primary)] font-heading">A Legacy of Innovation</h3>
               </div>
               <div className="space-y-6 text-gray-600 leading-relaxed italic">
