@@ -89,29 +89,208 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 1.5rem;
 }
 
+/* ============================================================
+   COMPREHENSIVE MOBILE RESPONSIVE OVERRIDES (≤767px)
+   ============================================================ */
 @media (max-width: 767px) {
   :root {
     --section-py: 2rem;
   }
-  /* Compact Tailwind py-24 / py-20 / pt-24 / pb-24 sections on mobile */
-  .compact-section {
+
+  /* ── Section padding reset ── */
+  .compact-section,
+  .py-24, .py-20, .py-16, .pt-24, .pb-24 {
     padding-top: 2rem !important;
     padding-bottom: 2rem !important;
   }
-  .compact-mb {
-    margin-bottom: 1.5rem !important;
+  .compact-mb { margin-bottom: 1.25rem !important; }
+  .mb-24, .mb-20, .mb-16 { margin-bottom: 1.25rem !important; }
+  .mt-24, .mt-20, .mt-16 { margin-top: 1.25rem !important; }
+
+  /* ── Horizontal padding on all sections ── */
+  .section-px {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
-  /* Adjust custom margins/paddings on sections */
-  section, .py-24, .py-20, .pt-24, .pb-24 {
-    padding-top: 2rem !important;
+  /* Tailwind px-4 / px-6 / px-12 overrides for sub-brand sections */
+  section.px-4, section.px-6, section.px-12,
+  section[class*="px-"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* ── Grid gaps ── */
+  .gap-16 { gap: 2rem !important; }
+  .gap-12 { gap: 1.5rem !important; }
+  .gap-10 { gap: 1.25rem !important; }
+  .gap-8  { gap: 1rem !important; }
+  .gap-6  { gap: 0.875rem !important; }
+
+  /* ── 2×2 Grid: Convert 1×4 and 1×3 single-col stacks → 2 columns ── */
+  /* Tailwind responsive grid classes: grid-cols-1 md:grid-cols-2 lg:grid-cols-4 */
+  .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4,
+  /* grid-cols-1 md:grid-cols-3 */
+  .grid-cols-1.md\:grid-cols-3,
+  /* grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 */
+  .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4,
+  /* grid-cols-1 md:grid-cols-2 lg:grid-cols-3 */
+  .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* ── Cards inside 2-col grids: limit height, reduce padding ── */
+  .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-4 > *,
+  .grid-cols-1.md\:grid-cols-3 > *,
+  .grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 > *,
+  .grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3 > * {
+    min-height: 0 !important;
+  }
+
+  /* ── Utility: force 2-col on mobile (add class="mobile-2col" to grid divs) ── */
+  .mobile-2col {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  /* Smaller gap for compact 2-col grids */
+  .mobile-2col .info-card,
+  .mobile-2col > * .info-card {
+    padding: 1rem !important;
+  }
+
+  /* ── Sub-brand hero section top/bottom padding (inline-style override via class) ── */
+  .subhero-inner {
+    padding-top: 3rem !important;
     padding-bottom: 2rem !important;
+    min-height: auto !important;
   }
-  .mb-24, .mb-16 {
+
+  /* ── Hero heading sizes ── */
+  h1 {
+    font-size: clamp(1.9rem, 7.5vw, 2.6rem) !important;
+    line-height: 1.15 !important;
+  }
+  h2 {
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem) !important;
+    line-height: 1.2 !important;
+  }
+  h3 { font-size: clamp(1.25rem, 5vw, 1.75rem) !important; }
+
+  /* ── Tailwind text size classes ── */
+  .text-5xl { font-size: 1.875rem !important; }
+  .text-6xl { font-size: 2rem !important; }
+  .text-7xl { font-size: 2.25rem !important; }
+  .text-4xl { font-size: 1.625rem !important; }
+
+  /* ── mb-8 / mb-12 (often used inside hero/intro sections) ── */
+  .mb-12 { margin-bottom: 1.25rem !important; }
+  .mb-10 { margin-bottom: 1rem !important; }
+  .mb-8  { margin-bottom: 1rem !important; }
+
+  /* ── card / info-card padding ── */
+  .info-card {
+    padding: 1.25rem !important;
+  }
+
+  /* ── Presence / about grid gaps ── */
+  .about-grid {
+    gap: 2rem !important;
+  }
+  .industry-layout {
+    gap: 2rem !important;
+  }
+
+  /* ── Services block vertical spacer ── */
+  .services-block-1 {
+    margin-bottom: 2.5rem !important;
+  }
+
+  /* ── Testimonial header margin ── */
+  .testimonial-header {
     margin-bottom: 1.5rem !important;
   }
-  .mt-24, .mt-16 {
-    margin-top: 1.5rem !important;
+
+  /* ── Presence block margin ── */
+  .presence-block {
+    margin-top: 2rem !important;
   }
+
+  /* ── Division cards ── */
+  .division-card {
+    padding: 1.25rem 1rem !important;
+  }
+
+  /* ── Limit image heights in About panels ── */
+  .about-img-wrap img {
+    max-height: 260px;
+    object-fit: cover;
+    width: 100%;
+  }
+  /* Hide decorative image in about panel on very small screens */
+  .about-deco-img {
+    display: none !important;
+  }
+
+  /* ── Stats grid ── */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  /* ── consulting / design etc: IndustryExpertise item rows ── */
+  .industry-row {
+    padding: 0.75rem 1rem !important;
+  }
+
+  /* ── Space-y reductions ── */
+  .space-y-6 > * + * { margin-top: 0.75rem !important; }
+  .space-y-8 > * + * { margin-top: 1rem !important; }
+
+  /* ── Text sizes in body copy ── */
+  .text-xl  { font-size: 1rem !important; }
+  .text-lg  { font-size: 0.95rem !important; }
+
+  /* ── Button stack on mobile ── */
+  .btn-group-mobile {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  .btn-group-mobile a,
+  .btn-group-mobile button {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* ── FAQ / accordion reduce padding ── */
+  .faq-item {
+    padding: 1rem !important;
+  }
+
+  /* ── Clients grid: 2 cols on mobile ── */
+  .clients-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* ── Reduce logo height on mobile hero marquee ── */
+  .marquee-hero {
+    padding: 0.5rem 0 !important;
+  }
+}
+
+/* ============================================================
+   TABLET RESPONSIVE OVERRIDES (768px – 1023px)
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --section-py: 3rem;
+  }
+  .section-px {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.5rem); }
+  h2 { font-size: clamp(1.9rem, 4.5vw, 3rem); }
+  .gap-16 { gap: 2.5rem !important; }
+  .gap-12 { gap: 2rem !important; }
 }
 
 @media (min-width: 768px) {

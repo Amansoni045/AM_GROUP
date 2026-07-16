@@ -7,12 +7,12 @@ export default function CFOHero() {
     <section
       style={{
         background: "linear-gradient(135deg, #f4f3ee 0%, #fff 55%, #faf7f0 100%)",
-        minHeight: "46vh",
+        minHeight: "auto",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-        padding: "5rem 2rem",
+        padding: "clamp(2.5rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem)",
         position: "relative",
         overflow: "hidden",
       }}

@@ -49,7 +49,7 @@ export default function AdvisoryServicesList() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mobile-2col">
           {advisoryServices.map((service, i) => (
             <Link href={service.href} key={i} target="_blank" rel="noopener noreferrer">
               <motion.div

@@ -45,7 +45,7 @@ export default function IndustryExpertise() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
               <span className="eyebrow">Sectors We Serve</span>
               <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
             </div>
@@ -53,18 +53,19 @@ export default function IndustryExpertise() {
             <h2
               style={{
                 fontFamily: "var(--font-heading)",
-                fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
+                fontSize: "clamp(2rem, 4vw, 3.5rem)",
                 fontWeight: 600,
                 color: "var(--text-primary)",
                 lineHeight: 1.1,
                 letterSpacing: "-0.01em",
-                marginBottom: "1.25rem",
+                marginBottom: "1rem",
               }}
             >
               Industry{" "}
               <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>Expertise</em>
             </h2>
 
+            {/* Long paragraph — hidden on mobile via CSS */}
             <p
               style={{
                 fontFamily: "var(--font-body)",
@@ -73,25 +74,28 @@ export default function IndustryExpertise() {
                 lineHeight: 1.8,
                 marginBottom: "2.5rem",
               }}
+              className="industry-desc"
             >
               From the very beginning, we have been committed to guiding businesses across diverse industries with strategic insights, practical solutions, and sustainable growth strategies. Our experience spans multiple sectors, enabling us to deliver tailored advisory and consulting services that drive measurable results.
             </p>
 
+            {/* Stats badge — full on desktop, compact inline on mobile */}
             <div
               style={{
                 display: "flex",
                 alignItems: "center",
                 gap: "1.25rem",
-                padding: "2rem",
+                padding: "1.25rem 1.5rem",
                 border: "1px solid var(--border-light)",
                 background: "var(--bg-main)",
                 boxShadow: "0 4px 20px rgba(15, 23, 42, 0.03)",
               }}
+              className="industry-badge"
             >
               <div
                 style={{
-                  width: "56px",
-                  height: "56px",
+                  width: "44px",
+                  height: "44px",
                   border: "1px solid var(--border-medium)",
                   borderRadius: "50%",
                   display: "flex",
@@ -100,7 +104,7 @@ export default function IndustryExpertise() {
                   flexShrink: 0,
                 }}
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="1.5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                 </svg>
               </div>
@@ -108,7 +112,7 @@ export default function IndustryExpertise() {
                 <div
                   style={{
                     fontFamily: "var(--font-heading)",
-                    fontSize: "1.75rem",
+                    fontSize: "1.5rem",
                     fontWeight: 600,
                     color: "var(--text-primary)",
                     lineHeight: 1.1,
@@ -119,11 +123,11 @@ export default function IndustryExpertise() {
                 <div
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.75rem",
+                    fontSize: "0.72rem",
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
                     color: "var(--text-muted)",
-                    marginTop: "0.25rem",
+                    marginTop: "0.2rem",
                     fontWeight: 500,
                   }}
                 >
@@ -155,12 +159,12 @@ export default function IndustryExpertise() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: i * 0.04 }}
                     style={{
-                      padding: "1.5rem 1.75rem",
+                      padding: "1.25rem 1.5rem",
                       borderRight: !isRight ? "1px solid var(--border-light)" : "none",
                       borderBottom: !isLastRow ? "1px solid var(--border-light)" : "none",
                       display: "flex",
                       alignItems: "center",
-                      gap: "0.875rem",
+                      gap: "0.75rem",
                       transition: "background 0.3s ease",
                       cursor: "default",
                     }}
@@ -168,8 +172,8 @@ export default function IndustryExpertise() {
                   >
                     <div
                       style={{
-                        width: "6px",
-                        height: "6px",
+                        width: "5px",
+                        height: "5px",
                         background: "var(--color-accent)",
                         borderRadius: "50%",
                         flexShrink: 0,
@@ -178,10 +182,10 @@ export default function IndustryExpertise() {
                     <span
                       style={{
                         fontFamily: "var(--font-body)",
-                        fontSize: "0.95rem",
+                        fontSize: "0.9rem",
                         fontWeight: 400,
                         color: "var(--text-primary)",
-                        lineHeight: 1.4,
+                        lineHeight: 1.3,
                       }}
                     >
                       {industry}
@@ -198,14 +202,41 @@ export default function IndustryExpertise() {
         @media (min-width: 1024px) {
           .industry-layout {
             grid-template-columns: 1fr 1.2fr !important;
+            gap: 4rem !important;
           }
         }
         @media (max-width: 767px) {
-          .industry-list-grid {
-            grid-template-columns: 1fr !important;
+          .industry-layout {
+            gap: 1.25rem !important;
           }
+          /* Hide long paragraph on mobile — too tall */
+          .industry-desc {
+            display: none !important;
+          }
+          /* Compact badge */
+          .industry-badge {
+            padding: 0.75rem 1rem !important;
+            gap: 0.75rem !important;
+            margin-bottom: 0 !important;
+          }
+          .industry-badge > div:first-child {
+            width: 36px !important;
+            height: 36px !important;
+          }
+          /* Industry list rows */
           .industry-row {
-            padding: 0.875rem 1rem !important;
+            padding: 0.65rem 0.75rem !important;
+            gap: 0.5rem !important;
+          }
+          .industry-row span {
+            font-size: 0.78rem !important;
+          }
+          .industry-list-grid {
+            grid-template-columns: 1fr 1fr !important;
+          }
+          /* Compact heading */
+          .industry-layout h2 {
+            margin-bottom: 0.75rem !important;
           }
         }
         .industry-row:hover {

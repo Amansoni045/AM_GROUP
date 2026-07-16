@@ -100,7 +100,7 @@ export default function Hero() {
         <div
           className="container-max"
           style={{
-            paddingTop: "6rem",
+            paddingTop: "clamp(3.5rem, 8vw, 6rem)",
             paddingBottom: "2rem",
             display: "flex",
             flexDirection: "column",
@@ -113,7 +113,7 @@ export default function Hero() {
           <div
             style={{
               width: "100%",
-              minHeight: "clamp(440px, 44vw, 520px)",
+              minHeight: "clamp(280px, 60vw, 440px)",
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-start",
@@ -197,13 +197,12 @@ export default function Hero() {
                 <p
                   style={{
                     fontFamily: "var(--font-body)",
-                    fontSize: "clamp(0.95rem, 1.3vw, 1.05rem)",
+                    fontSize: "clamp(0.9rem, 1.3vw, 1.05rem)",
                     color: "rgba(255,255,255,0.75)",
-                    lineHeight: 1.85,
-                    marginBottom: "2.5rem",
+                    lineHeight: 1.75,
+                    marginBottom: "2rem",
                     maxWidth: "560px",
                     textAlign: "left",
-                    minHeight: "8.5rem",
                   }}
                 >
                   {slide.desc}

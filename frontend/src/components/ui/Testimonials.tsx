@@ -98,7 +98,7 @@ export default function Testimonials() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="info-card testimonial-card"
-              style={{ padding: "3rem 2.5rem", display: "flex", flexDirection: "column" }}
+              style={{ padding: "2.5rem 2rem", display: "flex", flexDirection: "column" }}
             >
               {/* Gold Quote Mark */}
               <div
@@ -177,11 +177,42 @@ export default function Testimonials() {
           }
           .testimonial-grid {
             grid-template-columns: repeat(3, 1fr) !important;
+            gap: 1.5rem !important;
           }
         }
         @media (max-width: 767px) {
+          /* Horizontal scroll-snap: 1 card visible at a time */
+          .testimonial-grid {
+            display: flex !important;
+            flex-direction: row !important;
+            overflow-x: auto !important;
+            scroll-snap-type: x mandatory !important;
+            -webkit-overflow-scrolling: touch !important;
+            gap: 0.875rem !important;
+            padding-bottom: 0.75rem !important;
+            scrollbar-width: none !important;
+          }
+          .testimonial-grid::-webkit-scrollbar {
+            display: none !important;
+          }
           .testimonial-card {
+            flex: 0 0 85vw !important;
+            scroll-snap-align: start !important;
             padding: 1.5rem 1.25rem !important;
+          }
+          .testimonial-card p {
+            font-size: 0.9rem !important;
+            line-height: 1.6 !important;
+            margin-bottom: 1.25rem !important;
+          }
+          .testimonial-card > div:first-child {
+            font-size: 2rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+          /* Scroll indicator hint */
+          .testimonial-grid::after {
+            content: '' !important;
+            flex: 0 0 0.25rem !important;
           }
         }
       `}</style>

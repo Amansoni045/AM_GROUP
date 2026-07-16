@@ -7,7 +7,7 @@ export default function AboutHero() {
     <section
       style={{
         position: "relative",
-        minHeight: "60vh",
+        minHeight: "auto",
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
@@ -47,7 +47,7 @@ export default function AboutHero() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: "5rem 2rem",
+          padding: "clamp(2.5rem, 5vw, 5rem) clamp(1rem, 3vw, 2rem)",
           textAlign: "center",
         }}
       >

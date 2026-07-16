@@ -108,6 +108,7 @@ export default function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
             style={{ display: "flex", flexDirection: "column", gap: "2.5rem" }}
+            className="about-left-col"
           >
             <div style={{ position: "relative", maxWidth: "480px", width: "100%" }} className="about-img-wrap">
               <div
@@ -323,17 +324,23 @@ export default function AboutSection() {
           .mv-grid {
             grid-template-columns: 1fr !important;
           }
-          .about-img-wrap {
-            max-width: 100% !important;
+          /* Hide the image column on mobile — text + stats show cleanly */
+          .about-left-col {
+            display: none !important;
           }
           .about-grid {
-            margin-bottom: 2rem !important;
+            margin-bottom: 1.25rem !important;
+            gap: 1rem !important;
           }
           .stat-cell {
-            padding: 1.5rem 1rem !important;
+            padding: 1rem 0.75rem !important;
           }
           .stats-grid {
-            margin-top: 2rem !important;
+            margin-top: 1.25rem !important;
+          }
+          /* Compact about text section on mobile */
+          .about-right-col > div:first-child {
+            margin-bottom: 0.5rem !important;
           }
         }
         @media (min-width: 1024px) {

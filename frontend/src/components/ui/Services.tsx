@@ -70,7 +70,7 @@ export default function Services() {
           </div>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mobile-2col">
             {[
               {
                 title: "AM Consulting",
@@ -285,30 +285,39 @@ export default function Services() {
       </div>
 
       <style>{`
+        /* Default: 2 cols on mobile */
         .services-grid {
-          grid-template-columns: repeat(1, 1fr);
+          grid-template-columns: repeat(2, 1fr);
         }
         .service-item {
+          border-right: 1px solid var(--border-light);
           border-bottom: 1px solid var(--border-light);
+        }
+        .services-grid > div:nth-child(2n) {
           border-right: none;
+        }
+        .services-grid > div:nth-last-child(-n+2) {
+          border-bottom: none;
         }
         .service-item:last-child {
           border-bottom: none;
         }
 
-        @media (min-width: 640px) {
-          .services-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
+        @media (max-width: 639px) {
           .service-item {
-            border-right: 1px solid var(--border-light) !important;
-            border-bottom: 1px solid var(--border-light) !important;
+            padding: 0.875rem 0.75rem !important;
+            gap: 0.75rem !important;
           }
-          .services-grid > div:nth-child(2n) {
-            border-right: none !important;
+          .service-item p {
+            font-size: 0.8rem !important;
           }
-          .services-grid > div:nth-last-child(-n+2) {
-            border-bottom: none !important;
+          .service-icon {
+            width: 36px !important;
+            height: 36px !important;
+          }
+          .service-svg {
+            width: 16px !important;
+            height: 16px !important;
           }
         }
 
@@ -362,10 +371,25 @@ export default function Services() {
         }
         @media (max-width: 767px) {
           .services-block-1 {
-            margin-bottom: 2.5rem !important;
+            margin-bottom: 2rem !important;
           }
           .services-divider {
-            margin: 2.5rem 0 2rem !important;
+            margin: 2rem 0 1.5rem !important;
+          }
+          /* Truncate brand card service lists to 3 items on mobile */
+          .services-block-1 .info-card ul li:nth-child(n+4) {
+            display: none !important;
+          }
+          .services-block-1 .info-card ul {
+            gap: 0.5rem !important;
+          }
+          .services-block-1 .info-card ul li {
+            font-size: 0.78rem !important;
+          }
+          .services-block-1 .info-card h3 {
+            font-size: 0.95rem !important;
+            padding-bottom: 0.5rem !important;
+            margin-bottom: 0.75rem !important;
           }
         }
       `}</style>

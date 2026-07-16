@@ -61,7 +61,7 @@ export default function Footer() {
       {/* Main footer body */}
       <div
         className="section-px"
-        style={{ paddingTop: "5rem", paddingBottom: "4rem" }}
+        style={{ paddingTop: "clamp(2.5rem, 5vw, 5rem)", paddingBottom: "clamp(2rem, 4vw, 4rem)" }}
       >
         <div className="container-max">
           <div
@@ -350,6 +350,11 @@ export default function Footer() {
         @media (min-width: 1024px) {
           .footer-grid {
             grid-template-columns: 1.5fr 1fr 1fr 1fr !important;
+          }
+        }
+        @media (max-width: 767px) {
+          .footer-grid {
+            gap: 2rem !important;
           }
         }
       `}</style>

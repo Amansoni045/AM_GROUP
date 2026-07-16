@@ -63,7 +63,7 @@ export default function TechnologyServices() {
           <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto mt-6" />
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mobile-2col">
           {services.map((service, i) => (
             <motion.a
               key={i}

@@ -62,7 +62,7 @@ export default function FraudDetails() {
             <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto" />
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mobile-2col">
             <div className="aspect-video rounded-2xl overflow-hidden shadow-lg border border-gray-100">
               <iframe 
                 width="100%" 

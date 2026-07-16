@@ -276,7 +276,7 @@ export default function WhatWeDo() {
           </p>
 
           {/* Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mobile-2col">
             {[
               {
                 name: "Bahrain",
@@ -359,10 +359,31 @@ export default function WhatWeDo() {
         }
         @media (max-width: 767px) {
           .division-card {
-            padding: 1.5rem 1.25rem !important;
+            padding: 1.25rem 1rem !important;
           }
           .presence-block {
-            margin-top: 3rem !important;
+            margin-top: 2rem !important;
+          }
+          /* Hide long card descriptions inside presence 2×2 grid on mobile */
+          .presence-block .info-card-desc {
+            display: none !important;
+          }
+          /* Reduce flag size */
+          .presence-block .info-card > div:first-of-type {
+            font-size: 1.5rem !important;
+            margin-bottom: 0.5rem !important;
+          }
+          .presence-block .info-card-title {
+            font-size: 1rem !important;
+            margin-bottom: 0.15rem !important;
+          }
+          /* Presence heading */
+          .presence-block h3 {
+            font-size: 1.5rem !important;
+          }
+          .presence-block p {
+            font-size: 0.875rem !important;
+            margin-bottom: 1.5rem !important;
           }
         }
         .division-card:hover {

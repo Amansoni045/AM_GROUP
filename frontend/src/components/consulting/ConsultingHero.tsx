@@ -16,7 +16,7 @@ export default function ConsultingHero() {
       <div style={{ position: "absolute", top: 0, left: 0, width: "400px", height: "400px", background: "radial-gradient(circle at top left, rgba(180,151,90,0.11) 0%, transparent 65%)", pointerEvents: "none" }} />
       <div style={{ position: "absolute", bottom: 0, right: 0, width: "400px", height: "400px", background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.07) 0%, transparent 65%)", pointerEvents: "none" }} />
 
-      <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "6rem 2rem 4rem", minHeight: "62vh" }}>
+      <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "clamp(3rem,5vw,6rem) clamp(1rem,3vw,2rem) clamp(2rem,3.5vw,4rem)", minHeight: "auto" }}>
         <div style={{ maxWidth: "820px" }}>
           <motion.div
             initial={{ opacity: 0, y: 12 }}
