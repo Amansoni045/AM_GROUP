@@ -20,7 +20,7 @@ function MemberCard({ name, role, primary = false }: { name: string; role: strin
       className="flex flex-col items-center text-center group"
     >
       <div
-        className="w-20 h-20 rounded-full flex items-center justify-center mb-3 text-lg font-bold transition-transform duration-300 group-hover:scale-110"
+        className="w-28 h-28 rounded-full flex items-center justify-center mb-4 text-2xl font-bold transition-transform duration-300 group-hover:scale-110"
         style={{
           background: primary ? "var(--color-primary)" : "var(--color-accent-soft)",
           border: primary ? "2px solid var(--color-primary)" : "2px solid var(--color-accent)",
@@ -29,8 +29,8 @@ function MemberCard({ name, role, primary = false }: { name: string; role: strin
       >
         {getInitials(name)}
       </div>
-      <p className="text-sm font-bold text-[var(--text-primary)]">{name}</p>
-      <p className="text-xs text-gray-500 mt-0.5">{role}</p>
+      <p className="text-base font-bold text-[var(--text-primary)]">{name}</p>
+      <p className="text-sm text-gray-500 mt-1">{role}</p>
     </motion.div>
   );
 }
@@ -59,9 +59,9 @@ export default function TeamSection() {
         </motion.div>
 
         {/* Leadership */}
-        <div className="mb-20">
-          <h3 className="text-2xl md:text-3xl font-heading font-bold uppercase tracking-widest text-[var(--color-accent)] text-center mb-14">OUR LEADERSHIP</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center">
+        <div className="mb-14">
+          <h3 className="text-2xl md:text-3xl font-heading font-bold uppercase tracking-widest text-[var(--color-accent)] text-center mb-10">OUR LEADERSHIP</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 justify-items-center">
             {leadership.map((m, i) => (
               <MemberCard key={i} name={m.name} role={m.role} primary={true} />
             ))}

@@ -33,31 +33,36 @@ export default function DesignAbout() {
             </div>
           </motion.div>
 
-          {/* Right Logo Content */}
+          {/* Right Highlights Content */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-            className="flex items-center justify-center p-12 bg-white rounded-3xl border border-[var(--border-light)] shadow-xl shadow-black/5 relative overflow-hidden h-[350px]"
+            className="p-8 md:p-10 bg-white rounded-3xl border border-[var(--border-light)] shadow-xl shadow-black/5 relative overflow-hidden"
           >
             <div className="absolute inset-0 bg-gradient-to-tr from-[var(--color-accent-soft)] to-transparent opacity-50 -z-0" />
             <div className="absolute -top-10 -right-10 w-40 h-40 bg-[var(--color-primary)]/5 rounded-full blur-[40px] -z-0" />
-            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-[var(--color-accent-soft)] rounded-full blur-[40px] -z-0" />
-            
-            <div className="relative z-10 flex flex-col items-center text-center">
-              <img 
-                src="/logo.webp" 
-                alt="AM Group Logo" 
-                className="h-20 w-auto object-contain mb-6 transition-transform duration-500 hover:scale-105" 
-              />
-              <div className="w-12 h-[1px] bg-[var(--color-accent)] mb-4" />
-              <h3 className="font-heading text-3xl font-bold text-[var(--color-primary)]">
-                AM <span className="text-[var(--color-accent)]">Design</span>
-              </h3>
-              <p className="font-body text-xs tracking-[0.2em] text-[var(--text-muted)] uppercase mt-2">
-                Brand Identity & Creative Direction
-              </p>
+
+            <div className="relative z-10">
+              <p className="font-body text-xs tracking-[0.2em] text-[var(--color-accent)] uppercase font-bold mb-6">Why AM Design</p>
+              <div className="space-y-6">
+                {[
+                  { t: "Distinct Identity", d: "Brands built to stand out and stay memorable." },
+                  { t: "Digital Presence", d: "Websites and social that engage and convert." },
+                  { t: "Creative Direction", d: "Strategy and intent behind every visual choice." },
+                ].map((item) => (
+                  <div key={item.t} className="flex items-start gap-4">
+                    <span className="flex-shrink-0 w-10 h-10 rounded-xl flex items-center justify-center bg-[var(--color-accent-soft)] text-[var(--color-accent)]">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                    </span>
+                    <div>
+                      <h3 className="font-heading text-lg font-bold text-[var(--color-primary)] leading-tight">{item.t}</h3>
+                      <p className="font-body text-sm text-[var(--text-secondary)] mt-0.5 leading-relaxed">{item.d}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
           

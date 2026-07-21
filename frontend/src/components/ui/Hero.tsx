@@ -186,7 +186,7 @@ export default function Hero() {
                 >
                   {slide.titlePrefix && <span style={{ display: "block" }}>{slide.titlePrefix}</span>}
                   {slide.titleAccent && (
-                    <span style={{ display: "block", color: "#B4975A", fontStyle: "italic", fontWeight: 400 }}>
+                    <span style={{ display: "block", color: "#CBB279", fontWeight: 500 }}>
                       {slide.titleAccent}
                     </span>
                   )}
@@ -229,26 +229,29 @@ export default function Hero() {
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                background: "#B4975A",
-                color: "#0F172A",
+                background: "rgba(180,151,90,0.88)",
+                color: "#FFFFFF",
                 fontFamily: "var(--font-body)",
-                fontSize: "0.8rem",
-                fontWeight: 700,
+                fontSize: "0.95rem",
+                fontWeight: 600,
                 letterSpacing: "0.08em",
-                padding: "0.95rem 2.2rem",
-                border: "1px solid #B4975A",
+                padding: "1.05rem 2.5rem",
+                border: "1px solid rgba(203,178,121,0.55)",
+                backdropFilter: "blur(6px)",
+                WebkitBackdropFilter: "blur(6px)",
+                boxShadow: "0 10px 28px rgba(180,151,90,0.32)",
                 textDecoration: "none",
                 transition: "all 0.3s ease",
                 cursor: "pointer",
                 textTransform: "uppercase",
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
-                (e.currentTarget as HTMLAnchorElement).style.color = "#B4975A";
+                (e.currentTarget as HTMLAnchorElement).style.background = "#B4975A";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 12px 32px rgba(180,151,90,0.45)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLAnchorElement).style.background = "#B4975A";
-                (e.currentTarget as HTMLAnchorElement).style.color = "#0F172A";
+                (e.currentTarget as HTMLAnchorElement).style.background = "rgba(180,151,90,0.88)";
+                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 10px 28px rgba(180,151,90,0.32)";
               }}
             >
               Book a Free Consultation
@@ -267,11 +270,11 @@ export default function Hero() {
                 background: "transparent",
                 color: "#FFFFFF",
                 fontFamily: "var(--font-body)",
-                fontSize: "0.8rem",
+                fontSize: "0.95rem",
                 fontWeight: 600,
                 letterSpacing: "0.08em",
-                padding: "0.95rem 2.2rem",
-                border: "1px solid rgba(255,255,255,0.3)",
+                padding: "1.05rem 2.5rem",
+                border: "1px solid rgba(255,255,255,0.35)",
                 textDecoration: "none",
                 transition: "all 0.3s ease",
                 cursor: "pointer",

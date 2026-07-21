@@ -54,7 +54,7 @@ export default function Services() {
               }}
             >
               Services for <br />
-              Every <span style={{ color: "var(--color-accent)", fontStyle: "italic" }}>Business Need</span>
+              Every <span style={{ color: "var(--color-accent)" }}>Business Need</span>
             </h2>
             <p
               style={{
@@ -74,6 +74,8 @@ export default function Services() {
             {[
               {
                 title: "AM Consulting",
+                color: "#704b81",
+                soft: "rgba(112,75,129,0.1)",
                 items: [
                   "Advisory Services",
                   "Business Consulting",
@@ -84,6 +86,8 @@ export default function Services() {
               },
               {
                 title: "AM Accounting",
+                color: "#016abf",
+                soft: "rgba(1,106,191,0.1)",
                 items: [
                   "Accounting & Bookkeeping",
                   "VAT Advisory & Filing",
@@ -94,6 +98,8 @@ export default function Services() {
               },
               {
                 title: "AM Design",
+                color: "#db4319",
+                soft: "rgba(219,67,25,0.1)",
                 items: [
                   "Brand Identity & Logo Design",
                   "Website Design & Development",
@@ -104,6 +110,8 @@ export default function Services() {
               },
               {
                 title: "AM Technology",
+                color: "#0d9488",
+                soft: "rgba(13,148,136,0.1)",
                 items: [
                   "Data Analytics & Business Intelligence",
                   "Digital Transformation",
@@ -121,10 +129,31 @@ export default function Services() {
                 transition={{ duration: 0.6, delay: idx * 0.08 }}
                 className="info-card group"
               >
-                <div className="info-card-top-bar" />
-                <h3 className="info-card-title border-b border-[var(--border-light)] pb-3 mb-4">
-                  {div.title}
-                </h3>
+                <div className="info-card-top-bar" style={{ background: div.color }} />
+                <div className="flex items-center gap-3 border-b border-[var(--border-light)] pb-3 mb-4">
+                  <span
+                    style={{
+                      width: "2.25rem",
+                      height: "2.25rem",
+                      borderRadius: "0.6rem",
+                      flexShrink: 0,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      background: div.soft,
+                      color: div.color,
+                      fontFamily: "var(--font-heading)",
+                      fontWeight: 700,
+                      fontSize: "1rem",
+                      lineHeight: 1,
+                    }}
+                  >
+                    AM
+                  </span>
+                  <h3 className="info-card-title" style={{ margin: 0, color: div.color }}>
+                    {div.title.replace("AM ", "")}
+                  </h3>
+                </div>
                 <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.85rem", flexGrow: 1 }}>
                   {div.items.map((item) => (
                     <li
@@ -139,7 +168,7 @@ export default function Services() {
                         lineHeight: 1.4,
                       }}
                     >
-                      <span style={{ color: "var(--color-accent)", fontWeight: 700, flexShrink: 0 }}>→</span>
+                      <span style={{ color: div.color, fontWeight: 700, flexShrink: 0 }}>→</span>
                       <span>{item}</span>
                     </li>
                   ))}

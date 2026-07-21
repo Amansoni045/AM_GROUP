@@ -10,6 +10,7 @@ const divisions = [
     desc: "Expert consulting services, corporate advisory, market entry strategy, and ESG solutions for sustainable growth across the GCC.",
     href: "/consulting",
     number: "01",
+    color: "#704b81",
   },
   {
     name: "AM Accounting",
@@ -17,6 +18,7 @@ const divisions = [
     desc: "Comprehensive accounting, bookkeeping, VAT advisory, audit support, and financial reporting to keep your business in order.",
     href: "/accounting",
     number: "02",
+    color: "#016abf",
   },
   {
     name: "AM Design",
@@ -24,6 +26,7 @@ const divisions = [
     desc: "Visual identity, branding, web design, and social media management that positions your business with clarity and distinction.",
     href: "/design",
     number: "03",
+    color: "#db4319",
   },
   {
     name: "AM Technology",
@@ -31,6 +34,7 @@ const divisions = [
     desc: "Advanced data analytics, automation, digital transformation, and app development to accelerate operational excellence.",
     href: "/technology",
     number: "04",
+    color: "#0d9488",
   },
 ];
 
@@ -52,7 +56,7 @@ export default function WhatWeDo() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          style={{ marginBottom: "4rem" }}
+          style={{ marginBottom: "2.5rem" }}
         >
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>
             <span className="eyebrow">Our Divisions</span>
@@ -73,15 +77,15 @@ export default function WhatWeDo() {
                 fontSize: "clamp(2.5rem, 4vw, 3.5rem)",
                 fontWeight: 600,
                 color: "var(--text-primary)",
-                lineHeight: 1.1,
+                lineHeight: 1.15,
                 maxWidth: "500px",
                 letterSpacing: "-0.01em",
               }}
             >
-              One Partner.{" "}
-              <em style={{ fontStyle: "italic", color: "var(--color-accent)" }}>
+              <span style={{ display: "block" }}>One Partner.</span>
+              <span style={{ display: "block", color: "var(--color-accent)" }}>
                 Endless Possibilities.
-              </em>
+              </span>
             </h2>
             <p
               style={{
@@ -90,6 +94,8 @@ export default function WhatWeDo() {
                 color: "var(--text-secondary)",
                 lineHeight: 1.75,
                 maxWidth: "420px",
+                borderLeft: "2px solid var(--color-accent)",
+                paddingLeft: "1.25rem",
               }}
             >
               We bring together four specialised divisions under one trusted name - delivering integrated solutions that address the full spectrum of business needs.
@@ -139,11 +145,12 @@ export default function WhatWeDo() {
                   <div
                     style={{
                       fontFamily: "var(--font-heading)",
-                      fontSize: "1.1rem",
-                      color: "var(--color-accent)",
+                      fontSize: "2.25rem",
+                      fontWeight: 600,
+                      color: div.color,
                       flexShrink: 0,
-                      paddingTop: "0.2rem",
-                      letterSpacing: "0.05em",
+                      lineHeight: 1,
+                      letterSpacing: "0.01em",
                     }}
                   >
                     {div.number}
@@ -171,8 +178,8 @@ export default function WhatWeDo() {
                             fontSize: "0.75rem",
                             letterSpacing: "0.12em",
                             textTransform: "uppercase",
-                            color: "var(--color-accent)",
-                            fontWeight: 500,
+                            color: div.color,
+                            fontWeight: 600,
                           }}
                         >
                           {div.tagline}
@@ -257,7 +264,7 @@ export default function WhatWeDo() {
             }}
           >
             Operating Across <br />
-            <span style={{ color: "var(--color-accent)", fontStyle: "italic" }}>the Gulf Region</span>
+            <span style={{ color: "var(--color-accent)" }}>the Gulf Region</span>
           </h3>
 
           {/* Description */}
@@ -282,24 +289,32 @@ export default function WhatWeDo() {
                 name: "Bahrain",
                 flag: "🇧🇭",
                 status: "HEADQUARTERS",
+                isHQ: true,
+                wash: "linear-gradient(135deg, rgba(206,17,38,0.08) 0%, rgba(255,255,255,0) 55%)",
                 desc: "Headquartered in Bahrain, we partner with businesses at every stage of their journey, providing practical support across strategic, financial, regulatory, and technology matters."
               },
               {
                 name: "Saudi Arabia",
                 flag: "🇸🇦",
                 status: "ACTIVE OPERATIONS",
+                isHQ: false,
+                wash: "linear-gradient(135deg, rgba(22,90,44,0.08) 0%, rgba(255,255,255,0) 55%)",
                 desc: "Supporting businesses across the Kingdom with market entry, compliance, financial advisory, and technology-driven transformation aligned with Vision 2030."
               },
               {
                 name: "Oman",
                 flag: "🇴🇲",
                 status: "ACTIVE OPERATIONS",
+                isHQ: false,
+                wash: "linear-gradient(135deg, rgba(219,40,45,0.08) 0%, rgba(255,255,255,0) 55%)",
                 desc: "Partnering with businesses across Muscat to provide strategic guidance, regulatory support, financial expertise, operational improvement, and digital transformation."
               },
               {
                 name: "UAE",
                 flag: "🇦🇪",
                 status: "ACTIVE OPERATIONS",
+                isHQ: false,
+                wash: "linear-gradient(135deg, rgba(0,115,47,0.08) 0%, rgba(255,255,255,0) 55%)",
                 desc: "From market entry to business growth and ongoing operations, we work alongside our clients as a trusted partner, providing support on strategic, regulatory, and operational matters."
               }
             ].map((country, idx) => (
@@ -310,23 +325,44 @@ export default function WhatWeDo() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.1 }}
                 className="info-card group"
+                style={{ background: country.wash, backgroundColor: "var(--bg-surface)" }}
               >
-                <div className="info-card-top-bar" />
-                <div style={{ fontSize: "2rem", marginBottom: "1.25rem", display: "inline-block" }}>
+                <div className="info-card-top-bar" style={{ background: country.isHQ ? "var(--color-accent)" : "var(--border-medium)" }} />
+                <div
+                  style={{
+                    width: "3rem",
+                    height: "3rem",
+                    borderRadius: "50%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "1.6rem",
+                    marginBottom: "1rem",
+                    background: "#FFFFFF",
+                    border: "1px solid var(--border-light)",
+                    boxShadow: "0 2px 8px rgba(15,23,42,0.06)",
+                  }}
+                >
                   {country.flag}
                 </div>
-                <h4 className="info-card-title" style={{ marginBottom: "0.25rem" }}>
+                <h4 className="info-card-title" style={{ marginBottom: "0.6rem" }}>
                   {country.name}
                 </h4>
                 <div
                   style={{
+                    display: "inline-block",
                     fontFamily: "var(--font-body)",
-                    fontSize: "0.7rem",
+                    fontSize: "0.62rem",
                     fontWeight: 700,
-                    letterSpacing: "0.15em",
-                    color: "var(--color-accent)",
+                    letterSpacing: "0.12em",
                     textTransform: "uppercase",
+                    padding: "0.3rem 0.7rem",
+                    borderRadius: "999px",
                     marginBottom: "1.25rem",
+                    alignSelf: "flex-start",
+                    color: country.isHQ ? "#FFFFFF" : "var(--text-muted)",
+                    background: country.isHQ ? "var(--color-accent)" : "transparent",
+                    border: country.isHQ ? "1px solid var(--color-accent)" : "1px solid var(--border-medium)",
                   }}
                 >
                   {country.status}

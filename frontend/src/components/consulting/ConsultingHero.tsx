@@ -13,8 +13,15 @@ export default function ConsultingHero() {
         position: "relative",
       }}
     >
-      <div style={{ position: "absolute", top: 0, left: 0, width: "400px", height: "400px", background: "radial-gradient(circle at top left, rgba(180,151,90,0.11) 0%, transparent 65%)", pointerEvents: "none" }} />
-      <div style={{ position: "absolute", bottom: 0, right: 0, width: "400px", height: "400px", background: "radial-gradient(circle at bottom right, rgba(180,151,90,0.07) 0%, transparent 65%)", pointerEvents: "none" }} />
+      {/* Color-matched ambient washes */}
+      <div style={{ position: "absolute", top: 0, left: 0, width: "460px", height: "460px", background: "radial-gradient(circle at top left, var(--color-accent-soft) 0%, transparent 65%)", pointerEvents: "none" }} />
+      <div style={{ position: "absolute", bottom: 0, right: 0, width: "460px", height: "460px", background: "radial-gradient(circle at bottom right, var(--color-accent-soft) 0%, transparent 65%)", pointerEvents: "none" }} />
+      {/* Color-matched decorative side rings */}
+      <div aria-hidden className="hero-deco" style={{ position: "absolute", top: "50%", left: "-110px", transform: "translateY(-50%)", width: "300px", height: "300px", border: "1px solid var(--color-accent)", borderRadius: "50%", opacity: 0.14, pointerEvents: "none" }} />
+      <div aria-hidden className="hero-deco" style={{ position: "absolute", top: "50%", left: "-40px", transform: "translateY(-50%)", width: "160px", height: "160px", border: "1px solid var(--color-accent)", borderRadius: "50%", opacity: 0.2, pointerEvents: "none" }} />
+      <div aria-hidden className="hero-deco" style={{ position: "absolute", top: "50%", right: "-110px", transform: "translateY(-50%)", width: "300px", height: "300px", border: "1px solid var(--color-accent)", borderRadius: "50%", opacity: 0.14, pointerEvents: "none" }} />
+      <div aria-hidden className="hero-deco" style={{ position: "absolute", top: "50%", right: "-40px", transform: "translateY(-50%)", width: "160px", height: "160px", border: "1px solid var(--color-accent)", borderRadius: "50%", opacity: 0.2, pointerEvents: "none" }} />
+      <style>{`@media (max-width: 767px) { .hero-deco { display: none !important; } }`}</style>
 
       <div style={{ position: "relative", zIndex: 1, display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: "clamp(3rem,5vw,6rem) clamp(1rem,3vw,2rem) clamp(2rem,3.5vw,4rem)", minHeight: "auto" }}>
         <div style={{ maxWidth: "820px" }}>
@@ -32,7 +39,7 @@ export default function ConsultingHero() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(2.8rem, 5.5vw, 4.8rem)", fontWeight: 600, color: "#0F172A", lineHeight: 1.05, marginBottom: "1.25rem", letterSpacing: "-0.02em" }}
           >
-            Strategic Excellence in<br /><span style={{ color: "#B4975A" }}>Business Consulting</span>
+            Strategic Excellence in<br /><span style={{ color: "var(--color-accent)" }}>Business Consulting</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 16 }}
@@ -46,7 +53,7 @@ export default function ConsultingHero() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            style={{ width: "48px", height: "2px", background: "#B4975A", margin: "1.75rem auto 0", transformOrigin: "center" }}
+            style={{ width: "48px", height: "2px", background: "var(--color-accent)", margin: "1.75rem auto 0", transformOrigin: "center" }}
           />
         </div>
       </div>
@@ -56,7 +63,7 @@ export default function ConsultingHero() {
         <div className="flex animate-marquee whitespace-nowrap">
           {["Innovation","Success","Leadership","Enterprise","Business Growth","Corporate","Results","Innovation","Success","Leadership","Enterprise","Business Growth","Corporate","Results"].map((item, idx) => (
             <div key={idx} style={{ display: "flex", alignItems: "center", margin: "0 1.75rem" }}>
-              <span style={{ color: "#B4975A", marginRight: "1.25rem", fontSize: "0.65rem" }}>✦</span>
+              <span style={{ color: "var(--color-accent)", marginRight: "1.25rem", fontSize: "0.65rem" }}>✦</span>
               <span style={{ fontFamily: "var(--font-body)", fontSize: "0.7rem", fontWeight: 700, letterSpacing: "0.2em", textTransform: "uppercase", color: "#64748B" }}>{item}</span>
             </div>
           ))}

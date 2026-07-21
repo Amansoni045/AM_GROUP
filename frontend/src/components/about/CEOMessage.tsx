@@ -47,6 +47,12 @@ export default function CEOMessage() {
               Today, across Bahrain, Saudi Arabia, Oman, and UAE, our mission remains clear: to deliver integrated solutions that inspire transformation, drive innovation, and empower businesses for a brighter future.
             </p>
             <div className="pt-4">
+              <p
+                className="text-[var(--color-primary)] mb-1"
+                style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontWeight: 500, fontSize: "2.25rem", lineHeight: 1 }}
+              >
+                Ravi Mehta
+              </p>
               <p className="text-[var(--text-primary)] font-bold text-lg font-heading">Ravi Mehta</p>
               <p className="text-[var(--color-accent)] text-sm font-medium">Chief Executive Officer</p>
             </div>
@@ -61,11 +67,28 @@ export default function CEOMessage() {
             className="lg:col-span-2 flex flex-col items-center"
           >
             <div className="bg-white border border-[var(--border-light)] rounded-3xl p-8 text-center w-full shadow-lg shadow-black/5">
-              <div className="w-48 h-48 rounded-full border-[6px] border-[var(--color-accent)] mx-auto mb-8 overflow-hidden bg-[var(--color-primary)]/10 flex items-center justify-center shadow-md">
+              <div className="w-48 h-48 rounded-full border-[6px] border-[var(--color-accent)] mx-auto mb-6 overflow-hidden bg-[var(--color-primary)]/10 flex items-center justify-center shadow-md">
                 <span className="text-6xl font-bold text-[var(--color-accent)]">RM</span>
               </div>
-              <h3 className="text-[var(--text-primary)] text-2xl font-bold font-heading mb-1">Ravi Mehta</h3>
+              <p
+                className="text-[var(--color-primary)]"
+                style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: "italic", fontWeight: 500, fontSize: "1.75rem", lineHeight: 1 }}
+              >
+                Ravi Mehta
+              </p>
+              <h3 className="text-[var(--text-primary)] text-2xl font-bold font-heading mt-2 mb-1">Ravi Mehta</h3>
               <p className="text-[var(--color-accent)] text-md font-medium">Chief Executive Officer</p>
+              <div className="w-12 h-[1px] bg-[var(--color-accent)] mx-auto my-5" />
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <p className="text-[var(--color-primary)] text-2xl font-bold font-heading">25+</p>
+                  <p className="text-[var(--text-muted)] text-xs uppercase tracking-wider mt-1">Years Experience</p>
+                </div>
+                <div>
+                  <p className="text-[var(--color-primary)] text-2xl font-bold font-heading">2016</p>
+                  <p className="text-[var(--text-muted)] text-xs uppercase tracking-wider mt-1">Founded AM Group</p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>

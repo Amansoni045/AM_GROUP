@@ -38,17 +38,17 @@ export default function AboutFAQ() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1.25rem" }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.75rem", marginBottom: "1rem" }}>
             <span className="eyebrow">FAQs</span>
             <span style={{ width: "32px", height: "1px", background: "var(--color-accent)" }} />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[var(--text-primary)] font-heading mb-3">
             Need Help? <span className="text-[var(--color-accent)]">Start Here.</span>
           </h2>
           <p className="text-gray-500 text-lg">At the forefront of change, we turn challenges into opportunities for growth.</p>
-          <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto mt-6" />
+          <div className="w-16 h-1 bg-[var(--color-primary)] rounded mx-auto mt-4" />
         </motion.div>
 
         <div className="space-y-4">

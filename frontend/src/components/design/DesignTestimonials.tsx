@@ -180,11 +180,10 @@ export default function DesignTestimonials() {
                     {/* Quote Text */}
                     <p
                       style={{
-                        fontFamily: "var(--font-heading)",
-                        fontSize: "1.1rem",
-                        fontStyle: "italic",
+                        fontFamily: "var(--font-body)",
+                        fontSize: "0.95rem",
                         color: "var(--text-secondary)",
-                        lineHeight: 1.75,
+                        lineHeight: 1.8,
                         marginBottom: "2.5rem",
                         flexGrow: 1,
                       }}
