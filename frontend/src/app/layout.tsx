@@ -3,17 +3,14 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "AM Group | Consulting, Design, Accounting & Analytics",
-  description: "AM Group unites consulting, design, accounting, and analytics to deliver integrated solutions that drive sustainable business growth across the GCC.",
+  description:
+    "AM Group unites consulting, design, accounting, and analytics to deliver integrated solutions that drive sustainable business growth across the GCC.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
 };
-
-import Header from "@/components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
-import BackToTop from "@/components/ui/BackToTop";
 
 export default function RootLayout({
   children,
@@ -30,14 +27,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="antialiased flex flex-col min-h-screen">
-        <Header />
-        <div className="flex-grow flex flex-col">
-          {children}
-        </div>
-        <Footer />
-        <BackToTop />
-      </body>
+      <body className="antialiased flex flex-col min-h-screen">{children}</body>
     </html>
   );
 }

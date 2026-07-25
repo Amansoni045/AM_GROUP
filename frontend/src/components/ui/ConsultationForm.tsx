@@ -1,6 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useTransition } from "react";
 import { motion } from "framer-motion";
+import { submitContactQuery } from "@/app/actions/contact";
 
 const services = [
   "Accounting & Bookkeeping",
@@ -19,6 +20,8 @@ const services = [
 
 export default function ConsultationForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+  const [isPending, startTransition] = useTransition();
   const [form, setForm] = useState({
     name: "", company: "", email: "", service: "", message: "",
   });
@@ -31,9 +34,25 @@ export default function ConsultationForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 5000);
-    setForm({ name: "", company: "", email: "", service: "", message: "" });
+    setSubmitError("");
+
+    const formData = new FormData();
+    formData.set("name", form.name);
+    formData.set("company", form.company);
+    formData.set("email", form.email);
+    formData.set("service", form.service);
+    formData.set("message", form.message);
+
+    startTransition(async () => {
+      const result = await submitContactQuery(formData);
+      if (result.error) {
+        setSubmitError(result.error);
+        return;
+      }
+      setSubmitted(true);
+      setTimeout(() => setSubmitted(false), 5000);
+      setForm({ name: "", company: "", email: "", service: "", message: "" });
+    });
   };
 
   return (
@@ -415,12 +434,18 @@ export default function ConsultationForm() {
                   </div>
 
                   {/* Submit */}
+                  {submitError && (
+                    <p style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "#dc2626", background: "#fef2f2", border: "1px solid #fecaca", borderRadius: "0.5rem", padding: "0.75rem 1rem" }}>
+                      {submitError}
+                    </p>
+                  )}
                   <button
                     type="submit"
+                    disabled={isPending}
                     className="btn-primary"
-                    style={{ marginTop: "0.75rem", width: "100%", justifyContent: "center", padding: "1.25rem" }}
+                    style={{ marginTop: "0.75rem", width: "100%", justifyContent: "center", padding: "1.25rem", opacity: isPending ? 0.7 : 1 }}
                   >
-                    Submit Request
+                    {isPending ? "Submitting..." : "Submit Request"}
                   </button>
                 </form>
               )}

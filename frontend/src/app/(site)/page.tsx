@@ -9,7 +9,7 @@ import ConsultationForm from "@/components/ui/ConsultationForm";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      <Hero/>
       <WhatWeDo />
       <Services />
       <IndustryExpertise />
