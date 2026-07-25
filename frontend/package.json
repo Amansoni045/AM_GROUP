@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "seed:team": "node scripts/seed-team.mjs",
     "lint": "eslint"
   },
   "dependencies": {

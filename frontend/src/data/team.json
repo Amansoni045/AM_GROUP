@@ -12,7 +12,7 @@
         { "name": "Shwetank Bhushan", "role": "Director of Advisory" },
         { "name": "Asitava Bose", "role": "Director - Consulting" },
         { "name": "Maryam Almajed", "role": "Account Analyst" },
-        { "name": "Akash Mahajan", "role": "Financial Consultant" },
+        { "name": "Akash Mahajan", "role": "Consulting - Financial Consultant" },
         { "name": "Rose Maria Biju", "role": "Consultant" }
       ]
     },
@@ -20,7 +20,7 @@
       "name": "AM Accounting",
       "members": [
         { "name": "Anchu Prakash", "role": "Manager - Finance & Operations" },
-        { "name": "Anima Jagdeesh", "role": "Financial Manager" },
+        { "name": "Anima Jagdeesh", "role": "Consulting - Financial Manager" },
         { "name": "Abdul Niyas Thodi", "role": "Senior Accountant" },
         { "name": "Shafeek Alingal", "role": "Senior Accountant" },
         { "name": "Thrishna Radhakrishnan", "role": "Accountant" },
@@ -33,6 +33,7 @@
     {
       "name": "AM Design",
       "members": [
+        { "name": "Harshita Chadha", "role": "Sr. Manager - Marketing and Projects" },
         { "name": "Mohamed Abdulameer", "role": "Graphic Designer" },
         { "name": "Shreyas Rasane", "role": "Graphic Designer" }
       ]

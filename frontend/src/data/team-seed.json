@@ -1,0 +1,164 @@
+{
+  "categories": [
+    {
+      "name": "Leadership",
+      "is_leadership": true,
+      "sort_order": 0,
+      "members": [
+        {
+          "name": "Ravi Mehta",
+          "role": "CEO - Managing Partner",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/10/WhatsApp-6.webp"
+        },
+        {
+          "name": "Deepali Mehta",
+          "role": "Partner and Executive Director",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-13.webp"
+        },
+        {
+          "name": "Dr. Raed Sarhan",
+          "role": "Executive Director",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-14-at-23.28.51_5096b516.jpg"
+        },
+        {
+          "name": "Chandresh H. Mehta",
+          "role": "Executive Director",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/11/Director-Consulting-Chandresh-H-Mehta.webp"
+        }
+      ]
+    },
+    {
+      "name": "AM Consulting",
+      "is_leadership": false,
+      "sort_order": 1,
+      "members": [
+        {
+          "name": "Shwetank Bhushan",
+          "role": "Director of Advisory",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-14.webp"
+        },
+        {
+          "name": "Asitava Bose",
+          "role": "Director - Consulting",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-5.webp"
+        },
+        {
+          "name": "Maryam Almajed",
+          "role": "Account Analyst",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-9.webp"
+        },
+        {
+          "name": "Akash Mahajan",
+          "role": "Consulting - Financial Consultant",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/10/Adobe.webp"
+        },
+        {
+          "name": "Rose Maria Biju",
+          "role": "Consultant",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/11/WhatsApp-17.webp"
+        }
+      ]
+    },
+    {
+      "name": "AM Accounting",
+      "is_leadership": false,
+      "sort_order": 2,
+      "members": [
+        {
+          "name": "Anchu Prakash",
+          "role": "Manager - Finance & Operations",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-12.webp"
+        },
+        {
+          "name": "Anima Jagdeesh",
+          "role": "Consulting - Financial Manager",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-11.webp"
+        },
+        {
+          "name": "Abdul Niyas Thodi",
+          "role": "Senior Accountant",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-1.webp"
+        },
+        {
+          "name": "Shafeek Alingal",
+          "role": "Senior Accountant",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/10/WhatsApp-Image-2025-10-26-at-12.56.17_15a4f42a.webp"
+        },
+        {
+          "name": "Thrishna Radhakrishnan",
+          "role": "Accountant",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-4.webp"
+        },
+        {
+          "name": "Lekshmi Krishnan",
+          "role": "Accountant",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-3.webp"
+        },
+        {
+          "name": "Komal Parekh",
+          "role": "Accountant",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-8.webp"
+        },
+        {
+          "name": "Anju Augustine",
+          "role": "Accountant",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/11/WhatsApp-18.webp"
+        },
+        {
+          "name": "Preeti Mishra",
+          "role": "Office Administrator",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-7.webp"
+        }
+      ]
+    },
+    {
+      "name": "AM Design",
+      "is_leadership": false,
+      "sort_order": 3,
+      "members": [
+        {
+          "name": "Harshita Chadha",
+          "role": "Sr. Manager - Marketing and Projects",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/10/IMG_4136-Photoroom.webp"
+        },
+        {
+          "name": "Mohamed Abdulameer",
+          "role": "Graphic Designer",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/09/WhatsApp-10.webp"
+        },
+        {
+          "name": "Shreyas Rasane",
+          "role": "Graphic Designer",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/11/IMG_7728-scaled.webp"
+        }
+      ]
+    },
+    {
+      "name": "AM Technology",
+      "is_leadership": false,
+      "sort_order": 4,
+      "members": [
+        {
+          "name": "Aditi Upadhyay",
+          "role": "Sr. Manager, Data Analyst",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/10/IMG_20250922_171631.webp"
+        },
+        {
+          "name": "Sampath Raj",
+          "role": "Sr. Executive Data Analyst",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/10/IMG20250922083248-scaled-e1760410838703.webp"
+        },
+        {
+          "name": "Chandanam Golvi",
+          "role": "Sr. Executive - Developer",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/10/IMG_20250921_160859100-scaled-2.webp"
+        },
+        {
+          "name": "Diya Gupta",
+          "role": "Data Analyst Executive",
+          "image": "https://amgroup-gcc.com/wp-content/uploads/2025/11/WhatsApp-16.webp"
+        }
+      ]
+    }
+  ]
+}
