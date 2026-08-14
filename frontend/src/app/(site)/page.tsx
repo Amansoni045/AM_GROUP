@@ -13,7 +13,7 @@ export default function Home() {
       <WhatWeDo />
       <Services />
       <IndustryExpertise />
-      <Clients />
+      {/* <Clients /> */}
       <ConsultationForm />
     </main>
   );
